@@ -1,0 +1,2 @@
+class Speedtest < ApplicationRecord
+end
