@@ -7,7 +7,7 @@ class CreateDestinations < ActiveRecord::Migration[7.0]
       t.string :phone
       t.string :image
       t.string :website
-      t.integer :address_id
+      t.belongs_to :address
       t.timestamps
     end
   end

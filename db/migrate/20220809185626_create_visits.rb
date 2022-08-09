@@ -3,8 +3,9 @@ class CreateVisits < ActiveRecord::Migration[7.0]
     create_table :visits do |t|
       t.datetime :start
       t.datetime :end
-      t.integer :user_id
-      t.integer :destination_id
+      t.belongs_to :user
+      t.belongs_to :destination
+      t.belongs_to :speedtest
       t.string :desc
       t.integer :tech_rating
       t.string :tech_comment
