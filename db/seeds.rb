@@ -254,6 +254,7 @@ User.reset_pk_sequence
 Visit.destroy_all
 Visit.reset_pk_sequence
 
+puts 'Creating users'
 5.times do
   addr = Faker::Address.unique
   Address.create(
@@ -279,6 +280,7 @@ Visit.reset_pk_sequence
   )
 end
 
+puts 'Creating hotel destinations'
 mexico_hotels.each_with_index do |dest, index|
   Destination.create(category: dest[:category],
                      name: dest[:name],
@@ -286,3 +288,41 @@ mexico_hotels.each_with_index do |dest, index|
                      website: dest[:website],
                      address: Address.create(mexico_addresses[index]))
 end
+
+puts 'Creating visits'
+connection_types = %w[wifi cellular ethernet]
+test_providers = %w[speedtest speedcheck]
+User.all.each do |user|
+  puts 'Setting up user ' + user.username + ' visits'
+  rand(5..10).times do
+    startdate = Faker::Date.backward(days: 365)
+    speedtest_result = {
+      latency: rand(5..70),
+      download: rand(45..170),
+      upload: rand(15..80),
+      connectiontype: connection_types.sample,
+      testprovider: test_providers.sample,
+      resulturl: Faker::Internet.url,
+      resultimage: 'https://source.unsplash.com/random/800x800/?img=1'
+    }
+    Visit.create(
+      start: startdate,
+      end: Faker::Date.between(from: startdate, to: Date.today),
+      user: user,
+      destination_id: Destination.ids.sample,
+      desc: Faker::GreekPhilosophers.quote,
+      tech_rating: rand(1..5),
+      tech_comment: 'tech comment',
+      visit_rating: rand(1..5),
+      visit_comment: 'visit comment',
+      speedtest: Speedtest.create(speedtest_result)
+    )
+  end
+  puts '...and favorites'
+  rand(0..6).times do
+    Favorite.create(user: user,
+                    destination_id: Destination.ids.sample)
+  end
+end
+
+puts 'Seeding complete'
