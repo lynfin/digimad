@@ -268,11 +268,14 @@ puts 'Creating users'
     longitude: addr.longitude
   )
   user = Faker::Name.unique
+  firstname = user.first_name
+  lastname = user.last_name
+
   User.create(
-    firstname: user.first_name,
-    lastname: user.last_name,
-    username: user.first_name[0] + user.last_name,
-    email: Faker::Internet.email(name: user.name, separators: '_'),
+    firstname: firstname,
+    lastname: lastname,
+    username: firstname[0] + lastname,
+    email: Faker::Internet.email(name: firstname[0] + lastname),
     bio: Faker::Quote.jack_handey,
     admin: false,
     image: 'https://source.unsplash.com/1600x900?portrait',
