@@ -59,6 +59,7 @@ GEM
     activerecord (7.0.3.1)
       activemodel (= 7.0.3.1)
       activesupport (= 7.0.3.1)
+    activerecord-reset-pk-sequence (0.2.1)
     activestorage (7.0.3.1)
       actionpack (= 7.0.3.1)
       activejob (= 7.0.3.1)
@@ -84,6 +85,8 @@ GEM
       reline (>= 0.3.1)
     digest (3.1.0)
     erubi (1.11.0)
+    faker (2.21.0)
+      i18n (>= 1.8.11, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -155,6 +158,7 @@ GEM
     rake (13.0.6)
     reline (0.3.1)
       io-console (~> 0.5)
+    seed (1.1.3)
     strscan (3.0.4)
     thor (1.2.1)
     timeout (0.3.0)
@@ -170,12 +174,15 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.13)
+  activerecord-reset-pk-sequence
   bcrypt (~> 3.1.7)
   bootsnap
   debug
+  faker
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
+  seed
   tzinfo-data
 
 RUBY VERSION
