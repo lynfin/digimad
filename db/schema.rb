@@ -56,6 +56,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_09_185842) do
     t.decimal "download"
     t.decimal "upload"
     t.string "connectiontype"
+    t.string "connectionprovider"
     t.string "testprovider"
     t.string "resulturl"
     t.string "resultimage"
