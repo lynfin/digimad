@@ -118,8 +118,8 @@ mexico_addresses = [
     street2: 'Col. El Tezal',
     city: 'Cabo San Lucas',
     zipcode: '23454',
-    country: 'Mexico', lat: 22.902735,
-    long: -109.884096
+    country: 'Mexico', latitude: 22.902735,
+    longitude: -109.884096
   },
   {
     street1: 'Blvd. Adolfo Ruiz Cortines :4298 A',
@@ -127,8 +127,8 @@ mexico_addresses = [
     city: 'Boca Del Rio',
     zipcode: '94299',
     state: 'Veracruz',
-    country: 'Mexico', lat: 19.141682,
-    long: -96.10317
+    country: 'Mexico', latitude: 19.141682,
+    longitude: -96.10317
 
   },
   {
@@ -137,8 +137,8 @@ mexico_addresses = [
     city: 'Boca Del Rio',
     zipcode: '94299',
     state: 'Veracruz',
-    country: 'Mexico', lat: 19.141812,
-    long: -96.10334
+    country: 'Mexico', latitude: 19.141812,
+    longitude: -96.10334
   },
   {
     street1: 'BLVD. ADOLFO RUIZ CORTINES :3533',
@@ -146,8 +146,8 @@ mexico_addresses = [
     city: 'BOCA DEL RIO',
     zipcode: '94298',
     state: 'Veracruz',
-    country: 'Mexico', lat: 19.142938,
-    long: -96.104236
+    country: 'Mexico', latitude: 19.142938,
+    longitude: -96.104236
   },
   {
     street1: 'Calle Morelos 225',
@@ -155,8 +155,8 @@ mexico_addresses = [
     city: 'Veracruz',
     zipcode: '91700',
     state: 'Veracruz',
-    country: 'Mexico', lat: 19.201983,
-    long: -96.138893
+    country: 'Mexico', latitude: 19.201983,
+    longitude: -96.138893
   },
   {
     street1: 'Eje Nor-Oriente Luis Donaldo Colosio 285',
@@ -164,53 +164,53 @@ mexico_addresses = [
     city: 'Celaya',
     zipcode: '38080',
     state: 'Guanajuato',
-    country: 'Mexico', lat: 20.51677,
-    long: -100.779269
+    country: 'Mexico', latitude: 20.51677,
+    longitude: -100.779269
   },
   {
     street1: 'Av. Eje Nor-Oriente 215, Manzana 177',
     street2: 'Casi esq. con Ribera del Campestre', city: 'Celaya', zipcode:  '38080',
     state: 'Guanajuato',
-    country: 'Mexico', lat: 20.5238618,
-    long: -100.7781506
+    country: 'Mexico', latitude: 20.5238618,
+    longitude: -100.7781506
   },
   {
     street1: 'Av.5 De Febrero: 110 Bis', street2: 'Col. Ninos Heroes', zipcode: '76010',
     city: 'Queretaro',
     state: 'Queretaro',
-    country: 'Mexico', lat: 20.583446,
-    long: -100.408538
+    country: 'Mexico', latitude: 20.583446,
+    longitude: -100.408538
   },
   {
     street1: 'Av.5 De Febrero : 110', street2: 'Col. Ninos Heroes', zipcode: '76010',
     city: 'Queretaro',
     state: 'Queretaro',
-    country: 'Mexico', lat: 20.584956,
-    long: -100.409774
+    country: 'Mexico', latitude: 20.584956,
+    longitude: -100.409774
   },
   {
     street1: 'KM. 11', street2: 'Carretera Queretaro-San Luis Potosi',
     zipcode: '76100',
     city: 'Queretaro',
     state: 'Queretaro',
-    country: 'Mexico', lat: 20.66294,
-    long: -100.431745
+    country: 'Mexico', latitude: 20.66294,
+    longitude: -100.431745
   },
   {
     street1: 'Anillo Vial II',
     street2: 'Fray Junipero Serra : 1500 - A', zipcode: '76140',
     city: 'Queretaro',
     state: 'Queretaro',
-    country: 'Mexico', lat: 20.620439,
-    long: -100.38394
+    country: 'Mexico', latitude: 20.620439,
+    longitude: -100.38394
   },
   {
     street1: 'ANILLO VIAL II',
     street2: 'FRAY JUNIPERO SERRA : 1500', zipcode: '76140',
     city: 'Queretaro',
     state: 'Queretaro',
-    country: 'Mexico', lat: 20.619217,
-    long: -100.383278
+    country: 'Mexico', latitude: 20.619217,
+    longitude: -100.383278
   },
   {
     street1: 'Carreta San Luis-Queretaro 10685',
@@ -218,8 +218,8 @@ mexico_addresses = [
     zipcode: '76127',
     city: 'Queretaro',
     state: 'Queretaro',
-    country: 'Mexico', lat: 20.662674,
-    long: -100.433165
+    country: 'Mexico', latitude: 20.662674,
+    longitude: -100.433165
   },
   {
     street1: 'Santa Teresa 502 Int. A',
@@ -227,16 +227,16 @@ mexico_addresses = [
     zipcode: '76226',
     city: 'Queretaro',
     state: 'Queretaro',
-    country: 'Mexico', lat: 20.691609,
-    long: -100.445619
+    country: 'Mexico', latitude: 20.691609,
+    longitude: -100.445619
   },
   {
     street1: 'No. 52 Hernandez Macia',
     zipcode: '37700',
     city: 'San Miguel de Allende',
     state: 'Guanajuato',
-    country: 'Mexico', lat: 20.9163139,
-    long: -100.7451721
+    country: 'Mexico', latitude: 20.9163139,
+    longitude: -100.7451721
   }
 ]
 
@@ -264,8 +264,8 @@ puts 'Creating users'
     state: addr.state_abbr,
     country: addr.country,
     zipcode: addr.zip,
-    lat: addr.latitude,
-    long: addr.longitude
+    latitude: addr.latitude,
+    longitude: addr.longitude
   )
   user = Faker::Name.unique
   User.create(
