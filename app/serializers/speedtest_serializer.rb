@@ -1,3 +1,5 @@
 class SpeedtestSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :latency, :download, :upload, :connectiontype, :connectionprovider, :testprovider, :resulturl,
+             :resultimage
+  has_one :visit
 end
