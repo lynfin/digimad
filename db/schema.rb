@@ -23,8 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_09_185842) do
     t.string "country"
     t.string "region"
     t.string "zipcode"
-    t.decimal "lat"
-    t.decimal "long"
+    t.decimal "latitude"
+    t.decimal "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

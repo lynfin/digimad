@@ -5,6 +5,7 @@ class CreateSpeedtests < ActiveRecord::Migration[7.0]
       t.numeric :download
       t.numeric :upload
       t.string :connectiontype
+      t.string :connectionprovider
       t.string :testprovider
       t.string :resulturl
       t.string :resultimage
