@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :find_user, only: %i[show update destroy]
 
   def index
-    render json: User.order(:name), status: :ok
+    render json: User.order(:username), status: :ok
   end
 
   def show

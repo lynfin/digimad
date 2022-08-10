@@ -2,7 +2,7 @@ class SpeedtestsController < ApplicationController
   before_action :find_speedtest, only: %i[show update destroy]
 
   def index
-    render json: Speedtest.order(:name), status: :ok
+    render json: Speedtest.order(:updated_at), status: :ok
   end
 
   def show

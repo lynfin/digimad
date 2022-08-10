@@ -2,7 +2,7 @@ class VisitsController < ApplicationController
   before_action :find_visit, only: %i[show update destroy]
 
   def index
-    render json: Visit.order(:name), status: :ok
+    render json: Visit.order(:start), status: :ok
   end
 
   def show
