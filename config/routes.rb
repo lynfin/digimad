@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :users, :favorites, :destinations, :speedtests, :addresses
 
   get 'destinations/summarize/:id', to: 'destinations#summarize'
-  get 'summary', to: 'destinations#fullsummary'
+  get 'dest_summary', to: 'destinations#fullsummary'
+  get 'dest_maximums', to: 'destinations#maxsummary'
 
   get '*path',
       to: 'fallback#index',

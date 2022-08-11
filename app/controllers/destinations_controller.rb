@@ -9,6 +9,10 @@ class DestinationsController < ApplicationController
     render json: Destination.order(:name), each_serializer: DestinationWithTestSummarySerializer, status: :ok
   end
 
+  def maxsummary
+    render json: Destination.order(:name), each_serializer: DestinationMaximumTestsSerializer, status: :ok
+  end
+
   def summarize
     render json: @destination, serializer: DestinationWithTestSummarySerializer, status: :ok
   end

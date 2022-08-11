@@ -11,6 +11,9 @@ class Destination < ApplicationRecord
             inclusion: { in: %w[hotel other_accommodation restaurant public_space],
                          message: '%<value>s must be hotel | other_accommodation | restaurant | public_space' }
 
+  #######################################
+  # COME BACK AND DRY THIS UP
+  #######################################
   def average_download_rates
     !speedtests.empty? ? speedtests.group(:connectiontype).average(:download) : 0
   end
@@ -81,5 +84,33 @@ class Destination < ApplicationRecord
 
   def total_tests
     speedtests.count
+  end
+
+  # CELLULAR SPECIFIC
+  def maximum_cellular_download_rates
+    celltests = speedtests.where(connectiontype: 'cellular')
+    !celltests.empty? ? celltests.group(:connectionprovider).maximum(:download) : 0
+  end
+
+  def maximum_cellular_upload_rates
+    celltests = speedtests.where(connectiontype: 'cellular')
+    !celltests.empty? ? celltests.group(:connectionprovider).maximum(:upload) : 0
+  end
+
+  def maximum_cellular_latency_rates
+    celltests = speedtests.where(connectiontype: 'cellular')
+    !celltests.empty? ? celltests.group(:connectionprovider).maximum(:latency) : 0
+  end
+
+  def maximum_cellular_rates
+    rate_values = {}
+    rate_values['download'] = maximum_cellular_download_rates
+    rate_values['upload'] = maximum_cellular_upload_rates
+    rate_values['latency'] = maximum_cellular_latency_rates
+    rate_values
+  end
+
+  def provider_fastest_cellular_download
+    maximum_cellular_download_rates.max_by { |_k, v| v }
   end
 end
