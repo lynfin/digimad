@@ -9,105 +9,86 @@ mexico_hotels = [
   {
     name: 'Holiday Inn Express Cabo San Lucas',
     desc: 'holiday-inn-express',
-    category: 'hotel',
+    category: 'hotel', image: 'https://ihg.scene7.com/is/image/ihg/holiday-inn-express-cabo-san-lucas-4061083978-16x9?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/cabo-san-lucas/sjdsl/hoteldetail'
 
   },
   {
     name: 'Holiday Inn Express Veracruz Boca del Rio',
     desc: 'holiday-inn-express',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-express-boca-del-rio-3998658643-16x9?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/boca-del-rio/verpp/hoteldetail'
 
   },
   {
     name: 'Holiday Inn Veracruz Boca del Rio',
     desc: 'holiday-inn',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-boca-del-rio-3998314571-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinn/hotels/us/en/boca-del-rio/vcrmx/hoteldetail'
-
-  },
-  {
-    name: 'Hotel Indigo Veracruz Boca Del Rio',
-    desc: 'hotel-indigo',
-    category: 'hotel',
-    website: 'https://www.ihg.com/hotelindigo/hotels/us/en/boca-del-rio/verin/hoteldetail'
 
   },
   {
     name: 'Holiday Inn Veracruz Centro Historico',
     desc: 'holiday-inn',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-veracruz-3968729075-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinn/hotels/us/en/veracruz/vcrdt/hoteldetail'
 
   },
-  {
-    name: 'Holiday Inn Express & Suites Celaya',
-    desc: 'holiday-inn-express',
-    category: 'hotel',
-    website: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/celaya/bjxce/hoteldetail'
 
-  },
   {
     name: 'Candlewood Suites Celaya',
     desc: 'candlewood-suites',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/candlewood-suites-celaya-5114360258-2x1?wid=2880&hei=1440&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
     website: 'https://www.ihg.com/candlewood/hotels/us/en/celaya/bjxca/hoteldetail'
 
   },
-  {
-    name: 'Holiday Inn Express & Suites Queretaro ',
-    desc: 'holiday-inn-express',
-    category: 'hotel',
-    website: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/queretaro/mqerg/hoteldetail'
 
-  },
   {
     name: 'Holiday Inn Queretaro-Centro Historico',
     desc: 'holiday-inn',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6976573426-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqemx/hoteldetail'
 
   },
   {
     name: 'Holiday Inn Queretaro Zona Krystal',
     desc: 'holiday-inn',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6201528258-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqebc/hoteldetail'
 
   },
   {
     name: 'Holiday Inn Queretaro Zona Diamante',
     desc: 'holiday-inn',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6225228617-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqeap/hoteldetail'
 
   },
   {
     name: 'Crowne Plaza Queretaro',
     desc: 'crowne-plaza',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/crowne-plaza-queretaro-3252687880-3x2',
     website: 'https://www.ihg.com/crowneplaza/hotels/us/en/queretaro/mqecc/hoteldetail'
 
   },
   {
     name: 'Staybridge Suites Queretaro',
     desc: 'staybridge-suites',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/staybridge-suites-queretaro-6072304701-2x1?hei=512&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
     website: 'https://www.ihg.com/staybridge/hotels/us/en/queretaro/mqesb/hoteldetail'
 
   },
   {
     name: 'Candlewood Suites Queretaro Juriquilla',
     desc: 'candlewood-suites',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/candlewood-suites-queretaro-4815784940-2x1?wid=2880&hei=1440&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
     website: 'https://www.ihg.com/candlewood/hotels/us/en/juriquilla/qroja/hoteldetail'
 
   },
   {
     name: 'Mr & Mrs Smith Casa No Name',
     desc: 'mr-and-mrs-smith',
-    category: 'hotel',
+    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/smith-san-miguel-de-allende-6638616690-2x1',
     website: 'https://www.ihg.com/mrandmrssmith/hotels/us/en/san-miguel-de-allende/bjxsd/hoteldetail'
 
   }
@@ -140,15 +121,7 @@ mexico_addresses = [
     country: 'Mexico', latitude: 19.141812,
     longitude: -96.10334
   },
-  {
-    street1: 'BLVD. ADOLFO RUIZ CORTINES :3533',
-    street2: 'FRACC. LAS AMERICAS',
-    city: 'BOCA DEL RIO',
-    zipcode: '94298',
-    state: 'Veracruz',
-    country: 'Mexico', latitude: 19.142938,
-    longitude: -96.104236
-  },
+
   {
     street1: 'Calle Morelos 225',
     street2: 'Col. Centro',
@@ -158,15 +131,7 @@ mexico_addresses = [
     country: 'Mexico', latitude: 19.201983,
     longitude: -96.138893
   },
-  {
-    street1: 'Eje Nor-Oriente Luis Donaldo Colosio 285',
-    street2: 'Col. Las Delicias',
-    city: 'Celaya',
-    zipcode: '38080',
-    state: 'Guanajuato',
-    country: 'Mexico', latitude: 20.51677,
-    longitude: -100.779269
-  },
+
   {
     street1: 'Av. Eje Nor-Oriente 215, Manzana 177',
     street2: 'Casi esq. con Ribera del Campestre', city: 'Celaya', zipcode:  '38080',
@@ -174,13 +139,7 @@ mexico_addresses = [
     country: 'Mexico', latitude: 20.5238618,
     longitude: -100.7781506
   },
-  {
-    street1: 'Av.5 De Febrero: 110 Bis', street2: 'Col. Ninos Heroes', zipcode: '76010',
-    city: 'Queretaro',
-    state: 'Queretaro',
-    country: 'Mexico', latitude: 20.583446,
-    longitude: -100.408538
-  },
+
   {
     street1: 'Av.5 De Febrero : 110', street2: 'Col. Ninos Heroes', zipcode: '76010',
     city: 'Queretaro',
@@ -289,6 +248,7 @@ mexico_hotels.each_with_index do |dest, index|
                      name: dest[:name],
                      desc: dest[:desc],
                      website: dest[:website],
+                     image: dest[:image],
                      address: Address.create(mexico_addresses[index]))
 end
 
