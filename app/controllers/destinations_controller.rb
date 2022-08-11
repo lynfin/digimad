@@ -1,8 +1,16 @@
 class DestinationsController < ApplicationController
-  before_action :find_destination, only: %i[show update destroy]
+  before_action :find_destination, only: %i[show update destroy summarize]
 
   def index
     render json: Destination.order(:name), status: :ok
+  end
+
+  def fullsummary
+    render json: Destination.order(:name), each_serializer: DestinationWithTestSummarySerializer, status: :ok
+  end
+
+  def summarize
+    render json: @destination, serializer: DestinationWithTestSummarySerializer, status: :ok
   end
 
   def show
