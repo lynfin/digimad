@@ -2,15 +2,11 @@ class DestinationsController < ApplicationController
   before_action :find_destination, only: %i[show update destroy summarize]
 
   def index
-    render json: Destination.order(:name), status: :ok
-  end
-
-  def fullsummary
-    render json: Destination.order(:name), each_serializer: DestinationWithTestSummarySerializer, status: :ok
-  end
-
-  def maxsummary
-    render json: Destination.order(:name), each_serializer: DestinationMaximumTestsSerializer, status: :ok
+    if params.key?(:full)
+      render json: Destination.order(:name), each_serializer: DestinationFullDataSerializer, status: :ok
+    else
+      render json: Destination.order(:name), status: :ok
+    end
   end
 
   def summarize
@@ -39,7 +35,7 @@ class DestinationsController < ApplicationController
   private
 
   def destination_params
-    params.permit(:category, :name, :desc, :phone, :image, :website, :address)
+    params.permit(:category, :name, :desc, :phone, :image, :website, :address, :full)
   end
 
   def find_destination

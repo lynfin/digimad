@@ -54,6 +54,15 @@ class Destination < ApplicationRecord
     rate_values
   end
 
+  def maximum_wifi
+    wifitests = speedtests.where(connectiontype: 'wifi')
+    !wifitests.empty? ? wifitests.maximum(:download) : 0
+  end
+
+  def most_recent_test
+    !speedtests.empty? ? speedtests.maximum(:updated_at) : nil
+  end
+
   def minimum_download_rates
     !speedtests.empty? ? speedtests.group(:connectiontype).minimum(:download) : 0
   end
@@ -84,6 +93,14 @@ class Destination < ApplicationRecord
 
   def total_tests
     speedtests.count
+  end
+
+  def total_visits
+    visits.count
+  end
+
+  def average_tech_rating
+    !visits.empty? ? visits.average(:tech_rating) : 0
   end
 
   # CELLULAR SPECIFIC
