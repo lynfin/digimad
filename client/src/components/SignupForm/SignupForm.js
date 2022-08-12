@@ -68,7 +68,7 @@ function SignupForm({ onLogin, onShowLogin }) {
         });
       } else {
         r.json().then((err) => {
-          setError([`Error ${err.status}: ${err.error}`]);
+          setError(err.errors);
         });
       }
     });

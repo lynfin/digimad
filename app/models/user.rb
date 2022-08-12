@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :visits
   has_many :destinations, through: :visits
   has_many :speedtests, through: :visits
-  belongs_to :address
+  belongs_to :address, optional: true
   validates :firstname, :lastname, presence: true
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true, email: true
