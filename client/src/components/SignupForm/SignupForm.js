@@ -17,27 +17,52 @@ import { Divider, Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
 function SignupForm({ onLogin, onShowLogin }) {
-  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPass, setConfirmPass] = useState('');
-  const [error, setError] = useState(null);
+  const [errors, setError] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const resultError = validateForm({ name, email, password, confirmPass });
+    const resultError = validateForm({
+      username,
+      email,
+      password,
+      confirmPass,
+    });
 
-    if (resultError !== null) {
+    if (resultError.length) {
       setError(resultError);
       return;
     }
-    setName('');
+
+    setIsLoading(true);
+    fetch('/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password, confirmPass, email }),
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        r.json().then((user) => onLogin(user));
+      } else {
+        r.json().then((err) => {
+          setError([`Error ${err.status}: ${err.error}`]);
+        });
+      }
+    });
+
+    setUsername('');
     setEmail('');
     setPassword('');
     setConfirmPass('');
-    setError(null);
-    setSuccess('Registration was submitted!');
+    // setError(null);
+    // setSuccess('Registration was submitted!');
   };
 
   const messageVariants = {
@@ -47,9 +72,9 @@ function SignupForm({ onLogin, onShowLogin }) {
 
   const formData = [
     {
-      label: 'Name',
-      value: name,
-      onChange: (e) => setName(e.target.value),
+      label: 'Username',
+      value: username,
+      onChange: (e) => setUsername(e.target.value),
       type: 'text',
     },
     {
@@ -101,16 +126,17 @@ function SignupForm({ onLogin, onShowLogin }) {
                 </FormSmallButton>
               </FormRow>
             </FormWrapper>
-            {error && (
-              <FormMessage
-                variants={messageVariants}
-                initial='hidden'
-                animate='animate'
-                error
-              >
-                {error}
-              </FormMessage>
-            )}
+            {errors &&
+              errors.map((err) => (
+                <FormMessage
+                  key={err}
+                  variants={messageVariants}
+                  initial='hidden'
+                  animate='animate'
+                >
+                  {err}
+                </FormMessage>
+              ))}
             {success && (
               <FormMessage
                 variants={messageVariants}

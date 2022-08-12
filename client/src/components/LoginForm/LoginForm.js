@@ -42,7 +42,6 @@ function LoginForm({ onLogin, onShowLogin }) {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        console.log('Thinking it was ok');
         r.json().then((user) => onLogin(user));
       } else {
         r.json().then((err) => {
