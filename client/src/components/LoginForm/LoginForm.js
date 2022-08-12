@@ -19,17 +19,35 @@ import validateForm from './validateForm';
 function LoginForm({ onLogin, onShowLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(null);
+  const [errors, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const resultError = validateForm({ username, password });
 
-    if (resultError !== null) {
+    if (resultError.length) {
       setError(resultError);
       return;
     }
+
+    setIsLoading(true);
+    fetch('/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        r.json().then((user) => onLogin(user));
+      } else {
+        r.json().then((err) => setError(err.errors));
+      }
+    });
+
     setUsername('');
     setPassword('');
     setError(null);
@@ -74,7 +92,10 @@ function LoginForm({ onLogin, onShowLogin }) {
                 </FormInputRow>
               ))}
 
-              <FormButton type='submit'>Submit</FormButton>
+              <FormButton type='submit'>
+                {' '}
+                {isLoading ? 'Loading...' : 'Login'}
+              </FormButton>
               <Divider />
               <FormRow>
                 <FormSubTitle>
@@ -85,16 +106,17 @@ function LoginForm({ onLogin, onShowLogin }) {
                 </FormSmallButton>
               </FormRow>
             </FormWrapper>
-            {error && (
-              <FormMessage
-                variants={messageVariants}
-                initial='hidden'
-                animate='animate'
-                error
-              >
-                {error}
-              </FormMessage>
-            )}
+            {errors &&
+              errors.map((err) => (
+                <FormMessage
+                  key={err}
+                  variants={messageVariants}
+                  initial='hidden'
+                  animate='animate'
+                >
+                  {err}
+                </FormMessage>
+              ))}
             {success && (
               <FormMessage
                 variants={messageVariants}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import SignupForm from '../components/SignupForm/SignupForm';
 import LoginForm from '../components/LoginForm/LoginForm';
-import { Heading, Container, Button2 } from '../globalStyles';
+import { Container } from '../globalStyles';
 
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);

@@ -1,13 +1,13 @@
 export default function validateForm({ username, password }) {
+  let errors = [];
   if (!username.trim()) {
-    return 'Username required';
+    errors.push('Username required');
   }
 
   if (!password) {
-    return 'Password is required';
+    errors.push('Password is required');
   } else if (password.length < 6) {
-    return 'Password needs to be 6 characters or more';
+    errors.push('Password needs to be 6 characters or more');
   }
-
-  return null;
+  return errors;
 }
