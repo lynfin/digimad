@@ -10,8 +10,10 @@ import {
   FormMessage,
   FormButton,
   FormTitle,
+  FormSubTitle,
+  FormSmallButton,
 } from './FormStyles';
-import { Container } from '../../globalStyles';
+import { Divider, Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
 const LoginForm = () => {
@@ -73,6 +75,13 @@ const LoginForm = () => {
               ))}
 
               <FormButton type='submit'>Submit</FormButton>
+              <Divider />
+              <FormRow>
+                <FormSubTitle>
+                  Don't have an account?&nbsp;&nbsp;&nbsp;
+                </FormSubTitle>
+                <FormSmallButton>Sign Up</FormSmallButton>
+              </FormRow>
             </FormWrapper>
             {error && (
               <FormMessage

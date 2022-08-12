@@ -15,6 +15,13 @@ export const FormTitle = styled.h1`
   font-weight: 600;
 `;
 
+export const FormSubTitle = styled.h3`
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  font-weight: 300;
+`;
+
 export const FormContainer = styled.div`
   display: flex;
 `;
@@ -117,6 +124,28 @@ export const FormButton = styled.button`
   /* color: #fff; */
   outline: none;
   width: 100%;
+  font-size: 1.4rem;
+  padding: 5px 15px;
+  border: 2px solid black;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    color: white;
+    transition: background-color 0.4s ease-in;
+    background-color: black;
+  }
+`;
+
+export const FormSmallButton = styled.button`
+  border-radius: 4px;
+  background: none;
+  margin-top: 1.5rem;
+  white-space: nowrap;
+  /* color: #fff; */
+  outline: none;
+  width: 40%;
   font-size: 1.4rem;
   padding: 5px 15px;
   border: 2px solid black;

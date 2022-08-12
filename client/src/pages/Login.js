@@ -11,7 +11,6 @@ function Login({ onLogin }) {
       {showLogin ? (
         <>
           <LoginForm onLogin={onLogin} />
-
           <Heading>Don't have an account? &nbsp;</Heading>
           <Button2 onClick={() => setShowLogin(false)}>Sign Up</Button2>
         </>

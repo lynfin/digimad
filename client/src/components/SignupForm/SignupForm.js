@@ -10,8 +10,10 @@ import {
   FormMessage,
   FormButton,
   FormTitle,
+  FormSubTitle,
+  FormSmallButton,
 } from './FormStyles';
-import { Container } from '../../globalStyles';
+import { Divider, Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
 const SignupForm = () => {
@@ -35,7 +37,7 @@ const SignupForm = () => {
     setPassword('');
     setConfirmPass('');
     setError(null);
-    setSuccess('Application was submitted!');
+    setSuccess('Registration was submitted!');
   };
 
   const messageVariants = {
@@ -89,6 +91,13 @@ const SignupForm = () => {
               ))}
 
               <FormButton type='submit'>Signup</FormButton>
+              <Divider />
+              <FormRow>
+                <FormSubTitle>
+                  Already have an account?&nbsp;&nbsp;&nbsp;
+                </FormSubTitle>
+                <FormSmallButton>Log In</FormSmallButton>
+              </FormRow>
             </FormWrapper>
             {error && (
               <FormMessage

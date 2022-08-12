@@ -103,7 +103,7 @@ export const Column = styled.div`
 
 export const Divider = styled.hr`
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 4px solid #ccc;
   margin: 16px 0;
 `;
 
