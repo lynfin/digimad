@@ -1,12 +1,20 @@
 export default function validateForm({
   username,
+  firstname,
+  lastname,
   email,
   password,
-  confirmPass,
+  password_confirmation,
 }) {
   let errors = [];
   if (!username.trim()) {
     errors.push('Username required');
+  }
+  if (!firstname.trim()) {
+    errors.push('First name required');
+  }
+  if (!lastname.trim()) {
+    errors.push('Last name required');
   }
 
   const regex =
@@ -22,9 +30,9 @@ export default function validateForm({
     errors.push('Password needs to be 6 characters or more');
   }
 
-  if (!confirmPass) {
-    errors.push('Enter Confirm password is required');
-  } else if (confirmPass !== password) {
+  if (!password_confirmation) {
+    errors.push('Entering password confirmation is required');
+  } else if (password_confirmation !== password) {
     errors.push('Passwords do not match');
   }
   return errors;

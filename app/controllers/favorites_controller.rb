@@ -1,4 +1,5 @@
 class FavoritesController < ApplicationController
+  skip_before_action :authorize
   before_action :find_favorite, only: %i[show update destroy]
 
   def index

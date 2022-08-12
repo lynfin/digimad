@@ -9,4 +9,6 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true, email: true
   validates :image, http_url: true, allow_nil: true
+
+  has_secure_password
 end

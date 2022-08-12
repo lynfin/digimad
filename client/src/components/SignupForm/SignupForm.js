@@ -18,9 +18,11 @@ import validateForm from './validateForm';
 
 function SignupForm({ onLogin, onShowLogin }) {
   const [username, setUsername] = useState('');
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPass, setConfirmPass] = useState('');
+  const [password_confirmation, setPasswordConfirmation] = useState('');
   const [errors, setError] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(null);
@@ -29,9 +31,11 @@ function SignupForm({ onLogin, onShowLogin }) {
     e.preventDefault();
     const resultError = validateForm({
       username,
+      firstname,
+      lastname,
       email,
       password,
-      confirmPass,
+      password_confirmation,
     });
 
     if (resultError.length) {
@@ -45,7 +49,14 @@ function SignupForm({ onLogin, onShowLogin }) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ username, password, confirmPass, email }),
+      body: JSON.stringify({
+        username,
+        firstname,
+        lastname,
+        password,
+        password_confirmation,
+        email,
+      }),
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
@@ -58,9 +69,11 @@ function SignupForm({ onLogin, onShowLogin }) {
     });
 
     setUsername('');
+    setFirstname('');
+    setLastname('');
     setEmail('');
     setPassword('');
-    setConfirmPass('');
+    setPasswordConfirmation('');
     // setError(null);
     // setSuccess('Registration was submitted!');
   };
@@ -71,6 +84,18 @@ function SignupForm({ onLogin, onShowLogin }) {
   };
 
   const formData = [
+    {
+      label: 'First Name',
+      value: firstname,
+      onChange: (e) => setFirstname(e.target.value),
+      type: 'text',
+    },
+    {
+      label: 'Last Name',
+      value: lastname,
+      onChange: (e) => setLastname(e.target.value),
+      type: 'text',
+    },
     {
       label: 'Username',
       value: username,
@@ -91,8 +116,8 @@ function SignupForm({ onLogin, onShowLogin }) {
     },
     {
       label: 'Confirm Password',
-      value: confirmPass,
-      onChange: (e) => setConfirmPass(e.target.value),
+      value: password_confirmation,
+      onChange: (e) => setPasswordConfirmation(e.target.value),
       type: 'password',
     },
   ];

@@ -1,4 +1,5 @@
 class VisitsController < ApplicationController
+  skip_before_action :authorize
   before_action :find_visit, only: %i[show update destroy]
 
   def index
