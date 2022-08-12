@@ -46,7 +46,7 @@ function LoginForm({ onLogin, onShowLogin }) {
         r.json().then((user) => onLogin(user));
       } else {
         r.json().then((err) => {
-          setError([`ERROR: ${err.status}: ${err.error}`]);
+          setError([`Error ${err.status}: ${err.error}`]);
         });
       }
     });
