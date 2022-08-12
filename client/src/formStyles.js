@@ -20,6 +20,7 @@ export const FormSubTitle = styled.h3`
   font-size: 1.8rem;
   line-height: 1.1;
   font-weight: 300;
+  color: #f00e0e;
 `;
 
 export const FormContainer = styled.div`

@@ -12,7 +12,7 @@ import {
   FormTitle,
   FormSubTitle,
   FormSmallButton,
-} from './FormStyles';
+} from '../../formStyles';
 import { Divider, Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
