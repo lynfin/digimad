@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :visits
   resources :users, :favorites, :destinations, :speedtests, :addresses
 
+  get 'destinations/summarize/:id', to: 'destinations#summarize'
+
   get '*path',
       to: 'fallback#index',
       constraints: ->(req) { !req.xhr? && req.format.html? }

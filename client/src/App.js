@@ -1,9 +1,12 @@
-// client/src/components/App.js
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [destinations, setDestinations] = useState([]);
+  const [errors, setErrors] = useState(false);
 
   useEffect(() => {
     fetch('/hello')
@@ -11,18 +14,30 @@ function App() {
       .then((data) => setCount(data.count));
   }, []);
 
+  useEffect(() => {
+    fetch('/destinations').then((res) => {
+      if (res.ok) {
+        res.json().then(setDestinations);
+      } else {
+        res.json().then((data) => setErrors(data.error));
+      }
+    });
+  }, []);
+
+  if (errors) return <h1>{errors}</h1>;
   return (
     <BrowserRouter>
-      <div className='App'>
-        <Switch>
-          <Route path='/testing'>
-            <h1>Test Route</h1>
-          </Route>
-          <Route path='/'>
-            <h1>Page Count: {count}</h1>
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path='/testing'>
+          <h1>Test Route</h1>
+        </Route>
+        <Route exact path='/login'>
+          <Login />
+        </Route>
+        <Route exact path='/'>
+          <Home destinations={destinations} />
+        </Route>
+      </Switch>
     </BrowserRouter>
   );
 }
