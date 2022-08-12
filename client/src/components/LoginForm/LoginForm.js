@@ -16,7 +16,7 @@ import {
 import { Divider, Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
-const LoginForm = () => {
+function LoginForm({ onLogin, onShowLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
@@ -80,7 +80,9 @@ const LoginForm = () => {
                 <FormSubTitle>
                   Don't have an account?&nbsp;&nbsp;&nbsp;
                 </FormSubTitle>
-                <FormSmallButton>Sign Up</FormSmallButton>
+                <FormSmallButton onClick={() => onShowLogin(false)}>
+                  Sign Up
+                </FormSmallButton>
               </FormRow>
             </FormWrapper>
             {error && (
@@ -107,6 +109,6 @@ const LoginForm = () => {
       </Container>
     </FormSection>
   );
-};
+}
 
 export default LoginForm;

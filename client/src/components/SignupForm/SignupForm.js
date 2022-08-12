@@ -16,7 +16,7 @@ import {
 import { Divider, Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
-const SignupForm = () => {
+function SignupForm({ onLogin, onShowLogin }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -96,7 +96,9 @@ const SignupForm = () => {
                 <FormSubTitle>
                   Already have an account?&nbsp;&nbsp;&nbsp;
                 </FormSubTitle>
-                <FormSmallButton>Log In</FormSmallButton>
+                <FormSmallButton onClick={() => onShowLogin(true)}>
+                  Log In
+                </FormSmallButton>
               </FormRow>
             </FormWrapper>
             {error && (
@@ -123,6 +125,6 @@ const SignupForm = () => {
       </Container>
     </FormSection>
   );
-};
+}
 
 export default SignupForm;

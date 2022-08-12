@@ -10,13 +10,13 @@ function Login({ onLogin }) {
     <Container>
       {showLogin ? (
         <>
-          <LoginForm onLogin={onLogin} />
+          <LoginForm onLogin={onLogin} onShowLogin={setShowLogin} />
           <Heading>Don't have an account? &nbsp;</Heading>
           <Button2 onClick={() => setShowLogin(false)}>Sign Up</Button2>
         </>
       ) : (
         <>
-          <SignupForm onLogin={onLogin} />
+          <SignupForm onLogin={onLogin} onShowLogin={setShowLogin} />
           <Heading>Already have an account? &nbsp;</Heading>
           <Button2 onClick={() => setShowLogin(true)}>Log In</Button2>
         </>
