@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import {
   FormColumn,
   FormWrapper,
@@ -22,6 +23,7 @@ function LoginForm({ onLogin, onShowLogin }) {
   const [errors, setError] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(null);
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -42,7 +44,10 @@ function LoginForm({ onLogin, onShowLogin }) {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
+        r.json().then((user) => {
+          onLogin(user);
+          history.push('/');
+        });
       } else {
         r.json().then((err) => {
           setError([`Error ${err.status}: ${err.error}`]);

@@ -16,7 +16,8 @@ function App() {
       }
     });
   }, []);
-
+  console.log('user is ');
+  console.log(user);
   useEffect(() => {
     fetch('/destinations').then((res) => {
       if (res.ok) {
@@ -34,7 +35,7 @@ function App() {
         <Route path='/testing'>
           <h1>Test Route</h1>
         </Route>
-        <Route exact path='/login'>
+        <Route exact path='/userlogin'>
           <Login onLogin={setUser} />
         </Route>
         <Route exact path='/'>
