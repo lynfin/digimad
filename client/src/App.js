@@ -4,15 +4,17 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 
 function App() {
-  const [count, setCount] = useState(0);
   const [destinations, setDestinations] = useState([]);
   const [errors, setErrors] = useState(false);
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch('/hello')
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
+    // auto-login
+    fetch('/me').then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
   }, []);
 
   useEffect(() => {
@@ -33,7 +35,7 @@ function App() {
           <h1>Test Route</h1>
         </Route>
         <Route exact path='/login'>
-          <Login />
+          <Login onLogin={setUser} />
         </Route>
         <Route exact path='/'>
           <Home destinations={destinations} />
