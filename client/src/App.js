@@ -7,6 +7,7 @@ function App() {
   const [count, setCount] = useState(0);
   const [destinations, setDestinations] = useState([]);
   const [errors, setErrors] = useState(false);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     fetch('/hello')
