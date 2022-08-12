@@ -19,7 +19,7 @@ import validateForm from './validateForm';
 function LoginForm({ onLogin, onShowLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [errors, setError] = useState(null);
+  const [errors, setError] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(null);
 
@@ -42,16 +42,19 @@ function LoginForm({ onLogin, onShowLogin }) {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
+        console.log('Thinking it was ok');
         r.json().then((user) => onLogin(user));
       } else {
-        r.json().then((err) => setError(err.errors));
+        r.json().then((err) => {
+          setError([`ERROR: ${err.status}: ${err.error}`]);
+        });
       }
     });
 
     setUsername('');
     setPassword('');
-    setError(null);
-    setSuccess('Logged in!');
+    //setError(null);
+    //setSuccess('Logged in!');
   };
 
   const messageVariants = {
