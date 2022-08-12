@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Login from './pages/Login';
+
 function App() {
   const [count, setCount] = useState(0);
   const [destinations, setDestinations] = useState([]);
@@ -29,7 +31,10 @@ function App() {
         <Route path='/testing'>
           <h1>Test Route</h1>
         </Route>
-        <Route path='/'>
+        <Route exact path='/login'>
+          <Login />
+        </Route>
+        <Route exact path='/'>
           <Home destinations={destinations} />
         </Route>
       </Switch>
