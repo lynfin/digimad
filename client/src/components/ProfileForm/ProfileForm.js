@@ -17,7 +17,7 @@ import {
 import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
-function ProfileForm({ user }) {
+function ProfileForm({ user, onLogout }) {
   const [firstname, setFirstname] = useState(user.firstname);
   const [lastname, setLastname] = useState(user.lastname);
   const [email, setEmail] = useState(user.email);
@@ -39,7 +39,22 @@ function ProfileForm({ user }) {
     // setError(null);
     // setSuccess('Registration was submitted!');
   };
-
+  const handleLogout = () => {
+    fetch('/logout', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        onLogout(null);
+        history.push('/');
+      } else {
+        setError([`Logout failed`]);
+      }
+    });
+  };
   const messageVariants = {
     hidden: { y: 30, opacity: 0 },
     animate: { y: 0, opacity: 1, transition: { delay: 0.2, duration: 0.4 } },
@@ -83,6 +98,7 @@ function ProfileForm({ user }) {
       <Container>
         <FormRow>
           <FormColumn small>
+            <FormSmallButton onClick={handleLogout}>Logout</FormSmallButton>
             <FormTitleGrouped>{user.username}</FormTitleGrouped>
             <FormSubTitle>Profile</FormSubTitle>
             <FormWrapper onSubmit={handleSubmit}>
@@ -97,10 +113,13 @@ function ProfileForm({ user }) {
                   />
                 </FormInputRow>
               ))}
-
-              <FormButton type='submit'>
-                {isLoading ? 'Loading...' : 'Update'}
-              </FormButton>
+              <FormRow>
+                <FormColumn>
+                  <FormSmallButton type='submit'>
+                    {isLoading ? 'Loading...' : 'Update'}
+                  </FormSmallButton>
+                </FormColumn>
+              </FormRow>
             </FormWrapper>
             {errors &&
               errors.map((err) => (

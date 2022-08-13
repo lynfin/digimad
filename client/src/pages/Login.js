@@ -8,7 +8,11 @@ function Login({ onLogin, user }) {
   console.log(user);
   return (
     <Container>
-      {user ? <ProfileForm user={user} /> : <LoginMgr onLogin={onLogin} />}
+      {user ? (
+        <ProfileForm user={user} onLogout={onLogin} />
+      ) : (
+        <LoginMgr onLogin={onLogin} />
+      )}
     </Container>
   );
 }
