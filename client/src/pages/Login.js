@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import SignupForm from '../components/SignupForm/SignupForm';
-import LoginForm from '../components/LoginForm/LoginForm';
+import LoginMgr from '../components/LoginMgr/LoginMgr';
+import ProfileForm from '../components/ProfileForm/ProfileForm';
 import { Container } from '../globalStyles';
 
-function Login({ onLogin }) {
-  const [showLogin, setShowLogin] = useState(true);
-
+function Login({ onLogin, user }) {
+  console.log('In Login - user is ');
+  console.log(user);
   return (
     <Container>
-      {showLogin ? (
+      {user ? (
         <>
-          <LoginForm onLogin={onLogin} onShowLogin={setShowLogin} />
+          <ProfileForm user={user} />
         </>
       ) : (
         <>
-          <SignupForm onLogin={onLogin} onShowLogin={setShowLogin} />
+          <LoginMgr onLogin={onLogin} />
         </>
       )}
     </Container>

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import GlobalStyle from './globalStyles';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   const [destinations, setDestinations] = useState([]);
@@ -31,15 +33,14 @@ function App() {
   if (errors) return <h1>{errors}</h1>;
   return (
     <BrowserRouter>
+      <GlobalStyle />
+      <Navbar user={user} />
       <Switch>
-        <Route path='/testing'>
-          <h1>Test Route</h1>
-        </Route>
         <Route exact path='/userlogin'>
-          <Login onLogin={setUser} />
+          <Login onLogin={setUser} user={user} />
         </Route>
         <Route exact path='/'>
-          <Home destinations={destinations} />
+          <Home destinations={destinations} user={user} />
         </Route>
       </Switch>
     </BrowserRouter>
