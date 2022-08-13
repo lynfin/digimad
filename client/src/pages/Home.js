@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero/Hero';
 import ProfileForm from '../components/ProfileForm/ProfileForm';
 import Carousel from '../components/Carousel/Carousel';
+import { parseISO, format } from 'date-fns';
 
 function Home({ destinations, user }) {
   let mod = destinations.map((d) => {
@@ -62,8 +63,8 @@ function Home({ destinations, user }) {
       return {
         header: d.name,
         location: `${d.address.city}, ${d.address.country}`,
-        summary1: d.most_recent_test,
-        summary2: '',
+        summary1: format(parseISO(d.most_recent_test), 'MM/dd/yyyy'),
+        summary2: `${d.total_tests} tests`,
         image: d.image,
       };
     });
