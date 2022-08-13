@@ -18,8 +18,7 @@ function App() {
       }
     });
   }, []);
-  console.log('user is ');
-  console.log(user);
+
   useEffect(() => {
     fetch('/destinations').then((res) => {
       if (res.ok) {

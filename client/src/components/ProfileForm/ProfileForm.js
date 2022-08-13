@@ -9,10 +9,11 @@ import {
   FormLabel,
   FormInputRow,
   FormMessage,
-  FormButton,
   FormTitleGrouped,
   FormSubTitle,
   FormSmallButton,
+  FormImgWrapper,
+  FormAvatar,
 } from '../../formStyles';
 import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
@@ -22,15 +23,29 @@ function ProfileForm({ user, onUpdate }) {
   const [lastname, setLastname] = useState(user.lastname);
   const [email, setEmail] = useState(user.email);
   const [bio, setBio] = useState(user.bio);
+  const [image, setImage] = useState(user.image);
   const [password, setPassword] = useState('');
   const [password_confirmation, setPasswordConfirmation] = useState('');
   const [errors, setError] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(null);
   const history = useHistory();
-  console.log(user);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const resultError = validateForm({
+      firstname,
+      lastname,
+      email,
+      password,
+      password_confirmation,
+    });
+
+    if (resultError.length) {
+      setError(resultError);
+      return;
+    }
 
     fetch(`/update`, {
       method: 'PATCH',
@@ -41,7 +56,10 @@ function ProfileForm({ user, onUpdate }) {
         firstname,
         lastname,
         bio,
+        image,
         email,
+        password,
+        password_confirmation,
       }),
     }).then((r) => {
       if (r.ok) {
@@ -104,6 +122,13 @@ function ProfileForm({ user, onUpdate }) {
       placeholder: 'Tell us something about yourself',
     },
     {
+      label: 'Image',
+      value: image,
+      onChange: (e) => setImage(e.target.value),
+      type: 'text',
+      placeholder: 'Link to image or avatar',
+    },
+    {
       label: 'New Password',
       value: password,
       onChange: (e) => setPassword(e.target.value),
@@ -124,6 +149,9 @@ function ProfileForm({ user, onUpdate }) {
           <FormColumn small>
             <FormSmallButton onClick={handleLogout}>Logout</FormSmallButton>
             <FormTitleGrouped>{user.username}</FormTitleGrouped>
+            <FormImgWrapper>
+              <FormAvatar src={user.image}></FormAvatar>
+            </FormImgWrapper>
             <FormSubTitle>Profile</FormSubTitle>
             <FormWrapper onSubmit={handleSubmit}>
               {formData.map((el, index) => (
