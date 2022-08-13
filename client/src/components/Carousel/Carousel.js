@@ -5,14 +5,14 @@ import { Row, Heading, Section } from '../../globalStyles';
 import { ButtonContainer, ReviewSlider } from './CarouselStyles';
 import CarouselCard from '../CarouselCard/CarouselCard';
 
-function Carousel({ data }) {
+function Carousel({ data, title }) {
   const [sliderRef, setSliderRef] = useState(null);
 
   return (
     <Section margin='auto' maxWidth='1280px' padding='50px 70px' inverse>
       <Row justify='space-between' margin='1rem' wrap='wrap'>
         <Heading width='auto' inverse>
-          Destinations
+          {title}
         </Heading>
         <ButtonContainer>
           <IconContext.Provider value={{ size: '3rem', color: '#1d609c' }}>
