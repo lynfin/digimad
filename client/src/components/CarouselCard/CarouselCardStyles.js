@@ -18,7 +18,7 @@ export const ImageWrapper = styled.div`
   align-items: center;
   border-radius: 10px;
   outline: none;
-  height: 430px;
+  height: 330px;
 
   @media screen and (min-width: 440px) {
     border: 1px solid #bebebe;

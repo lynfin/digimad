@@ -7,7 +7,10 @@ function Home({ destinations, user }) {
   return (
     <>
       <Hero />
-      <Carousel data={destinations} />
+      <Carousel data={destinations} title='Best Wifi' />
+      <Carousel data={destinations} title='Best Cell Coverage' />
+      <Carousel data={destinations} title='Top Rated' />
+      <Carousel data={destinations} title='Recently Visited' />
     </>
   );
 }

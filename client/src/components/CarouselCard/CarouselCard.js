@@ -11,7 +11,12 @@ function CarouselCard({ el, index }) {
         {el.name}
       </TextWrapper>
       <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
-        {el.category}
+        {`${el.maximum_wifi} Mbps || ${parseFloat(
+          el.average_tech_rating
+        ).toFixed(2)} Average Rating`}
+      </TextWrapper>
+      <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
+        {`${el.address.city}, ${el.address.country}`}
       </TextWrapper>
       <CardButton>Details</CardButton>
     </ImageWrapper>
