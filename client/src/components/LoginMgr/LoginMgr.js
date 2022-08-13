@@ -9,13 +9,9 @@ function LoginMgr({ onLogin }) {
   return (
     <Container>
       {showLogin ? (
-        <>
-          <LoginForm onLogin={onLogin} onShowLogin={setShowLogin} />
-        </>
+        <LoginForm onLogin={onLogin} onShowLogin={setShowLogin} />
       ) : (
-        <>
-          <SignupForm onLogin={onLogin} onShowLogin={setShowLogin} />
-        </>
+        <SignupForm onLogin={onLogin} onShowLogin={setShowLogin} />
       )}
     </Container>
   );

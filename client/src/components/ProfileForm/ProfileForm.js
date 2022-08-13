@@ -65,13 +65,13 @@ function ProfileForm({ user }) {
       type: 'email',
     },
     {
-      label: 'Password',
+      label: 'New Password',
       value: password,
       onChange: (e) => setPassword(e.target.value),
       type: 'password',
     },
     {
-      label: 'Confirm Password',
+      label: 'Confirm New Password',
       value: password_confirmation,
       onChange: (e) => setPasswordConfirmation(e.target.value),
       type: 'password',
