@@ -260,34 +260,59 @@ cellular_providers = %w[sprint att verizon]
 test_providers = %w[speedtest speedcheck]
 User.all.each do |user|
   puts 'Setting up user ' + user.username + ' visits'
-  rand(5..10).times do
+  rand(1..5).times do
     startdate = Faker::Date.backward(days: 365)
-    connectiontype = connection_types.sample
-    connectionprovider = connectiontype == 'cellular' ? cellular_providers.sample : nil
-
-    speedtest_result = {
-      latency: rand(5..70),
-      download: rand(45..170),
-      upload: rand(15..80),
-      connectiontype: connectiontype,
-      connectionprovider: connectionprovider,
-      testprovider: test_providers.sample,
-      resulturl: Faker::Internet.url,
-      resultimage: 'https://source.unsplash.com/random/800x800/?img=1'
-    }
-    Visit.create(
-      start: startdate,
-      end: Faker::Date.between(from: startdate, to: Date.today),
-      user: user,
-      destination_id: Destination.ids.sample,
-      desc: Faker::GreekPhilosophers.quote,
-      tech_rating: rand(1..5),
-      tech_comment: 'tech comment',
-      visit_rating: rand(1..5),
-      visit_comment: 'visit comment',
-      speedtest: Speedtest.create(speedtest_result)
-    )
-    rand(5..10).times do
+    # connectiontype = connection_types.sample
+    # connectionprovider = connectiontype == 'cellular' ? cellular_providers.sample : nil
+    rand(12..20).times do
+      speedtest_result = {
+        latency: rand(5..70),
+        download: rand(45..170),
+        upload: rand(15..80),
+        connectiontype: 'wifi',
+        connectionprovider: nil,
+        testprovider: test_providers.sample,
+        resulturl: Faker::Internet.url,
+        resultimage: 'https://source.unsplash.com/random/800x800/?img=1'
+      }
+      Visit.create(
+        start: startdate,
+        end: Faker::Date.between(from: startdate, to: Date.today),
+        user: user,
+        destination_id: Destination.ids.sample,
+        desc: Faker::GreekPhilosophers.quote,
+        tech_rating: rand(1..5),
+        tech_comment: 'tech comment',
+        visit_rating: rand(1..5),
+        visit_comment: 'visit comment',
+        speedtest: Speedtest.create(speedtest_result)
+      )
+    end
+    rand(0..3).times do
+      speedtest_result = {
+        latency: rand(5..70),
+        download: rand(45..170),
+        upload: rand(15..80),
+        connectiontype: 'ethernet',
+        connectionprovider: nil,
+        testprovider: test_providers.sample,
+        resulturl: Faker::Internet.url,
+        resultimage: 'https://source.unsplash.com/random/800x800/?img=1'
+      }
+      Visit.create(
+        start: startdate,
+        end: Faker::Date.between(from: startdate, to: Date.today),
+        user: user,
+        destination_id: Destination.ids.sample,
+        desc: Faker::GreekPhilosophers.quote,
+        tech_rating: rand(1..5),
+        tech_comment: 'tech comment',
+        visit_rating: rand(1..5),
+        visit_comment: 'visit comment',
+        speedtest: Speedtest.create(speedtest_result)
+      )
+    end
+    rand(3..8).times do
       startdate = Faker::Date.backward(days: 365)
       connectiontype = 'cellular'
       connectionprovider = cellular_providers.sample

@@ -3,6 +3,7 @@ import { TextWrapper } from '../../globalStyles';
 import { ImageWrapper, CarouselImage, CardButton } from './CarouselCardStyles';
 
 function CarouselCard({ el, index }) {
+  console.log(el);
   return (
     <ImageWrapper key={index}>
       <CarouselImage src={el.image} />
