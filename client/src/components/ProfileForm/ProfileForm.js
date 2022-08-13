@@ -17,17 +17,18 @@ import {
 import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
-function ProfileForm({ user, onLogout }) {
+function ProfileForm({ user, onUpdate }) {
   const [firstname, setFirstname] = useState(user.firstname);
   const [lastname, setLastname] = useState(user.lastname);
   const [email, setEmail] = useState(user.email);
+  const [bio, setBio] = useState(user.bio);
   const [password, setPassword] = useState('');
   const [password_confirmation, setPasswordConfirmation] = useState('');
   const [errors, setError] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(null);
   const history = useHistory();
-
+  console.log(user);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -36,11 +37,16 @@ function ProfileForm({ user, onLogout }) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ firstname: firstname }),
+      body: JSON.stringify({
+        firstname,
+        lastname,
+        bio,
+        email,
+      }),
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => {
-          onLogout(user);
+          onUpdate(user);
           history.push('/');
         });
       } else {
@@ -59,7 +65,7 @@ function ProfileForm({ user, onLogout }) {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        onLogout(null);
+        onUpdate(null);
         history.push('/');
       } else {
         setError([`Logout failed`]);
@@ -91,6 +97,13 @@ function ProfileForm({ user, onLogout }) {
       type: 'email',
     },
     {
+      label: 'Bio',
+      value: bio,
+      onChange: (e) => setBio(e.target.value),
+      type: 'text',
+      placeholder: 'Tell us something about yourself',
+    },
+    {
       label: 'New Password',
       value: password,
       onChange: (e) => setPassword(e.target.value),
@@ -118,7 +131,11 @@ function ProfileForm({ user, onLogout }) {
                   <FormLabel>{el.label}</FormLabel>
                   <FormInput
                     type={el.type}
-                    placeholder={`Enter your ${el.label.toLocaleLowerCase()}`}
+                    placeholder={
+                      el.placeholder
+                        ? el.placeholder
+                        : `Enter your ${el.label.toLocaleLowerCase()}`
+                    }
                     value={el.value}
                     onChange={el.onChange}
                   />

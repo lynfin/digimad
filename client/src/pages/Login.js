@@ -9,7 +9,7 @@ function Login({ onLogin, user }) {
   return (
     <Container>
       {user ? (
-        <ProfileForm user={user} onLogout={onLogin} />
+        <ProfileForm user={user} onUpdate={onLogin} />
       ) : (
         <LoginMgr onLogin={onLogin} />
       )}
