@@ -8,7 +8,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :bio
       t.boolean :admin
       t.belongs_to :address
-      t.string :password
+      t.string :password_digest
       t.string :image
 
       t.timestamps

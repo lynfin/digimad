@@ -227,6 +227,12 @@ npm install --prefix client
 
 ## Server Start
 
+Run this command to start the Postgres service:
+
+```sh
+sudo service postgresql start
+```
+
 You can use the following commands to run the application:
 
 - `rails db:migrate db:seed`: migrate and seed the database (use `db:seed:replant` if this is not the first time running)

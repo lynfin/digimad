@@ -101,6 +101,12 @@ export const Column = styled.div`
   min-height: ${({ minHeight }) => (minHeight ? minHeight : 'auto')};
 `;
 
+export const Divider = styled.hr`
+  border: none;
+  border-bottom: 4px solid #ccc;
+  margin: 16px 0;
+`;
+
 export const Button = styled.button`
   border-radius: 4px;
   background: none;
@@ -136,5 +142,25 @@ export const Button = styled.button`
     color: black;
   }
 `;
+export const Button2 = styled.button`
+  border-radius: 4px;
+  background: none;
+  margin-top: 1.5rem;
+  white-space: nowrap;
+  /* color: #fff; */
+  outline: none;
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 5px 15px;
+  border: 2px solid black;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 
+  &:hover {
+    color: white;
+    transition: background-color 0.4s ease-in;
+    background-color: black;
+  }
+`;
 export default GlobalStyle;

@@ -234,6 +234,8 @@ puts 'Creating users'
     firstname: firstname,
     lastname: lastname,
     username: firstname[0] + lastname,
+    password: firstname[0] + lastname,
+    password_confirmation: firstname[0] + lastname,
     email: Faker::Internet.email(name: firstname[0] + lastname),
     bio: Faker::Quote.jack_handey,
     admin: false,

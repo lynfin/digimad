@@ -1,10 +1,12 @@
 # config/routes.rb
 Rails.application.routes.draw do
-  get '/hello', to: 'application#hello_world'
-
   resources :visits
-  resources :users, :favorites, :destinations, :speedtests, :addresses
-
+  resources :favorites, :destinations, :speedtests, :addresses
+  get '/me', to: 'users#show'
+  patch '/update', to: 'users#update'
+  post '/signup', to: 'users#create'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
   get 'destinations/summarize/:id', to: 'destinations#summarize'
 
   get '*path',

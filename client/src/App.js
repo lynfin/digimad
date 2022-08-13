@@ -2,16 +2,21 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import GlobalStyle from './globalStyles';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
-  const [count, setCount] = useState(0);
   const [destinations, setDestinations] = useState([]);
   const [errors, setErrors] = useState(false);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch('/hello')
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
+    // auto-login
+    fetch('/me').then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user));
+      }
+    });
   }, []);
 
   useEffect(() => {
@@ -27,15 +32,14 @@ function App() {
   if (errors) return <h1>{errors}</h1>;
   return (
     <BrowserRouter>
+      <GlobalStyle />
+      <Navbar user={user} />
       <Switch>
-        <Route path='/testing'>
-          <h1>Test Route</h1>
-        </Route>
-        <Route exact path='/login'>
-          <Login />
+        <Route exact path='/userlogin'>
+          <Login onLogin={setUser} user={user} />
         </Route>
         <Route exact path='/'>
-          <Home destinations={destinations} />
+          <Home destinations={destinations} user={user} />
         </Route>
       </Switch>
     </BrowserRouter>

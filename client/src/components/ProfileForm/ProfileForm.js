@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import {
   FormColumn,
@@ -9,19 +9,21 @@ import {
   FormLabel,
   FormInputRow,
   FormMessage,
-  FormButton,
-  FormTitle,
+  FormTitleGrouped,
   FormSubTitle,
   FormSmallButton,
+  FormImgWrapper,
+  FormAvatar,
 } from '../../formStyles';
-import { Divider, Container } from '../../globalStyles';
+import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
-function SignupForm({ onLogin, onShowLogin }) {
-  const [username, setUsername] = useState('');
-  const [firstname, setFirstname] = useState('');
-  const [lastname, setLastname] = useState('');
-  const [email, setEmail] = useState('');
+function ProfileForm({ user, onUpdate }) {
+  const [firstname, setFirstname] = useState(user.firstname);
+  const [lastname, setLastname] = useState(user.lastname);
+  const [email, setEmail] = useState(user.email);
+  const [bio, setBio] = useState(user.bio);
+  const [image, setImage] = useState(user.image);
   const [password, setPassword] = useState('');
   const [password_confirmation, setPasswordConfirmation] = useState('');
   const [errors, setError] = useState([]);
@@ -31,8 +33,8 @@ function SignupForm({ onLogin, onShowLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const resultError = validateForm({
-      username,
       firstname,
       lastname,
       email,
@@ -45,44 +47,49 @@ function SignupForm({ onLogin, onShowLogin }) {
       return;
     }
 
-    setIsLoading(true);
-    fetch('/signup', {
-      method: 'POST',
+    fetch(`/update`, {
+      method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        username,
         firstname,
         lastname,
+        bio,
+        image,
+        email,
         password,
         password_confirmation,
-        email,
       }),
     }).then((r) => {
-      setIsLoading(false);
       if (r.ok) {
         r.json().then((user) => {
-          onLogin(user);
+          onUpdate(user);
           history.push('/');
         });
       } else {
-        r.json().then((err) => {
-          setError(err.errors);
-        });
+        r.json().then((err) => console.log(err));
       }
     });
-
-    setUsername('');
-    setFirstname('');
-    setLastname('');
-    setEmail('');
-    setPassword('');
-    setPasswordConfirmation('');
-    // setError(null);
-    // setSuccess('Registration was submitted!');
+    // setSuccess('Profile updated!');
   };
 
+  const handleLogout = () => {
+    fetch('/logout', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then((r) => {
+      setIsLoading(false);
+      if (r.ok) {
+        onUpdate(null);
+        history.push('/');
+      } else {
+        setError([`Logout failed`]);
+      }
+    });
+  };
   const messageVariants = {
     hidden: { y: 30, opacity: 0 },
     animate: { y: 0, opacity: 1, transition: { delay: 0.2, duration: 0.4 } },
@@ -102,61 +109,72 @@ function SignupForm({ onLogin, onShowLogin }) {
       type: 'text',
     },
     {
-      label: 'Username',
-      value: username,
-      onChange: (e) => setUsername(e.target.value),
-      type: 'text',
-    },
-    {
       label: 'Email',
       value: email,
       onChange: (e) => setEmail(e.target.value),
       type: 'email',
     },
     {
-      label: 'Password',
+      label: 'Bio',
+      value: bio,
+      onChange: (e) => setBio(e.target.value),
+      type: 'text',
+      placeholder: 'Tell us something about yourself',
+    },
+    {
+      label: 'Image',
+      value: image,
+      onChange: (e) => setImage(e.target.value),
+      type: 'text',
+      placeholder: 'Link to image or avatar',
+    },
+    {
+      label: 'New Password',
       value: password,
       onChange: (e) => setPassword(e.target.value),
       type: 'password',
     },
     {
-      label: 'Confirm Password',
+      label: 'Confirm New Password',
       value: password_confirmation,
       onChange: (e) => setPasswordConfirmation(e.target.value),
       type: 'password',
     },
   ];
+
   return (
     <FormSection>
       <Container>
         <FormRow>
           <FormColumn small>
-            <FormTitle>Sign up</FormTitle>
+            <FormSmallButton onClick={handleLogout}>Logout</FormSmallButton>
+            <FormTitleGrouped>{user.username}</FormTitleGrouped>
+            <FormImgWrapper>
+              <FormAvatar src={user.image}></FormAvatar>
+            </FormImgWrapper>
+            <FormSubTitle>Profile</FormSubTitle>
             <FormWrapper onSubmit={handleSubmit}>
               {formData.map((el, index) => (
                 <FormInputRow key={index}>
                   <FormLabel>{el.label}</FormLabel>
                   <FormInput
                     type={el.type}
-                    placeholder={`Enter your ${el.label.toLocaleLowerCase()}`}
+                    placeholder={
+                      el.placeholder
+                        ? el.placeholder
+                        : `Enter your ${el.label.toLocaleLowerCase()}`
+                    }
                     value={el.value}
                     onChange={el.onChange}
                   />
                 </FormInputRow>
               ))}
-
-              <FormButton type='submit'>
-                {' '}
-                {isLoading ? 'Loading...' : 'Sign Up'}
-              </FormButton>
-              <Divider />
               <FormRow>
-                <FormSubTitle>
-                  Already have an account?&nbsp;&nbsp;&nbsp;
-                </FormSubTitle>
-                <FormSmallButton onClick={() => onShowLogin(true)}>
-                  Log In
-                </FormSmallButton>
+                <FormColumn>
+                  <FormSmallButton type='submit'>
+                    {isLoading ? 'Loading...' : 'Update'}
+                  </FormSmallButton>
+                </FormColumn>
               </FormRow>
             </FormWrapper>
             {errors &&
@@ -186,4 +204,4 @@ function SignupForm({ onLogin, onShowLogin }) {
   );
 }
 
-export default SignupForm;
+export default ProfileForm;

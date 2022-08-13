@@ -17,13 +17,9 @@ import {
 import { Divider, Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
-function SignupForm({ onLogin, onShowLogin }) {
+function LoginForm({ onLogin, onShowLogin }) {
   const [username, setUsername] = useState('');
-  const [firstname, setFirstname] = useState('');
-  const [lastname, setLastname] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [password_confirmation, setPasswordConfirmation] = useState('');
   const [errors, setError] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(null);
@@ -31,14 +27,7 @@ function SignupForm({ onLogin, onShowLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const resultError = validateForm({
-      username,
-      firstname,
-      lastname,
-      email,
-      password,
-      password_confirmation,
-    });
+    const resultError = validateForm({ username, password });
 
     if (resultError.length) {
       setError(resultError);
@@ -46,19 +35,12 @@ function SignupForm({ onLogin, onShowLogin }) {
     }
 
     setIsLoading(true);
-    fetch('/signup', {
+    fetch('/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        username,
-        firstname,
-        lastname,
-        password,
-        password_confirmation,
-        email,
-      }),
+      body: JSON.stringify({ username, password }),
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
@@ -68,19 +50,15 @@ function SignupForm({ onLogin, onShowLogin }) {
         });
       } else {
         r.json().then((err) => {
-          setError(err.errors);
+          setError([`Error ${err.status}: ${err.error}`]);
         });
       }
     });
 
     setUsername('');
-    setFirstname('');
-    setLastname('');
-    setEmail('');
     setPassword('');
-    setPasswordConfirmation('');
-    // setError(null);
-    // setSuccess('Registration was submitted!');
+    //setError(null);
+    //setSuccess('Logged in!');
   };
 
   const messageVariants = {
@@ -90,39 +68,15 @@ function SignupForm({ onLogin, onShowLogin }) {
 
   const formData = [
     {
-      label: 'First Name',
-      value: firstname,
-      onChange: (e) => setFirstname(e.target.value),
-      type: 'text',
-    },
-    {
-      label: 'Last Name',
-      value: lastname,
-      onChange: (e) => setLastname(e.target.value),
-      type: 'text',
-    },
-    {
       label: 'Username',
       value: username,
       onChange: (e) => setUsername(e.target.value),
       type: 'text',
     },
     {
-      label: 'Email',
-      value: email,
-      onChange: (e) => setEmail(e.target.value),
-      type: 'email',
-    },
-    {
       label: 'Password',
       value: password,
       onChange: (e) => setPassword(e.target.value),
-      type: 'password',
-    },
-    {
-      label: 'Confirm Password',
-      value: password_confirmation,
-      onChange: (e) => setPasswordConfirmation(e.target.value),
       type: 'password',
     },
   ];
@@ -131,7 +85,7 @@ function SignupForm({ onLogin, onShowLogin }) {
       <Container>
         <FormRow>
           <FormColumn small>
-            <FormTitle>Sign up</FormTitle>
+            <FormTitle>Log In</FormTitle>
             <FormWrapper onSubmit={handleSubmit}>
               {formData.map((el, index) => (
                 <FormInputRow key={index}>
@@ -147,15 +101,15 @@ function SignupForm({ onLogin, onShowLogin }) {
 
               <FormButton type='submit'>
                 {' '}
-                {isLoading ? 'Loading...' : 'Sign Up'}
+                {isLoading ? 'Loading...' : 'Login'}
               </FormButton>
               <Divider />
               <FormRow>
                 <FormSubTitle>
-                  Already have an account?&nbsp;&nbsp;&nbsp;
+                  Don't have an account?&nbsp;&nbsp;&nbsp;
                 </FormSubTitle>
-                <FormSmallButton onClick={() => onShowLogin(true)}>
-                  Log In
+                <FormSmallButton onClick={() => onShowLogin(false)}>
+                  Sign Up
                 </FormSmallButton>
               </FormRow>
             </FormWrapper>
@@ -186,4 +140,4 @@ function SignupForm({ onLogin, onShowLogin }) {
   );
 }
 
-export default SignupForm;
+export default LoginForm;
