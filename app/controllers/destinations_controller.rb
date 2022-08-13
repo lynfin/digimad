@@ -1,5 +1,5 @@
 class DestinationsController < ApplicationController
-  skip_before_action :authorize
+  skip_before_action :authenticate_user
   before_action :find_destination, only: %i[show update destroy summarize]
 
   def index

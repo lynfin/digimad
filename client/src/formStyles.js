@@ -15,12 +15,19 @@ export const FormTitle = styled.h1`
   font-weight: 600;
 `;
 
+export const FormTitleGrouped = styled.h1`
+  margin-bottom: 12px;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 600;
+`;
+
 export const FormSubTitle = styled.h3`
   margin-bottom: 12px;
   font-size: 1.8rem;
   line-height: 1.1;
   font-weight: 300;
-  color: #f00e0e;
+  color: #afafaf;
 `;
 
 export const FormContainer = styled.div`

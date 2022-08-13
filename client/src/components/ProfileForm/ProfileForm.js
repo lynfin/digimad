@@ -10,7 +10,7 @@ import {
   FormInputRow,
   FormMessage,
   FormButton,
-  FormTitle,
+  FormTitleGrouped,
   FormSubTitle,
   FormSmallButton,
 } from '../../formStyles';
@@ -83,7 +83,8 @@ function ProfileForm({ user }) {
       <Container>
         <FormRow>
           <FormColumn small>
-            <FormTitle>{user.username}</FormTitle>
+            <FormTitleGrouped>{user.username}</FormTitleGrouped>
+            <FormSubTitle>Profile</FormSubTitle>
             <FormWrapper onSubmit={handleSubmit}>
               {formData.map((el, index) => (
                 <FormInputRow key={index}>
