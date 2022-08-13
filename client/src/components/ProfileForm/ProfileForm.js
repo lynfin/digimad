@@ -31,14 +31,25 @@ function ProfileForm({ user, onLogout }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setFirstname('');
-    setLastname('');
-    setEmail('');
-    setPassword('');
-    setPasswordConfirmation('');
-    // setError(null);
-    // setSuccess('Registration was submitted!');
+    fetch(`/update`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ firstname: firstname }),
+    }).then((r) => {
+      if (r.ok) {
+        r.json().then((user) => {
+          onLogout(user);
+          history.push('/');
+        });
+      } else {
+        r.json().then((err) => console.log(err));
+      }
+    });
+    // setSuccess('Profile updated!');
   };
+
   const handleLogout = () => {
     fetch('/logout', {
       method: 'DELETE',

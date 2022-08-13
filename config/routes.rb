@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :visits
   resources :favorites, :destinations, :speedtests, :addresses
   get '/me', to: 'users#show'
+  patch '/update', to: 'users#update'
   post '/signup', to: 'users#create'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
