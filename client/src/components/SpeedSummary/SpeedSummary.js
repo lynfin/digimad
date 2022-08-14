@@ -15,9 +15,20 @@ import {
 } from './SpeedSummaryStyles';
 //import { SpeedSummaryData } from '../../data/SpeedSummaryData';
 
-function SpeedSummary({ destination_overview, selectedDestination }) {
-  console.log('In SpeedSummary, have access to destination details:');
+function SpeedSummary({
+  destination_overview,
+  selectedDestination,
+  destinationDetails,
+}) {
+  console.log('In SpeedSummary, have access to selected destination:');
   console.log(selectedDestination);
+  console.log('In SpeedSummary, have access to destination details:');
+  console.log(destinationDetails);
+
+  let connectionTypes = Object.keys(
+    destinationDetails.rate_summary.average.download
+  ).sort(); //.keys;
+  console.log(connectionTypes);
   return (
     <IconContext.Provider value={{ color: '#a9b3c1', size: '1rem' }}>
       <SpeedSummarySection id='SpeedSummary'>
@@ -34,10 +45,23 @@ function SpeedSummary({ destination_overview, selectedDestination }) {
             Speed test summary
           </TextWrapper>
           <SpeedSummaryContainer>
-            {/* {SpeedSummaryData.map((card, index) => (
+            {connectionTypes.map((card, index) => (
               <SpeedSummaryCard key={index}>
                 <SpeedSummaryCardInfo>
-                  <SpeedSummaryCardPlan>{card.title}</SpeedSummaryCardPlan>
+                  <SpeedSummaryCardPlan>{card}</SpeedSummaryCardPlan>
+                  <SpeedSummaryCardCost>max</SpeedSummaryCardCost>
+                  <SpeedSummaryCardText>download</SpeedSummaryCardText>
+                  <SpeedSummaryCardText>upload</SpeedSummaryCardText>
+                  <SpeedSummaryCardText>latency</SpeedSummaryCardText>
+                  <SpeedSummaryCardCost>average</SpeedSummaryCardCost>
+                  <SpeedSummaryCardCost>min</SpeedSummaryCardCost>
+                </SpeedSummaryCardInfo>
+              </SpeedSummaryCard>
+            ))}
+            {/* {connectionTypes.map((card, index) => (
+              <SpeedSummaryCard key={index}>
+                <SpeedSummaryCardInfo>
+                  <SpeedSummaryCardPlan>{card}</SpeedSummaryCardPlan>
                   <SpeedSummaryCardCost>{card.price}</SpeedSummaryCardCost>
                   <SpeedSummaryCardText>
                     {card.description}

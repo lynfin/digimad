@@ -26,10 +26,11 @@ function Destination({ user, selectedDestination }) {
   // Might be able to get rid of state.el and just use selectedDestination now.
   return (
     <>
-      {state && state.el ? (
+      {state && state.el && destinationDetails ? (
         <SpeedSummary
           destination_overview={state.el}
           selectedDestination={selectedDestination}
+          destinationDetails={destinationDetails}
         />
       ) : (
         <Container>
