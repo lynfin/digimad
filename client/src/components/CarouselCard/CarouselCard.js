@@ -9,6 +9,11 @@ import {
 } from './CarouselCardStyles';
 
 function CarouselCard({ el, index, onDestinationSelected }) {
+  function handleClick() {
+    console.log('Clicked on ', el.id);
+    onDestinationSelected(el.id);
+  }
+
   return (
     <ImageWrapper key={index}>
       <CarouselImage src={el.image} />
@@ -26,10 +31,9 @@ function CarouselCard({ el, index, onDestinationSelected }) {
       </TextWrapper>
       <ButtonWrapper>
         <Link to={{ pathname: 'destination', state: { el } }}>
-          <CardButton>
-            {/* <CardButton onClick={onDestinationSelected(el.id)}> */}
-            Details
-          </CardButton>
+          {/* <CardButton> */}
+          {/* <CardButton onClick={onDestinationSelected(el.id)}> */}
+          <CardButton onClick={handleClick}>Details</CardButton>
         </Link>
       </ButtonWrapper>
     </ImageWrapper>

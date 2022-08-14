@@ -15,7 +15,9 @@ import {
 } from './SpeedSummaryStyles';
 //import { SpeedSummaryData } from '../../data/SpeedSummaryData';
 
-function SpeedSummary({ destination_overview }) {
+function SpeedSummary({ destination_overview, selectedDestination }) {
+  console.log('In SpeedSummary, have access to destination details:');
+  console.log(selectedDestination);
   return (
     <IconContext.Provider value={{ color: '#a9b3c1', size: '1rem' }}>
       <SpeedSummarySection id='SpeedSummary'>

@@ -113,7 +113,7 @@ function App() {
       })
     );
   }
-
+  console.log('currently selected destination: ', selectedDestinationId);
   return (
     <BrowserRouter>
       <GlobalStyle />
@@ -130,7 +130,7 @@ function App() {
           />
         </Route>
         <Route exact path='/destination'>
-          <Destination user={user} />
+          <Destination user={user} selectedDestination={selectedDestination} />
         </Route>
       </Switch>
     </BrowserRouter>
