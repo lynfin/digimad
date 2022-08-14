@@ -8,20 +8,19 @@ import {
 } from '../../globalStyles';
 import { IconContext } from 'react-icons/lib';
 import {
-  SpeedSummarySection,
-  SpeedSummaryWrapper,
-  SpeedSummaryContainer,
-  SpeedSummaryCardInfo,
-  SpeedSummaryCardPlan,
-  SpeedSummaryCardCost,
-  SpeedSummaryCardFeatures,
-  SpeedSummaryCardText,
-  SpeedSummaryCardFeature,
-  SpeedSummaryCard,
-} from './SpeedSummaryStyles';
-//import { SpeedSummaryData } from '../../data/SpeedSummaryData';
+  TestSummarySection,
+  TestSummaryWrapper,
+  TestSummaryContainer,
+  TestSummaryCardInfo,
+  TestSummaryCardPlan,
+  TestSummaryCardCost,
+  TestSummaryCardFeatures,
+  TestSummaryCardText,
+  TestSummaryCardFeature,
+  TestSummaryCard,
+} from './TestSummaryStyles';
 
-function SpeedSummary({
+function TestSummary({
   destination_overview,
   selectedDestination,
   destinationDetails,
@@ -31,8 +30,8 @@ function SpeedSummary({
 
   return (
     <IconContext.Provider value={{ color: '#a9b3c1', size: '1rem' }}>
-      <SpeedSummarySection id='SpeedSummary'>
-        <SpeedSummaryWrapper>
+      <TestSummarySection id='TestSummary'>
+        <TestSummaryWrapper>
           <Heading>Download speeds</Heading>
           <SubHeading>{destination_overview.header}</SubHeading>
 
@@ -45,29 +44,29 @@ function SpeedSummary({
           >
             based on {destinationDetails.total_tests} user-submitted tests
           </TextWrapper>
-          <SpeedSummaryContainer>
+          <TestSummaryContainer>
             {connectionTypes.map((card, index) => (
-              <SpeedSummaryCard key={index}>
-                <SpeedSummaryCardInfo>
-                  <SpeedSummaryCardPlan>{card}</SpeedSummaryCardPlan>
+              <TestSummaryCard key={index}>
+                <TestSummaryCardInfo>
+                  <TestSummaryCardPlan>{card}</TestSummaryCardPlan>
                   {Object.keys(rate_summary).map((rate, index) => (
                     <Container key={index}>
-                      <SpeedSummaryCardCost>
+                      <TestSummaryCardCost>
                         {parseFloat(
                           rate_summary[rate]['download'][card]
                         ).toFixed(2)}{' '}
                         Mbps
-                      </SpeedSummaryCardCost>
-                      <SpeedSummaryCardText>{rate}</SpeedSummaryCardText>
+                      </TestSummaryCardCost>
+                      <TestSummaryCardText>{rate}</TestSummaryCardText>
                     </Container>
                   ))}
-                </SpeedSummaryCardInfo>
-              </SpeedSummaryCard>
+                </TestSummaryCardInfo>
+              </TestSummaryCard>
             ))}
-          </SpeedSummaryContainer>
-        </SpeedSummaryWrapper>
-      </SpeedSummarySection>
+          </TestSummaryContainer>
+        </TestSummaryWrapper>
+      </TestSummarySection>
     </IconContext.Provider>
   );
 }
-export default SpeedSummary;
+export default TestSummary;
