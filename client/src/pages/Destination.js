@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Container, MainHeading, TextWrapper } from '../globalStyles';
 import DestinationHero from '../components/DestinationHero/DestinationHero';
 import SpeedSummary from '../components/SpeedSummary/SpeedSummary';
+import TestSummary from '../components/TestSummary/TestSummary';
 import LoadingPage from '../components/LoadingPage/LoadingPage';
 import { useLocation } from 'react-router-dom';
 
@@ -36,6 +37,10 @@ function Destination({ user, selectedDestination }) {
             destination_overview={state.el}
             selectedDestination={selectedDestination}
             destinationDetails={destinationDetails}
+          />
+          <TestSummary
+            destinationId={destinationDetails.id}
+            destinationName={destinationDetails.name}
           />
         </>
       ) : (
