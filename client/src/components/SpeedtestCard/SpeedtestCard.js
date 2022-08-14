@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { parseISO, format } from 'date-fns';
 
 import {
   Button,
@@ -11,8 +12,8 @@ import {
 
 import {
   SpeedtestCardSection,
-  SpeedtestCardWrapper,
-  SpeedtestCardContainer,
+  SpeedtestWrapper,
+  SpeedtestContainer,
   SpeedtestCardInfo,
   SpeedtestCardPlan,
   SpeedtestCardCost,
@@ -24,32 +25,33 @@ import {
 
 function SpeedtestCard({ testData }) {
   return (
-    <SpeedtestCardSection id='Speedtest'>
-      <SpeedtestCardText>Start Date:</SpeedtestCardText>
-      <SpeedtestCardText>End Date:</SpeedtestCardText>
-      <SpeedtestCardText>{testData.desc}</SpeedtestCardText>
-      <SpeedtestCardText>Tech Rating: {testData.tech_rating}</SpeedtestCardText>
-      <SpeedtestCardText>
-        Tech Comment: {testData.tech_comment}
-      </SpeedtestCardText>
-      <SpeedtestCardText>
-        Visit Rating: {testData.visit_rating}
-      </SpeedtestCardText>
-      <SpeedtestCardText>
-        Visit Comment: {testData.visit_comment}
-      </SpeedtestCardText>
-      <SpeedtestCardText>Username: {testData.user.username}</SpeedtestCardText>
-      <SpeedtestCardText>
-        Test: {testData.speedtest.testprovider}
-      </SpeedtestCardText>
-      <SpeedtestCardText>
-        Download: {testData.speedtest.download}
-      </SpeedtestCardText>
-      <SpeedtestCardText>Upload: {testData.speedtest.upload}</SpeedtestCardText>
-      <SpeedtestCardText>
-        Latency: {testData.speedtest.latency}
-      </SpeedtestCardText>
-    </SpeedtestCardSection>
+    <SpeedtestWrapper id='Speedtest'>
+      <SpeedtestContainer>
+        <SpeedtestCardInfo>
+          <SpeedtestCardPlan>
+            Username: {testData.user.username}
+          </SpeedtestCardPlan>
+          <SpeedtestCardCost>
+            Visit: {format(parseISO(testData.start), 'MM/dd/yyyy')} -{' '}
+            {format(parseISO(testData.end), 'MM/dd/yyyy')}
+          </SpeedtestCardCost>
+          <SpeedtestCardText>{testData.desc}</SpeedtestCardText>
+          <SpeedtestCardText>
+            Tech Rating: {testData.tech_rating} | {testData.tech_comment}
+          </SpeedtestCardText>
+          <SpeedtestCardText>
+            Visit Rating: {testData.visit_rating} | {testData.visit_comment}
+          </SpeedtestCardText>
+          <SpeedtestCardText>
+            Test: {testData.speedtest.testprovider}
+          </SpeedtestCardText>
+          <SpeedtestCardCost>
+            Download: {testData.speedtest.download} | Upload:{' '}
+            {testData.speedtest.upload} | Latency: {testData.speedtest.latency}
+          </SpeedtestCardCost>
+        </SpeedtestCardInfo>
+      </SpeedtestContainer>
+    </SpeedtestWrapper>
   );
 }
 export default SpeedtestCard;
