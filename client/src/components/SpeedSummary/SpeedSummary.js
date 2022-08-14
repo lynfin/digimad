@@ -25,9 +25,9 @@ function SpeedSummary({
   console.log('In SpeedSummary, have access to destination details:');
   console.log(destinationDetails);
 
-  let connectionTypes = Object.keys(
-    destinationDetails.rate_summary.average.download
-  ).sort(); //.keys;
+  let rate_summary = destinationDetails.rate_summary;
+  let connectionTypes = Object.keys(rate_summary.average.download).sort();
+
   console.log(connectionTypes);
   return (
     <IconContext.Provider value={{ color: '#a9b3c1', size: '1rem' }}>
@@ -38,45 +38,39 @@ function SpeedSummary({
           <TextWrapper
             mb='1.4rem'
             weight='600'
+            size='1.3rem'
+            color='white'
+            align='center'
+          >
+            Download speeds
+          </TextWrapper>
+          <TextWrapper
+            mb='1.4rem'
+            weight='600'
             size='1.1rem'
             color='white'
             align='center'
           >
-            Speed test summary
+            based on {destinationDetails.total_tests} user-submitted tests
           </TextWrapper>
           <SpeedSummaryContainer>
             {connectionTypes.map((card, index) => (
               <SpeedSummaryCard key={index}>
                 <SpeedSummaryCardInfo>
                   <SpeedSummaryCardPlan>{card}</SpeedSummaryCardPlan>
-                  <SpeedSummaryCardCost>max</SpeedSummaryCardCost>
-                  <SpeedSummaryCardText>download</SpeedSummaryCardText>
-                  <SpeedSummaryCardText>upload</SpeedSummaryCardText>
-                  <SpeedSummaryCardText>latency</SpeedSummaryCardText>
-                  <SpeedSummaryCardCost>average</SpeedSummaryCardCost>
-                  <SpeedSummaryCardCost>min</SpeedSummaryCardCost>
+                  {Object.keys(rate_summary).map((rate, index) => (
+                    <>
+                      <SpeedSummaryCardCost>
+                        {parseFloat(
+                          rate_summary[rate]['download'][card]
+                        ).toFixed(2)}
+                      </SpeedSummaryCardCost>
+                      <SpeedSummaryCardText>{rate}</SpeedSummaryCardText>
+                    </>
+                  ))}
                 </SpeedSummaryCardInfo>
               </SpeedSummaryCard>
             ))}
-            {/* {connectionTypes.map((card, index) => (
-              <SpeedSummaryCard key={index}>
-                <SpeedSummaryCardInfo>
-                  <SpeedSummaryCardPlan>{card}</SpeedSummaryCardPlan>
-                  <SpeedSummaryCardCost>{card.price}</SpeedSummaryCardCost>
-                  <SpeedSummaryCardText>
-                    {card.description}
-                  </SpeedSummaryCardText>
-                  <SpeedSummaryCardFeatures>
-                    {card.features.map((feature, index) => (
-                      <SpeedSummaryCardFeature key={index}>
-                        {feature}
-                      </SpeedSummaryCardFeature>
-                    ))}
-                  </SpeedSummaryCardFeatures>
-                  <Button>Get Started</Button>
-                </SpeedSummaryCardInfo>
-              </SpeedSummaryCard>
-            ))} */}
           </SpeedSummaryContainer>
         </SpeedSummaryWrapper>
       </SpeedSummarySection>
