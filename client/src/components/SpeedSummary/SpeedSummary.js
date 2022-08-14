@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Heading, TextWrapper } from '../../globalStyles';
+import { Button, Heading, TextWrapper, Container } from '../../globalStyles';
 import { IconContext } from 'react-icons/lib';
 import {
   SpeedSummarySection,
@@ -32,7 +32,7 @@ function SpeedSummary({
           <TextWrapper
             mb='1.4rem'
             weight='600'
-            size='1.3rem'
+            size='1.5rem'
             color='white'
             align='center'
           >
@@ -53,14 +53,15 @@ function SpeedSummary({
                 <SpeedSummaryCardInfo>
                   <SpeedSummaryCardPlan>{card}</SpeedSummaryCardPlan>
                   {Object.keys(rate_summary).map((rate, index) => (
-                    <>
+                    <Container key={index}>
                       <SpeedSummaryCardCost>
                         {parseFloat(
                           rate_summary[rate]['download'][card]
-                        ).toFixed(2)}
+                        ).toFixed(2)}{' '}
+                        Mbps
                       </SpeedSummaryCardCost>
                       <SpeedSummaryCardText>{rate}</SpeedSummaryCardText>
-                    </>
+                    </Container>
                   ))}
                 </SpeedSummaryCardInfo>
               </SpeedSummaryCard>
