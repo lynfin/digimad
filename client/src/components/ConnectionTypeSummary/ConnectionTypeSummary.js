@@ -7,6 +7,7 @@ import {
   TextWrapper,
   Container,
 } from '../../globalStyles';
+import SpeedtestCard from '../SpeedtestCard/SpeedtestCard';
 
 import {
   ConnectionTypeSummarySection,
@@ -28,6 +29,11 @@ function ConnectionTypeSummary({ connectionType, connectionData }) {
         <Heading>{connectionType}</Heading>
 
         <SubHeading>{connectionData.length} tests</SubHeading>
+        {connectionData
+          ? connectionData.map((speedtestData, index) => (
+              <SpeedtestCard key={index} testData={speedtestData} />
+            ))
+          : null}
       </ConnectionTypeSummaryWrapper>
     </ConnectionTypeSummarySection>
   );
