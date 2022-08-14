@@ -1,9 +1,8 @@
 import React from 'react';
 import Hero from '../components/Hero/Hero';
 import Carousel from '../components/Carousel/Carousel';
-import { parseISO, format } from 'date-fns';
 
-function Home({ destination_sets, user }) {
+function Home({ destination_sets, user, onDestinationSelected }) {
   return (
     <>
       <Hero />
@@ -12,6 +11,7 @@ function Home({ destination_sets, user }) {
           key={index}
           data={destination.data}
           title={destination.title}
+          onDestinationSelected={onDestinationSelected}
         />
       ))}
     </>

@@ -5,7 +5,7 @@ import { Row, Heading, Section } from '../../globalStyles';
 import { ButtonContainer, ReviewSlider } from './CarouselStyles';
 import CarouselCard from '../CarouselCard/CarouselCard';
 
-function Carousel({ data, title }) {
+function Carousel({ data, title, onDestinationSelected }) {
   const [sliderRef, setSliderRef] = useState(null);
 
   return (
@@ -24,7 +24,12 @@ function Carousel({ data, title }) {
 
       <ReviewSlider {...sliderSettings} ref={setSliderRef}>
         {data.map((el, index) => (
-          <CarouselCard key={index} el={el} index={index} />
+          <CarouselCard
+            key={index}
+            el={el}
+            index={index}
+            onDestinationSelected={onDestinationSelected}
+          />
         ))}
       </ReviewSlider>
     </Section>
