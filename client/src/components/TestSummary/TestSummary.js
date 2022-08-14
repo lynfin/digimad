@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import ConnectionTypeSummary from '../ConnectionTypeSummary/ConnectionTypeSummary';
 import {
   Button,
   Heading,
@@ -7,7 +8,7 @@ import {
   TextWrapper,
   Container,
 } from '../../globalStyles';
-import { IconContext } from 'react-icons/lib';
+
 import {
   TestSummarySection,
   TestSummaryWrapper,
@@ -23,6 +24,7 @@ import {
 
 function TestSummary({ destinationId, destinationName }) {
   const [speedtestDetails, setSpeedtestDetails] = useState(null);
+  const [connectionTypes, setConnectionTypes] = useState(null);
 
   useEffect(() => {
     fetch(`/visits/?dest=${destinationId}`).then((res) => {
@@ -34,15 +36,46 @@ function TestSummary({ destinationId, destinationName }) {
     });
   }, [destinationId]);
 
+  useEffect(() => {
+    const uniques = speedtestDetails
+      ? [
+          ...new Set(
+            speedtestDetails.map((obj) => {
+              return obj.speedtest.connectiontype;
+            })
+          ),
+        ]
+      : null;
+    setConnectionTypes(uniques);
+  }, [speedtestDetails]);
   return (
-    <IconContext.Provider value={{ color: '#a9b3c1', size: '1rem' }}>
-      <TestSummarySection id='TestSummary'>
-        <TestSummaryWrapper>
-          <Heading>THIS WILL BE TEST SUMMARY</Heading>
-          <SubHeading>FOR {destinationName}</SubHeading>
-        </TestSummaryWrapper>
-      </TestSummarySection>
-    </IconContext.Provider>
+    <TestSummarySection id='TestSummary'>
+      <TestSummaryWrapper>
+        <Heading>THIS WILL BE TEST SUMMARY</Heading>
+        <SubHeading>FOR {destinationName}</SubHeading>
+        {speedtestDetails ? (
+          <SubHeading>{speedtestDetails.length} tests retrieved</SubHeading>
+        ) : null}
+        {connectionTypes ? (
+          <SubHeading>
+            {connectionTypes.length} connection types detected
+          </SubHeading>
+        ) : null}
+
+        {connectionTypes
+          ? connectionTypes.map((connectionType, index) => (
+              <ConnectionTypeSummary
+                key={index}
+                connectionType={connectionType}
+                connectionData={speedtestDetails.filter(
+                  (testData) =>
+                    testData.speedtest.connectiontype === connectionType
+                )}
+              />
+            ))
+          : null}
+      </TestSummaryWrapper>
+    </TestSummarySection>
   );
 }
 export default TestSummary;
