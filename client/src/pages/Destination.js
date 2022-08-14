@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Container, MainHeading, TextWrapper } from '../globalStyles';
+import DestinationHero from '../components/DestinationHero/DestinationHero';
 import SpeedSummary from '../components/SpeedSummary/SpeedSummary';
 import LoadingPage from '../components/LoadingPage/LoadingPage';
 import { useLocation } from 'react-router-dom';
@@ -26,11 +27,17 @@ function Destination({ user, selectedDestination }) {
   return (
     <>
       {state && state.el && destinationDetails ? (
-        <SpeedSummary
-          destination_overview={state.el}
-          selectedDestination={selectedDestination}
-          destinationDetails={destinationDetails}
-        />
+        <>
+          <DestinationHero
+            destination_overview={state.el}
+            destinationDetails={destinationDetails}
+          />
+          <SpeedSummary
+            destination_overview={state.el}
+            selectedDestination={selectedDestination}
+            destinationDetails={destinationDetails}
+          />
+        </>
       ) : (
         <Container>
           <LoadingPage message='...destination details being retrieved...' />
