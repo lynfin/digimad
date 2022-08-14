@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Container, MainHeading, TextWrapper } from '../globalStyles';
 import SpeedSummary from '../components/SpeedSummary/SpeedSummary';
-import ErrorPage from '../components/ErrorPage/ErrorPage';
+import LoadingPage from '../components/LoadingPage/LoadingPage';
 import { useLocation } from 'react-router-dom';
 
 function Destination({ user, selectedDestination }) {
@@ -34,7 +34,7 @@ function Destination({ user, selectedDestination }) {
         />
       ) : (
         <Container>
-          <ErrorPage message='No destination selected' />
+          <LoadingPage message='...destination details being retrieved...' />
         </Container>
       )}
     </>
