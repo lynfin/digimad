@@ -20,15 +20,9 @@ function SpeedSummary({
   selectedDestination,
   destinationDetails,
 }) {
-  console.log('In SpeedSummary, have access to selected destination:');
-  console.log(selectedDestination);
-  console.log('In SpeedSummary, have access to destination details:');
-  console.log(destinationDetails);
-
   let rate_summary = destinationDetails.rate_summary;
   let connectionTypes = Object.keys(rate_summary.average.download).sort();
 
-  console.log(connectionTypes);
   return (
     <IconContext.Provider value={{ color: '#a9b3c1', size: '1rem' }}>
       <SpeedSummarySection id='SpeedSummary'>

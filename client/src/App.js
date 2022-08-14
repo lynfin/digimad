@@ -113,7 +113,7 @@ function App() {
       })
     );
   }
-  console.log('currently selected destination: ', selectedDestinationId);
+
   return (
     <BrowserRouter>
       <GlobalStyle />

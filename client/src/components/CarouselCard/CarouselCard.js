@@ -10,7 +10,6 @@ import {
 
 function CarouselCard({ el, index, onDestinationSelected }) {
   function handleClick() {
-    console.log('Clicked on ', el.id);
     onDestinationSelected(el.id);
   }
 
