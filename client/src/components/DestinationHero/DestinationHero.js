@@ -10,7 +10,7 @@ import {
   ButtonWrapper,
 } from './DestinationHeroStyles';
 
-function DestinationHero({ destination_overview, destinationDetails }) {
+function DestinationHero({ destinationDetails }) {
   const openInNewTab = (url) => {
     window.open(url, '_blank', 'noopener, noreferrer');
   };
