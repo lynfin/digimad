@@ -19,7 +19,9 @@ class VisitsController < ApplicationController
     # speedtest = Speedtest.new(visit_params[:speedtest_params])
     # visit.speedtest = speedtest.save!
     # visit.save!
+
     visit = Visit.create!(visit_params)
+    # visit.speedtest = Speedtest.create!(visit_params[:speedtest_params])
     render json: visit, status: :created
   end
 
