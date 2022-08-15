@@ -2,8 +2,10 @@ class VisitsController < ApplicationController
   skip_before_action :authenticate_user
   before_action :find_visit, only: %i[show update destroy]
 
+  # ?dest=DESTINATION_ID to retrieve only visits to that destination
   def index
-    render json: Visit.order(:start), status: :ok
+    visit_list = params.key?(:dest) ? Visit.where(destination_id: params[:dest]).order(:start) : Visit.order(:start)
+    render json: visit_list, status: :ok
   end
 
   def show
@@ -29,7 +31,7 @@ class VisitsController < ApplicationController
 
   def visit_params
     params.permit(:start, :end, :user, :destination, :speedtest, :desc, :tech_rating, :tech_comment, :visit_rating,
-                  :visit_comment)
+                  :visit_comment, :dest)
   end
 
   def find_visit

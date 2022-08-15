@@ -1,8 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { TextWrapper } from '../../globalStyles';
-import { ImageWrapper, CarouselImage, CardButton } from './CarouselCardStyles';
+import {
+  ImageWrapper,
+  CarouselImage,
+  CardButton,
+  ButtonWrapper,
+} from './CarouselCardStyles';
 
-function CarouselCard({ el, index }) {
+function CarouselCard({ el, index, onDestinationSelected }) {
+  function handleClick() {
+    onDestinationSelected(el.id);
+  }
+
   return (
     <ImageWrapper key={index}>
       <CarouselImage src={el.image} />
@@ -18,7 +28,13 @@ function CarouselCard({ el, index }) {
       <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
         {el.location}
       </TextWrapper>
-      <CardButton>Details</CardButton>
+      <ButtonWrapper>
+        <Link to={{ pathname: 'destination', state: { el } }}>
+          {/* <CardButton> */}
+          {/* <CardButton onClick={onDestinationSelected(el.id)}> */}
+          <CardButton onClick={handleClick}>Details</CardButton>
+        </Link>
+      </ButtonWrapper>
     </ImageWrapper>
   );
 }

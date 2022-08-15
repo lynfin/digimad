@@ -77,3 +77,10 @@ export const CardButton = styled.button`
     transition: background-color 0.2s ease-in;
   }
 `;
+export const ButtonWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  gap: 0.5rem;
+`;

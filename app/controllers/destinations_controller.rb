@@ -10,12 +10,16 @@ class DestinationsController < ApplicationController
     end
   end
 
-  def summarize
-    render json: @destination, serializer: DestinationWithTestSummarySerializer, status: :ok
-  end
+  # def summarize
+  #   render json: @destination, serializer: DestinationWithTestSummarySerializer, status: :ok
+  # end
 
   def show
-    render json: @destination, status: :ok
+    if params.key?(:full)
+      render json: @destination, serializer: DestinationFullDataSerializer, status: :ok
+    else
+      render json: @destination, status: :ok
+    end
   end
 
   def create

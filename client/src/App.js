@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Destination from './pages/Destination';
 import GlobalStyle from './globalStyles';
 import Navbar from './components/Navbar/Navbar';
 import { parseISO, format } from 'date-fns';
@@ -11,6 +12,8 @@ function App() {
   const [destination_sets, setDestinationSets] = useState([]);
   const [errors, setErrors] = useState(false);
   const [user, setUser] = useState(null);
+  const [selectedDestinationId, setSelectedDestinationId] = useState(null);
+  const [selectedDestination, setSelectedDestination] = useState(null);
 
   useEffect(() => {
     // auto-login
@@ -32,6 +35,8 @@ function App() {
   }, []);
 
   useEffect(() => {
+    // TODO: create basic map, then add the more detailed info?
+    // Build once with all the info, then rename appropriate entry to summary1/summary2
     let wifi_sort = destinations
       .sort((a, b) => (a.maximum_wifi > b.maximum_wifi ? -1 : 1))
       .map((d) => {
@@ -41,6 +46,7 @@ function App() {
           summary1: `${d.maximum_wifi} Max Mbps`,
           summary2: `${d.total_tests} tests`,
           image: d.image,
+          id: d.id,
         };
       });
     let rating_sort = destinations
@@ -54,6 +60,7 @@ function App() {
           )} Average Rating`,
           summary2: `${d.total_visits} visits`,
           image: d.image,
+          id: d.id,
         };
       });
     let cell_coverage = destinations
@@ -72,6 +79,7 @@ function App() {
           ).toFixed(2)} Mbps`,
           summary2: d.provider_fastest_cellular_download[0],
           image: d.image,
+          id: d.id,
         };
       });
     let most_recent_test = destinations
@@ -83,6 +91,7 @@ function App() {
           summary1: format(parseISO(d.most_recent_test), 'MM/dd/yyyy'),
           summary2: `${d.total_tests} tests`,
           image: d.image,
+          id: d.id,
         };
       });
     let arraryOfDestinations = [
@@ -95,6 +104,16 @@ function App() {
   }, [destinations]);
 
   if (errors) return <h1>{errors}</h1>;
+
+  function handleDestinationSelected(selectedId) {
+    setSelectedDestinationId(selectedId);
+    setSelectedDestination(
+      destinations.filter((d) => {
+        return d.id === selectedId;
+      })
+    );
+  }
+
   return (
     <BrowserRouter>
       <GlobalStyle />
@@ -104,7 +123,14 @@ function App() {
           <Login onLogin={setUser} user={user} />
         </Route>
         <Route exact path='/'>
-          <Home destination_sets={destination_sets} user={user} />
+          <Home
+            destination_sets={destination_sets}
+            user={user}
+            onDestinationSelected={handleDestinationSelected}
+          />
+        </Route>
+        <Route exact path='/destination'>
+          <Destination user={user} selectedDestination={selectedDestination} />
         </Route>
       </Switch>
     </BrowserRouter>
