@@ -18,14 +18,31 @@ import {
 import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
-function SpeedtestForm({ user, onUpdate }) {
-  const [firstname, setFirstname] = useState(user.firstname);
-  const [lastname, setLastname] = useState(user.lastname);
-  const [email, setEmail] = useState(user.email);
-  const [bio, setBio] = useState(user.bio);
-  const [image, setImage] = useState(user.image);
-  const [password, setPassword] = useState('');
-  const [password_confirmation, setPasswordConfirmation] = useState('');
+function SpeedtestForm({ user, selectedDestination }) {
+  const date = new Date();
+  const formattedToday =
+    date.getFullYear().toString() +
+    '-' +
+    (date.getMonth() + 1).toString().padStart(2, 0) +
+    '-' +
+    date.getDate().toString().padStart(2, 0);
+
+  const [latency, setLatency] = useState(0.0);
+  const [download, setDownload] = useState(0.0);
+  const [upload, setUpload] = useState(0.0);
+  const [connectiontype, setConnectiontype] = useState('wifi');
+  const [connectionprovider, setConnectionprovider] = useState('');
+  const [testprovider, setTestprovider] = useState('');
+  const [resulturl, setResulturl] = useState('');
+  const [resultimage, setResultimage] = useState('');
+  const [start, setStart] = useState(formattedToday);
+  const [end, setEnd] = useState(formattedToday);
+  const [desc, setDesc] = useState('');
+  const [techRating, setTechRating] = useState(0);
+  const [techComment, setTechComment] = useState('');
+  const [visitRating, setVisitRating] = useState(0);
+  const [visitComment, setVisitComment] = useState('');
+
   const [errors, setError] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(null);
@@ -33,63 +50,74 @@ function SpeedtestForm({ user, onUpdate }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const resultError = validateForm({
-      firstname,
-      lastname,
-      email,
-      password,
-      password_confirmation,
-    });
+    const resultError = [];
+    // const resultError = validateForm({
+    //   latency,
+    //   download,
+    //   upload,
+    //   connectiontype,
+    //   connectionprovider,
+    //   testprovider,
+    //   resulturl,
+    //   resultimage,
+    //   start,
+    //   end,
+    //   techRating,
+    //   visitRating,
+    // });
 
     if (resultError.length) {
       setError(resultError);
       return;
     }
 
-    fetch(`/update`, {
-      method: 'PATCH',
+    const visit_attributes = {
+      start,
+      end,
+      user_id: user ? user.id : null,
+      destination_id: selectedDestination ? selectedDestination.id : null,
+      desc,
+      tech_rating: techRating,
+      tech_comment: techComment,
+      visit_rating: visitRating,
+      visit_comment: visitComment,
+    };
+
+    fetch(`/speedtests`, {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        firstname,
-        lastname,
-        bio,
-        image,
-        email,
-        password,
-        password_confirmation,
+        latency,
+        download,
+        upload,
+        connectiontype,
+        connectionprovider,
+        testprovider,
+        resulturl,
+        resultimage,
+        visit_attributes,
       }),
     }).then((r) => {
       if (r.ok) {
-        r.json().then((user) => {
-          onUpdate(user);
-          history.push('/');
+        r.json().then((speedtest) => {
+          // WILL NEED TO UPDATE LOCAL COPY
+          //onTest(speedtest);
+          //history.push('/');
+          console.log(speedtest);
         });
       } else {
         r.json().then((err) => console.log(err));
       }
     });
-    // setSuccess('Profile updated!');
+    // setSuccess('Test submitted!');
   };
 
-  const handleLogout = () => {
-    fetch('/logout', {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }).then((r) => {
-      setIsLoading(false);
-      if (r.ok) {
-        onUpdate(null);
-        history.push('/');
-      } else {
-        setError([`Logout failed`]);
-      }
-    });
+  const openInNewTab = (url) => {
+    window.open(url, '_blank', 'noopener, noreferrer');
   };
+
   const messageVariants = {
     hidden: { y: 30, opacity: 0 },
     animate: { y: 0, opacity: 1, transition: { delay: 0.2, duration: 0.4 } },
@@ -97,48 +125,95 @@ function SpeedtestForm({ user, onUpdate }) {
 
   const formData = [
     {
-      label: 'First Name',
-      value: firstname,
-      onChange: (e) => setFirstname(e.target.value),
+      label: 'Start Date',
+      value: start,
+      onChange: (e) => setStart(e.target.value),
+      type: 'date',
+    },
+    {
+      label: 'End Date',
+      value: end,
+      onChange: (e) => setEnd(e.target.value),
+      type: 'date',
+    },
+    {
+      label: 'Notes',
+      value: desc,
+      onChange: (e) => setDesc(e.target.value),
       type: 'text',
     },
     {
-      label: 'Last Name',
-      value: lastname,
-      onChange: (e) => setLastname(e.target.value),
+      label: 'Tech Rating',
+      value: techRating,
+      onChange: (e) => setTechRating(e.target.value),
+      type: 'number',
+    },
+    {
+      label: 'Tech Comments',
+      value: techComment,
+      onChange: (e) => setTechComment(e.target.value),
       type: 'text',
     },
     {
-      label: 'Email',
-      value: email,
-      onChange: (e) => setEmail(e.target.value),
-      type: 'email',
+      label: 'Visit Rating',
+      value: visitRating,
+      onChange: (e) => setVisitRating(e.target.value),
+      type: 'number',
     },
     {
-      label: 'Bio',
-      value: bio,
-      onChange: (e) => setBio(e.target.value),
+      label: 'Visit Comments',
+      value: visitComment,
+      onChange: (e) => setVisitComment(e.target.value),
       type: 'text',
-      placeholder: 'Tell us something about yourself',
     },
     {
-      label: 'Image',
-      value: image,
-      onChange: (e) => setImage(e.target.value),
+      label: 'Download',
+      value: download,
+      onChange: (e) => setDownload(e.target.value),
+      type: 'number',
+    },
+    {
+      label: 'Upload',
+      value: upload,
+      onChange: (e) => setUpload(e.target.value),
+      type: 'number',
+    },
+    {
+      label: 'Latency',
+      value: latency,
+      onChange: (e) => setLatency(e.target.value),
+      type: 'number',
+    },
+    {
+      label: 'Connection Type',
+      value: connectiontype,
+      onChange: (e) => setConnectiontype(e.target.value),
       type: 'text',
-      placeholder: 'Link to image or avatar',
     },
     {
-      label: 'New Password',
-      value: password,
-      onChange: (e) => setPassword(e.target.value),
-      type: 'password',
+      label: 'Cell Provider',
+      value: connectionprovider,
+      onChange: (e) => setConnectionprovider(e.target.value),
+      type: 'text',
     },
     {
-      label: 'Confirm New Password',
-      value: password_confirmation,
-      onChange: (e) => setPasswordConfirmation(e.target.value),
-      type: 'password',
+      label: 'Test Provider',
+      value: testprovider,
+      onChange: (e) => setTestprovider(e.target.value),
+      type: 'text',
+    },
+
+    {
+      label: 'Result URL',
+      value: resulturl,
+      onChange: (e) => setResulturl(e.target.value),
+      type: 'text',
+    },
+    {
+      label: 'Result Image',
+      value: resultimage,
+      onChange: (e) => setResultimage(e.target.value),
+      type: 'text',
     },
   ];
 
@@ -146,13 +221,25 @@ function SpeedtestForm({ user, onUpdate }) {
     <FormSection>
       <Container>
         <FormRow>
-          <FormColumn small>
-            <FormSmallButton onClick={handleLogout}>Logout</FormSmallButton>
-            <FormTitleGrouped>{user.username}</FormTitleGrouped>
-            <FormImgWrapper>
-              <FormAvatar src={user.image}></FormAvatar>
-            </FormImgWrapper>
-            <FormSubTitle>Profile</FormSubTitle>
+          <FormColumn>
+            <FormRow>
+              <FormSmallButton
+                onClick={() => openInNewTab('https://www.speedtest.net/')}
+              >
+                Speedtest
+              </FormSmallButton>
+              <FormSmallButton
+                onClick={() => openInNewTab('https://www.speedcheck.org/')}
+              >
+                Speedcheck
+              </FormSmallButton>
+            </FormRow>
+            <FormTitleGrouped>Speedtest</FormTitleGrouped>
+            <FormSubTitle>
+              {selectedDestination
+                ? selectedDestination.name
+                : 'destination required'}
+            </FormSubTitle>
             <FormWrapper onSubmit={handleSubmit}>
               {formData.map((el, index) => (
                 <FormInputRow key={index}>
@@ -172,7 +259,7 @@ function SpeedtestForm({ user, onUpdate }) {
               <FormRow>
                 <FormColumn>
                   <FormSmallButton type='submit'>
-                    {isLoading ? 'Loading...' : 'Update'}
+                    {isLoading ? 'Loading...' : 'Submit'}
                   </FormSmallButton>
                 </FormColumn>
               </FormRow>
