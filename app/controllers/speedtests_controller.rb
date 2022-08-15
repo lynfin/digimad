@@ -12,6 +12,9 @@ class SpeedtestsController < ApplicationController
 
   def create
     speedtest = Speedtest.create!(speedtest_params)
+    speedtest.visit = Visit.create!(speedtest_params[:visit_attributes])
+    # speedtest.visit = Visit.create!(speedtest_params[:start, :end, :user_id, :destination_id, :desc, :tech_rating,
+    #                                                   :tech_comment, :visit_rating, :visit_comment])
     render json: speedtest, status: :created
   end
 
@@ -29,7 +32,9 @@ class SpeedtestsController < ApplicationController
 
   def speedtest_params
     params.permit(:latency, :download, :upload, :connectiontype, :connectionprovider, :testprovider, :resulturl,
-                  :resultimage)
+                  :resultimage,
+                  visit_attributes: %i[start end user user_id destination destination_id speedtest desc tech_rating
+                                       tech_comment visit_rating visit_comment])
   end
 
   def find_speedtest

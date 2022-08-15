@@ -21,7 +21,7 @@ class VisitsController < ApplicationController
     # visit.save!
 
     visit = Visit.create!(visit_params)
-    # visit.speedtest = Speedtest.create!(visit_params[:speedtest_params])
+    # visit.speedtest = Speedtest.create!(visit_params[:speedtest_attributes])
     render json: visit, status: :created
   end
 
@@ -39,9 +39,7 @@ class VisitsController < ApplicationController
 
   def visit_params
     params.permit(:start, :end, :user, :user_id, :destination, :destination_id, :speedtest, :desc, :tech_rating,
-                  :tech_comment, :visit_rating, :visit_comment, :dest,
-                  speedtest_params: %i[latency download upload connectiontype connectionprovider
-                                       testprovider resulturl resultimage])
+                  :tech_comment, :visit_rating, :visit_comment, :dest)
   end
 
   def find_visit

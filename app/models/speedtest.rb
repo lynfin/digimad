@@ -1,5 +1,6 @@
 class Speedtest < ApplicationRecord
-  has_one :visit
+  has_one :visit, dependent: :destroy
+  accepts_nested_attributes_for :visit
   validates :download, numericality: true
   validates :upload, :latency, numericality: true, allow_nil: true
   validates :connectiontype,
