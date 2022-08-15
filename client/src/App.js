@@ -109,7 +109,7 @@ function App() {
   function handleDestinationSelected(selectedId) {
     setSelectedDestinationId(selectedId);
     setSelectedDestination(
-      destinations.filter((d) => {
+      destinations.find((d) => {
         return d.id === selectedId;
       })
     );

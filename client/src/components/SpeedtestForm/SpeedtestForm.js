@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import {
   FormColumn,
   FormWrapper,
@@ -19,6 +19,8 @@ import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
 function SpeedtestForm({ user, selectedDestination }) {
+  console.log('IN SPEEDTEST FORM');
+  console.log(selectedDestination);
   const date = new Date();
   const formattedToday =
     date.getFullYear().toString() +
