@@ -12,7 +12,7 @@ class SpeedtestsController < ApplicationController
 
   def create
     speedtest = Speedtest.create!(speedtest_params)
-    speedtest.visit = Visit.create!(speedtest_params[:visit_attributes])
+    speedtest_params[:visit_attributes] ? speedtest.visit = Visit.create!(speedtest_params[:visit_attributes]) : nil
     # speedtest.visit = Visit.create!(speedtest_params[:start, :end, :user_id, :destination_id, :desc, :tech_rating,
     #                                                   :tech_comment, :visit_rating, :visit_comment])
     render json: speedtest, status: :created
