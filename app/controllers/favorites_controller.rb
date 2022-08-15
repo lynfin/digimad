@@ -17,7 +17,7 @@ class FavoritesController < ApplicationController
 
   def update
     @favorite.update!(favorite_params)
-    render json: favorite, status: :accepted
+    render json: @favorite, status: :accepted
   end
 
   def destroy

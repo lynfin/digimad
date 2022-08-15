@@ -13,16 +13,19 @@ class VisitsController < ApplicationController
   end
 
   def create
+    # visit = Visit.new(visit_params)
+    # # fix to check whether speedtest params were provided
+    # # it is allowed to create a visit and not provide the speedtest details
+    # speedtest = Speedtest.new(visit_params[:speedtest_params])
+    # visit.speedtest = speedtest.save!
+    # visit.save!
     visit = Visit.create!(visit_params)
-    # fix to check whether speedtest params were provided
-    # it is allowed to create a visit and not provide the speedtest details
-    visit.speedtest.create!(speedtest_params)
     render json: visit, status: :created
   end
 
   def update
     @visit.update!(visit_params)
-    render json: visit, status: :accepted
+    render json: @visit, status: :accepted
   end
 
   def destroy
@@ -33,9 +36,10 @@ class VisitsController < ApplicationController
   private
 
   def visit_params
-    params.permit(:start, :end, :user, :destination, :speedtest, :desc, :tech_rating, :tech_comment, :visit_rating,
-                  :visit_comment, :dest, speedtest_params: %i[latency download upload connectiontype connectionprovider
-                                                              testprovider resulturl resultimage])
+    params.permit(:start, :end, :user, :user_id, :destination, :destination_id, :speedtest, :desc, :tech_rating,
+                  :tech_comment, :visit_rating, :visit_comment, :dest,
+                  speedtest_params: %i[latency download upload connectiontype connectionprovider
+                                       testprovider resulturl resultimage])
   end
 
   def find_visit

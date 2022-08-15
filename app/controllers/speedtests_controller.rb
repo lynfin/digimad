@@ -17,7 +17,7 @@ class SpeedtestsController < ApplicationController
 
   def update
     @speedtest.update!(speedtest_params)
-    render json: speedtest, status: :accepted
+    render json: @speedtest, status: :accepted
   end
 
   def destroy
