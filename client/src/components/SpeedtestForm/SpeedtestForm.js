@@ -19,8 +19,6 @@ import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
 
 function SpeedtestForm({ user, selectedDestination }) {
-  console.log('IN SPEEDTEST FORM');
-  console.log(selectedDestination);
   const date = new Date();
   const formattedToday =
     date.getFullYear().toString() +
@@ -97,8 +95,8 @@ function SpeedtestForm({ user, selectedDestination }) {
         connectiontype,
         connectionprovider,
         testprovider,
-        resulturl,
-        resultimage,
+        resulturl: resulturl ? resulturl : null,
+        resultimage: resultimage ? resultimage : null,
         visit_attributes,
       }),
     }).then((r) => {
@@ -106,8 +104,8 @@ function SpeedtestForm({ user, selectedDestination }) {
         r.json().then((speedtest) => {
           // WILL NEED TO UPDATE LOCAL COPY
           //onTest(speedtest);
-          //history.push('/');
           console.log(speedtest);
+          history.push('/destination');
         });
       } else {
         r.json().then((err) => console.log(err));
