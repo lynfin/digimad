@@ -35,6 +35,13 @@ function CarouselCard({ el, index, onDestinationSelected }) {
           <CardButton onClick={handleClick}>Details</CardButton>
         </Link>
       </ButtonWrapper>
+      <ButtonWrapper>
+        <Link to={{ pathname: 'speedtest', state: { el } }}>
+          {/* <CardButton> */}
+          {/* <CardButton onClick={onDestinationSelected(el.id)}> */}
+          <CardButton onClick={handleClick}>Record Test</CardButton>
+        </Link>
+      </ButtonWrapper>
     </ImageWrapper>
   );
 }
