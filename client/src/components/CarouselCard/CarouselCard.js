@@ -9,10 +9,28 @@ import {
   ButtonWrapper,
 } from './CarouselCardStyles';
 
-function CarouselCard({ el, index, onDestinationSelected, cardStyle }) {
+function CarouselCard({
+  el,
+  index,
+  onDestinationSelected,
+  cardStyle,
+  isFavorite,
+  onFavoriteSelected,
+}) {
   function handleClick() {
     onDestinationSelected(el.id);
   }
+  function handleFavorite() {
+    isFavorite = !isFavorite;
+
+    if (isFavorite) {
+      console.log('Creating new favorite');
+    } else {
+      console.log('Deleting favorite');
+    }
+    onFavoriteSelected(el.id, isFavorite);
+  }
+
   function formatValue(value, valueFormat) {
     switch (valueFormat) {
       case 'float':
@@ -32,6 +50,9 @@ function CarouselCard({ el, index, onDestinationSelected, cardStyle }) {
   // come back and interpret cardStyle with destination data for summary lines
   return (
     <ImageWrapper key={index}>
+      <CardButton onClick={handleFavorite}>
+        {isFavorite ? ' - ' : ' + '}
+      </CardButton>
       <CarouselImage src={el.image} />
       <TextWrapper size='1.1rem' margin='0.4rem 0 0' weight='bold'>
         {el.name}
@@ -51,8 +72,7 @@ function CarouselCard({ el, index, onDestinationSelected, cardStyle }) {
           {/* <CardButton onClick={onDestinationSelected(el.id)}> */}
           <CardButton onClick={handleClick}>Details</CardButton>
         </Link>
-      </ButtonWrapper>
-      <ButtonWrapper>
+
         <Link to={{ pathname: 'speedtest', state: { el } }}>
           {/* <CardButton> */}
           {/* <CardButton onClick={onDestinationSelected(el.id)}> */}

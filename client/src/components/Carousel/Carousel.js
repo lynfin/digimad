@@ -5,7 +5,14 @@ import { Row, Heading, Section } from '../../globalStyles';
 import { ButtonContainer, ReviewSlider } from './CarouselStyles';
 import CarouselCard from '../CarouselCard/CarouselCard';
 
-function Carousel({ data, title, cardStyle, onDestinationSelected }) {
+function Carousel({
+  data,
+  title,
+  cardStyle,
+  onDestinationSelected,
+  favorites,
+  onFavoriteSelected,
+}) {
   const [sliderRef, setSliderRef] = useState(null);
 
   return (
@@ -30,6 +37,8 @@ function Carousel({ data, title, cardStyle, onDestinationSelected }) {
             index={index}
             cardStyle={cardStyle}
             onDestinationSelected={onDestinationSelected}
+            isFavorite={favorites.includes(el.id)}
+            onFavoriteSelected={onFavoriteSelected}
           />
         ))}
       </ReviewSlider>

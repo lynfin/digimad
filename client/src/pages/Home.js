@@ -2,7 +2,13 @@ import React from 'react';
 import Hero from '../components/Hero/Hero';
 import Carousel from '../components/Carousel/Carousel';
 
-function Home({ user, onDestinationSelected, destinations }) {
+function Home({
+  user,
+  onDestinationSelected,
+  destinations,
+  favorites,
+  onFavoriteSelected,
+}) {
   const destinationCardStyles = [
     {
       data: {
@@ -59,6 +65,8 @@ function Home({ user, onDestinationSelected, destinations }) {
           title={cardStyle.title}
           cardStyle={cardStyle.data}
           onDestinationSelected={onDestinationSelected}
+          favorites={favorites}
+          onFavoriteSelected={onFavoriteSelected}
         />
       ))}
       {/* {destination_sets.map((destination, index) => (

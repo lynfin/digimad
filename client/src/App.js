@@ -6,10 +6,12 @@ import Destination from './pages/Destination';
 import Speedtest from './pages/Speedtest';
 import GlobalStyle from './globalStyles';
 import Navbar from './components/Navbar/Navbar';
-import { parseISO, format } from 'date-fns';
+import { parseISO, format, endOfDay } from 'date-fns';
+import { CgOpenCollective } from 'react-icons/cg';
 
 function App() {
   const [destinations, setDestinations] = useState([]);
+  const [favorites, setFavorites] = useState([]);
   //const [destination_sets, setDestinationSets] = useState([]);
   const [errors, setErrors] = useState(false);
   const [user, setUser] = useState(null);
@@ -34,6 +36,32 @@ function App() {
       }
     });
   }, []);
+
+  // useEffect(() => {
+  //   console.log('Checking for favorites');
+  //   let favoriteDestinations = destinations.map((d) => {
+  //     return { isFavorite: favorites.includes(d.id), ...d };
+  //   });
+  //   setDestinations(favoriteDestinations);
+  // }, []);
+
+  useEffect(() => {
+    if (user)
+      fetch('/favorites').then((res) => {
+        if (res.ok) {
+          res.json().then((d) => {
+            setFavorites(d ? d.map((fav) => fav.destination_id) : []);
+          });
+        } else {
+          //res.json().then((data) => setErrors(data.error));
+          setFavorites([]);
+        }
+      });
+    else setFavorites([]);
+  }, [user]);
+  console.log(user ? user.username : 'no one logged in');
+  console.log(favorites.length);
+  console.log(favorites);
 
   // useEffect(() => {
   //   // TODO: create basic map, then add the more detailed info?
@@ -115,6 +143,16 @@ function App() {
     );
   }
 
+  function handleFavoriteSelected(selectedId, isFavorite) {
+    let updatedFavorites = isFavorite
+      ? setFavorites((oldFavorites) => [...oldFavorites, selectedId])
+      : setFavorites((oldFavorites) =>
+          oldFavorites.filter((f) => {
+            return f !== selectedId;
+          })
+        );
+  }
+
   return (
     <BrowserRouter>
       <GlobalStyle />
@@ -128,6 +166,8 @@ function App() {
             user={user}
             onDestinationSelected={handleDestinationSelected}
             destinations={destinations}
+            favorites={favorites}
+            onFavoriteSelected={handleFavoriteSelected}
           />
         </Route>
         <Route exact path='/destination'>

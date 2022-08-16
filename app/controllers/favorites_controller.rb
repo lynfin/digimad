@@ -1,9 +1,8 @@
 class FavoritesController < ApplicationController
-  skip_before_action :authenticate_user
   before_action :find_favorite, only: %i[show update destroy]
 
   def index
-    render json: Favorite.all, status: :ok
+    render json: @current_user.favorites, each_serializer: FavoriteDestinationSerializer, status: :ok
   end
 
   def show
