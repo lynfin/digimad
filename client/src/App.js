@@ -17,6 +17,7 @@ function App() {
   const [user, setUser] = useState(null);
   //const [selectedDestinationId, setSelectedDestinationId] = useState(null);
   const [selectedDestination, setSelectedDestination] = useState(null);
+  const [locations, setLocations] = useState([]);
 
   useEffect(() => {
     // auto-login
@@ -37,14 +38,33 @@ function App() {
     });
   }, []);
 
-  // useEffect(() => {
-  //   console.log('Checking for favorites');
-  //   let favoriteDestinations = destinations.map((d) => {
-  //     return { isFavorite: favorites.includes(d.id), ...d };
-  //   });
-  //   setDestinations(favoriteDestinations);
-  // }, []);
+  useEffect(() => {
+    if (destinations.length) {
+      const countries = destinations
+        .map((dest) => dest.address.country)
+        .filter((country, index, array) => array.indexOf(country) === index); // build array of distinct countries
 
+      const countryCounts = countries.map((country) => ({
+        country: country,
+        count: destinations.filter((item) => item.address.country === country) // record country and count of occurrences
+          .length,
+        cities: destinations
+          .filter((item) => item.address.country === country)
+          .map((dest) => dest.address.city)
+          .filter((city, index, array) => array.indexOf(city) === index) // build array of cities in each country
+          .map((city) => ({
+            city: city,
+            count: destinations.filter(
+              (item) =>
+                item.address.country === country && item.address.city === city // record city and count of occurrences
+            ).length,
+          })),
+      }));
+      setLocations(countryCounts);
+    }
+  }, [destinations]);
+
+  console.log(locations);
   useEffect(() => {
     if (user)
       fetch('/favorites').then((res) => {
