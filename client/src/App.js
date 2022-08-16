@@ -39,7 +39,7 @@ function App() {
     // TODO: create basic map, then add the more detailed info?
     // Build once with all the info, then rename appropriate entry to summary1/summary2
     let wifi_sort = destinations
-      .sort((a, b) => (a.maximum_wifi > b.maximum_wifi ? -1 : 1))
+      .sort((a, b) => (a['maximum_wifi'] > b['maximum_wifi'] ? -1 : 1))
       .map((d) => {
         return {
           header: d.name,
@@ -128,6 +128,7 @@ function App() {
             destination_sets={destination_sets}
             user={user}
             onDestinationSelected={handleDestinationSelected}
+            destinations={destinations}
           />
         </Route>
         <Route exact path='/destination'>

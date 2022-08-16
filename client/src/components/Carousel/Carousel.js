@@ -5,7 +5,7 @@ import { Row, Heading, Section } from '../../globalStyles';
 import { ButtonContainer, ReviewSlider } from './CarouselStyles';
 import CarouselCard from '../CarouselCard/CarouselCard';
 
-function Carousel({ data, title, onDestinationSelected }) {
+function Carousel({ data, title, cardStyle, onDestinationSelected }) {
   const [sliderRef, setSliderRef] = useState(null);
 
   return (
@@ -28,6 +28,7 @@ function Carousel({ data, title, onDestinationSelected }) {
             key={index}
             el={el}
             index={index}
+            cardStyle={cardStyle}
             onDestinationSelected={onDestinationSelected}
           />
         ))}

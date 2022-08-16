@@ -11,8 +11,7 @@ function Destination({ user, selectedDestination }) {
   const location = useLocation();
   const state = location.state;
   const [destinationDetails, setDestinationDetails] = useState(null);
-  console.log('DESTINATION:');
-  console.log(selectedDestination);
+
   useEffect(() => {
     fetch(`/destinations/${selectedDestination.id}?full`).then((res) => {
       if (res.ok) {
