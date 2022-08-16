@@ -16,12 +16,12 @@ function Home({ destination_sets, user, onDestinationSelected, destinations }) {
     },
     {
       data: {
-        summary1: 'provider_fastest_cellular_download',
+        summary1: 'fastest_cell_download',
         summary1Type: 'float',
         summary1Units: 'Max Mbps',
-        summary2: 'provider_fastest_cellular_download',
+        summary2: 'fastest_cell_provider',
       },
-      sortField: 'provider_fastest_cellular_download',
+      sortField: 'fastest_cell_download',
       title: 'Best Cell Coverage',
     },
     {
@@ -53,7 +53,7 @@ function Home({ destination_sets, user, onDestinationSelected, destinations }) {
       {destinationCardStyles.map((cardStyle, index) => (
         <Carousel
           key={index}
-          data={destinations.sort((a, b) =>
+          data={[...destinations].sort((a, b) =>
             a[cardStyle.sortField] > b[cardStyle.sortField] ? -1 : 1
           )}
           title={cardStyle.title}
