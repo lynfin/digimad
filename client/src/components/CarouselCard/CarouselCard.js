@@ -25,10 +25,42 @@ function CarouselCard({
 
     if (isFavorite) {
       console.log('Creating new favorite');
+      fetch('/favorites', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          destination_id: el.id,
+        }),
+      }).then((r) => {
+        if (r.ok) {
+          r.json().then(() => {
+            onFavoriteSelected(el.id, isFavorite);
+          });
+        } else {
+          r.json().then((err) => {
+            console.log(err.errors);
+          });
+        }
+      });
     } else {
       console.log('Deleting favorite');
+      fetch(`/favorites/${el.id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then((r) => {
+        if (r.ok) {
+          onFavoriteSelected(el.id, isFavorite);
+        } else {
+          r.json().then((err) => {
+            console.log(err.errors);
+          });
+        }
+      });
     }
-    onFavoriteSelected(el.id, isFavorite);
   }
 
   function formatValue(value, valueFormat) {

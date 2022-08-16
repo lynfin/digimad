@@ -1,22 +1,13 @@
 class FavoritesController < ApplicationController
-  before_action :find_favorite, only: %i[show update destroy]
+  before_action :find_favorite, only: %i[destroy]
 
   def index
     render json: @current_user.favorites, each_serializer: FavoriteDestinationSerializer, status: :ok
   end
 
-  def show
-    render json: @favorite, status: :ok
-  end
-
   def create
-    favorite = Favorite.create!(favorite_params)
-    render json: favorite, status: :created
-  end
-
-  def update
-    @favorite.update!(favorite_params)
-    render json: @favorite, status: :accepted
+    favorite = @current_user.favorites.create!(favorite_params)
+    render json: favorite, serializer: FavoriteDestinationSerializer, status: :created
   end
 
   def destroy
@@ -27,10 +18,10 @@ class FavoritesController < ApplicationController
   private
 
   def favorite_params
-    params.permit(:user, :destination)
+    params.permit(:destination_id)
   end
 
   def find_favorite
-    @favorite = Favorite.find(params[:id])
+    @favorite = @current_user.favorites.find_by_destination_id(params[:destination_id])
   end
 end
