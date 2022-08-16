@@ -12,6 +12,7 @@ function Carousel({
   onDestinationSelected,
   favorites,
   onFavoriteSelected,
+  user,
 }) {
   const [sliderRef, setSliderRef] = useState(null);
 
@@ -39,6 +40,7 @@ function Carousel({
             onDestinationSelected={onDestinationSelected}
             isFavorite={favorites.includes(el.id)}
             onFavoriteSelected={onFavoriteSelected}
+            user={user}
           />
         ))}
       </ReviewSlider>

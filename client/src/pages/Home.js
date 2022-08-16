@@ -76,6 +76,7 @@ function Home({
           onDestinationSelected={onDestinationSelected}
           favorites={favorites}
           onFavoriteSelected={onFavoriteSelected}
+          user={user}
         />
       ) : null}
       {destinationCardStyles.map((cardStyle, index) => (
@@ -89,6 +90,7 @@ function Home({
           onDestinationSelected={onDestinationSelected}
           favorites={favorites}
           onFavoriteSelected={onFavoriteSelected}
+          user={user}
         />
       ))}
       {/* {destination_sets.map((destination, index) => (

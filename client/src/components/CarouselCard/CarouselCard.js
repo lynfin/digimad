@@ -16,6 +16,7 @@ function CarouselCard({
   cardStyle,
   isFavorite,
   onFavoriteSelected,
+  user,
 }) {
   function handleClick() {
     onDestinationSelected(el.id);
@@ -82,9 +83,11 @@ function CarouselCard({
   // come back and interpret cardStyle with destination data for summary lines
   return (
     <ImageWrapper key={index}>
-      <CardButton onClick={handleFavorite}>
-        {isFavorite ? ' - ' : ' + '}
-      </CardButton>
+      {user ? (
+        <CardButton onClick={handleFavorite}>
+          {isFavorite ? ' - ' : ' + '}
+        </CardButton>
+      ) : null}
       <CarouselImage src={el.image} />
       <TextWrapper size='1.1rem' margin='0.4rem 0 0' weight='bold'>
         {el.name}
