@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero/Hero';
+import Filters from '../components/Filters/Filters';
 import Carousel from '../components/Carousel/Carousel';
 
 function Home({
@@ -66,6 +67,7 @@ function Home({
   return (
     <>
       <Hero />
+      <Filters />
       {favorites.length > 0 ? (
         <Carousel
           data={[...favoriteDestinations].sort((a, b) =>
