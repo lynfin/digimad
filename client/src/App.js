@@ -28,7 +28,7 @@ function App() {
   useEffect(() => {
     fetch('/destinations').then((res) => {
       if (res.ok) {
-        res.json().then(setDestinations);
+        res.json().then((d) => setDestinations(d));
       } else {
         res.json().then((data) => setErrors(data.error));
       }

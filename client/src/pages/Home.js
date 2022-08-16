@@ -53,7 +53,9 @@ function Home({ destination_sets, user, onDestinationSelected, destinations }) {
       {destinationCardStyles.map((cardStyle, index) => (
         <Carousel
           key={index}
-          data={destinations}
+          data={destinations.sort((a, b) =>
+            a[cardStyle.sortField] > b[cardStyle.sortField] ? -1 : 1
+          )}
           title={cardStyle.title}
           cardStyle={cardStyle.data}
           onDestinationSelected={onDestinationSelected}
