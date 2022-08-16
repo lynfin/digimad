@@ -49,13 +49,35 @@ function Home({
         summary2Units: 'tests',
       },
       sortField: 'most_recent_test',
-      title: 'Recently Visited',
+      title: 'Most Recent Tests',
     },
   ];
+  const favoritesData = {
+    summary1: 'maximum_wifi',
+    summary1Units: 'Max Mbps',
+    summary2: 'total_tests',
+    summary2Units: 'tests',
+  };
+  const favoriteDestinations = destinations.filter((destination) =>
+    favorites.includes(destination.id)
+  );
+
   // add sort to data={destinations} once the rest is working
   return (
     <>
       <Hero />
+      {favorites.length > 0 ? (
+        <Carousel
+          data={[...favoriteDestinations].sort((a, b) =>
+            a['name'] > b['name'] ? 1 : -1
+          )}
+          title='Favorites'
+          cardStyle={favoritesData}
+          onDestinationSelected={onDestinationSelected}
+          favorites={favorites}
+          onFavoriteSelected={onFavoriteSelected}
+        />
+      ) : null}
       {destinationCardStyles.map((cardStyle, index) => (
         <Carousel
           key={index}
