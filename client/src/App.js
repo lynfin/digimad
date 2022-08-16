@@ -38,6 +38,7 @@ function App() {
     });
   }, []);
 
+  // inspired by https://stackoverflow.com/questions/44672209/react-count-object-properties-in-an-array
   useEffect(() => {
     if (destinations.length) {
       const countries = destinations
