@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero/Hero';
 import Carousel from '../components/Carousel/Carousel';
 
-function Home({ destination_sets, user, onDestinationSelected, destinations }) {
+function Home({ user, onDestinationSelected, destinations }) {
   const destinationCardStyles = [
     {
       data: {
