@@ -80,6 +80,23 @@ export const Section = styled.section`
   }
 `;
 
+const DEFAULT_DIV = styled.div`
+  padding: ${({ padding }) => (padding ? padding : '')};
+  padding-bottom: ${({ pb }) => (pb ? pb : '')};
+  padding-top: ${({ pt }) => (pt ? pt : '')};
+  margin: ${({ margin }) => (margin ? margin : '')};
+  margin-bottom: ${({ mb }) => (mb ? mb : '')};
+  margin-top: ${({ mt }) => (mt ? mt : '')};
+  position: ${({ position }) => (position ? position : '')};
+  width: ${({ width }) => (width ? width : '')};
+  min-width: ${({ minWidth }) => (minWidth ? minWidth : '')};
+  max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : '')};
+  height: ${({ height }) => (height ? height : '')};
+  max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : '')};
+  min-height: ${({ minHeight }) => (minHeight ? minHeight : '')};
+  background-color: ${({ background }) => (background ? background : '')};
+`;
+
 export const Row = styled.div`
   display: flex;
   justify-content: ${({ justify }) => (justify ? justify : '')};
