@@ -8,8 +8,6 @@ import { DropdownBox, DropdownContainer } from './DropdownStyles';
 import { Text } from '../../globalStyles';
 
 const Dropdown = ({
-  selectedCode,
-  setSelectedCode,
   selectedName,
   setSelectedName,
   dropdownOptions,
@@ -21,7 +19,7 @@ const Dropdown = ({
 
   const closeDropdown = (el) => {
     setSelectedName(el.name);
-    setSelectedCode(el.code);
+
     setShow(false);
   };
 

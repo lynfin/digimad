@@ -11,7 +11,6 @@ function Home({
   onFavoriteSelected,
   locations,
 }) {
-  const [selectedCode, setSelectedCode] = useState('MX');
   const [selectedName, setSelectedName] = useState('Mexico');
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
@@ -82,8 +81,6 @@ function Home({
       <Hero />
       <Filters
         locations={locations}
-        selectedCode={selectedCode}
-        setSelectedCode={setSelectedCode}
         selectedName={selectedName}
         setSelectedName={setSelectedName}
       />

@@ -21,8 +21,7 @@ import Dropdown from '../Dropdown/Dropdown';
 
 function Filters({
   locations,
-  selectedCode,
-  setSelectedCode,
+
   selectedName,
   setSelectedName,
 }) {
@@ -55,16 +54,12 @@ function Filters({
           {mergedFilteredCountries.length ? (
             <RowDEFAULT justify='center' align='center' mt='4rem'>
               <Dropdown
-                selectedCode={selectedCode}
-                setSelectedCode={setSelectedCode}
                 selectedName={selectedName}
                 setSelectedName={setSelectedName}
                 dropdownOptions={mergedFilteredCountries}
                 showFlag={true}
               />
               <Dropdown
-                selectedCode={selectedCode}
-                setSelectedCode={setSelectedCode}
                 selectedName={selectedName}
                 setSelectedName={setSelectedName}
                 dropdownOptions={mergedFilteredCountries}
