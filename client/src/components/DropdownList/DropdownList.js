@@ -35,11 +35,16 @@ const DropdownList = ({
     return code || name;
   };
 
-  console.log('dropdownOptions:');
-  console.log(dropdownOptions);
-  const allOption = { code: 'ALL', count: 0, name: 'All' };
+  function sumCounts(total, option) {
+    return (total += option.count);
+  }
+  const allOption = {
+    code: '',
+    count: dropdownOptions.reduce(sumCounts, 0),
+    name: 'All',
+  };
   const fullDropdownOptions = [allOption, ...dropdownOptions];
-  console.log(fullDropdownOptions);
+
   return (
     <AnimatePresence>
       {show && (
