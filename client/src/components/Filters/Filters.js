@@ -27,7 +27,7 @@ function Filters({
   setSelectedName,
 }) {
   // const [country, setCountry] = useState('US');
-  const [mergedFilteredCountries, setMergedFilteredCountries] = useState('');
+  const [mergedFilteredCountries, setMergedFilteredCountries] = useState([]);
   useEffect(() => {
     const filterForKnownDestinations = (el) => {
       const searchText = el.name.toLocaleLowerCase().trim();
@@ -52,24 +52,26 @@ function Filters({
       <FiltersWrapper>
         <ContainerDEFAULT>
           <Header color='white'>Choose your destination:</Header>
-          <RowDEFAULT justify='center' align='center' mt='4rem'>
-            <Dropdown
-              selectedCode={selectedCode}
-              setSelectedCode={setSelectedCode}
-              selectedName={selectedName}
-              setSelectedName={setSelectedName}
-              dropdownOptions={mergedFilteredCountries}
-              showFlag={true}
-            />
-            <Dropdown
-              selectedCode={selectedCode}
-              setSelectedCode={setSelectedCode}
-              selectedName={selectedName}
-              setSelectedName={setSelectedName}
-              dropdownOptions={mergedFilteredCountries}
-              showFlag={false}
-            />
-          </RowDEFAULT>
+          {mergedFilteredCountries.length ? (
+            <RowDEFAULT justify='center' align='center' mt='4rem'>
+              <Dropdown
+                selectedCode={selectedCode}
+                setSelectedCode={setSelectedCode}
+                selectedName={selectedName}
+                setSelectedName={setSelectedName}
+                dropdownOptions={mergedFilteredCountries}
+                showFlag={true}
+              />
+              <Dropdown
+                selectedCode={selectedCode}
+                setSelectedCode={setSelectedCode}
+                selectedName={selectedName}
+                setSelectedName={setSelectedName}
+                dropdownOptions={mergedFilteredCountries}
+                showFlag={false}
+              />
+            </RowDEFAULT>
+          ) : null}
         </ContainerDEFAULT>
       </FiltersWrapper>
     </FiltersSection>
