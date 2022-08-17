@@ -26,13 +26,12 @@ function Filters({
   setFilterCountry,
 }) {
   // const [country, setCountry] = useState('US');
-  console.log('current country is ', country);
-  console.log('current filterCountry is ', filterCountry);
+
   return (
     <FiltersSection>
       <FiltersWrapper>
         <ContainerDEFAULT>
-          <Header color='white'>Filters</Header>
+          <Header color='white'>Choose your destination:</Header>
           <RowDEFAULT justify='center' align='center' mt='4rem'>
             <Dropdown
               country={country}

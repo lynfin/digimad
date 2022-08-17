@@ -11,8 +11,8 @@ function Home({
   onFavoriteSelected,
   locations,
 }) {
-  const [country, setCountry] = useState('US');
-  const [filterCountry, setFilterCountry] = useState('United States');
+  const [country, setCountry] = useState('MX');
+  const [filterCountry, setFilterCountry] = useState('Mexico');
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
 
@@ -23,8 +23,6 @@ function Home({
       })
     );
   }, [destinations, filterCountry]);
-  console.log('Filtered destinations');
-  console.log(filteredDestinations);
 
   const destinationCardStyles = [
     {
@@ -78,9 +76,6 @@ function Home({
   const favoriteDestinations = filteredDestinations.filter((destination) =>
     favorites.includes(destination.id)
   );
-
-  console.log('Home sees country as ', country);
-  console.log('Home sees filter country as ', filterCountry);
 
   return (
     <>
