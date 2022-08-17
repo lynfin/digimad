@@ -60,12 +60,14 @@ function Filters({
                 dropdownOptions={mergedFilteredCountries}
                 showFlag={true}
               />
-              <Dropdown
-                selectedName={selectedCountry}
-                setSelectedName={setSelectedCountry}
-                dropdownOptions={mergedFilteredCountries}
-                showFlag={false}
-              />
+              {selectedCountry !== 'All' ? (
+                <Dropdown
+                  selectedName={selectedCountry}
+                  setSelectedName={setSelectedCountry}
+                  dropdownOptions={mergedFilteredCountries}
+                  showFlag={false}
+                />
+              ) : null}
             </RowDEFAULT>
           ) : null}
         </ContainerDEFAULT>
