@@ -21,9 +21,10 @@ import Dropdown from '../Dropdown/Dropdown';
 
 function Filters({
   locations,
-
-  selectedName,
-  setSelectedName,
+  selectedCountry,
+  setSelectedCountry,
+  selectedCity,
+  setSelectedCity,
 }) {
   // const [country, setCountry] = useState('US');
   const [mergedFilteredCountries, setMergedFilteredCountries] = useState([]);
@@ -54,14 +55,14 @@ function Filters({
           {mergedFilteredCountries.length ? (
             <RowDEFAULT justify='center' align='center' mt='4rem'>
               <Dropdown
-                selectedName={selectedName}
-                setSelectedName={setSelectedName}
+                selectedName={selectedCountry}
+                setSelectedName={setSelectedCountry}
                 dropdownOptions={mergedFilteredCountries}
                 showFlag={true}
               />
               <Dropdown
-                selectedName={selectedName}
-                setSelectedName={setSelectedName}
+                selectedName={selectedCountry}
+                setSelectedName={setSelectedCountry}
                 dropdownOptions={mergedFilteredCountries}
                 showFlag={false}
               />
