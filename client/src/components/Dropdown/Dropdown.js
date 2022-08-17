@@ -6,15 +6,13 @@ import DropdownList from '../DropdownList/DropdownList';
 import { CurrencyDropdown, DropdownContainer } from './DropdownStyles';
 import { Text } from '../../globalStyles';
 
-const Dropdown = ({ currency, setCurrency }) => {
+const Dropdown = ({ country, setCountry }) => {
   const ref = useRef();
   const listRef = useRef();
   const [show, setShow] = useState(false);
 
-  console.log('show is', show);
   const closeDropdown = (el) => {
-    console.log(el);
-    setCurrency(el.cur);
+    setCountry(el.code);
     setShow(false);
   };
 
@@ -44,15 +42,15 @@ const Dropdown = ({ currency, setCurrency }) => {
   return (
     <DropdownContainer>
       <CurrencyDropdown ref={ref} onClick={() => setShow(true)}>
-        <Flag size={32} country={currency.slice(0, -1)} />
-        <Text color='#f4f4f4'>{currency}</Text>
+        <Flag size={32} country={country} />
+        <Text color='#f4f4f4'>{country}</Text>
         <IconContext.Provider value={{ size: '1.3em', color: '#dfdfdf' }}>
           <AiOutlineCaretDown />
         </IconContext.Provider>
       </CurrencyDropdown>
       <DropdownList
         listRef={listRef}
-        setCurrency={setCurrency}
+        setCountry={setCountry}
         show={show}
         closeDropdown={closeDropdown}
       />

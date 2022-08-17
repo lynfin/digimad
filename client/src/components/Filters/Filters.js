@@ -19,14 +19,15 @@ import Dropdown from '../Dropdown/Dropdown';
 // </FiltersSection>
 
 function Filters({}) {
-  const [currency, setCurrency] = useState('USD');
+  const [country, setCountry] = useState('US');
+  console.log('current country is ', country);
   return (
     <FiltersSection>
       <FiltersWrapper>
         <ContainerDEFAULT>
           <Header color='red'>Filters</Header>
           <RowDEFAULT justify='center' align='center' mt='4rem'>
-            <Dropdown currency={currency} setCurrency={setCurrency} />
+            <Dropdown country={country} setCountry={setCountry} />
           </RowDEFAULT>
         </ContainerDEFAULT>
       </FiltersWrapper>

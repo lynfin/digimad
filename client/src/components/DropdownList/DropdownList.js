@@ -25,7 +25,7 @@ const DropdownList = ({ closeDropdown, show, listRef }) => {
     const searchText = search.trim().toLocaleLowerCase();
 
     const name = el.name.toLocaleLowerCase().trim().includes(searchText);
-    const code = el.cur.toLocaleLowerCase().trim().includes(searchText);
+    const code = el.code.toLocaleLowerCase().trim().includes(searchText);
 
     return code || name;
   };
@@ -46,7 +46,7 @@ const DropdownList = ({ closeDropdown, show, listRef }) => {
               <CountryInput
                 value={search}
                 onChange={(e) => handleSearch(e.target.value)}
-                placeholder='Type a currency'
+                placeholder='Type a country'
                 className='ml-5'
                 bc='#fff'
                 type='text'
@@ -55,19 +55,18 @@ const DropdownList = ({ closeDropdown, show, listRef }) => {
             {search.length === 0 && (
               <>
                 <ListItem noHover noPointer>
-                  <Label bold>Popular Currencies</Label>
+                  <Label bold>Popular Countries</Label>
                 </ListItem>
 
                 {popular.map((el, index) => (
                   <ListItem key={index} onClick={() => closeDropdown(el)}>
-                    <Flag size={28} country={el.cur.slice(0, -1)} />{' '}
-                    <Text>{el.cur}</Text>
+                    <Flag size={28} country={el.code} /> <Text>{el.code}</Text>
                     <Label fontSize='1em'>{el.name}</Label>
                   </ListItem>
                 ))}
 
                 <ListItem noHover noPointer>
-                  <Label bold>All Currencies</Label>
+                  <Label bold>All Countries</Label>
                 </ListItem>
               </>
             )}
@@ -76,8 +75,7 @@ const DropdownList = ({ closeDropdown, show, listRef }) => {
               .filter((el) => filterCountry(el))
               .map((el, index) => (
                 <ListItem key={index} onClick={() => closeDropdown(el)}>
-                  <Flag size={28} country={el.cur.slice(0, -1)} />{' '}
-                  <Text>{el.cur}</Text>
+                  <Flag size={28} country={el.code} /> <Text>{el.code}</Text>
                   <Label fontSize='1em'>{el.name}</Label>
                 </ListItem>
               ))}
