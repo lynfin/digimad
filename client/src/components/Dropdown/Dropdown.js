@@ -51,7 +51,14 @@ const Dropdown = ({
   return (
     <DropdownContainer>
       <DropdownBox ref={ref} onClick={() => setShow(true)}>
-        {showFlag ? <Flag size={32} country={selectedCode} /> : null}
+        {showFlag ? (
+          <Flag
+            size={32}
+            country={
+              dropdownOptions.find((opt) => opt.name === selectedName).code
+            }
+          />
+        ) : null}
         <Text color='black'>{selectedName}</Text>
         <IconContext.Provider value={{ size: '1.3em', color: 'darkgray' }}>
           <AiOutlineCaretDown />
