@@ -6,7 +6,7 @@ export const DropdownContainer = styled.div`
   }
 `;
 
-export const CurrencyDropdown = styled.button`
+export const DropdownBox = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;

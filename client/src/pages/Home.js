@@ -11,18 +11,18 @@ function Home({
   onFavoriteSelected,
   locations,
 }) {
-  const [country, setCountry] = useState('MX');
-  const [filterCountry, setFilterCountry] = useState('Mexico');
+  const [selectedCode, setSelectedCode] = useState('MX');
+  const [selectedName, setSelectedName] = useState('Mexico');
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
 
   useEffect(() => {
     setFilteredDestinations(
       destinations.filter((d) => {
-        return d.address.country === filterCountry;
+        return d.address.country === selectedName;
       })
     );
-  }, [destinations, filterCountry]);
+  }, [destinations, selectedName]);
 
   const destinationCardStyles = [
     {
@@ -82,10 +82,10 @@ function Home({
       <Hero />
       <Filters
         locations={locations}
-        country={country}
-        setCountry={setCountry}
-        filterCountry={filterCountry}
-        setFilterCountry={setFilterCountry}
+        selectedCode={selectedCode}
+        setSelectedCode={setSelectedCode}
+        selectedName={selectedName}
+        setSelectedName={setSelectedName}
       />
       {favorites.length > 0 ? (
         <Carousel

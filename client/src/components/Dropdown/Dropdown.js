@@ -4,14 +4,14 @@ import { IconContext } from 'react-icons';
 import { AiOutlineCaretDown } from 'react-icons/ai';
 import DropdownList from '../DropdownList/DropdownList';
 
-import { CurrencyDropdown, DropdownContainer } from './DropdownStyles';
+import { DropdownBox, DropdownContainer } from './DropdownStyles';
 import { Text } from '../../globalStyles';
 
 const Dropdown = ({
-  country,
-  setCountry,
-  filterCountry,
-  setFilterCountry,
+  selectedCode,
+  setSelectedCode,
+  selectedName,
+  setSelectedName,
   dropdownOptions,
   showFlag,
 }) => {
@@ -20,8 +20,8 @@ const Dropdown = ({
   const [show, setShow] = useState(false);
 
   const closeDropdown = (el) => {
-    setFilterCountry(el.name);
-    setCountry(el.code);
+    setSelectedName(el.name);
+    setSelectedCode(el.code);
     setShow(false);
   };
 
@@ -33,7 +33,6 @@ const Dropdown = ({
       //     setShow(false);
       //   }
     };
-
     window.addEventListener('click', handleMouseClick);
 
     return () => {
@@ -51,13 +50,13 @@ const Dropdown = ({
 
   return (
     <DropdownContainer>
-      <CurrencyDropdown ref={ref} onClick={() => setShow(true)}>
-        {showFlag ? <Flag size={32} country={country} /> : null}
-        <Text color='black'>{filterCountry}</Text>
+      <DropdownBox ref={ref} onClick={() => setShow(true)}>
+        {showFlag ? <Flag size={32} country={selectedCode} /> : null}
+        <Text color='black'>{selectedName}</Text>
         <IconContext.Provider value={{ size: '1.3em', color: 'darkgray' }}>
           <AiOutlineCaretDown />
         </IconContext.Provider>
-      </CurrencyDropdown>
+      </DropdownBox>
       <DropdownList
         listRef={listRef}
         show={show}
