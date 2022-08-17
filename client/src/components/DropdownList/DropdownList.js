@@ -17,7 +17,7 @@ const DropdownList = ({
   setFilterCountry,
 }) => {
   const [search, setSearch] = useState('');
-  //const [mergedFilteredCountries, setMergedFilteredCountries] = useState('');
+  const [mergedFilteredCountries, setMergedFilteredCountries] = useState('');
 
   useEffect(() => {
     if (!show) {
@@ -38,28 +38,25 @@ const DropdownList = ({
     return code || name;
   };
 
-  const filterForKnownDestinations = (el) => {
-    const searchText = el.name.toLocaleLowerCase().trim();
-
-    const located = locations.find((loc) =>
-      loc.country.toLocaleLowerCase().trim().includes(searchText)
+  useEffect(() => {
+    const filterForKnownDestinations = (el) => {
+      const searchText = el.name.toLocaleLowerCase().trim();
+      const located = locations.find((loc) =>
+        loc.country.toLocaleLowerCase().trim().includes(searchText)
+      );
+      return located;
+    };
+    setMergedFilteredCountries(
+      data
+        .filter((el) => filterForKnownDestinations(el))
+        .map((item, i) => {
+          if (item.name === locations[i].country) {
+            return Object.assign({}, item, locations[i]);
+          } else return null;
+        })
     );
+  }, [locations]);
 
-    return located;
-  };
-
-  console.log('locations:');
-  console.log(locations);
-  const filteredCountries = data.filter((el) => filterForKnownDestinations(el));
-  console.log('***** filteredCountries: *****');
-  console.log(filteredCountries);
-  const mergedFilteredCountries = filteredCountries.map((item, i) => {
-    if (item.name === locations[i].country) {
-      return Object.assign({}, item, locations[i]);
-    } else return null;
-  });
-  console.log('***** mergedFilteredCountries: *****');
-  console.log(mergedFilteredCountries);
   return (
     <AnimatePresence>
       {show && (
@@ -82,24 +79,6 @@ const DropdownList = ({
                 type='text'
               />
             </ListItem>
-            {/* {search.length === 0 && (
-              <>
-                <ListItem noHover noPointer>
-                  <Label bold>Popular Countries</Label>
-                </ListItem>
-
-                {popular.map((el, index) => (
-                  <ListItem key={index} onClick={() => closeDropdown(el)}>
-                    <Flag size={28} country={el.code} /> <Text>{el.code}</Text>
-                    <Label fontSize='1em'>{el.name}</Label>
-                  </ListItem>
-                ))}
-
-                <ListItem noHover noPointer>
-                  <Label bold>All Countries</Label>
-                </ListItem>
-              </>
-            )} */}
 
             {mergedFilteredCountries
               .filter((el) => filterCountry(el))
@@ -107,7 +86,7 @@ const DropdownList = ({
                 <ListItem key={index} onClick={() => closeDropdown(el)}>
                   <Flag size={28} country={el.code} /> <Text>{el.code}</Text>
                   <Label fontSize='1em'>
-                    {el.name} ({el.count})
+                    {el.name} ({el.count} sites)
                   </Label>
                 </ListItem>
               ))}
