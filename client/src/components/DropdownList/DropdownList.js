@@ -11,9 +11,7 @@ const DropdownList = ({
   closeDropdown,
   show,
   listRef,
-  setCountry,
-  setFilterCountry,
-  mergedFilteredCountries,
+  dropdownOptions,
   showFlag,
 }) => {
   const [search, setSearch] = useState('');
@@ -60,7 +58,7 @@ const DropdownList = ({
               />
             </ListItem>
 
-            {mergedFilteredCountries
+            {dropdownOptions
               .filter((el) => filterCountry(el))
               .map((el, index) => (
                 <ListItem key={index} onClick={() => closeDropdown(el)}>

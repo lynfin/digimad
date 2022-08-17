@@ -58,8 +58,7 @@ function Filters({
               setCountry={setCountry}
               filterCountry={filterCountry}
               setFilterCountry={setFilterCountry}
-              locations={locations}
-              mergedFilteredCountries={mergedFilteredCountries}
+              dropdownOptions={mergedFilteredCountries}
               showFlag={true}
             />
             <Dropdown
@@ -67,8 +66,7 @@ function Filters({
               setCountry={setCountry}
               filterCountry={filterCountry}
               setFilterCountry={setFilterCountry}
-              locations={locations}
-              mergedFilteredCountries={mergedFilteredCountries}
+              dropdownOptions={mergedFilteredCountries}
               showFlag={false}
             />
           </RowDEFAULT>

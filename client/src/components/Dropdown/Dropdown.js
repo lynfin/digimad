@@ -12,8 +12,7 @@ const Dropdown = ({
   setCountry,
   filterCountry,
   setFilterCountry,
-  locations,
-  mergedFilteredCountries,
+  dropdownOptions,
   showFlag,
 }) => {
   const ref = useRef();
@@ -61,12 +60,9 @@ const Dropdown = ({
       </CurrencyDropdown>
       <DropdownList
         listRef={listRef}
-        setCountry={setCountry}
-        setFilterCountry={setFilterCountry}
         show={show}
         closeDropdown={closeDropdown}
-        locations={locations}
-        mergedFilteredCountries={mergedFilteredCountries}
+        dropdownOptions={dropdownOptions}
         showFlag={showFlag}
       />
     </DropdownContainer>
