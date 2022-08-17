@@ -8,7 +8,14 @@ import { CountryInput, Label, List, ListItem } from './DropdownListStyles';
 import { AnimatePresence } from 'framer-motion';
 import { ContainerDEFAULT, Text } from '../../globalStyles';
 
-const DropdownList = ({ closeDropdown, show, listRef, locations }) => {
+const DropdownList = ({
+  closeDropdown,
+  show,
+  listRef,
+  locations,
+  setCountry,
+  setFilterCountry,
+}) => {
   const [search, setSearch] = useState('');
 
   useEffect(() => {

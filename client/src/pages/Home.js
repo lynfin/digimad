@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Hero from '../components/Hero/Hero';
 import Filters from '../components/Filters/Filters';
 import Carousel from '../components/Carousel/Carousel';
@@ -12,6 +12,20 @@ function Home({
   locations,
 }) {
   const [country, setCountry] = useState('US');
+  const [filterCountry, setFilterCountry] = useState('United States');
+  const [filteredDestinations, setFilteredDestinations] =
+    useState(destinations);
+
+  useEffect(() => {
+    setFilteredDestinations(
+      destinations.filter((d) => {
+        return d.address.country === filterCountry;
+      })
+    );
+  }, [destinations, filterCountry]);
+  console.log('Filtered destinations');
+  console.log(filteredDestinations);
+
   const destinationCardStyles = [
     {
       data: {
@@ -65,7 +79,9 @@ function Home({
     favorites.includes(destination.id)
   );
 
-  // add sort to data={destinations} once the rest is working
+  console.log('Home sees country as ', country);
+  console.log('Home sees filter country as ', filterCountry);
+
   return (
     <>
       <Hero />
@@ -73,6 +89,8 @@ function Home({
         locations={locations}
         country={country}
         setCountry={setCountry}
+        filterCountry={filterCountry}
+        setFilterCountry={setFilterCountry}
       />
       {favorites.length > 0 ? (
         <Carousel

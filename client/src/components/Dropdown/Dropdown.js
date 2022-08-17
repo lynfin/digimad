@@ -7,12 +7,19 @@ import data from '../DropdownList/data.json';
 import { CurrencyDropdown, DropdownContainer } from './DropdownStyles';
 import { Text } from '../../globalStyles';
 
-const Dropdown = ({ country, setCountry, locations }) => {
+const Dropdown = ({
+  country,
+  setCountry,
+  filterCountry,
+  setFilterCountry,
+  locations,
+}) => {
   const ref = useRef();
   const listRef = useRef();
   const [show, setShow] = useState(false);
 
   const closeDropdown = (el) => {
+    setFilterCountry(el.name);
     setCountry(el.code);
     setShow(false);
   };
@@ -52,6 +59,7 @@ const Dropdown = ({ country, setCountry, locations }) => {
       <DropdownList
         listRef={listRef}
         setCountry={setCountry}
+        setFilterCountry={setFilterCountry}
         show={show}
         closeDropdown={closeDropdown}
         locations={locations}

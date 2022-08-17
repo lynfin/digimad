@@ -18,9 +18,16 @@ import Dropdown from '../Dropdown/Dropdown';
 // </FiltersWrapper>
 // </FiltersSection>
 
-function Filters({ locations, country, setCountry }) {
+function Filters({
+  locations,
+  country,
+  setCountry,
+  filterCountry,
+  setFilterCountry,
+}) {
   // const [country, setCountry] = useState('US');
   console.log('current country is ', country);
+  console.log('current filterCountry is ', filterCountry);
   return (
     <FiltersSection>
       <FiltersWrapper>
@@ -30,6 +37,8 @@ function Filters({ locations, country, setCountry }) {
             <Dropdown
               country={country}
               setCountry={setCountry}
+              filterCountry={filterCountry}
+              setFilterCountry={setFilterCountry}
               locations={locations}
             />
           </RowDEFAULT>
