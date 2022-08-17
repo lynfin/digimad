@@ -37,6 +37,22 @@ const DropdownList = ({
     return code || name;
   };
 
+  const filterForKnownDestinations = (el) => {
+    const searchText = el.name.toLocaleLowerCase().trim();
+
+    const name = el.name.toLocaleLowerCase().trim().includes(searchText);
+    const located = locations.find((loc) =>
+      loc.country.toLocaleLowerCase().trim().includes(searchText)
+    );
+
+    return located;
+  };
+
+  console.log('locations:');
+  console.log(locations);
+  const filteredCountries = data.filter((el) => filterForKnownDestinations(el));
+  console.log('***** filteredCountries: *****');
+  console.log(filteredCountries);
   //   const filterLocation = (el, location) => {
   //     const searchText = location.trim().toLocaleLowerCase();
 
@@ -77,7 +93,7 @@ const DropdownList = ({
                 type='text'
               />
             </ListItem>
-            {search.length === 0 && (
+            {/* {search.length === 0 && (
               <>
                 <ListItem noHover noPointer>
                   <Label bold>Popular Countries</Label>
@@ -94,7 +110,7 @@ const DropdownList = ({
                   <Label bold>All Countries</Label>
                 </ListItem>
               </>
-            )}
+            )} */}
 
             {data
               .filter((el) => filterCountry(el))
