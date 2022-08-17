@@ -19,7 +19,6 @@ const Dropdown = ({
 
   const closeDropdown = (el) => {
     setSelectedName(el.name);
-
     setShow(false);
   };
 
@@ -49,7 +48,7 @@ const Dropdown = ({
   return (
     <DropdownContainer>
       <DropdownBox ref={ref} onClick={() => setShow(true)}>
-        {showFlag ? (
+        {showFlag && selectedName !== 'All' ? (
           <Flag
             size={32}
             country={

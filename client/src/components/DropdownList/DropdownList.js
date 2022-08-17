@@ -3,7 +3,7 @@ import Flag from 'react-flagkit';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { IconContext } from 'react-icons';
 
-import { CountryInput, Label, List, ListItem } from './DropdownListStyles';
+import { SearchInput, Label, List, ListItem } from './DropdownListStyles';
 import { AnimatePresence } from 'framer-motion';
 import { ContainerDEFAULT, Text } from '../../globalStyles';
 
@@ -35,6 +35,11 @@ const DropdownList = ({
     return code || name;
   };
 
+  console.log('dropdownOptions:');
+  console.log(dropdownOptions);
+  const allOption = { code: 'ALL', count: 0, name: 'All' };
+  const fullDropdownOptions = [allOption, ...dropdownOptions];
+  console.log(fullDropdownOptions);
   return (
     <AnimatePresence>
       {show && (
@@ -48,7 +53,7 @@ const DropdownList = ({
               <IconContext.Provider value={{ size: '2em', color: '#c9c9c9' }}>
                 <AiOutlineSearch></AiOutlineSearch>
               </IconContext.Provider>
-              <CountryInput
+              <SearchInput
                 value={search}
                 onChange={(e) => handleSearch(e.target.value)}
                 placeholder='Type a country'
@@ -58,7 +63,7 @@ const DropdownList = ({
               />
             </ListItem>
 
-            {dropdownOptions
+            {fullDropdownOptions
               .filter((el) => filterCountry(el))
               .map((el, index) => (
                 <ListItem key={index} onClick={() => closeDropdown(el)}>
@@ -69,7 +74,7 @@ const DropdownList = ({
                     </>
                   ) : null}
                   <Label fontSize='1em'>
-                    {el.name} ({el.count} sites)
+                    {el.name} {el.count ? `(${el.count} sites)` : null}
                   </Label>
                 </ListItem>
               ))}

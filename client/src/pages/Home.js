@@ -11,14 +11,14 @@ function Home({
   onFavoriteSelected,
   locations,
 }) {
-  const [selectedCountry, setSelectedCountry] = useState('Mexico');
+  const [selectedCountry, setSelectedCountry] = useState('All');
   const [selectedCity, setSelectedCity] = useState('');
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
 
   useEffect(() => {
     setFilteredDestinations(
-      selectedCountry
+      selectedCountry && selectedCountry !== 'All'
         ? destinations.filter((d) => {
             return d.address.country === selectedCountry;
           })

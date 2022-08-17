@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const CountryInput = styled.input`
+export const SearchInput = styled.input`
   width: 100%;
   border: none;
   outline: none;
