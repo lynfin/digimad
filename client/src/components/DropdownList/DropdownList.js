@@ -11,7 +11,6 @@ const DropdownList = ({
   closeDropdown,
   show,
   listRef,
-  locations,
   setCountry,
   setFilterCountry,
   mergedFilteredCountries,
