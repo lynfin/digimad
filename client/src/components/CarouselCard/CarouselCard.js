@@ -107,12 +107,11 @@ function CarouselCard({
           {/* <CardButton onClick={onDestinationSelected(el.id)}> */}
           <CardButton onClick={handleClick}>Details</CardButton>
         </Link>
-
-        <Link to={{ pathname: 'speedtest', state: { el } }}>
-          {/* <CardButton> */}
-          {/* <CardButton onClick={onDestinationSelected(el.id)}> */}
-          <CardButton onClick={handleClick}>Record Test</CardButton>
-        </Link>
+        {user ? (
+          <Link to={{ pathname: 'speedtest', state: { el } }}>
+            <CardButton onClick={handleClick}>Record Test</CardButton>
+          </Link>
+        ) : null}
       </ButtonWrapper>
     </ImageWrapper>
   );
