@@ -18,9 +18,11 @@ function Home({
 
   useEffect(() => {
     setFilteredDestinations(
-      destinations.filter((d) => {
-        return d.address.country === selectedCountry;
-      })
+      selectedCountry
+        ? destinations.filter((d) => {
+            return d.address.country === selectedCountry;
+          })
+        : destinations
     );
   }, [destinations, selectedCountry]);
 
