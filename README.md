@@ -422,4 +422,5 @@ This project based on:
 
 - [this project template](https://github.com/learn-co-curriculum/react-rails-project-setup-guide).
 - [this authentication template](https://github.com/learn-co-curriculum/phase-4-rails-putting-it-all-together-auth).
-- [responsive NavBar tutorial](https://youtu.be/1yMrdBsep-A).
+- [Aldar Satori: Build a Custom Dropdown](https://www.youtube.com/watch?v=5_Le7bnqstQ&t=4s).
+- [Aldar Satori: Build a responsive website in React using Styled Components](https://www.youtube.com/watch?v=53i9EHsJGxw&t=448s).
