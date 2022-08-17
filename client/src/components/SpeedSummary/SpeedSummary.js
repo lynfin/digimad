@@ -21,11 +21,7 @@ import {
 } from './SpeedSummaryStyles';
 //import { SpeedSummaryData } from '../../data/SpeedSummaryData';
 
-function SpeedSummary({
-  destination_overview,
-  selectedDestination,
-  destinationDetails,
-}) {
+function SpeedSummary({ selectedDestination, destinationDetails }) {
   let rate_summary = destinationDetails.rate_summary;
   let connectionTypes = Object.keys(rate_summary.average.download).sort();
 
@@ -34,7 +30,7 @@ function SpeedSummary({
       <SpeedSummarySection id='SpeedSummary'>
         <SpeedSummaryWrapper>
           <Heading>Download speeds</Heading>
-          <SubHeading>{destination_overview.header}</SubHeading>
+          <SubHeading>{selectedDestination.name}</SubHeading>
 
           <TextWrapper
             mb='1.4rem'

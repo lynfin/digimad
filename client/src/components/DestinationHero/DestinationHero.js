@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useLocation, useHistory } from 'react-router-dom';
 import { Container, MainHeading } from '../../globalStyles';
 import {
   HeroDiv,
@@ -7,10 +7,15 @@ import {
   HeroText,
   ImageWrapper,
   HeroImage,
+  ButtonWrapper,
 } from './DestinationHeroStyles';
 
-function DestinationHero({ destination_overview, destinationDetails }) {
-  console.log(destinationDetails);
+function DestinationHero({ destinationDetails }) {
+  const openInNewTab = (url) => {
+    window.open(url, '_blank', 'noopener, noreferrer');
+  };
+  let history = useHistory();
+
   return (
     <HeroSection>
       <HeroDiv />
@@ -19,9 +24,12 @@ function DestinationHero({ destination_overview, destinationDetails }) {
       </ImageWrapper>
       <Container>
         <MainHeading>{destinationDetails.name}</MainHeading>
-        <HeroText>
-          Visit their website <a href={destinationDetails.desc}>here</a>
-        </HeroText>
+        <ButtonWrapper onClick={() => openInNewTab(destinationDetails.website)}>
+          <HeroText>Visit their website</HeroText>
+        </ButtonWrapper>
+        <ButtonWrapper onClick={() => history.push('/speedtest')}>
+          <HeroText>Record your speedtest</HeroText>
+        </ButtonWrapper>
         <HeroText>
           ...more details to be displayed - rating, address, phone, etc
         </HeroText>

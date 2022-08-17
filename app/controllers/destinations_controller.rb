@@ -29,7 +29,7 @@ class DestinationsController < ApplicationController
 
   def update
     @destination.update!(destination_params)
-    render json: destination, status: :accepted
+    render json: @destination, status: :accepted
   end
 
   def destroy

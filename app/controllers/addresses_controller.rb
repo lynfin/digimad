@@ -17,7 +17,7 @@ class AddressesController < ApplicationController
 
   def update
     @address.update!(address_params)
-    render json: address, status: :accepted
+    render json: @address, status: :accepted
   end
 
   def destroy

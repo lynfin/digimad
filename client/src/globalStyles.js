@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   }
+ 
 `;
 
 export const Container = styled.div`
@@ -78,6 +79,69 @@ export const Section = styled.section`
   @media screen and (max-width: 768px) {
     padding: ${({ smPadding }) => (smPadding ? smPadding : '70px 0')};
   }
+`;
+
+const DEFAULT_DIV = styled.div`
+  padding: ${({ padding }) => (padding ? padding : '')};
+  padding-bottom: ${({ pb }) => (pb ? pb : '')};
+  padding-top: ${({ pt }) => (pt ? pt : '')};
+  margin: ${({ margin }) => (margin ? margin : '')};
+  margin-bottom: ${({ mb }) => (mb ? mb : '')};
+  margin-top: ${({ mt }) => (mt ? mt : '')};
+  position: ${({ position }) => (position ? position : '')};
+  width: ${({ width }) => (width ? width : '')};
+  min-width: ${({ minWidth }) => (minWidth ? minWidth : '')};
+  max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : '')};
+  height: ${({ height }) => (height ? height : '')};
+  max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : '')};
+  min-height: ${({ minHeight }) => (minHeight ? minHeight : '')};
+  background-color: ${({ background }) => (background ? background : '')};
+`;
+
+export const ContainerDEFAULT = styled.div`
+  width: 100%;
+  max-width: 1300px;
+  margin: ${({ margin }) => (margin ? margin : '0 auto')};
+  padding: ${({ padding }) => (padding ? padding : '0 15px')};
+`;
+
+export const RowDEFAULT = styled(DEFAULT_DIV)`
+  display: flex;
+  justify-content: ${({ justify }) => (justify ? justify : '')};
+  align-items: ${({ align }) => (align ? align : '')};
+  gap: ${({ gap }) => (gap ? gap : '')};
+`;
+
+export const ColumnDEFAULT = styled(DEFAULT_DIV)`
+  display: flex;
+  flex-flow: column;
+  justify-content: ${({ justify }) => (justify ? justify : '')};
+  align-items: ${({ align }) => (align ? align : '')};
+  gap: ${({ gap }) => (gap ? gap : '')};
+`;
+
+export const Header = styled.h1`
+  color: ${({ color }) => (color ? color : 'blue')};
+  text-align: center;
+  margin: 2rem;
+`;
+
+export const Text = styled.span`
+  font-size: ${({ size }) => (size ? size : '')};
+  font-weight: ${({ weight }) => (weight ? weight : '')};
+  letter-spacing: ${({ spacing }) => (spacing ? spacing : '')};
+  text-align: ${({ align }) => (align ? align : '')};
+  padding: ${({ padding }) => (padding ? padding : '')};
+  margin: ${({ margin }) => (margin ? margin : '')};
+  margin-bottom: ${({ mb }) => (mb ? mb : '')};
+  margin-top: ${({ mt }) => (mt ? mt : '')};
+  width: ${({ width }) => (width ? width : 'auto')};
+  min-width: ${({ minWidth }) => (minWidth ? minWidth : '')};
+  max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : '')};
+  height: ${({ height }) => (height ? height : '')};
+  max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : '')};
+  min-height: ${({ minHeight }) => (minHeight ? minHeight : '')};
+  color: ${({ color }) => (color ? color : '')};
 `;
 
 export const Row = styled.div`
