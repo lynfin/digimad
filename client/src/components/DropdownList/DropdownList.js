@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Flag from 'react-flagkit';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { IconContext } from 'react-icons';
-import data from './data.json';
-import popular from './popular.json';
+
 import { CountryInput, Label, List, ListItem } from './DropdownListStyles';
 import { AnimatePresence } from 'framer-motion';
 import { ContainerDEFAULT, Text } from '../../globalStyles';
@@ -15,9 +14,10 @@ const DropdownList = ({
   locations,
   setCountry,
   setFilterCountry,
+  mergedFilteredCountries,
+  showFlag,
 }) => {
   const [search, setSearch] = useState('');
-  const [mergedFilteredCountries, setMergedFilteredCountries] = useState('');
 
   useEffect(() => {
     if (!show) {
@@ -37,25 +37,6 @@ const DropdownList = ({
 
     return code || name;
   };
-
-  useEffect(() => {
-    const filterForKnownDestinations = (el) => {
-      const searchText = el.name.toLocaleLowerCase().trim();
-      const located = locations.find((loc) =>
-        loc.country.toLocaleLowerCase().trim().includes(searchText)
-      );
-      return located;
-    };
-    setMergedFilteredCountries(
-      data
-        .filter((el) => filterForKnownDestinations(el))
-        .map((item, i) => {
-          if (item.name === locations[i].country) {
-            return Object.assign({}, item, locations[i]);
-          } else return null;
-        })
-    );
-  }, [locations]);
 
   return (
     <AnimatePresence>
@@ -84,7 +65,12 @@ const DropdownList = ({
               .filter((el) => filterCountry(el))
               .map((el, index) => (
                 <ListItem key={index} onClick={() => closeDropdown(el)}>
-                  <Flag size={28} country={el.code} /> <Text>{el.code}</Text>
+                  {showFlag ? (
+                    <>
+                      <Flag size={28} country={el.code} />{' '}
+                      <Text>{el.code}</Text>
+                    </>
+                  ) : null}
                   <Label fontSize='1em'>
                     {el.name} ({el.count} sites)
                   </Label>
