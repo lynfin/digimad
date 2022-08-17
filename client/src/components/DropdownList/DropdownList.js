@@ -17,6 +17,7 @@ const DropdownList = ({
   setFilterCountry,
 }) => {
   const [search, setSearch] = useState('');
+  //const [mergedFilteredCountries, setMergedFilteredCountries] = useState('');
 
   useEffect(() => {
     if (!show) {
@@ -52,7 +53,13 @@ const DropdownList = ({
   const filteredCountries = data.filter((el) => filterForKnownDestinations(el));
   console.log('***** filteredCountries: *****');
   console.log(filteredCountries);
-
+  const mergedFilteredCountries = filteredCountries.map((item, i) => {
+    if (item.name === locations[i].country) {
+      return Object.assign({}, item, locations[i]);
+    } else return null;
+  });
+  console.log('***** mergedFilteredCountries: *****');
+  console.log(mergedFilteredCountries);
   return (
     <AnimatePresence>
       {show && (
@@ -94,12 +101,14 @@ const DropdownList = ({
               </>
             )} */}
 
-            {filteredCountries
+            {mergedFilteredCountries
               .filter((el) => filterCountry(el))
               .map((el, index) => (
                 <ListItem key={index} onClick={() => closeDropdown(el)}>
                   <Flag size={28} country={el.code} /> <Text>{el.code}</Text>
-                  <Label fontSize='1em'>{el.name}</Label>
+                  <Label fontSize='1em'>
+                    {el.name} ({el.count})
+                  </Label>
                 </ListItem>
               ))}
           </ContainerDEFAULT>
