@@ -7,9 +7,7 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   font-family: 'Montserrat', sans-serif;
   }
-  body {
-  background-color: #ffe357;
-}
+ 
 `;
 
 export const Container = styled.div`
