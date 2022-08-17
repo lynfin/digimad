@@ -26,7 +26,8 @@ const Dropdown = ({
 
   useEffect(() => {
     const handleMouseClick = (e) => {
-      console.log('handling click, show is ', show);
+      // This was intended to close the dropdown if click outside the dropdown
+      // but it is causing dropdown to open/close immediately
       //   if (show && !listRef?.current?.contains(e.target)) {
       //     setShow(false);
       //   }
@@ -51,8 +52,8 @@ const Dropdown = ({
     <DropdownContainer>
       <CurrencyDropdown ref={ref} onClick={() => setShow(true)}>
         <Flag size={32} country={country} />
-        <Text color='#f4f4f4'>{country}</Text>
-        <IconContext.Provider value={{ size: '1.3em', color: '#dfdfdf' }}>
+        <Text color='black'>{filterCountry}</Text>
+        <IconContext.Provider value={{ size: '1.3em', color: 'darkgray' }}>
           <AiOutlineCaretDown />
         </IconContext.Provider>
       </CurrencyDropdown>
