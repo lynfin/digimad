@@ -53,8 +53,9 @@ function App() {
           .filter((item) => item.address.country === country)
           .map((dest) => dest.address.city)
           .filter((city, index, array) => array.indexOf(city) === index) // build array of cities in each country
-          .map((city) => ({
-            city: city,
+          .map((city, i) => ({
+            name: city,
+            code: i,
             count: destinations.filter(
               (item) =>
                 item.address.country === country && item.address.city === city // record city and count of occurrences

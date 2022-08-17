@@ -46,7 +46,7 @@ function Filters({
         })
     );
   }, [locations]);
-  console.log('filterCountry is ', filterCountry);
+  console.log(mergedFilteredCountries);
   return (
     <FiltersSection>
       <FiltersWrapper>
