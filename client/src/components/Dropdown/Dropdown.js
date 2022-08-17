@@ -3,10 +3,11 @@ import Flag from 'react-flagkit';
 import { IconContext } from 'react-icons';
 import { AiOutlineCaretDown } from 'react-icons/ai';
 import DropdownList from '../DropdownList/DropdownList';
+import data from '../DropdownList/data.json';
 import { CurrencyDropdown, DropdownContainer } from './DropdownStyles';
 import { Text } from '../../globalStyles';
 
-const Dropdown = ({ country, setCountry }) => {
+const Dropdown = ({ country, setCountry, locations }) => {
   const ref = useRef();
   const listRef = useRef();
   const [show, setShow] = useState(false);
@@ -53,6 +54,7 @@ const Dropdown = ({ country, setCountry }) => {
         setCountry={setCountry}
         show={show}
         closeDropdown={closeDropdown}
+        locations={locations}
       />
     </DropdownContainer>
   );

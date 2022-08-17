@@ -8,7 +8,7 @@ import { CountryInput, Label, List, ListItem } from './DropdownListStyles';
 import { AnimatePresence } from 'framer-motion';
 import { ContainerDEFAULT, Text } from '../../globalStyles';
 
-const DropdownList = ({ closeDropdown, show, listRef }) => {
+const DropdownList = ({ closeDropdown, show, listRef, locations }) => {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
@@ -29,6 +29,24 @@ const DropdownList = ({ closeDropdown, show, listRef }) => {
 
     return code || name;
   };
+
+  //   const filterLocation = (el, location) => {
+  //     const searchText = location.trim().toLocaleLowerCase();
+
+  //     const name = el.name.toLocaleLowerCase().trim().includes(searchText);
+  //     const code = el.code.toLocaleLowerCase().trim().includes(searchText);
+
+  //     return code || name;
+  //   };
+
+  //   const filteredLocations = data
+  //     .filter((el) => filterCountry(el))
+  //     .map((el, index) => (
+  //       <ListItem key={index} onClick={() => closeDropdown(el)}>
+  //         <Flag size={28} country={el.code} /> <Text>{el.code}</Text>
+  //         <Label fontSize='1em'>{el.name}</Label>
+  //       </ListItem>
+  //     ))
 
   return (
     <AnimatePresence>

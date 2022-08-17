@@ -189,6 +189,7 @@ function App() {
             destinations={destinations}
             favorites={favorites}
             onFavoriteSelected={handleFavoriteSelected}
+            locations={locations}
           />
         </Route>
         <Route exact path='/destination'>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Hero from '../components/Hero/Hero';
 import Filters from '../components/Filters/Filters';
 import Carousel from '../components/Carousel/Carousel';
@@ -9,7 +9,9 @@ function Home({
   destinations,
   favorites,
   onFavoriteSelected,
+  locations,
 }) {
+  const [country, setCountry] = useState('US');
   const destinationCardStyles = [
     {
       data: {
@@ -67,7 +69,11 @@ function Home({
   return (
     <>
       <Hero />
-      <Filters />
+      <Filters
+        locations={locations}
+        country={country}
+        setCountry={setCountry}
+      />
       {favorites.length > 0 ? (
         <Carousel
           data={[...favoriteDestinations].sort((a, b) =>
