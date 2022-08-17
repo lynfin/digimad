@@ -75,7 +75,7 @@ function Home({
     summary2: 'total_tests',
     summary2Units: 'tests',
   };
-  const favoriteDestinations = destinations.filter((destination) =>
+  const favoriteDestinations = filteredDestinations.filter((destination) =>
     favorites.includes(destination.id)
   );
 
@@ -108,7 +108,7 @@ function Home({
       {destinationCardStyles.map((cardStyle, index) => (
         <Carousel
           key={index}
-          data={[...destinations].sort((a, b) =>
+          data={[...filteredDestinations].sort((a, b) =>
             a[cardStyle.sortField] > b[cardStyle.sortField] ? -1 : 1
           )}
           title={cardStyle.title}
