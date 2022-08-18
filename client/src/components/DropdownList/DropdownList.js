@@ -13,6 +13,7 @@ const DropdownList = ({
   listRef,
   dropdownOptions,
   showFlag,
+  label,
 }) => {
   const [search, setSearch] = useState('');
 
@@ -61,7 +62,7 @@ const DropdownList = ({
               <SearchInput
                 value={search}
                 onChange={(e) => handleSearch(e.target.value)}
-                placeholder='Type a country'
+                placeholder={`Type a ${label.toLocaleLowerCase()}`}
                 className='ml-5'
                 bc='#fff'
                 type='text'

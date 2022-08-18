@@ -68,6 +68,7 @@ function Filters({
                 setSelectedName={setSelectedCountry}
                 dropdownOptions={mergedFilteredCountries}
                 showFlag={true}
+                label={'Country'}
               />
               {selectedCountry !== 'All' && cityChoices.length ? (
                 <Dropdown
@@ -75,6 +76,7 @@ function Filters({
                   setSelectedName={setSelectedCity}
                   dropdownOptions={cityChoices}
                   showFlag={false}
+                  label={'City'}
                 />
               ) : null}
             </RowDEFAULT>

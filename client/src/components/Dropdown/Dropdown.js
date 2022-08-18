@@ -12,6 +12,7 @@ const Dropdown = ({
   setSelectedName,
   dropdownOptions,
   showFlag,
+  label,
 }) => {
   const ref = useRef();
   const listRef = useRef();
@@ -67,6 +68,7 @@ const Dropdown = ({
         closeDropdown={closeDropdown}
         dropdownOptions={dropdownOptions}
         showFlag={showFlag}
+        label={label}
       />
     </DropdownContainer>
   );
