@@ -17,14 +17,27 @@ function Home({
     useState(destinations);
 
   useEffect(() => {
-    setFilteredDestinations(
+    const filterForCountry =
       selectedCountry && selectedCountry !== 'All'
         ? destinations.filter((d) => {
             return d.address.country === selectedCountry;
           })
-        : destinations
-    );
-  }, [destinations, selectedCountry]);
+        : destinations;
+    const filterForCity =
+      selectedCity && selectedCity !== 'All'
+        ? filterForCountry.filter((d) => {
+            return d.address.city === selectedCity;
+          })
+        : filterForCountry;
+    setFilteredDestinations(filterForCity);
+    // setFilteredDestinations(
+    //   selectedCountry && selectedCountry !== 'All'
+    //     ? destinations.filter((d) => {
+    //         return d.address.country === selectedCountry;
+    //       })
+    //     : destinations
+    // );
+  }, [destinations, selectedCountry, selectedCity]);
 
   const destinationCardStyles = [
     {
