@@ -17,6 +17,12 @@ function Home({
     useState(destinations);
 
   useEffect(() => {
+    if (selectedCountry === 'All') {
+      setSelectedCity('All');
+    }
+  }, [selectedCountry]);
+
+  useEffect(() => {
     const filterForCountry =
       selectedCountry && selectedCountry !== 'All'
         ? destinations.filter((d) => {
