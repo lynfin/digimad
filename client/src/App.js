@@ -66,7 +66,6 @@ function App() {
     }
   }, [destinations]);
 
-  console.log(locations);
   useEffect(() => {
     if (user)
       fetch('/favorites').then((res) => {
@@ -81,9 +80,6 @@ function App() {
       });
     else setFavorites([]);
   }, [user]);
-  console.log(user ? user.username : 'no one logged in');
-  console.log(favorites.length);
-  console.log(favorites);
 
   // useEffect(() => {
   //   // TODO: create basic map, then add the more detailed info?

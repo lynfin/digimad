@@ -46,7 +46,6 @@ function Filters({
         })
     );
   }, [locations]);
-  console.log(mergedFilteredCountries);
 
   const cityChoices =
     selectedCountry !== 'All' && mergedFilteredCountries.length
@@ -54,8 +53,6 @@ function Filters({
           (country) => country.name === selectedCountry
         ).cities
       : [];
-  console.log('cityChoices:');
-  console.log(cityChoices);
   return (
     <FiltersSection>
       <FiltersWrapper>

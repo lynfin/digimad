@@ -121,28 +121,22 @@ function Home({
           user={user}
         />
       ) : null}
-      {destinationCardStyles.map((cardStyle, index) => (
-        <Carousel
-          key={index}
-          data={[...filteredDestinations].sort((a, b) =>
-            a[cardStyle.sortField] > b[cardStyle.sortField] ? -1 : 1
-          )}
-          title={cardStyle.title}
-          cardStyle={cardStyle.data}
-          onDestinationSelected={onDestinationSelected}
-          favorites={favorites}
-          onFavoriteSelected={onFavoriteSelected}
-          user={user}
-        />
-      ))}
-      {/* {destination_sets.map((destination, index) => (
-        <Carousel
-          key={index}
-          data={destination.data}
-          title={destination.title}
-          onDestinationSelected={onDestinationSelected}
-        />
-      ))} */}
+      {filteredDestinations.length > 0
+        ? destinationCardStyles.map((cardStyle, index) => (
+            <Carousel
+              key={index}
+              data={[...filteredDestinations].sort((a, b) =>
+                a[cardStyle.sortField] > b[cardStyle.sortField] ? -1 : 1
+              )}
+              title={cardStyle.title}
+              cardStyle={cardStyle.data}
+              onDestinationSelected={onDestinationSelected}
+              favorites={favorites}
+              onFavoriteSelected={onFavoriteSelected}
+              user={user}
+            />
+          ))
+        : null}
     </>
   );
 }
