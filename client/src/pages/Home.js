@@ -11,18 +11,39 @@ function Home({
   onFavoriteSelected,
   locations,
 }) {
-  const [country, setCountry] = useState('MX');
-  const [filterCountry, setFilterCountry] = useState('Mexico');
+  const [selectedCountry, setSelectedCountry] = useState('All');
+  const [selectedCity, setSelectedCity] = useState('All');
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
 
   useEffect(() => {
-    setFilteredDestinations(
-      destinations.filter((d) => {
-        return d.address.country === filterCountry;
-      })
-    );
-  }, [destinations, filterCountry]);
+    if (selectedCountry === 'All') {
+      setSelectedCity('All');
+    }
+  }, [selectedCountry]);
+
+  useEffect(() => {
+    const filterForCountry =
+      selectedCountry && selectedCountry !== 'All'
+        ? destinations.filter((d) => {
+            return d.address.country === selectedCountry;
+          })
+        : destinations;
+    const filterForCity =
+      selectedCity && selectedCity !== 'All'
+        ? filterForCountry.filter((d) => {
+            return d.address.city === selectedCity;
+          })
+        : filterForCountry;
+    setFilteredDestinations(filterForCity);
+    // setFilteredDestinations(
+    //   selectedCountry && selectedCountry !== 'All'
+    //     ? destinations.filter((d) => {
+    //         return d.address.country === selectedCountry;
+    //       })
+    //     : destinations
+    // );
+  }, [destinations, selectedCountry, selectedCity]);
 
   const destinationCardStyles = [
     {
@@ -82,10 +103,10 @@ function Home({
       <Hero />
       <Filters
         locations={locations}
-        country={country}
-        setCountry={setCountry}
-        filterCountry={filterCountry}
-        setFilterCountry={setFilterCountry}
+        selectedCountry={selectedCountry}
+        setSelectedCountry={setSelectedCountry}
+        selectedCity={selectedCity}
+        setSelectedCity={setSelectedCity}
       />
       {favorites.length > 0 ? (
         <Carousel
@@ -100,28 +121,22 @@ function Home({
           user={user}
         />
       ) : null}
-      {destinationCardStyles.map((cardStyle, index) => (
-        <Carousel
-          key={index}
-          data={[...filteredDestinations].sort((a, b) =>
-            a[cardStyle.sortField] > b[cardStyle.sortField] ? -1 : 1
-          )}
-          title={cardStyle.title}
-          cardStyle={cardStyle.data}
-          onDestinationSelected={onDestinationSelected}
-          favorites={favorites}
-          onFavoriteSelected={onFavoriteSelected}
-          user={user}
-        />
-      ))}
-      {/* {destination_sets.map((destination, index) => (
-        <Carousel
-          key={index}
-          data={destination.data}
-          title={destination.title}
-          onDestinationSelected={onDestinationSelected}
-        />
-      ))} */}
+      {filteredDestinations.length > 0
+        ? destinationCardStyles.map((cardStyle, index) => (
+            <Carousel
+              key={index}
+              data={[...filteredDestinations].sort((a, b) =>
+                a[cardStyle.sortField] > b[cardStyle.sortField] ? -1 : 1
+              )}
+              title={cardStyle.title}
+              cardStyle={cardStyle.data}
+              onDestinationSelected={onDestinationSelected}
+              favorites={favorites}
+              onFavoriteSelected={onFavoriteSelected}
+              user={user}
+            />
+          ))
+        : null}
     </>
   );
 }

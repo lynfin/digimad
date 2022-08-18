@@ -53,8 +53,9 @@ function App() {
           .filter((item) => item.address.country === country)
           .map((dest) => dest.address.city)
           .filter((city, index, array) => array.indexOf(city) === index) // build array of cities in each country
-          .map((city) => ({
-            city: city,
+          .map((city, i) => ({
+            name: city,
+            code: i.toString(),
             count: destinations.filter(
               (item) =>
                 item.address.country === country && item.address.city === city // record city and count of occurrences
@@ -65,7 +66,6 @@ function App() {
     }
   }, [destinations]);
 
-  console.log(locations);
   useEffect(() => {
     if (user)
       fetch('/favorites').then((res) => {
@@ -80,9 +80,6 @@ function App() {
       });
     else setFavorites([]);
   }, [user]);
-  console.log(user ? user.username : 'no one logged in');
-  console.log(favorites.length);
-  console.log(favorites);
 
   // useEffect(() => {
   //   // TODO: create basic map, then add the more detailed info?

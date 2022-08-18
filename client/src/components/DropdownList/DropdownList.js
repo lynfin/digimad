@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Flag from 'react-flagkit';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { IconContext } from 'react-icons';
-import data from './data.json';
-import popular from './popular.json';
-import { CountryInput, Label, List, ListItem } from './DropdownListStyles';
+
+import { SearchInput, Label, List, ListItem } from './DropdownListStyles';
 import { AnimatePresence } from 'framer-motion';
 import { ContainerDEFAULT, Text } from '../../globalStyles';
 
@@ -12,9 +11,9 @@ const DropdownList = ({
   closeDropdown,
   show,
   listRef,
-  locations,
-  setCountry,
-  setFilterCountry,
+  dropdownOptions,
+  showFlag,
+  label,
 }) => {
   const [search, setSearch] = useState('');
 
@@ -37,23 +36,15 @@ const DropdownList = ({
     return code || name;
   };
 
-  //   const filterLocation = (el, location) => {
-  //     const searchText = location.trim().toLocaleLowerCase();
-
-  //     const name = el.name.toLocaleLowerCase().trim().includes(searchText);
-  //     const code = el.code.toLocaleLowerCase().trim().includes(searchText);
-
-  //     return code || name;
-  //   };
-
-  //   const filteredLocations = data
-  //     .filter((el) => filterCountry(el))
-  //     .map((el, index) => (
-  //       <ListItem key={index} onClick={() => closeDropdown(el)}>
-  //         <Flag size={28} country={el.code} /> <Text>{el.code}</Text>
-  //         <Label fontSize='1em'>{el.name}</Label>
-  //       </ListItem>
-  //     ))
+  function sumCounts(total, option) {
+    return (total += option.count);
+  }
+  const allOption = {
+    code: '',
+    count: dropdownOptions.reduce(sumCounts, 0),
+    name: 'All',
+  };
+  const fullDropdownOptions = [allOption, ...dropdownOptions];
 
   return (
     <AnimatePresence>
@@ -68,40 +59,29 @@ const DropdownList = ({
               <IconContext.Provider value={{ size: '2em', color: '#c9c9c9' }}>
                 <AiOutlineSearch></AiOutlineSearch>
               </IconContext.Provider>
-              <CountryInput
+              <SearchInput
                 value={search}
                 onChange={(e) => handleSearch(e.target.value)}
-                placeholder='Type a country'
+                placeholder={`Type a ${label.toLocaleLowerCase()}`}
                 className='ml-5'
                 bc='#fff'
                 type='text'
               />
             </ListItem>
-            {search.length === 0 && (
-              <>
-                <ListItem noHover noPointer>
-                  <Label bold>Popular Countries</Label>
-                </ListItem>
 
-                {popular.map((el, index) => (
-                  <ListItem key={index} onClick={() => closeDropdown(el)}>
-                    <Flag size={28} country={el.code} /> <Text>{el.code}</Text>
-                    <Label fontSize='1em'>{el.name}</Label>
-                  </ListItem>
-                ))}
-
-                <ListItem noHover noPointer>
-                  <Label bold>All Countries</Label>
-                </ListItem>
-              </>
-            )}
-
-            {data
+            {fullDropdownOptions
               .filter((el) => filterCountry(el))
               .map((el, index) => (
                 <ListItem key={index} onClick={() => closeDropdown(el)}>
-                  <Flag size={28} country={el.code} /> <Text>{el.code}</Text>
-                  <Label fontSize='1em'>{el.name}</Label>
+                  {showFlag ? (
+                    <>
+                      <Flag size={28} country={el.code} />{' '}
+                      <Text>{el.code}</Text>
+                    </>
+                  ) : null}
+                  <Label fontSize='1em'>
+                    {el.name} {el.count ? `(${el.count} sites)` : null}
+                  </Label>
                 </ListItem>
               ))}
           </ContainerDEFAULT>

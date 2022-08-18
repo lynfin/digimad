@@ -6,12 +6,12 @@ export const DropdownContainer = styled.div`
   }
 `;
 
-export const CurrencyDropdown = styled.button`
+export const DropdownBox = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px;
-  background-color: #de2eff;
+  background-color: lightgray;
   border: none;
   border-radius: 5px;
   padding: 15px;
@@ -19,7 +19,7 @@ export const CurrencyDropdown = styled.button`
   gap: 0.5rem;
   cursor: pointer;
   &:hover {
-    background-color: #8703a0;
+    background-color: lightslategray;
     border: 1px solid #c2c2c2;
     transition: background 0.3s ease-in;
   }

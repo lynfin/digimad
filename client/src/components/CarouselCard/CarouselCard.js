@@ -12,8 +12,10 @@ import {
 function CarouselCard({
   el,
   index,
-  onDestinationSelected,
   cardStyle,
+
+  onDestinationSelected,
+
   isFavorite,
   onFavoriteSelected,
   user,
@@ -25,7 +27,6 @@ function CarouselCard({
     isFavorite = !isFavorite;
 
     if (isFavorite) {
-      console.log('Creating new favorite');
       fetch('/favorites', {
         method: 'POST',
         headers: {
@@ -46,7 +47,6 @@ function CarouselCard({
         }
       });
     } else {
-      console.log('Deleting favorite');
       fetch(`/favorites/${el.id}`, {
         method: 'DELETE',
         headers: {
@@ -80,7 +80,6 @@ function CarouselCard({
   let summary2 = formatValue(el[cardStyle.summary2], cardStyle.summary2Type);
   summary2 += cardStyle.summary2Units ? ' ' + cardStyle.summary2Units : '';
 
-  // come back and interpret cardStyle with destination data for summary lines
   return (
     <ImageWrapper key={index}>
       {user ? (

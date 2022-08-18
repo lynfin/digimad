@@ -16,6 +16,30 @@ function Carousel({
 }) {
   const [sliderRef, setSliderRef] = useState(null);
 
+  // Creating this responsiveSliderSetting for slidesToShow resolves the problem
+  // of duplicate cards being created when less than three cards are placed
+  // on the carousel.
+  const responsiveSliderSettings = {
+    arrows: false,
+    slidesToShow: data && data.length < 3 ? data.length : 3,
+    focusOnselect: false,
+    accessability: false,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: data && data.length < 2 ? data.length : 2,
+        },
+      },
+
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
   return (
     <Section margin='auto' maxWidth='1280px' padding='50px 70px' inverse>
       <Row justify='space-between' margin='1rem' wrap='wrap'>
@@ -30,10 +54,10 @@ function Carousel({
         </ButtonContainer>
       </Row>
 
-      <ReviewSlider {...sliderSettings} ref={setSliderRef}>
+      <ReviewSlider {...responsiveSliderSettings} ref={setSliderRef}>
         {data.map((el, index) => (
           <CarouselCard
-            key={index}
+            key={el.id}
             el={el}
             index={index}
             cardStyle={cardStyle}
@@ -48,25 +72,26 @@ function Carousel({
   );
 }
 
-const sliderSettings = {
-  arrows: false,
-  slidesToShow: 3,
-  focusOnselect: false,
-  accessability: false,
-  responsive: [
-    {
-      breakpoint: 1280,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
+// const sliderSettings = {
+//   arrows: false,
+//   slidesToShow: 3,
+//   focusOnselect: false,
+//   accessability: false,
+//   responsive: [
+//     {
+//       breakpoint: 1280,
+//       settings: {
+//         slidesToShow: 2,
+//       },
+//     },
 
-    {
-      breakpoint: 900,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-};
+//     {
+//       breakpoint: 900,
+//       settings: {
+//         slidesToShow: 1,
+//       },
+//     },
+//   ],
+// };
+
 export default Carousel;

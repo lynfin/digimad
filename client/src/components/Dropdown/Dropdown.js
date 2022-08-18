@@ -3,35 +3,34 @@ import Flag from 'react-flagkit';
 import { IconContext } from 'react-icons';
 import { AiOutlineCaretDown } from 'react-icons/ai';
 import DropdownList from '../DropdownList/DropdownList';
-import data from '../DropdownList/data.json';
-import { CurrencyDropdown, DropdownContainer } from './DropdownStyles';
+
+import { DropdownBox, DropdownContainer } from './DropdownStyles';
 import { Text } from '../../globalStyles';
 
 const Dropdown = ({
-  country,
-  setCountry,
-  filterCountry,
-  setFilterCountry,
-  locations,
+  selectedName,
+  setSelectedName,
+  dropdownOptions,
+  showFlag,
+  label,
 }) => {
   const ref = useRef();
   const listRef = useRef();
   const [show, setShow] = useState(false);
 
   const closeDropdown = (el) => {
-    setFilterCountry(el.name);
-    setCountry(el.code);
+    setSelectedName(el.name);
     setShow(false);
   };
 
   useEffect(() => {
     const handleMouseClick = (e) => {
-      console.log('handling click, show is ', show);
+      // This was intended to close the dropdown if click outside the dropdown
+      // but it is causing dropdown to open/close immediately
       //   if (show && !listRef?.current?.contains(e.target)) {
       //     setShow(false);
       //   }
     };
-
     window.addEventListener('click', handleMouseClick);
 
     return () => {
@@ -49,20 +48,27 @@ const Dropdown = ({
 
   return (
     <DropdownContainer>
-      <CurrencyDropdown ref={ref} onClick={() => setShow(true)}>
-        <Flag size={32} country={country} />
-        <Text color='#f4f4f4'>{country}</Text>
-        <IconContext.Provider value={{ size: '1.3em', color: '#dfdfdf' }}>
+      <DropdownBox ref={ref} onClick={() => setShow(true)}>
+        {showFlag && selectedName !== 'All' ? (
+          <Flag
+            size={32}
+            country={
+              dropdownOptions.find((opt) => opt.name === selectedName).code
+            }
+          />
+        ) : null}
+        <Text color='black'>{selectedName}</Text>
+        <IconContext.Provider value={{ size: '1.3em', color: 'darkgray' }}>
           <AiOutlineCaretDown />
         </IconContext.Provider>
-      </CurrencyDropdown>
+      </DropdownBox>
       <DropdownList
         listRef={listRef}
-        setCountry={setCountry}
-        setFilterCountry={setFilterCountry}
         show={show}
         closeDropdown={closeDropdown}
-        locations={locations}
+        dropdownOptions={dropdownOptions}
+        showFlag={showFlag}
+        label={label}
       />
     </DropdownContainer>
   );
