@@ -12,7 +12,7 @@ function Home({
   locations,
 }) {
   const [selectedCountry, setSelectedCountry] = useState('All');
-  const [selectedCity, setSelectedCity] = useState('');
+  const [selectedCity, setSelectedCity] = useState('All');
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
 

@@ -47,6 +47,15 @@ function Filters({
     );
   }, [locations]);
   console.log(mergedFilteredCountries);
+
+  const cityChoices =
+    selectedCountry !== 'All' && mergedFilteredCountries.length
+      ? mergedFilteredCountries.find(
+          (country) => country.name === selectedCountry
+        ).cities
+      : [];
+  console.log('cityChoices:');
+  console.log(cityChoices);
   return (
     <FiltersSection>
       <FiltersWrapper>
@@ -60,11 +69,11 @@ function Filters({
                 dropdownOptions={mergedFilteredCountries}
                 showFlag={true}
               />
-              {selectedCountry !== 'All' ? (
+              {selectedCountry !== 'All' && cityChoices.length ? (
                 <Dropdown
-                  selectedName={selectedCountry}
-                  setSelectedName={setSelectedCountry}
-                  dropdownOptions={mergedFilteredCountries}
+                  selectedName={selectedCity}
+                  setSelectedName={setSelectedCity}
+                  dropdownOptions={cityChoices}
                   showFlag={false}
                 />
               ) : null}
