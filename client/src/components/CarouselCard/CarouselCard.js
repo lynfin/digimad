@@ -7,6 +7,7 @@ import {
   CarouselImage,
   CardButton,
   ButtonWrapper,
+  FavoriteButton,
 } from './CarouselCardStyles';
 
 function CarouselCard({
@@ -82,14 +83,16 @@ function CarouselCard({
 
   return (
     <ImageWrapper key={index}>
+      <Row height='25px' width='100%' justify='right' gap='20px' row-gap='20px'>
+        {user ? (
+          <FavoriteButton onClick={handleFavorite}>
+            {isFavorite ? ' - ' : ' + '}
+          </FavoriteButton>
+        ) : null}
+      </Row>
       <Row>
         <CarouselImage src={el.image} />
         <Column justify-content='flex-start'>
-          {user ? (
-            <CardButton onClick={handleFavorite}>
-              {isFavorite ? ' - ' : ' + '}
-            </CardButton>
-          ) : null}
           <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
             {summary1}
           </TextWrapper>

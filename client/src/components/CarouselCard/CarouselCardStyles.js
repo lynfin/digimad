@@ -60,6 +60,22 @@ export const ReviewSlider = styled(Slider)`
     overflow: hidden;
   }
 `;
+export const FavoriteButton = styled.button`
+  background-color: #1d609c;
+  font-size: 1.3rem;
+  padding: 1px 15px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  margin: auto 0 0 0;
+  border: none;
+  border-radius: 10px 10px 10px 10px;
+
+  &:hover {
+    background-color: #112f4a;
+    transition: background-color 0.2s ease-in;
+  }
+`;
 
 export const CardButton = styled.button`
   background-color: #1d609c;

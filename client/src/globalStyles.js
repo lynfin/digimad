@@ -159,6 +159,7 @@ export const Row = styled.div`
   max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : 'auto')};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : 'auto')};
   flex-wrap: ${({ wrap }) => (wrap ? wrap : '')};
+  background-color: purple;
 `;
 
 export const Column = styled.div`
