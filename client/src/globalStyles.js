@@ -176,6 +176,7 @@ export const Column = styled.div`
   height: ${({ height }) => (height ? height : 'auto')};
   max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : 'auto')};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : 'auto')};
+  background-color: orange;
 `;
 
 export const Divider = styled.hr`

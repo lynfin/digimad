@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { parseISO, format } from 'date-fns';
-import { TextWrapper } from '../../globalStyles';
+import { TextWrapper, Row, Column } from '../../globalStyles';
 import {
   ImageWrapper,
   CarouselImage,
@@ -82,24 +82,36 @@ function CarouselCard({
 
   return (
     <ImageWrapper key={index}>
-      {user ? (
-        <CardButton onClick={handleFavorite}>
-          {isFavorite ? ' - ' : ' + '}
-        </CardButton>
-      ) : null}
-      <CarouselImage src={el.image} />
-      <TextWrapper size='1.1rem' margin='0.4rem 0 0' weight='bold'>
-        {el.name}
-      </TextWrapper>
-      <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
-        {summary1}
-      </TextWrapper>
-      <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
-        {summary2}
-      </TextWrapper>
-      <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
-        {`${el.address.city}, ${el.address.country}`}
-      </TextWrapper>
+      <Row>
+        <CarouselImage src={el.image} />
+        <Column justify-content='flex-start'>
+          {user ? (
+            <CardButton onClick={handleFavorite}>
+              {isFavorite ? ' - ' : ' + '}
+            </CardButton>
+          ) : null}
+          <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
+            {summary1}
+          </TextWrapper>
+          <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
+            {summary2}
+          </TextWrapper>
+        </Column>
+      </Row>
+      <Row justify-content='center'>
+        <Column align-items='center'>
+          <Row justify-content='center'>
+            <TextWrapper size='1.1rem' margin='0.4rem 0 0' weight='bold'>
+              {el.name}
+            </TextWrapper>
+          </Row>
+          <Row justify-content='center'>
+            <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
+              {`${el.address.city}, ${el.address.country}`}
+            </TextWrapper>
+          </Row>
+        </Column>
+      </Row>
       <ButtonWrapper>
         <Link to={{ pathname: 'destination', state: { el } }}>
           {/* <CardButton> */}
