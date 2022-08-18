@@ -8,6 +8,8 @@ import {
   CardButton,
   ButtonWrapper,
   FavoriteButton,
+  SummaryValue,
+  SummaryUnits,
 } from './CarouselCardStyles';
 
 function CarouselCard({
@@ -76,10 +78,10 @@ function CarouselCard({
     }
   }
   let summary1 = formatValue(el[cardStyle.summary1], cardStyle.summary1Type);
-  summary1 += cardStyle.summary1Units ? ' ' + cardStyle.summary1Units : '';
+  //summary1 += cardStyle.summary1Units ? ' ' + cardStyle.summary1Units : '';
 
   let summary2 = formatValue(el[cardStyle.summary2], cardStyle.summary2Type);
-  summary2 += cardStyle.summary2Units ? ' ' + cardStyle.summary2Units : '';
+  //summary2 += cardStyle.summary2Units ? ' ' + cardStyle.summary2Units : '';
 
   return (
     <ImageWrapper key={index}>
@@ -93,12 +95,10 @@ function CarouselCard({
       <Row>
         <CarouselImage src={el.image} />
         <Column justify-content='flex-start'>
-          <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
-            {summary1}
-          </TextWrapper>
-          <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
-            {summary2}
-          </TextWrapper>
+          <SummaryValue>{summary1}</SummaryValue>
+          <SummaryUnits>{cardStyle.summary1Units}</SummaryUnits>
+          <SummaryValue>{summary2}</SummaryValue>
+          <SummaryUnits>{cardStyle.summary2Units}</SummaryUnits>
         </Column>
       </Row>
       <Row justify-content='center'>

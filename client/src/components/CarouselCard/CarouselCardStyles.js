@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Row } from '../../globalStyles';
+import { Row, TextWrapper } from '../../globalStyles';
 import Slider from 'react-slick';
 
 export const CarouselImage = styled.img`
@@ -100,4 +100,18 @@ export const ButtonWrapper = styled.div`
   justify-content: center;
   flex-flow: wrap;
   gap: 0.5rem;
+`;
+
+export const SummaryValue = styled(TextWrapper)`
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.4rem 0.1rem 0.1rem 0.1rem;
+  color: '#4f4f4f';
+`;
+
+export const SummaryUnits = styled(TextWrapper)`
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0.1rem 0.1rem 0.8rem 0.1rem;
+  color: '#4f4f4f';
 `;
