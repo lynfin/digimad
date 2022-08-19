@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdFavoriteBorder, MdFavorite } from 'react-icons/md';
+import { MdFavoriteBorder, MdFavorite, MdSpeed } from 'react-icons/md';
 import { parseISO, format } from 'date-fns';
 import { TextWrapper, TextContainer, Row, Column } from '../../globalStyles';
 import {
@@ -8,6 +8,7 @@ import {
   CardButton,
   ButtonWrapper,
   FavoriteButton,
+  IconButton,
   SummaryValue,
   SummaryUnits,
   ButtonContainer,
@@ -101,6 +102,13 @@ function CarouselCard({
           <SummaryUnits>{cardStyle.summary1Units}</SummaryUnits>
           <SummaryValue>{summary2}</SummaryValue>
           <SummaryUnits>{cardStyle.summary2Units}</SummaryUnits>
+          {user ? (
+            <IconButton onClick={handleClick}>
+              <ButtonLink to={{ pathname: 'speedtest', state: { el } }}>
+                <MdSpeed size='2em' color='#1d609c' />
+              </ButtonLink>
+            </IconButton>
+          ) : null}
         </Column>
       </Row>
       <Row justify='start' align='start' background='' width='100%'>
@@ -108,7 +116,7 @@ function CarouselCard({
           <TextContainer justify='start' align='start' background=''>
             <TextWrapper
               size='1.1rem'
-              margin='0.4rem 0 0'
+              margin='0.8rem 0.2rem 0.1rem 0.4rem'
               weight='bold'
               padding='0.1rem'
             >
@@ -117,8 +125,8 @@ function CarouselCard({
           </TextContainer>
           <TextContainer justify='start' align='start'>
             <TextWrapper
-              size='1.0rem'
-              margin='0.4rem'
+              size='1.1rem'
+              margin='0.1rem 0.2rem 0.2rem 0.4rem'
               padding='0.1rem'
               color='#4f4f4f'
             >
