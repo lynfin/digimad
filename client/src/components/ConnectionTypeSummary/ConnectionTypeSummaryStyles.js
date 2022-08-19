@@ -14,6 +14,8 @@ export const ConnectionTypeSummaryWrapper = styled.div`
   align-items: center;
   margin: 0 auto;
 
+  width: 100%;
+
   @media screen and (max-width: 960px) {
     margin: 0 30px;
     display: flex;
