@@ -1,7 +1,13 @@
 import React from 'react';
 import { MdSpeed, MdCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md';
 import { parseISO, format } from 'date-fns';
-import { TextWrapper, TextContainer, Row, Column } from '../../globalStyles';
+import {
+  TextWrapper,
+  TextContainer,
+  Row,
+  Column,
+  ButtonLink,
+} from '../../globalStyles';
 import {
   CardWrapper,
   CarouselImage,
@@ -12,7 +18,6 @@ import {
   SummaryValue,
   SummaryUnits,
   ButtonContainer,
-  ButtonLink,
 } from './CarouselCardStyles';
 
 function CarouselCard({

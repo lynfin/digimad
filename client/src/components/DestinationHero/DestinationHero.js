@@ -1,7 +1,19 @@
 import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
+
+import { MdSpeed, MdCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md';
 import Ratings from 'react-ratings-declarative';
-import { Container, MainHeading, Text } from '../../globalStyles';
+import {
+  Container,
+  MainHeading,
+  Text,
+  Column,
+  Row,
+  SubHeading,
+  ButtonLink,
+  Button,
+  Divider,
+} from '../../globalStyles';
 import {
   HeroDiv,
   HeroSection,
@@ -9,6 +21,7 @@ import {
   ImageWrapper,
   HeroImage,
   ButtonWrapper,
+  AddressText,
 } from './DestinationHeroStyles';
 
 function DestinationHero({ destinationDetails }) {
@@ -20,33 +33,87 @@ function DestinationHero({ destinationDetails }) {
   return (
     <HeroSection>
       <HeroDiv />
-      <ImageWrapper>
-        <HeroImage src={destinationDetails.image} />
-      </ImageWrapper>
-      <Container>
-        <MainHeading>{destinationDetails.name}</MainHeading>
-        <Ratings
-          rating={+destinationDetails.average_tech_rating}
-          widgetDimensions='40px'
-          widgetSpacings='15px'
-        >
-          <Ratings.Widget widgetRatedColor='yellow' />
-          <Ratings.Widget widgetRatedColor='yellow' />
-          <Ratings.Widget widgetRatedColor='yellow' />
-          <Ratings.Widget widgetRatedColor='yellow' />
-          <Ratings.Widget widgetRatedColor='yellow' />
-        </Ratings>
-        <Text>Average Tech Rating</Text>
-        <ButtonWrapper onClick={() => openInNewTab(destinationDetails.website)}>
-          <HeroText>Visit their website</HeroText>
-        </ButtonWrapper>
-        <ButtonWrapper onClick={() => history.push('/speedtest')}>
-          <HeroText>Record your speedtest</HeroText>
-        </ButtonWrapper>
-        <HeroText>
-          ...more details to be displayed - rating, address, phone, etc
-        </HeroText>
-      </Container>
+      <Column>
+        {/* <Row background=''>
+          <SubHeading align='start' padding='0rem 0.0rem 0.00rem 0.4rem'>
+            {destinationDetails.category}:
+          </SubHeading>
+        </Row> */}
+        <Row background='' justify='center'>
+          <ImageWrapper background=''>
+            <HeroImage src={destinationDetails.image} />
+          </ImageWrapper>
+        </Row>
+        <Container>
+          <MainHeading>{destinationDetails.name}</MainHeading>
+
+          <Row background='' justify='space-between'>
+            <Column>
+              <Ratings
+                rating={+destinationDetails.average_visit_rating}
+                widgetDimensions='40px'
+                widgetSpacings='15px'
+              >
+                <Ratings.Widget widgetRatedColor='yellow' />
+                <Ratings.Widget widgetRatedColor='yellow' />
+                <Ratings.Widget widgetRatedColor='yellow' />
+                <Ratings.Widget widgetRatedColor='yellow' />
+                <Ratings.Widget widgetRatedColor='yellow' />
+              </Ratings>
+              <HeroText>Average Visit Rating</HeroText>
+            </Column>
+            <Column>
+              <Ratings
+                rating={+destinationDetails.average_tech_rating}
+                widgetDimensions='40px'
+                widgetSpacings='15px'
+              >
+                <Ratings.Widget widgetRatedColor='yellow' />
+                <Ratings.Widget widgetRatedColor='yellow' />
+                <Ratings.Widget widgetRatedColor='yellow' />
+                <Ratings.Widget widgetRatedColor='yellow' />
+                <Ratings.Widget widgetRatedColor='yellow' />
+              </Ratings>
+              <HeroText>Average Tech Rating</HeroText>
+            </Column>
+          </Row>
+          {/*           
+          <Row>
+            <Column>
+              <MdCheckBox size='60px' fill='green' />
+            </Column>
+            <Column>
+              <ButtonLink to={{ pathname: 'speedtest' }}>
+                <MdSpeed size='60px' color='#1d609c' />
+              </ButtonLink>
+            </Column>
+          </Row> */}
+          <Divider />
+          <AddressText>{destinationDetails.address.street1}</AddressText>
+          <AddressText>{destinationDetails.address.street2}</AddressText>
+          <AddressText>
+            {destinationDetails.address.city},{' '}
+            {destinationDetails.address.state}{' '}
+            {destinationDetails.address.country}
+          </AddressText>
+          <AddressText>{destinationDetails.address.zipcode}</AddressText>
+          <AddressText>
+            Phone:{' '}
+            {destinationDetails.phone
+              ? destinationDetails.phone
+              : 'unavailable'}
+          </AddressText>
+          <Row justify='center'>
+            <Button onClick={() => openInNewTab(destinationDetails.website)}>
+              <HeroText>Visit their website</HeroText>
+            </Button>
+          </Row>
+          {/*           
+          <ButtonWrapper onClick={() => history.push('/speedtest')}>
+            <HeroText>Record your speedtest</HeroText>
+          </ButtonWrapper> */}
+        </Container>
+      </Column>
     </HeroSection>
   );
 }

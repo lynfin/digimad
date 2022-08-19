@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Row, TextWrapper } from '../../globalStyles';
 import Slider from 'react-slick';
-import { Link } from 'react-router-dom';
 
 export const CarouselImage = styled.img`
   width: 65%;
@@ -119,20 +118,4 @@ export const SummaryUnits = styled(TextWrapper)`
   font-weight: 500;
   margin: 0.1rem 0.1rem 0.8rem 0.1rem;
   color: '#4f4f4f';
-`;
-
-// Styling <Link> elements: https://blog.logrocket.com/how-style-react-router-links-styled-components/
-export const ButtonLink = styled(Link)`
-  color: white;
-  /* font-size: x-large;
-  font-family: Arial, Helvetica, sans-serif;*/
-  text-decoration: none;
-  margin: 10px;
-  /*&:hover,
-   &:focus {
-    color: blue;
-  } 
-  &:active {
-    color: red;
-  }*/
 `;

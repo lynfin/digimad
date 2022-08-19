@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -50,7 +51,8 @@ export const SubHeading = styled.h2`
   color: ${({ inverse }) => (inverse ? '$403ae3' : '#fff')};
   letter-spacing: 0.4rem;
   line-height: 2.06;
-  text-align: center;
+  text-align: ${({ align }) => (align ? align : 'center')};
+  padding: ${({ padding }) => (padding ? padding : '')};
   width: ${({ width }) => (width ? width : '100%')};
 `;
 
@@ -220,7 +222,7 @@ export const Button = styled.button`
   border: 2px solid #fff;
   cursor: pointer;
   overflow: hidden;
-  position: relative;
+  position: ${({ position }) => (position ? position : 'relative')};
 
   &:before {
     background: #fff;
@@ -244,6 +246,7 @@ export const Button = styled.button`
     color: black;
   }
 `;
+
 export const Button2 = styled.button`
   border-radius: 4px;
   background: none;
@@ -265,4 +268,21 @@ export const Button2 = styled.button`
     background-color: black;
   }
 `;
+
+// Styling <Link> elements: https://blog.logrocket.com/how-style-react-router-links-styled-components/
+export const ButtonLink = styled(Link)`
+  color: white;
+  /* font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;*/
+  text-decoration: none;
+  margin: 10px;
+  /*&:hover,
+   &:focus {
+    color: blue;
+  } 
+  &:active {
+    color: red;
+  }*/
+`;
+
 export default GlobalStyle;
