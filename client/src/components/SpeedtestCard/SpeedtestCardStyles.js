@@ -59,7 +59,7 @@ export const SpeedtestCardInfo = styled.div`
   height: 100%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 24px;
   color: #fff;
   margin: auto;
