@@ -113,20 +113,29 @@ function CarouselCard({
       </Row>
       <Row justify='start' align='start' background='' width='100%'>
         <Column justify='start' align='start' background=''>
-          <TextContainer justify='start' align='start' background=''>
+          <TextContainer
+            justify='start'
+            align='start'
+            background=''
+            padding='0.4rem 0.0rem 0.00rem 0.0rem'
+          >
             <TextWrapper
               size='1.1rem'
-              margin='0.8rem 0.2rem 0.1rem 0.4rem'
+              margin='0.8rem 0.2rem 0.0rem 0.4rem'
               weight='bold'
               padding='0.1rem'
             >
               {el.name.trim()}
             </TextWrapper>
           </TextContainer>
-          <TextContainer justify='start' align='start'>
+          <TextContainer
+            justify='start'
+            align='start'
+            padding='0.0rem 0.0rem 0.00rem 0.0rem'
+          >
             <TextWrapper
               size='1.1rem'
-              margin='0.1rem 0.2rem 0.2rem 0.4rem'
+              margin='0.0rem 0.2rem 0.2rem 0.4rem'
               padding='0.1rem'
               color='#4f4f4f'
             >
@@ -141,19 +150,6 @@ function CarouselCard({
           Details
         </ButtonLink>
       </CardButton>
-
-      {/* <ButtonWrapper>
-        <Link to={{ pathname: 'destination', state: { el } }}>
-          <CardButton onClick={handleClick} background='orange'>
-            Details
-          </CardButton>
-        </Link>
-        {user ? (
-          <Link to={{ pathname: 'speedtest', state: { el } }}>
-            <CardButton onClick={handleClick}>Record Test</CardButton>
-          </Link>
-        ) : null}
-      </ButtonWrapper> */}
     </CardWrapper>
   );
 }

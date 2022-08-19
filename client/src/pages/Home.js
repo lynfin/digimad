@@ -81,6 +81,7 @@ function Home({
       data: {
         summary1: 'most_recent_test',
         summary1Type: 'date',
+
         summary2: 'total_tests',
         summary2Units: 'tests',
       },
