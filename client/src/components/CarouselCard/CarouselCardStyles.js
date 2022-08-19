@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Row, TextWrapper } from '../../globalStyles';
 import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
 
 export const CarouselImage = styled.img`
   width: 65%;
@@ -99,6 +100,7 @@ export const ButtonWrapper = styled.div`
   justify-content: center;
   flex-flow: wrap;
   gap: 0.5rem;
+  background-color: ${({ background }) => (background ? background : '')};
 `;
 
 export const SummaryValue = styled(TextWrapper)`
@@ -113,4 +115,19 @@ export const SummaryUnits = styled(TextWrapper)`
   font-weight: 500;
   margin: 0.1rem 0.1rem 0.8rem 0.1rem;
   color: '#4f4f4f';
+`;
+
+export const ButtonLink = styled(Link)`
+  color: white;
+  /* font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;*/
+  text-decoration: none;
+  margin: 10px;
+  &: hover;
+  /* &:focus {
+    color: blue;
+  } 
+  &:active {
+    color: red;
+  }*/
 `;

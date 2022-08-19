@@ -10,6 +10,8 @@ import {
   FavoriteButton,
   SummaryValue,
   SummaryUnits,
+  ButtonContainer,
+  ButtonLink,
 } from './CarouselCardStyles';
 
 function CarouselCard({
@@ -101,42 +103,49 @@ function CarouselCard({
           <SummaryUnits>{cardStyle.summary2Units}</SummaryUnits>
         </Column>
       </Row>
-      <Row justify='start'>
-        <Column align='start'>
-          <TextContainer justify='start'>
+      <Row justify='start' align='start' background='' width='100%'>
+        <Column justify='start' align='start' background=''>
+          <TextContainer justify='start' align='start' background=''>
             <TextWrapper
               size='1.1rem'
               margin='0.4rem 0 0'
               weight='bold'
               padding='0.1rem'
             >
-              {el.name}
+              {el.name.trim()}
             </TextWrapper>
           </TextContainer>
-          <TextContainer justify='start'>
+          <TextContainer justify='start' align='start'>
             <TextWrapper
               size='1.0rem'
               margin='0.4rem'
               padding='0.1rem'
               color='#4f4f4f'
             >
-              {`${el.address.city}, ${el.address.country}`}
+              {`${el.address.city.trim()}, ${el.address.country.trim()}`}
             </TextWrapper>
           </TextContainer>
         </Column>
       </Row>
-      <ButtonWrapper>
+
+      <CardButton onClick={handleClick}>
+        <ButtonLink to={{ pathname: 'destination', state: { el } }}>
+          Details
+        </ButtonLink>
+      </CardButton>
+
+      {/* <ButtonWrapper>
         <Link to={{ pathname: 'destination', state: { el } }}>
-          {/* <CardButton> */}
-          {/* <CardButton onClick={onDestinationSelected(el.id)}> */}
-          <CardButton onClick={handleClick}>Details</CardButton>
+          <CardButton onClick={handleClick} background='orange'>
+            Details
+          </CardButton>
         </Link>
         {user ? (
           <Link to={{ pathname: 'speedtest', state: { el } }}>
             <CardButton onClick={handleClick}>Record Test</CardButton>
           </Link>
         ) : null}
-      </ButtonWrapper>
+      </ButtonWrapper> */}
     </CardWrapper>
   );
 }
