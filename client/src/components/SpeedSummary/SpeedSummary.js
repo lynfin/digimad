@@ -40,7 +40,7 @@ function SpeedSummary({ selectedDestination, destinationDetails }) {
               color='white'
               align='center'
             >
-              based on {destinationDetails.total_tests} user-submitted tests
+              based on {destinationDetails.total_tests} member-submitted tests
             </TextWrapper>
             <SpeedSummaryContainer>
               {connectionTypes.map((card, index) => (
