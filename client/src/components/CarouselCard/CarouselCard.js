@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { MdFavoriteBorder, MdFavorite } from 'react-icons/md';
 import { parseISO, format } from 'date-fns';
 import { TextWrapper, TextContainer, Row, Column } from '../../globalStyles';
 import {
@@ -90,7 +90,7 @@ function CarouselCard({
       <Row height='25px' width='100%' justify='right' gap='20px' row-gap='20px'>
         {user ? (
           <FavoriteButton onClick={handleFavorite}>
-            {isFavorite ? ' - ' : ' + '}
+            {isFavorite ? <MdFavorite /> : <MdFavoriteBorder />}
           </FavoriteButton>
         ) : null}
       </Row>
