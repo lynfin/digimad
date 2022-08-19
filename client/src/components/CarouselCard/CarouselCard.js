@@ -90,7 +90,7 @@ function CarouselCard({
       <Row height='25px' width='100%' justify='right' gap='20px' row-gap='20px'>
         {user ? (
           <FavoriteButton onClick={handleFavorite}>
-            {isFavorite ? <MdFavorite /> : <MdFavoriteBorder />}
+            {isFavorite ? <MdFavorite fill='#1d609c' /> : <MdFavoriteBorder />}
           </FavoriteButton>
         ) : null}
       </Row>
