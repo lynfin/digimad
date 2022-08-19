@@ -181,7 +181,6 @@ export const TextContainer = styled.div`
   height: ${({ height }) => (height ? height : 'auto')};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : 'auto')};
   flex-wrap: ${({ wrap }) => (wrap ? wrap : '')};
-
   background-color: ${({ background }) => (background ? background : '')};
 `;
 
