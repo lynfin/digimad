@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdFavoriteBorder, MdFavorite, MdSpeed } from 'react-icons/md';
+import { MdSpeed, MdCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md';
 import { parseISO, format } from 'date-fns';
 import { TextWrapper, TextContainer, Row, Column } from '../../globalStyles';
 import {
@@ -91,7 +91,11 @@ function CarouselCard({
       <Row height='25px' width='100%' justify='right' gap='20px' row-gap='20px'>
         {user ? (
           <FavoriteButton onClick={handleFavorite}>
-            {isFavorite ? <MdFavorite fill='#1d609c' /> : <MdFavoriteBorder />}
+            {isFavorite ? (
+              <MdCheckBox size='1.2em' fill='green' />
+            ) : (
+              <MdCheckBoxOutlineBlank size='1.2em' />
+            )}
           </FavoriteButton>
         ) : null}
       </Row>
