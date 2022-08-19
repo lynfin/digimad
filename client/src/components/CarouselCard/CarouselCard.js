@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { parseISO, format } from 'date-fns';
 import { TextWrapper, TextContainer, Row, Column } from '../../globalStyles';
 import {
-  ImageWrapper,
+  CardWrapper,
   CarouselImage,
   CardButton,
   ButtonWrapper,
@@ -84,7 +84,7 @@ function CarouselCard({
   //summary2 += cardStyle.summary2Units ? ' ' + cardStyle.summary2Units : '';
 
   return (
-    <ImageWrapper key={index}>
+    <CardWrapper key={index}>
       <Row height='25px' width='100%' justify='right' gap='20px' row-gap='20px'>
         {user ? (
           <FavoriteButton onClick={handleFavorite}>
@@ -127,7 +127,7 @@ function CarouselCard({
           </Link>
         ) : null}
       </ButtonWrapper>
-    </ImageWrapper>
+    </CardWrapper>
   );
 }
 

@@ -10,10 +10,10 @@ export const CarouselImage = styled.img`
   vertical-align: middle;
 `;
 
-export const ImageWrapper = styled.div`
+export const CardWrapper = styled.div`
   width: 90%;
   display: flex !important;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
