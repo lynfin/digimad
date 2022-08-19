@@ -100,7 +100,11 @@ class Destination < ApplicationRecord
   end
 
   def average_tech_rating
-    !visits.empty? ? visits.average(:tech_rating) : 0
+    !visits.empty? ? visits.average(:tech_rating).round(2) : 0
+  end
+
+  def average_visit_rating
+    !visits.empty? ? visits.average(:visit_rating).round(2) : 0
   end
 
   # CELLULAR SPECIFIC
