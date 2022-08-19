@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
+import Ratings from 'react-ratings-declarative';
 import { Container, MainHeading } from '../../globalStyles';
 import {
   HeroDiv,
@@ -24,6 +25,17 @@ function DestinationHero({ destinationDetails }) {
       </ImageWrapper>
       <Container>
         <MainHeading>{destinationDetails.name}</MainHeading>
+        {/* <Ratings
+          rating={destinationDetails.techRating}
+          widgetDimensions='40px'
+          widgetSpacings='15px'
+        >
+          <Ratings.Widget widgetRatedColor='yellow' />
+          <Ratings.Widget widgetRatedColor='yellow' />
+          <Ratings.Widget widgetRatedColor='yellow' />
+          <Ratings.Widget widgetRatedColor='yellow' />
+          <Ratings.Widget widgetRatedColor='yellow' />
+        </Ratings> */}
         <ButtonWrapper onClick={() => openInNewTab(destinationDetails.website)}>
           <HeroText>Visit their website</HeroText>
         </ButtonWrapper>
