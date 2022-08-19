@@ -162,6 +162,28 @@ export const Row = styled.div`
   background-color: purple;
 `;
 
+export const TextContainer = styled.div`
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  line-height: 2em;
+  max-height: 2em;
+  justify-content: ${({ justify }) => (justify ? justify : '')};
+  align-items: ${({ align }) => (align ? align : '')};
+  gap: ${({ gap }) => (gap ? gap : '')};
+  padding: ${({ padding }) => (padding ? padding : '')};
+  margin: ${({ margin }) => (margin ? margin : '')};
+  position: ${({ position }) => (position ? position : '')};
+  width: ${({ width }) => (width ? width : 'auto')};
+  min-width: ${({ minWidth }) => (minWidth ? minWidth : 'auto')};
+  max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : 'auto')};
+  height: ${({ height }) => (height ? height : 'auto')};
+  min-height: ${({ minHeight }) => (minHeight ? minHeight : 'auto')};
+  flex-wrap: ${({ wrap }) => (wrap ? wrap : '')};
+  background-color: purple;
+`;
+
 export const Column = styled.div`
   display: flex;
   flex-direction: column;

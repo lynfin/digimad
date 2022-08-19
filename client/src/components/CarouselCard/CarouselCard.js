@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { parseISO, format } from 'date-fns';
-import { TextWrapper, Row, Column } from '../../globalStyles';
+import { TextWrapper, TextContainer, Row, Column } from '../../globalStyles';
 import {
   ImageWrapper,
   CarouselImage,
@@ -92,7 +92,7 @@ function CarouselCard({
           </FavoriteButton>
         ) : null}
       </Row>
-      <Row>
+      <Row justify='space-around'>
         <CarouselImage src={el.image} />
         <Column justify-content='flex-start'>
           <SummaryValue>{summary1}</SummaryValue>
@@ -103,16 +103,16 @@ function CarouselCard({
       </Row>
       <Row justify-content='center'>
         <Column align-items='center'>
-          <Row justify-content='center'>
+          <TextContainer justify='center'>
             <TextWrapper size='1.1rem' margin='0.4rem 0 0' weight='bold'>
               {el.name}
             </TextWrapper>
-          </Row>
-          <Row justify-content='center'>
+          </TextContainer>
+          <TextContainer justify-content='center'>
             <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
               {`${el.address.city}, ${el.address.country}`}
             </TextWrapper>
-          </Row>
+          </TextContainer>
         </Column>
       </Row>
       <ButtonWrapper>
