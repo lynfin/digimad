@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 export const CarouselImage = styled.img`
   width: 65%;
   height: 200px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 10px 10px;
   object-fit: cover;
   vertical-align: middle;
 `;
@@ -19,7 +19,6 @@ export const CardWrapper = styled.div`
   border-radius: 10px;
   outline: none;
   height: 330px;
-  background-color: yellow;
 
   @media screen and (min-width: 440px) {
     border: 1px solid #bebebe;

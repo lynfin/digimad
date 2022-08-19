@@ -94,22 +94,32 @@ function CarouselCard({
       </Row>
       <Row justify='space-around'>
         <CarouselImage src={el.image} />
-        <Column justify-content='flex-start'>
+        <Column justify='flex-start' align='center'>
           <SummaryValue>{summary1}</SummaryValue>
           <SummaryUnits>{cardStyle.summary1Units}</SummaryUnits>
           <SummaryValue>{summary2}</SummaryValue>
           <SummaryUnits>{cardStyle.summary2Units}</SummaryUnits>
         </Column>
       </Row>
-      <Row justify-content='center'>
-        <Column align-items='center'>
-          <TextContainer justify='center'>
-            <TextWrapper size='1.1rem' margin='0.4rem 0 0' weight='bold'>
+      <Row justify='start'>
+        <Column align='start'>
+          <TextContainer justify='start'>
+            <TextWrapper
+              size='1.1rem'
+              margin='0.4rem 0 0'
+              weight='bold'
+              padding='0.1rem'
+            >
               {el.name}
             </TextWrapper>
           </TextContainer>
-          <TextContainer justify-content='center'>
-            <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
+          <TextContainer justify='start'>
+            <TextWrapper
+              size='1.0rem'
+              margin='0.4rem'
+              padding='0.1rem'
+              color='#4f4f4f'
+            >
               {`${el.address.city}, ${el.address.country}`}
             </TextWrapper>
           </TextContainer>
