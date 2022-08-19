@@ -117,14 +117,15 @@ export const SummaryUnits = styled(TextWrapper)`
   color: '#4f4f4f';
 `;
 
+// Styling <Link> elements: https://blog.logrocket.com/how-style-react-router-links-styled-components/
 export const ButtonLink = styled(Link)`
   color: white;
   /* font-size: x-large;
   font-family: Arial, Helvetica, sans-serif;*/
   text-decoration: none;
   margin: 10px;
-  &: hover;
-  /* &:focus {
+  /*&:hover,
+   &:focus {
     color: blue;
   } 
   &:active {
