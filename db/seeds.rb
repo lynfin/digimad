@@ -10,192 +10,184 @@ mexico_hotels = [
     name: 'Holiday Inn Express Cabo San Lucas',
     desc: 'holiday-inn-express',
     category: 'hotel', image: 'https://ihg.scene7.com/is/image/ihg/holiday-inn-express-cabo-san-lucas-4061083978-16x9?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
-    website: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/cabo-san-lucas/sjdsl/hoteldetail'
-
+    website: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/cabo-san-lucas/sjdsl/hoteldetail',
+    address: {
+      street1: 'Corredor Csl - SJD KM. 4.5',
+      street2: 'Col. El Tezal',
+      city: 'Cabo San Lucas',
+      zipcode: '23454',
+      country: 'Mexico', latitude: 22.902735,
+      longitude: -109.884096
+    }
   },
   {
     name: 'Holiday Inn Express Veracruz Boca del Rio',
     desc: 'holiday-inn-express',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-express-boca-del-rio-3998658643-16x9?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
-    website: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/boca-del-rio/verpp/hoteldetail'
+    website: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/boca-del-rio/verpp/hoteldetail',
+    address: {
+      street1: 'Blvd. Adolfo Ruiz Cortines :4298 A',
+      street2: 'Fracc. Costa De Oro',
+      city: 'Boca Del Rio',
+      zipcode: '94299',
+      state: 'Veracruz',
+      country: 'Mexico', latitude: 19.141682,
+      longitude: -96.10317
 
+    }
   },
   {
     name: 'Holiday Inn Veracruz Boca del Rio',
     desc: 'holiday-inn',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-boca-del-rio-3998314571-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
-    website: 'https://www.ihg.com/holidayinn/hotels/us/en/boca-del-rio/vcrmx/hoteldetail'
+    website: 'https://www.ihg.com/holidayinn/hotels/us/en/boca-del-rio/vcrmx/hoteldetail',
 
+    address: {
+      street1: 'Blvd. Adolfo Ruiz Cortinez : 4298',
+      street2: 'Fracc. Costa De Oro',
+      city: 'Boca Del Rio',
+      zipcode: '94299',
+      state: 'Veracruz',
+      country: 'Mexico', latitude: 19.141812,
+      longitude: -96.10334
+    }
   },
   {
     name: 'Holiday Inn Veracruz Centro Historico',
     desc: 'holiday-inn',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-veracruz-3968729075-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
-    website: 'https://www.ihg.com/holidayinn/hotels/us/en/veracruz/vcrdt/hoteldetail'
+    website: 'https://www.ihg.com/holidayinn/hotels/us/en/veracruz/vcrdt/hoteldetail',
 
+    address: {
+      street1: 'Calle Morelos 225',
+      street2: 'Col. Centro',
+      city: 'Veracruz',
+      zipcode: '91700',
+      state: 'Veracruz',
+      country: 'Mexico', latitude: 19.201983,
+      longitude: -96.138893
+    }
   },
 
   {
     name: 'Candlewood Suites Celaya',
     desc: 'candlewood-suites',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/candlewood-suites-celaya-5114360258-2x1?wid=2880&hei=1440&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
-    website: 'https://www.ihg.com/candlewood/hotels/us/en/celaya/bjxca/hoteldetail'
+    website: 'https://www.ihg.com/candlewood/hotels/us/en/celaya/bjxca/hoteldetail',
 
+    address: {
+      street1: 'Av. Eje Nor-Oriente 215, Manzana 177',
+      street2: 'Casi esq. con Ribera del Campestre', city: 'Celaya', zipcode:  '38080',
+      state: 'Guanajuato',
+      country: 'Mexico', latitude: 20.5238618,
+      longitude: -100.7781506
+    }
   },
 
   {
     name: 'Holiday Inn Queretaro-Centro Historico',
     desc: 'holiday-inn',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6976573426-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
-    website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqemx/hoteldetail'
+    website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqemx/hoteldetail',
 
+    address: {
+      street1: 'Av.5 De Febrero : 110', street2: 'Col. Ninos Heroes', zipcode: '76010',
+      city: 'Queretaro',
+      state: 'Queretaro',
+      country: 'Mexico', latitude: 20.584956,
+      longitude: -100.409774
+    }
   },
   {
     name: 'Holiday Inn Queretaro Zona Krystal',
     desc: 'holiday-inn',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6201528258-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
-    website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqebc/hoteldetail'
+    website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqebc/hoteldetail',
 
+    address: {
+      street1: 'KM. 11', street2: 'Carretera Queretaro-San Luis Potosi',
+      zipcode: '76100',
+      city: 'Queretaro',
+      state: 'Queretaro',
+      country: 'Mexico', latitude: 20.66294,
+      longitude: -100.431745
+    }
   },
   {
     name: 'Holiday Inn Queretaro Zona Diamante',
     desc: 'holiday-inn',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6225228617-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
-    website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqeap/hoteldetail'
+    website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqeap/hoteldetail',
 
+    address: {
+      street1: 'Anillo Vial II',
+      street2: 'Fray Junipero Serra : 1500 - A', zipcode: '76140',
+      city: 'Queretaro',
+      state: 'Queretaro',
+      country: 'Mexico', latitude: 20.620439,
+      longitude: -100.38394
+    }
   },
   {
     name: 'Crowne Plaza Queretaro',
     desc: 'crowne-plaza',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/crowne-plaza-queretaro-3252687880-3x2',
-    website: 'https://www.ihg.com/crowneplaza/hotels/us/en/queretaro/mqecc/hoteldetail'
+    website: 'https://www.ihg.com/crowneplaza/hotels/us/en/queretaro/mqecc/hoteldetail',
 
+    address: {
+      street1: 'ANILLO VIAL II',
+      street2: 'FRAY JUNIPERO SERRA : 1500', zipcode: '76140',
+      city: 'Queretaro',
+      state: 'Queretaro',
+      country: 'Mexico', latitude: 20.619217,
+      longitude: -100.383278
+    }
   },
   {
     name: 'Staybridge Suites Queretaro',
     desc: 'staybridge-suites',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/staybridge-suites-queretaro-6072304701-2x1?hei=512&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
-    website: 'https://www.ihg.com/staybridge/hotels/us/en/queretaro/mqesb/hoteldetail'
+    website: 'https://www.ihg.com/staybridge/hotels/us/en/queretaro/mqesb/hoteldetail',
 
+    address: {
+      street1: 'Carreta San Luis-Queretaro 10685',
+      street2: 'Col. El Salitre Junto A Jurica',
+      zipcode: '76127',
+      city: 'Queretaro',
+      state: 'Queretaro',
+      country: 'Mexico', latitude: 20.662674,
+      longitude: -100.433165
+    }
   },
   {
     name: 'Candlewood Suites Queretaro Juriquilla',
     desc: 'candlewood-suites',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/candlewood-suites-queretaro-4815784940-2x1?wid=2880&hei=1440&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
-    website: 'https://www.ihg.com/candlewood/hotels/us/en/juriquilla/qroja/hoteldetail'
+    website: 'https://www.ihg.com/candlewood/hotels/us/en/juriquilla/qroja/hoteldetail',
 
+    address: {
+      street1: 'Santa Teresa 502 Int. A',
+      street2: 'Fracc. Residencial Juriquilla Santa Fe',
+      zipcode: '76226',
+      city: 'Queretaro',
+      state: 'Queretaro',
+      country: 'Mexico', latitude: 20.691609,
+      longitude: -100.445619
+    }
   },
   {
     name: 'Mr & Mrs Smith Casa No Name',
     desc: 'mr-and-mrs-smith',
     category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/smith-san-miguel-de-allende-6638616690-2x1',
-    website: 'https://www.ihg.com/mrandmrssmith/hotels/us/en/san-miguel-de-allende/bjxsd/hoteldetail'
-
-  }
-]
-mexico_addresses = [
-  {
-    street1: 'Corredor Csl - SJD KM. 4.5',
-    street2: 'Col. El Tezal',
-    city: 'Cabo San Lucas',
-    zipcode: '23454',
-    country: 'Mexico', latitude: 22.902735,
-    longitude: -109.884096
-  },
-  {
-    street1: 'Blvd. Adolfo Ruiz Cortines :4298 A',
-    street2: 'Fracc. Costa De Oro',
-    city: 'Boca Del Rio',
-    zipcode: '94299',
-    state: 'Veracruz',
-    country: 'Mexico', latitude: 19.141682,
-    longitude: -96.10317
-
-  },
-  {
-    street1: 'Blvd. Adolfo Ruiz Cortinez : 4298',
-    street2: 'Fracc. Costa De Oro',
-    city: 'Boca Del Rio',
-    zipcode: '94299',
-    state: 'Veracruz',
-    country: 'Mexico', latitude: 19.141812,
-    longitude: -96.10334
-  },
-
-  {
-    street1: 'Calle Morelos 225',
-    street2: 'Col. Centro',
-    city: 'Veracruz',
-    zipcode: '91700',
-    state: 'Veracruz',
-    country: 'Mexico', latitude: 19.201983,
-    longitude: -96.138893
-  },
-
-  {
-    street1: 'Av. Eje Nor-Oriente 215, Manzana 177',
-    street2: 'Casi esq. con Ribera del Campestre', city: 'Celaya', zipcode:  '38080',
-    state: 'Guanajuato',
-    country: 'Mexico', latitude: 20.5238618,
-    longitude: -100.7781506
-  },
-
-  {
-    street1: 'Av.5 De Febrero : 110', street2: 'Col. Ninos Heroes', zipcode: '76010',
-    city: 'Queretaro',
-    state: 'Queretaro',
-    country: 'Mexico', latitude: 20.584956,
-    longitude: -100.409774
-  },
-  {
-    street1: 'KM. 11', street2: 'Carretera Queretaro-San Luis Potosi',
-    zipcode: '76100',
-    city: 'Queretaro',
-    state: 'Queretaro',
-    country: 'Mexico', latitude: 20.66294,
-    longitude: -100.431745
-  },
-  {
-    street1: 'Anillo Vial II',
-    street2: 'Fray Junipero Serra : 1500 - A', zipcode: '76140',
-    city: 'Queretaro',
-    state: 'Queretaro',
-    country: 'Mexico', latitude: 20.620439,
-    longitude: -100.38394
-  },
-  {
-    street1: 'ANILLO VIAL II',
-    street2: 'FRAY JUNIPERO SERRA : 1500', zipcode: '76140',
-    city: 'Queretaro',
-    state: 'Queretaro',
-    country: 'Mexico', latitude: 20.619217,
-    longitude: -100.383278
-  },
-  {
-    street1: 'Carreta San Luis-Queretaro 10685',
-    street2: 'Col. El Salitre Junto A Jurica',
-    zipcode: '76127',
-    city: 'Queretaro',
-    state: 'Queretaro',
-    country: 'Mexico', latitude: 20.662674,
-    longitude: -100.433165
-  },
-  {
-    street1: 'Santa Teresa 502 Int. A',
-    street2: 'Fracc. Residencial Juriquilla Santa Fe',
-    zipcode: '76226',
-    city: 'Queretaro',
-    state: 'Queretaro',
-    country: 'Mexico', latitude: 20.691609,
-    longitude: -100.445619
-  },
-  {
-    street1: 'No. 52 Hernandez Macia',
-    zipcode: '37700',
-    city: 'San Miguel de Allende',
-    state: 'Guanajuato',
-    country: 'Mexico', latitude: 20.9163139,
-    longitude: -100.7451721
+    website: 'https://www.ihg.com/mrandmrssmith/hotels/us/en/san-miguel-de-allende/bjxsd/hoteldetail',
+    address: {
+      street1: 'No. 52 Hernandez Macia',
+      zipcode: '37700',
+      city: 'San Miguel de Allende',
+      state: 'Guanajuato',
+      country: 'Mexico', latitude: 20.9163139,
+      longitude: -100.7451721
+    }
   }
 ]
 
@@ -243,15 +235,14 @@ puts 'Creating users'
     address: Address.last
   )
 end
-
 puts 'Creating hotel destinations'
-mexico_hotels.each_with_index do |dest, index|
+mexico_hotels.each_with_index do |dest, _index|
   Destination.create(category: dest[:category],
                      name: dest[:name],
                      desc: dest[:desc],
                      website: dest[:website],
                      image: dest[:image],
-                     address: Address.create(mexico_addresses[index]))
+                     address: Address.create(dest[:address]))
 end
 
 puts 'Creating visits'
@@ -342,9 +333,10 @@ User.all.each do |user|
     end
   end
   puts '...and favorites'
+  dest_ids = Destination.ids
   rand(0..6).times do
     Favorite.create(user: user,
-                    destination_id: Destination.ids.sample)
+                    destination_id: dest_ids.shuffle!.pop)
   end
 end
 
