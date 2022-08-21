@@ -58,10 +58,6 @@ function Filters({
         })
     );
   }, [locations]);
-  console.log('LOCATIONS:');
-  console.log(locations);
-  console.log('MERGED FILTERED COUNTRIES:');
-  console.log(mergedFilteredCountries);
   const cityChoices =
     selectedCountry !== 'All' && mergedFilteredCountries.length
       ? mergedFilteredCountries.find(
