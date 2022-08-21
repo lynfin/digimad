@@ -341,7 +341,7 @@ User.all.each do |user|
     rand(12..20).times do
       speedtest_result = {
         latency: rand(5..70),
-        download: rand(45..170),
+        download: rand(100..170),
         upload: rand(15..80),
         connectiontype: 'wifi',
         connectionprovider: nil,
@@ -365,7 +365,7 @@ User.all.each do |user|
     rand(0..3).times do
       speedtest_result = {
         latency: rand(5..70),
-        download: rand(45..170),
+        download: rand(100..170),
         upload: rand(15..80),
         connectiontype: 'ethernet',
         connectionprovider: nil,
@@ -393,7 +393,7 @@ User.all.each do |user|
 
       cellular_speedtest_result = {
         latency: rand(5..70),
-        download: rand(45..170),
+        download: rand(100..170),
         upload: rand(15..80),
         connectiontype: connectiontype,
         connectionprovider: connectionprovider,

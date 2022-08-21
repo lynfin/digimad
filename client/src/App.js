@@ -28,6 +28,7 @@ function App() {
     });
   }, []);
 
+  // Believe I need to convert string values to numerics here, so sort of 90 < 120
   useEffect(() => {
     fetch('/destinations').then((res) => {
       if (res.ok) {
