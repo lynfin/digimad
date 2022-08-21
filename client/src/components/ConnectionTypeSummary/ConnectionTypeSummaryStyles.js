@@ -5,7 +5,7 @@ export const ConnectionTypeSummarySection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #101522;
+  background: mediumgray;
 `;
 
 export const ConnectionTypeSummaryWrapper = styled.div`

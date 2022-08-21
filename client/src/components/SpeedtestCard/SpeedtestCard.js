@@ -26,18 +26,18 @@ import {
 } from './SpeedtestCardStyles';
 
 function SpeedtestCard({ testData }) {
-  console.log(testData);
   return (
     <SpeedtestWrapper id='Speedtest'>
       <SpeedtestContainer>
         <SpeedtestCardInfo>
           <SpeedtestCardDiv>
             <Row background='' width='800px' justify='space-between'>
-              <Column width='30%'>
-                <SpeedtestCardPlan>{testData.user.username}</SpeedtestCardPlan>
-                <SpeedtestCardCost>Visit Dates:</SpeedtestCardCost>
+              <Column width='30%' justify='space-between'>
+                <SpeedtestCardCost>{testData.user.username}</SpeedtestCardCost>
+
                 <Row>
                   <Column>
+                    <SpeedtestCardCost>Visit Dates:</SpeedtestCardCost>
                     <SpeedtestCardText>
                       {format(parseISO(testData.start), 'MM/dd/yyyy')}
                     </SpeedtestCardText>
@@ -62,9 +62,6 @@ function SpeedtestCard({ testData }) {
                       spacing='5px'
                       color='yellow'
                     />
-                    {/* <SpeedtestCardText>
-                      {testData.tech_rating}
-                    </SpeedtestCardText> */}
                   </Column>
                   <Column>
                     <SpeedtestCardText>
