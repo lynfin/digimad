@@ -19,7 +19,7 @@ import {
   SummaryUnits,
   ButtonContainer,
 } from './CarouselCardStyles';
-
+import StarRating from '../StarRating/StarRating';
 function CarouselCard({
   el,
   index,
@@ -107,7 +107,16 @@ function CarouselCard({
       <Row justify='space-around'>
         <CarouselImage src={el.image} />
         <Column justify='flex-start' align='center'>
-          <SummaryValue>{summary1}</SummaryValue>
+          {cardStyle.summary1Units === 'Average Rating' ? (
+            <StarRating
+              value={+summary1}
+              size='18px'
+              spacing='1px'
+              color='orange'
+            />
+          ) : (
+            <SummaryValue>{summary1}</SummaryValue>
+          )}
           <SummaryUnits>{cardStyle.summary1Units}</SummaryUnits>
           <SummaryValue>{summary2}</SummaryValue>
           <SummaryUnits>{cardStyle.summary2Units}</SummaryUnits>
