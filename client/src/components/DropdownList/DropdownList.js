@@ -16,7 +16,8 @@ const DropdownList = ({
   label,
 }) => {
   const [search, setSearch] = useState('');
-
+  console.log('Building for dropdownOptions');
+  console.log(dropdownOptions);
   useEffect(() => {
     if (!show) {
       setSearch('');

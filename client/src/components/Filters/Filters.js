@@ -45,7 +45,16 @@ function Filters({
             locations[i].country.toLocaleLowerCase().trim()
           ) {
             return Object.assign({}, item, locations[i]);
-          } else return null;
+          } else {
+            console.log(
+              `comparing ${item.name.toLocaleLowerCase().trim()} to ${locations[
+                i
+              ].country
+                .toLocaleLowerCase()
+                .trim()}`
+            );
+            return null;
+          }
         })
     );
   }, [locations]);
