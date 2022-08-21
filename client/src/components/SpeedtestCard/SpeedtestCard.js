@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { parseISO, format } from 'date-fns';
-
+import StarRating from '../StarRating/StarRating';
 import {
   Button,
   Heading,
@@ -56,9 +56,15 @@ function SpeedtestCard({ testData }) {
                     <SpeedtestCardCost>Tech Rating:</SpeedtestCardCost>
                   </Column>
                   <Column>
-                    <SpeedtestCardText>
+                    <StarRating
+                      value={+testData.tech_rating}
+                      size='20px'
+                      spacing='5px'
+                      color='yellow'
+                    />
+                    {/* <SpeedtestCardText>
                       {testData.tech_rating}
-                    </SpeedtestCardText>
+                    </SpeedtestCardText> */}
                   </Column>
                   <Column>
                     <SpeedtestCardText>
@@ -71,9 +77,12 @@ function SpeedtestCard({ testData }) {
                     <SpeedtestCardCost>Visit Rating:</SpeedtestCardCost>
                   </Column>
                   <Column>
-                    <SpeedtestCardText>
-                      {testData.visit_rating}
-                    </SpeedtestCardText>
+                    <StarRating
+                      value={+testData.visit_rating}
+                      size='20px'
+                      spacing='5px'
+                      color='yellow'
+                    />
                   </Column>
                   <Column>
                     <SpeedtestCardText>

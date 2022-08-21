@@ -3,6 +3,7 @@ import { useLocation, useHistory } from 'react-router-dom';
 
 import { MdSpeed, MdCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md';
 import Ratings from 'react-ratings-declarative';
+import StarRating from '../StarRating/StarRating';
 import {
   Container,
   MainHeading,
@@ -49,31 +50,23 @@ function DestinationHero({ destinationDetails }) {
 
           <Row background='' justify='space-between'>
             <Column>
-              <Ratings
-                rating={+destinationDetails.average_visit_rating}
-                widgetDimensions='40px'
-                widgetSpacings='15px'
-              >
-                <Ratings.Widget widgetRatedColor='yellow' />
-                <Ratings.Widget widgetRatedColor='yellow' />
-                <Ratings.Widget widgetRatedColor='yellow' />
-                <Ratings.Widget widgetRatedColor='yellow' />
-                <Ratings.Widget widgetRatedColor='yellow' />
-              </Ratings>
+              <StarRating
+                value={+destinationDetails.average_visit_rating}
+                size='40px'
+                spacing='15px'
+                color='yellow'
+              />
+
               <HeroText>Average Visit Rating</HeroText>
             </Column>
             <Column>
-              <Ratings
-                rating={+destinationDetails.average_tech_rating}
-                widgetDimensions='40px'
-                widgetSpacings='15px'
-              >
-                <Ratings.Widget widgetRatedColor='yellow' />
-                <Ratings.Widget widgetRatedColor='yellow' />
-                <Ratings.Widget widgetRatedColor='yellow' />
-                <Ratings.Widget widgetRatedColor='yellow' />
-                <Ratings.Widget widgetRatedColor='yellow' />
-              </Ratings>
+              <StarRating
+                value={+destinationDetails.average_tech_rating}
+                size='40px'
+                spacing='15px'
+                color='yellow'
+              />
+
               <HeroText>Average Tech Rating</HeroText>
             </Column>
           </Row>
