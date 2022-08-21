@@ -36,19 +36,13 @@ function Home({
           })
         : filterForCountry;
     setFilteredDestinations(filterForCity);
-    // setFilteredDestinations(
-    //   selectedCountry && selectedCountry !== 'All'
-    //     ? destinations.filter((d) => {
-    //         return d.address.country === selectedCountry;
-    //       })
-    //     : destinations
-    // );
   }, [destinations, selectedCountry, selectedCity]);
 
   const destinationCardStyles = [
     {
       data: {
         summary1: 'maximum_wifi',
+        summary1Type: 'float',
         summary1Units: 'Max Mbps',
         summary2: 'total_tests',
         summary2Units: 'tests',
