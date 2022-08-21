@@ -40,13 +40,19 @@ function Filters({
       data
         .filter((el) => filterForKnownDestinations(el))
         .map((item, i) => {
-          if (item.name === locations[i].country) {
+          if (
+            item.name.toLocaleLowerCase().trim() ===
+            locations[i].country.toLocaleLowerCase().trim()
+          ) {
             return Object.assign({}, item, locations[i]);
           } else return null;
         })
     );
   }, [locations]);
-
+  console.log('LOCATIONS:');
+  console.log(locations);
+  console.log('MERGED FILTERED COUNTRIES:');
+  console.log(mergedFilteredCountries);
   const cityChoices =
     selectedCountry !== 'All' && mergedFilteredCountries.length
       ? mergedFilteredCountries.find(

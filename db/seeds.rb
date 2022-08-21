@@ -195,7 +195,7 @@ destinations = [
     category: 'coworking',
     image: 'https://res.cloudinary.com/kisi-kloud/image/upload/c_lfill,dpr_auto,f_auto,q_auto:good,w_1128/c_limit,w_752/v1/collections/cwr/coworking-locations/barcelona/barcelona-5b2a2d3e0621454cb241e9c5',
     website: 'https://www.bcnewt.com/en/',
-    address: { street1: 'Calle Pere IV 74', street2: '', zipcode: '08005', city: ' Barcelona', country: 'Spain' } },
+    address: { street1: 'Calle Pere IV 74', street2: '', zipcode: '08005', city: 'Barcelona', country: 'Spain' } },
 
   { name: 'BCN575 Coworking',
     desc: 'BCN575 Coworking is open 24/7 and includes a coffee machine, water fountain, microwave, fridge, and utensils for members. There is a talking area for privacy, as well as a meeting room with flexible layout. Take advantage of fiber optic 100 MB cable or Wi-Fi internet and a copier/scanner/printer in color with your choice of A3 or A4. Phone lines and courier service are also available upon request. Personal desks start at 225€, with discounts for part-time and daily rates available, as well as private offices.',
@@ -249,7 +249,7 @@ destinations = [
   { name: 'NeueHouse', desc: 'Dedicated Desks: $1,500 /month', category: 'coworking',
     image: 'https://www.neuehouse.com/wp-content/uploads/2020/02/NeueHouse_MSQStudioFloor_Mobile.jpg', website: 'https://neuehouse.com/', phone: '', address: { street1: '110 E 25th St', street2: '', zipcode: '10010', city: 'New York', state: 'NY', country: 'United States' } },
   { name: 'Green Desk', desc: 'Dedicated Desk: Starting $199/month', category: 'coworking',
-    image: 'https://greendesk.com/wp-content/uploads/2022/01/68Jay-GD_16-7.jpg', website: 'https://www.greendesk.com/&sa=D&ust=1530701033696000', phone: '', address: { street1: '155 Water St', street2: ' Brooklyn', zipcode: '11201', city: 'New York', state: 'NY', country: 'United States' } },
+    image: 'https://greendesk.com/wp-content/uploads/2022/01/68Jay-GD_16-7.jpg', website: 'https://www.greendesk.com/&sa=D&ust=1530701033696000', phone: '', address: { street1: '155 Water St', street2: 'Brooklyn', zipcode: '11201', city: 'New York', state: 'NY', country: 'United States' } },
   { name: 'The Wing', desc: 'Coworking: $ 215/month', category: 'coworking',
     image: 'https://images.ctfassets.net/4qzau7lus3iz/3NXacpc40Qr9rfRsIHYoPE/ae6ada9155bd3a3ea9c967a1f60a76e6/The-Wing-BP-2021-16.JPG?w=800&h=548&q=100', website: 'https://www.the-wing.com/&sa=D&ust=1530701033698000', phone: '', address: { street1: '45 E 20th St', street2: '', zipcode: '10003', city: 'New York', state: 'NY', country: 'United States' } },
   { name: 'WeWork (Harlem)',
@@ -259,7 +259,7 @@ destinations = [
   { name: 'Primary',
     desc: 'Primary is all about the relaxing mood which does not stand in the way of productivity. Its amenities include espresso and snack bar, paired with dedicated spaces for yoga and meditation. A zen workplace for the thoughtful and contemplative audience. Coworking membership from $300/month.', category: 'coworking', image: 'https://res.cloudinary.com/kisi-kloud/image/upload/c_lfill,dpr_auto,f_auto,q_auto:good,w_624/c_limit,w_500/v1/collections/cwr/coworking-locations/new-york-city/new-york-city-5b3c9b470554a9158d6d73c5', website: 'https://liveprimary.com/', phone: '+1 (212) 658-0077', address: { street1: '26 Broadway', street2: '', zipcode: '10004', city: 'New York', state: 'NY', country: 'United States' } },
   { name: 'The Camp David',
-    desc: 'Camp David wants to distinguish itself by offering premium quality at the prices which will still not make you feel robbed. Its retro-futurist design goes hand in hand with café bars, library, gym and workshop rooms, all dedicated to making you feel rewarded for all the hard work you put there. Dedicated desk: $600/month.', category: 'coworking', image: 'https://res.cloudinary.com/kisi-kloud/image/upload/c_lfill,dpr_auto,f_auto,q_auto:good,w_624/c_limit,w_500/v1/collections/cwr/coworking-locations/new-york-city/new-york-city-5b3c9b7e0554a95ed26d73c8', website: 'https://thecampdavid.com/', phone: '718.313.0111', address: { street1: '237 36TH STREET', street2: '', zipcode: '11232', city: ' BROOKLYN', state: 'NY', country: 'United States' } }
+    desc: 'Camp David wants to distinguish itself by offering premium quality at the prices which will still not make you feel robbed. Its retro-futurist design goes hand in hand with café bars, library, gym and workshop rooms, all dedicated to making you feel rewarded for all the hard work you put there. Dedicated desk: $600/month.', category: 'coworking', image: 'https://res.cloudinary.com/kisi-kloud/image/upload/c_lfill,dpr_auto,f_auto,q_auto:good,w_624/c_limit,w_500/v1/collections/cwr/coworking-locations/new-york-city/new-york-city-5b3c9b7e0554a95ed26d73c8', website: 'https://thecampdavid.com/', phone: '718.313.0111', address: { street1: '237 36TH STREET', street2: '', zipcode: '11232', city: 'Brooklyn', state: 'NY', country: 'United States' } }
 
 ]
 
@@ -309,6 +309,7 @@ puts 'Creating users'
 end
 puts 'Creating  destinations'
 destinations.each_with_index do |dest, _index|
+  puts 'Creating ' + dest[:name]
   Destination.create(category: dest[:category],
                      name: dest[:name],
                      desc: dest[:desc],

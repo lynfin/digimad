@@ -8,7 +8,7 @@ class Destination < ApplicationRecord
   validates :name, uniqueness: true, presence: true
   validates :website, :image, http_url: true, allow_nil: true
   validates :category,
-            inclusion: { in: %w[hotel other_accommodation restaurant public_space],
+            inclusion: { in: %w[hotel other_accommodation restaurant public_space coworking],
                          message: '%<value>s must be hotel | other_accommodation | restaurant | public_space' }
 
   #######################################
@@ -110,17 +110,17 @@ class Destination < ApplicationRecord
   # CELLULAR SPECIFIC
   def maximum_cellular_download_rates
     celltests = speedtests.where(connectiontype: 'cellular')
-    !celltests.empty? ? celltests.group(:connectionprovider).maximum(:download) : 0
+    !celltests.empty? ? celltests.group(:connectionprovider).maximum(:download) : []
   end
 
   def maximum_cellular_upload_rates
     celltests = speedtests.where(connectiontype: 'cellular')
-    !celltests.empty? ? celltests.group(:connectionprovider).maximum(:upload) : 0
+    !celltests.empty? ? celltests.group(:connectionprovider).maximum(:upload) : []
   end
 
   def maximum_cellular_latency_rates
     celltests = speedtests.where(connectiontype: 'cellular')
-    !celltests.empty? ? celltests.group(:connectionprovider).maximum(:latency) : 0
+    !celltests.empty? ? celltests.group(:connectionprovider).maximum(:latency) : []
   end
 
   def maximum_cellular_rates
@@ -132,6 +132,6 @@ class Destination < ApplicationRecord
   end
 
   def provider_fastest_cellular_download
-    maximum_cellular_download_rates.max_by { |_k, v| v }
+    maximum_cellular_download_rates.count > 0 ? maximum_cellular_download_rates.max_by { |_k, v| v } : 'none'
   end
 end
