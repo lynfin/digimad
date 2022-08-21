@@ -12,6 +12,8 @@ import {
   FormTitleGrouped,
   FormSubTitle,
   FormSmallButton,
+  FormButtons,
+  FormInstruction,
   FormImgWrapper,
   FormAvatar,
 } from '../../formStyles';
@@ -223,7 +225,13 @@ function SpeedtestForm({ user, selectedDestination }) {
       <Container>
         <FormRow>
           <FormColumn>
-            <FormRow>
+            <FormTitleGrouped>Speedtest</FormTitleGrouped>
+            <FormSubTitle>
+              {selectedDestination
+                ? selectedDestination.name
+                : 'destination required'}
+            </FormSubTitle>
+            <FormButtons>
               <FormSmallButton
                 onClick={() => openInNewTab('https://www.speedtest.net/')}
               >
@@ -234,13 +242,13 @@ function SpeedtestForm({ user, selectedDestination }) {
               >
                 Speedcheck
               </FormSmallButton>
-            </FormRow>
-            <FormTitleGrouped>Speedtest</FormTitleGrouped>
-            <FormSubTitle>
-              {selectedDestination
-                ? selectedDestination.name
-                : 'destination required'}
-            </FormSubTitle>
+            </FormButtons>
+            <FormInstruction>
+              Select a button to run your speedtest.
+            </FormInstruction>
+            <FormInstruction>
+              Once complete, return here to log the results.
+            </FormInstruction>
             <FormWrapper onSubmit={handleSubmit}>
               {formData.map((el, index) => (
                 <FormInputRow key={index}>

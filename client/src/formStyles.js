@@ -29,6 +29,13 @@ export const FormSubTitle = styled.h3`
   font-weight: 300;
   color: #afafaf;
 `;
+export const FormInstruction = styled.h4`
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  font-weight: 300;
+  color: black;
+`;
 
 export const FormContainer = styled.div`
   display: flex;
@@ -62,6 +69,14 @@ export const FormRow = styled.div`
   display: flex;
   justify-content: center;
   margin: 0 -15px -15px -15px;
+  flex-wrap: wrap;
+  align-items: center;
+`;
+
+export const FormButtons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   flex-wrap: wrap;
   align-items: center;
 `;
@@ -160,7 +175,7 @@ export const FormSmallButton = styled.button`
   white-space: nowrap;
   /* color: #fff; */
   outline: none;
-  width: 40%;
+  width: 50%;
   font-size: 1.4rem;
   padding: 5px 15px;
   border: 2px solid black;

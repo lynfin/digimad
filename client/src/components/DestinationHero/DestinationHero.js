@@ -30,7 +30,7 @@ function DestinationHero({ destinationDetails }) {
     window.open(url, '_blank', 'noopener, noreferrer');
   };
   let history = useHistory();
-  console.log(destinationDetails);
+
   return (
     <HeroSection>
       <HeroDiv />
