@@ -9,9 +9,6 @@ export const AboutSection = styled.section`
 `;
 
 export const AboutDiv = styled.div`
-  object-fit: fill;
-  width: 100%;
-  height: 100%;
   top: 0;
   position: absolute;
   z-index: -1;
@@ -27,12 +24,40 @@ export const AboutDiv = styled.div`
   opacity: 0.4;
 `;
 
-export const AboutText = styled.p`
-  margin-bottom: 35px;
+export const AboutQuestion = styled.p`
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-style: italic;
   font-weight: 600;
   line-height: 24px;
-  text-align: center;
+  text-align: left;
+  letter-spacing: 2px;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: ${({ inverse }) => (inverse ? '$403ae3' : '#fff')};
+`;
+
+export const AboutAnswer = styled.p`
+  margin-top: 10px;
+  margin-bottom: 50px;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  letter-spacing: 2px;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: ${({ inverse }) => (inverse ? '$403ae3' : '#fff')};
+`;
+
+export const AboutText = styled.p`
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  margin: ${({ margin }) => (margin ? margin : '')};
+  font-weight: 400;
+  line-height: 24px;
+  text-align: start;
   letter-spacing: 2px;
   color: ${({ inverse }) => (inverse ? '$403ae3' : '#fff')};
 `;
