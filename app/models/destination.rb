@@ -8,7 +8,7 @@ class Destination < ApplicationRecord
   validates :name, uniqueness: true, presence: true
   validates :website, :image, http_url: true, allow_nil: true
   validates :category,
-            inclusion: { in: %w[hotel other_accommodation restaurant public_space coworking],
+            inclusion: { in: %w[lodging dining public_space coworking],
                          message: '%<value>s must be hotel | other_accommodation | restaurant | public_space' }
 
   #######################################
