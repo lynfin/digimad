@@ -5,7 +5,7 @@ export const ConnectionTypeSummarySection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #101522;
+  background: mediumgray;
 `;
 
 export const ConnectionTypeSummaryWrapper = styled.div`
@@ -13,6 +13,8 @@ export const ConnectionTypeSummaryWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+
+  width: 100%;
 
   @media screen and (max-width: 960px) {
     margin: 0 30px;

@@ -13,18 +13,21 @@ function Destination({ user, selectedDestination }) {
   const [destinationDetails, setDestinationDetails] = useState(null);
 
   useEffect(() => {
-    fetch(`/destinations/${selectedDestination.id}?full`).then((res) => {
-      if (res.ok) {
-        res.json().then(setDestinationDetails);
-      } else {
-        res.json().then((data) => console.log(data.error));
-      }
-    });
+    if (selectedDestination) {
+      fetch(`/destinations/${selectedDestination.id}?full`).then((res) => {
+        if (res.ok) {
+          res.json().then(setDestinationDetails);
+        } else {
+          res.json().then((data) => console.log(data.error));
+        }
+      });
+    }
   }, [selectedDestination]);
 
   // Initially had trouble setting selectedDestination at App level
   // so used state with Link to pass in the destination overview.
   // Might be able to get rid of state.el and just use selectedDestination now.
+
   return (
     <>
       {/* {state && state.el && destinationDetails ? ( */}

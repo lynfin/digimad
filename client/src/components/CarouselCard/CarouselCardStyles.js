@@ -1,19 +1,19 @@
 import styled from 'styled-components';
-import { Row } from '../../globalStyles';
+import { Row, TextWrapper } from '../../globalStyles';
 import Slider from 'react-slick';
 
 export const CarouselImage = styled.img`
-  width: 100%;
-  height: 300px;
-  border-radius: 10px 10px 0 0;
+  width: 65%;
+  height: 200px;
+  border-radius: 10px 10px 10px 10px;
   object-fit: cover;
   vertical-align: middle;
 `;
 
-export const ImageWrapper = styled.div`
+export const CardWrapper = styled.div`
   width: 90%;
   display: flex !important;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
@@ -60,6 +60,26 @@ export const ReviewSlider = styled(Slider)`
   }
 `;
 
+export const FavoriteButton = styled.button`
+  font-size: 1.3rem;
+  padding: 2px 5px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  margin: auto 0 0 0;
+  border: none;
+`;
+
+export const IconButton = styled.button`
+  font-size: 1.3rem;
+  padding: 2px 5px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+
+  border: none;
+`;
+
 export const CardButton = styled.button`
   background-color: #1d609c;
   font-size: 1.3rem;
@@ -83,4 +103,19 @@ export const ButtonWrapper = styled.div`
   justify-content: center;
   flex-flow: wrap;
   gap: 0.5rem;
+  background-color: ${({ background }) => (background ? background : '')};
+`;
+
+export const SummaryValue = styled(TextWrapper)`
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.4rem 0.1rem 0.1rem 0.1rem;
+  color: '#4f4f4f';
+`;
+
+export const SummaryUnits = styled(TextWrapper)`
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0.1rem 0.1rem 0.8rem 0.1rem;
+  color: '#4f4f4f';
 `;

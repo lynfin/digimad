@@ -27,12 +27,22 @@ export const HeroText = styled.p`
   color: #fff;
 `;
 
+export const AddressText = styled.p`
+  margin-bottom: 15px;
+  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #fff;
+`;
+
 export const ButtonWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   flex-flow: wrap;
   gap: 0.5rem;
+  background-color: purple;
 `;
 
 export const HeroImage = styled.img`
@@ -52,6 +62,7 @@ export const ImageWrapper = styled.div`
   border-radius: 10px;
   outline: none;
   height: 330px;
+  background-color: ${({ background }) => (background ? background : '')};
 
   @media screen and (min-width: 440px) {
     border: 1px solid #bebebe;

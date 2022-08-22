@@ -13,8 +13,15 @@ function Home({
 }) {
   const [selectedCountry, setSelectedCountry] = useState('All');
   const [selectedCity, setSelectedCity] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
+
+  const categoryOptions = [
+    { code: 'LD', name: 'Lodging' },
+    { code: 'CO', name: 'Coworking' },
+    { code: 'DI', name: 'Dining' },
+  ];
 
   useEffect(() => {
     if (selectedCountry === 'All') {
@@ -35,20 +42,23 @@ function Home({
             return d.address.city === selectedCity;
           })
         : filterForCountry;
-    setFilteredDestinations(filterForCity);
-    // setFilteredDestinations(
-    //   selectedCountry && selectedCountry !== 'All'
-    //     ? destinations.filter((d) => {
-    //         return d.address.country === selectedCountry;
-    //       })
-    //     : destinations
-    // );
-  }, [destinations, selectedCountry, selectedCity]);
+    const filterForCategory =
+      selectedCategory && selectedCategory !== 'All'
+        ? filterForCity.filter((d) => {
+            return (
+              d.category.toLocaleLowerCase().trim() ===
+              selectedCategory.toLocaleLowerCase().trim()
+            );
+          })
+        : filterForCity;
+    setFilteredDestinations(filterForCategory);
+  }, [destinations, selectedCountry, selectedCity, selectedCategory]);
 
   const destinationCardStyles = [
     {
       data: {
         summary1: 'maximum_wifi',
+        summary1Type: 'float',
         summary1Units: 'Max Mbps',
         summary2: 'total_tests',
         summary2Units: 'tests',
@@ -81,6 +91,7 @@ function Home({
       data: {
         summary1: 'most_recent_test',
         summary1Type: 'date',
+
         summary2: 'total_tests',
         summary2Units: 'tests',
       },
@@ -107,6 +118,9 @@ function Home({
         setSelectedCountry={setSelectedCountry}
         selectedCity={selectedCity}
         setSelectedCity={setSelectedCity}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+        categories={categoryOptions}
       />
       {favorites.length > 0 ? (
         <Carousel

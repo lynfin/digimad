@@ -1,0 +1,3082 @@
+[
+  {
+    "position": {
+      "lat": 37.73394698,
+      "lng": -122.4904542
+    },
+    "name": "Starbucks - CA - San Francisco  01911",
+    "address": "Albertsons - San Francisco #7128_1515 Sloat Blvd._San Francisco, California 94132"
+  },
+  {
+    "position": {
+      "lat": 37.77568626,
+      "lng": -122.4463312
+    },
+    "name": "Starbucks - CA - San Francisco  01912",
+    "address": "Albertsons - San Francisco #7137_ Fulton St & Masonic Ave_San Francisco, California 94117"
+  },
+  {
+    "position": {
+      "lat": 37.78471577,
+      "lng": -122.4660295
+    },
+    "name": "Starbucks - CA - San Francisco  01913",
+    "address": "Grand Central Market - Mollie Stone_2435 California Street_San Francisco, California 94118",
+    "phone": "415-567-3978"
+  },
+  {
+    "position": {
+      "lat": 37.785183,
+      "lng": -122.404915
+    },
+    "name": "Starbucks - CA - San Francisco  01914",
+    "address": "Marriott SF Lobby_55 Fourth St_San Francisco, California 94103"
+  },
+  {
+    "position": {
+      "lat": 37.784492,
+      "lng": -122.404286
+    },
+    "name": "Starbucks - CA - San Francisco  01915",
+    "address": "Metreon SF (UCO)_101 4th Street_San Francisco, California 94103",
+    "phone": "415-369-6284"
+  },
+  {
+    "position": {
+      "lat": 37.74367316,
+      "lng": -122.4379437
+    },
+    "name": "Starbucks - CA - San Francisco  01916",
+    "address": "Safeway - San Francisco #667_5290 Diamond Heights Blvd_San Francisco, California 94131",
+    "phone": "415-824-7744"
+  },
+  {
+    "position": {
+      "lat": 37.77643758,
+      "lng": -122.3941076
+    },
+    "name": "Starbucks - CA - San Francisco  01917",
+    "address": "Safeway-San Francisco #2606_298 King Street_San Francisco, California 94107"
+  },
+  {
+    "position": {
+      "lat": 37.76554384,
+      "lng": -122.4090521
+    },
+    "name": "Starbucks - CA - San Francisco  01918",
+    "address": "Safeway-San Francisco #1490_2300 16th St. Unit 203_San Francisco, California 94103",
+    "phone": "415-575-1120"
+  },
+  {
+    "position": {
+      "lat": 37.76880554,
+      "lng": -122.4270818
+    },
+    "name": "Starbucks - CA - San Francisco  01919",
+    "address": "Safeway-San Franscisco #1507_2020 Market St._San Francisco, California 941141314"
+  },
+  {
+    "position": {
+      "lat": 37.78552856,
+      "lng": -122.3967031
+    },
+    "name": "Starbucks - CA - San Francisco  01920",
+    "address": "SF Courtyard Marriott Lobby_299 Second St_San Francisco, California 94105"
+  },
+  {
+    "position": {
+      "lat": 37.72785445,
+      "lng": -122.4756191
+    },
+    "name": "Starbucks - CA - San Francisco  01921",
+    "address": "Stonestown Galleria_3251 20th Ave_San Francisco, California 94132_(415) 665-4956"
+  },
+  {
+    "position": {
+      "lat": 37.73966267,
+      "lng": -122.4670769
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01922",
+    "address": "100 West Portal/Vicente_100 West Portal_San Francisco, California 94127_(415) 664-8370"
+  },
+  {
+    "position": {
+      "lat": 37.78420013,
+      "lng": -122.4039336
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01923",
+    "address": "120 4th Street_120 4th Street_San Francisco, California 94103_(415) 284-0579"
+  },
+  {
+    "position": {
+      "lat": 37.79241074,
+      "lng": -122.3996419
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01924",
+    "address": "123 Battery_123 Battery Street_San Francisco, California 94109",
+    "phone": "415-544-0830"
+  },
+  {
+    "position": {
+      "lat": 37.79229838,
+      "lng": -122.3941373
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01925",
+    "address": "123 Mission Street_123 Mission Street_San Francisco, California 94105_(415) 543-1510"
+  },
+  {
+    "position": {
+      "lat": 37.79018675,
+      "lng": -122.4006782
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01926",
+    "address": "15 Sutter St._15 Sutter Street_San Francisco, California 94104_(415) 433-9615"
+  },
+  {
+    "position": {
+      "lat": 37.77831067,
+      "lng": -122.4151365
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01927",
+    "address": "1231 Market Street_1231 Market Street_San Francisco, California 94103_(415) 522-1438"
+  },
+  {
+    "position": {
+      "lat": 37.76350481,
+      "lng": -122.4771178
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01928",
+    "address": "1800 Irving Street_1800 Irving Street_San Francisco, California 94122",
+    "phone": "415-242-7970"
+  },
+  {
+    "position": {
+      "lat": 37.7857039,
+      "lng": -122.4398944
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01929",
+    "address": "1750 Divisadero Street_1750 Divisadero Street_San Francisco, California 94115_(415) 346-7193"
+  },
+  {
+    "position": {
+      "lat": 37.75129339,
+      "lng": -122.4317225
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01930",
+    "address": "24th & Noe_3995 24th Street_San Francisco, California 94114_(415) 826-1118"
+  },
+  {
+    "position": {
+      "lat": 37.7892237,
+      "lng": -122.3950775
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01931",
+    "address": "199 Fremont @ Howard - SF_199 Fremont Street_San Francisco, California 94111",
+    "phone": "415-615-0458"
+  },
+  {
+    "position": {
+      "lat": 37.79223581,
+      "lng": -122.3975773
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01932",
+    "address": "333 Market St._333 Market Street_San Francisco, California 94105_(415) 543-4786"
+  },
+  {
+    "position": {
+      "lat": 37.78640624,
+      "lng": -122.4079319
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01933",
+    "address": "201 Powell Street - San Francisco_201 Powell Street_San Francisco, California 94102",
+    "phone": "415-835-2470"
+  },
+  {
+    "position": {
+      "lat": 37.788914,
+      "lng": -122.401058
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01934",
+    "address": "36 Second Street_36 2nd Street_San Francisco, California 94104_(415) 227-1665"
+  },
+  {
+    "position": {
+      "lat": 37.79350412,
+      "lng": -122.3962473
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01935",
+    "address": "27 Drumm Street_27 Drumm Street_San Francisco, California 94111",
+    "phone": "415-392-3825"
+  },
+  {
+    "position": {
+      "lat": 37.78930907,
+      "lng": -122.4067981
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01936",
+    "address": "390 Stockton @ Sutter (Union Sq)_390 Stockton Street_San Francisco, California 941084609",
+    "phone": "415-989-1637"
+  },
+  {
+    "position": {
+      "lat": 37.79080744,
+      "lng": -122.3960374
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01937",
+    "address": "340 Mission_340 Mission Street_San Francisco, California 94105_(415) 538-0900"
+  },
+  {
+    "position": {
+      "lat": 37.79180209,
+      "lng": -122.3981647
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01938",
+    "address": "398 Market St._398 Market Street_San Francisco, California 94111_(415) 788-5856"
+  },
+  {
+    "position": {
+      "lat": 37.7639076,
+      "lng": -122.4560028
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01939",
+    "address": "350 Parnassus_350 Parnassus Street_San Francisco, California 94117_(415) 665-6406"
+  },
+  {
+    "position": {
+      "lat": 37.804356,
+      "lng": -122.433569
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01940",
+    "address": "3727 Buchanan - San Francisco_3735 Buchanan_San Francisco, California 94123_4153462852"
+  },
+  {
+    "position": {
+      "lat": 37.76073839,
+      "lng": -122.4348975
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01941",
+    "address": "4094 18th St._4094 18th Street_San Francisco, California 94114_(415) 626-6263"
+  },
+  {
+    "position": {
+      "lat": 37.78495202,
+      "lng": -122.4003272
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01942",
+    "address": "3rd & Howard_201 3rd St._San Francisco, California 941033124_(415) 644-0072"
+  },
+  {
+    "position": {
+      "lat": 37.78115041,
+      "lng": -122.4116612
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01943",
+    "address": "455 Market_455 Market Street_San Francisco, California 94102_(415) 243-9792"
+  },
+  {
+    "position": {
+      "lat": 37.7954016,
+      "lng": -122.4003504
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01944",
+    "address": "425 Battery - San Francisco_425 Battery Street_San Francisco, California 94111_4154459030"
+  },
+  {
+    "position": {
+      "lat": 37.77840572,
+      "lng": -122.3963438
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01945",
+    "address": "4th & Brannan - WFB_490 Brannan Street_San Francisco, California 941071713_(415) 974-5926"
+  },
+  {
+    "position": {
+      "lat": 37.7894116,
+      "lng": -122.4020345
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01946",
+    "address": "44 Montgomery @ Market St._44 Montgomery Street_San Francisco, California 94104",
+    "phone": "415-397-4394"
+  },
+  {
+    "position": {
+      "lat": 37.79357453,
+      "lng": -122.396867
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01947",
+    "address": "50 California St._52 California Street_San Francisco, California 94111_(415) 398-8630"
+  },
+  {
+    "position": {
+      "lat": 37.7863805,
+      "lng": -122.4044
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01948",
+    "address": "4th & Market - S.F._780 Market Street_San Francisco, California 94108_(415) 677-4493"
+  },
+  {
+    "position": {
+      "lat": 37.79490868,
+      "lng": -122.4014057
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01949",
+    "address": "505 Sansome Street_505 Sansome Street_San Francisco, California 94111_(415) 391-5966"
+  },
+  {
+    "position": {
+      "lat": 37.780213,
+      "lng": -122.47781
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01950",
+    "address": "5455  Geary Blvd. - WFB_5455 Geary Blvd_San Francisco, California 94163_(415) 386-8813"
+  },
+  {
+    "position": {
+      "lat": 37.79273783,
+      "lng": -122.4034376
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01951",
+    "address": "555 California St._555 California St_San Francisco, California 94104_(415) 788-8670"
+  },
+  {
+    "position": {
+      "lat": 37.79475615,
+      "lng": -122.4023994
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01952",
+    "address": "565 Clay St._565 Clay Street_San Francisco, California 94111",
+    "phone": "415-834-0578"
+  },
+  {
+    "position": {
+      "lat": 37.74454709,
+      "lng": -122.4528838
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01953",
+    "address": "675 Portola - Miraloma_675 Portola Drive_San Francisco, California 94127",
+    "phone": "415-682-9477"
+  },
+  {
+    "position": {
+      "lat": 37.78769032,
+      "lng": -122.4008285
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01954",
+    "address": "74 New Montgomery_74 New Montgomery Street_San Francisco, California 94105_(415) 284-0651"
+  },
+  {
+    "position": {
+      "lat": 37.79765556,
+      "lng": -122.4008695
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01955",
+    "address": "701 Battery_701 Battery Street_San Francisco, California 94111_(415) 986-5808"
+  },
+  {
+    "position": {
+      "lat": 37.77089,
+      "lng": -122.40251
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01956",
+    "address": "8th & Townsend - San Francisco_689 Townsend_San Francisco, California 94103",
+    "phone": "415-255-7561"
+  },
+  {
+    "position": {
+      "lat": 37.78391664,
+      "lng": -122.4080412
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01957",
+    "address": "901 Market St._901 Market Street_San Francisco, California 94103_(415) 979-0418"
+  },
+  {
+    "position": {
+      "lat": 37.79710416,
+      "lng": -122.3981662
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01958",
+    "address": "99 Jackson_99 Jackson Street_San Francisco, California 94111",
+    "phone": "415-421-4464"
+  },
+  {
+    "position": {
+      "lat": 37.77487572,
+      "lng": -122.4130418
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01959",
+    "address": "9th & Howard_1298 Howard Street_San Francisco, California 94103_(415) 565-7385"
+  },
+  {
+    "position": {
+      "lat": 37.805298,
+      "lng": -122.415085
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01960",
+    "address": "Bay & Taylor - San Francisco_499 Bay Street_San Francisco, California 94133",
+    "phone": "415-409-1847"
+  },
+  {
+    "position": {
+      "lat": 37.80670215,
+      "lng": -122.420076
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01961",
+    "address": "Beach & Hyde - San Francisco_680 Beach Street_San Francisco, California 94109",
+    "phone": "415-409-0840"
+  },
+  {
+    "position": {
+      "lat": 37.78846521,
+      "lng": -122.4218551
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01962",
+    "address": "Bush & Van Ness - S.F._1401 Van Ness Avenue_San Francisco, California 94109_(415) 474-7095"
+  },
+  {
+    "position": {
+      "lat": 37.80053582,
+      "lng": -122.4383694
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01963",
+    "address": "Chestnut_2132 Chestnut Street_San Francisco, California 94123_(415) 673-6781"
+  },
+  {
+    "position": {
+      "lat": 37.7932,
+      "lng": -122.3997
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01964",
+    "address": "California & Battery - SF_295 California Street_San Francisco, California 94111",
+    "phone": "415-986-2349"
+  },
+  {
+    "position": {
+      "lat": 37.78546368,
+      "lng": -122.4093526
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01965",
+    "address": "Cyril Magnin @ O`Farrell - Nikko_222 Mason St_San Francisco, California 94102",
+    "phone": "415-296-9056"
+  },
+  {
+    "position": {
+      "lat": 37.79102784,
+      "lng": -122.3990391
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01966",
+    "address": "Church & Market - S.F._2018 Market Street_San Francisco, California 94111_(415) 431-5561"
+  },
+  {
+    "position": {
+      "lat": 37.78328143,
+      "lng": -122.4326708
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01967",
+    "address": "Fillmore & O'Farrell (UCO)_1501 Fillmore Street_San Francisco, California 94115",
+    "phone": "415-441-7969"
+  },
+  {
+    "position": {
+      "lat": 37.78996475,
+      "lng": -122.4339959
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01968",
+    "address": "Fillmore_2222 Fillmore Street_San Francisco, California 94115_(415) 673-3171"
+  },
+  {
+    "position": {
+      "lat": 37.78701757,
+      "lng": -122.4104703
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01969",
+    "address": "Geary & Taylor - San Francisco_442 Geary Street_San Francisco, California 94102_(415) 922-9086"
+  },
+  {
+    "position": {
+      "lat": 37.78941836,
+      "lng": -122.3886298
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01970",
+    "address": "Hills Plaza_2 Harrison Street_San Francisco, California 94105_(415) 512-7005"
+  },
+  {
+    "position": {
+      "lat": 37.79024997,
+      "lng": -122.4053899
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01971",
+    "address": "Grant & Bush - San Francisco_359 Grant Avenue_San Francisco, California 94108",
+    "phone": "415-392-2365"
+  },
+  {
+    "position": {
+      "lat": 37.80711196,
+      "lng": -122.4171253
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01972",
+    "address": "Jones @ Jefferson - San Francisco_2801 Jones S_San Francisco, California 94133",
+    "phone": "415-776-7907"
+  },
+  {
+    "position": {
+      "lat": 37.76405776,
+      "lng": -122.4657748
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01973",
+    "address": "Irving Street_744 Irving Street_San Francisco, California 94122_(415) 664-8340"
+  },
+  {
+    "position": {
+      "lat": 37.7914,
+      "lng": -122.402
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01974",
+    "address": "Kearny @ Bush_264 Kearny Bush_San Francisco, California 94104_(415) 788-1363"
+  },
+  {
+    "position": {
+      "lat": 37.76533511,
+      "lng": -122.4024677
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01975",
+    "address": "Kansas & 16th St. - San Francisco_350 Rhode Island_San Francisco, California 94103",
+    "phone": "415-864-6383"
+  },
+  {
+    "position": {
+      "lat": 37.78643419,
+      "lng": -122.4532257
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01976",
+    "address": "Laurel Village_3595 California St._San Francisco, California 94118_(415) 387-2249"
+  },
+  {
+    "position": {
+      "lat": 37.76288274,
+      "lng": -122.4104104
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01977",
+    "address": "Mariposa & Bryant_2727 Mariposa St_San Francisco, California 94110",
+    "phone": "415-552-2649"
+  },
+  {
+    "position": {
+      "lat": 37.77676202,
+      "lng": -122.3936978
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01978",
+    "address": "King & 4th Street - San Francisco_280 King Street_San Francisco, California 94107",
+    "phone": "415-344-0351"
+  },
+  {
+    "position": {
+      "lat": 37.80280553,
+      "lng": -122.4019077
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01979",
+    "address": "Levi's Plaza @ Sansome_1255 Battery Street_San Francisco, California 94111",
+    "phone": "415-402-0379"
+  },
+  {
+    "position": {
+      "lat": 37.79656825,
+      "lng": -122.4217555
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01980",
+    "address": "Polk Street_2165 Polk Street_San Francisco, California 94109_(415) 921-1351"
+  },
+  {
+    "position": {
+      "lat": 37.77641709,
+      "lng": -122.4175488
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01981",
+    "address": "Market & Fell - San Francisco_1390 Market Street_San Francisco, California 94102",
+    "phone": "415-863-8332"
+  },
+  {
+    "position": {
+      "lat": 37.77569231,
+      "lng": -122.446275
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01982",
+    "address": "Masonic @ Fulton - S.F._1799 Fulton Street_San Francisco, California 94117_(415) 474-8930"
+  },
+  {
+    "position": {
+      "lat": 37.79457,
+      "lng": -122.39352
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01983",
+    "address": "One Market Plaza_One Market Plaza_San Francisco, California 94103_(415) 543-6345"
+  },
+  {
+    "position": {
+      "lat": 37.80134838,
+      "lng": -122.4027813
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01984",
+    "address": "Sansome_343 Sansome_San Francisco, California 94111_(415) 989-8759"
+  },
+  {
+    "position": {
+      "lat": 37.7913069,
+      "lng": -122.3924137
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01985",
+    "address": "Spear Street_201 Spear Street_San Francisco, California 94105_(415) 974-5077"
+  },
+  {
+    "position": {
+      "lat": 37.7875,
+      "lng": -122.4032
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01986",
+    "address": "Third & Market - San Francisco_7 Third Street_San Francisco, California 94103_4159799530"
+  },
+  {
+    "position": {
+      "lat": 37.7899345,
+      "lng": -122.4221739
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01987",
+    "address": "Van Ness & California - WFB_1560 Van Ness Avenue_San Francisco, California 941094606_(415) 749-0365"
+  },
+  {
+    "position": {
+      "lat": 37.79770923,
+      "lng": -122.4304693
+    },
+    "name": "Starbucks - CA - San Francisco [W]  01988",
+    "address": "Union Street_1899 Union Street_San Francisco, California 94123_(415) 921-4049"
+  },
+
+  {
+    "position": {
+      "lat": 41.8828,
+      "lng": -87.6326
+    },
+    "name": "Starbucks - IL - Chicago  03839",
+    "address": "30 N. LaSalle_30 N LaSalle St._Chicago, Illinois 60602",
+    "phone": "312-263-0925"
+  },
+  {
+    "position": {
+      "lat": 41.883063,
+      "lng": -87.626653
+    },
+    "name": "Starbucks - IL - Chicago  03840",
+    "address": "25 East Washington_25 E Washington Blvd_Chicago, Illinois 60606",
+    "phone": "312-920-0473"
+  },
+  {
+    "position": {
+      "lat": 41.94310733,
+      "lng": -87.68812612
+    },
+    "name": "Starbucks - IL - Chicago  03841",
+    "address": "Albertsons-Chicago #3501_3400 N Western Ave_Chicago, Illinois 60618"
+  },
+  {
+    "position": {
+      "lat": 41.96129171,
+      "lng": -87.6547889
+    },
+    "name": "Starbucks - IL - Chicago  03842",
+    "address": "Albertsons-Chicago #3455_4355 N. Sheridan Rd._Chicago, Illinois 60613",
+    "phone": "773-477-7151"
+  },
+  {
+    "position": {
+      "lat": 41.878958,
+      "lng": -87.632015
+    },
+    "name": "Starbucks - IL - Chicago  03843",
+    "address": "Bank of America Building_231 S LaSalle St_Chicago, Illinois 60604",
+    "phone": "312-553-0373"
+  },
+  {
+    "position": {
+      "lat": 41.8817,
+      "lng": -87.6307
+    },
+    "name": "Starbucks - IL - Chicago  03844",
+    "address": "Chase Tower Chicago_21 S Clark St_Chicago, Illinois 60670",
+    "phone": "312-732-4525"
+  },
+  {
+    "position": {
+      "lat": 41.89330337,
+      "lng": -87.62371822
+    },
+    "name": "Starbucks - IL - Chicago  03845",
+    "address": "Chicago Dwntwn Courtyard - Lobby_155 E Ontario_Chicago, Illinois 60611",
+    "phone": "219-769-3267"
+  },
+  {
+    "position": {
+      "lat": 41.88319526,
+      "lng": -87.62993108
+    },
+    "name": "Starbucks - IL - Chicago  03846",
+    "address": "Daley Center Plaza_66 West Washington Street_Chicago, Illinois 60602_(312) 269-9335"
+  },
+  {
+    "position": {
+      "lat": 41.88468708,
+      "lng": -87.63098554
+    },
+    "name": "Starbucks - IL - Chicago  03847",
+    "address": "CT&T Building_161 North Clark Street_Chicago, Illinois 606013206_(312) 641-0320"
+  },
+  {
+    "position": {
+      "lat": 41.9037,
+      "lng": -87.63918
+    },
+    "name": "Starbucks - IL - Chicago  03848",
+    "address": "Dominick's - Chicago #2153_424 W Division_Chicago, Illinois 60610"
+  },
+  {
+    "position": {
+      "lat": 41.92526,
+      "lng": -87.65344
+    },
+    "name": "Starbucks - IL - Chicago  03849",
+    "address": "Dominick's-Chicago #1695_959 West Fullerton_Chicago, Illinois 60614",
+    "phone": "773-248-0049"
+  },
+  {
+    "position": {
+      "lat": 41.88177787,
+      "lng": -87.64731457
+    },
+    "name": "Starbucks - IL - Chicago  03850",
+    "address": "Dominick's-Chicago #1875_1 N Halsted St_Chicago, Illinois 60661"
+  },
+  {
+    "position": {
+      "lat": 41.99120389,
+      "lng": -87.66030754
+    },
+    "name": "Starbucks - IL - Chicago  03851",
+    "address": "Dominick's-N. Broadway & Thornd #12_6009 N. Broadway Street_Chicago, Illinois 60660"
+  },
+  {
+    "position": {
+      "lat": 41.92831833,
+      "lng": -87.67371521
+    },
+    "name": "Starbucks - IL - Chicago  03852",
+    "address": "Dominick's-North Clyborn #2304_2550 N. Clyborn_Chicago, Illinois 60614",
+    "phone": "773-935-5777"
+  },
+  {
+    "position": {
+      "lat": 41.86495808,
+      "lng": -87.63914762
+    },
+    "name": "Starbucks - IL - Chicago  03853",
+    "address": "Dominick's-Canal Street #1147_1340 South Canal Street_Chicago, Illinois 60607",
+    "phone": "312-850-3915"
+  },
+  {
+    "position": {
+      "lat": 41.8918,
+      "lng": -87.62131
+    },
+    "name": "Starbucks - IL - Chicago  03854",
+    "address": "Dominicks-Chicago #1703_255 E Grand Ave_Chicago, Illinois 60611",
+    "phone": "312-279-1305"
+  },
+  {
+    "position": {
+      "lat": 42.01940915,
+      "lng": -87.66816909
+    },
+    "name": "Starbucks - IL - Chicago  03855",
+    "address": "Dominick's-Clark&Howard #1698_1763 W. Howard St._Chicago, Illinois 60626"
+  },
+  {
+    "position": {
+      "lat": 41.991181,
+      "lng": -87.660299
+    },
+    "name": "Starbucks - IL - Chicago  03856",
+    "address": "Dominick's-N. Broadwy&Thorn. #12_6009 N. Broadway Street_Chicago, Illinois 60660"
+  },
+  {
+    "position": {
+      "lat": 41.88599507,
+      "lng": -87.62449686
+    },
+    "name": "Starbucks - IL - Chicago  03857",
+    "address": "Illinois Center_225 N Michigan Ave_Chicago, Illinois 60601",
+    "phone": "312-565-0009"
+  },
+  {
+    "position": {
+      "lat": 41.89194336,
+      "lng": -87.60988112
+    },
+    "name": "Starbucks - IL - Chicago  03858",
+    "address": "Levy-Navy Pier_600 E Grand Ave_Chicago, Illinois 60611",
+    "phone": "312-595-5309"
+  },
+  {
+    "position": {
+      "lat": 41.88346589,
+      "lng": -87.62782984
+    },
+    "name": "Starbucks - IL - Chicago  03859",
+    "address": "Marshall Fields_111 N. State St._Chicago, Illinois 60602"
+  },
+  {
+    "position": {
+      "lat": 41.850563,
+      "lng": -87.618615
+    },
+    "name": "Starbucks - IL - Chicago  03860",
+    "address": "McCormick Con Ctr - Mezzanine Level_2301 S. Martin Luther King Dr._Chicago, Illinois 60616",
+    "phone": "312-791-7252"
+  },
+  {
+    "position": {
+      "lat": 41.85538216,
+      "lng": -87.61523513
+    },
+    "name": "Starbucks - IL - Chicago  03861",
+    "address": "McCormick Con Ctr - North Food Ct_2301 S Lake Shore Dr_Chicago, Illinois 60616"
+  },
+  {
+    "position": {
+      "lat": 41.8949346,
+      "lng": -87.62156954
+    },
+    "name": "Starbucks - IL - Chicago  03862",
+    "address": "Northwestern Mem. Hospital_251 East Huron Street_Chicago, Illinois 60611",
+    "phone": "312-274-1472"
+  },
+  {
+    "position": {
+      "lat": 41.981099,
+      "lng": -87.838999
+    },
+    "name": "Starbucks - IL - Chicago  03863",
+    "address": "Renaissance Chicago O'Hare Hotel_8500 W Bryn Mawr Ave_Chicago, Illinois 60631"
+  },
+  {
+    "position": {
+      "lat": 41.868532,
+      "lng": -87.639248
+    },
+    "name": "Starbucks - IL - Chicago  03864",
+    "address": "South Loop-Roosevelt & Canal_1101 South Canal St._Chicago, Illinois 60607",
+    "phone": "312-235-0429"
+  },
+  {
+    "position": {
+      "lat": 41.94665398,
+      "lng": -87.70183509
+    },
+    "name": "Starbucks - IL - Chicago  03865",
+    "address": "Target Chicago Mid North T-1437_2939 West Addison St_Chicago, Illinois 60618"
+  },
+  {
+    "position": {
+      "lat": 41.92969803,
+      "lng": -87.68426102
+    },
+    "name": "Starbucks - IL - Chicago  03866",
+    "address": "Target Chicago Near North T-942_2656 N Elston Ave_Chicago, Illinois 606472019",
+    "phone": "773-252-1994"
+  },
+  {
+    "position": {
+      "lat": 41.81275495,
+      "lng": -87.72374634
+    },
+    "name": "Starbucks - IL - Chicago  03867",
+    "address": "Target Chicago T-1879_4433 S. Pulaski_Chicago, Illinois 60632"
+  },
+  {
+    "position": {
+      "lat": 41.93098552,
+      "lng": -87.78868095
+    },
+    "name": "Starbucks - IL - Chicago  03868",
+    "address": "Target Chicago Brickyards T-1924_6525 W. Diversey_Chicago, Illinois 60707"
+  },
+  {
+    "position": {
+      "lat": 41.834084,
+      "lng": -87.673947
+    },
+    "name": "Starbucks - IL - Chicago  03869",
+    "address": "Target Chicago McKinley Park T-2078_1940 W 33rd St_Chicago, Illinois 60608"
+  },
+  {
+    "position": {
+      "lat": 41.8781301,
+      "lng": -87.63308241
+    },
+    "name": "Starbucks - IL - Chicago  03870",
+    "address": "Van Buren Relocation_175 W. Jackson Blvd_Chicago, Illinois 60604_312/566-0792"
+  },
+  {
+    "position": {
+      "lat": 41.86796678,
+      "lng": -87.63049377
+    },
+    "name": "Starbucks - IL - Chicago  03871",
+    "address": "Target Chicago South Loop T-1889_1154 S. Clark Street_Chicago, Illinois 60605"
+  },
+  {
+    "position": {
+      "lat": 41.990616,
+      "lng": -87.6841
+    },
+    "name": "Starbucks - IL - Chicago  03872",
+    "address": "Target Chicago T-2079_2112 W Peterson Ave_Chicago, Illinois 60659",
+    "phone": "773-761-3001"
+  },
+  {
+    "position": {
+      "lat": 41.9527465,
+      "lng": -87.80719759
+    },
+    "name": "Starbucks - IL - Chicago  03873",
+    "address": "Target Norridge T-1888_4104 N. Harlem Ave_Chicago, Illinois 60634"
+  },
+  {
+    "position": {
+      "lat": 41.8857,
+      "lng": -87.642698
+    },
+    "name": "Starbucks - IL - Chicago  03874",
+    "address": "West Loop-Lake & Jefferson_600 W. Lake St._Chicago, Illinois 60661",
+    "phone": "312-575-0221"
+  },
+  {
+    "position": {
+      "lat": 41.88319526,
+      "lng": -87.63127993
+    },
+    "name": "Starbucks - IL - Chicago  03875",
+    "address": "West Washington_111 W Washington St_Chicago, Illinois 60602",
+    "phone": "312-372-1331"
+  },
+  {
+    "position": {
+      "lat": 41.9787,
+      "lng": -87.895
+    },
+    "name": "Starbucks - IL - Chicago [A]  03876",
+    "address": "ORD OHare Airport_Chicago, Illinois 60666",
+    "phone": "773-686-6181"
+  },
+  {
+    "position": {
+      "lat": 41.80754448,
+      "lng": -87.7431091
+    },
+    "name": "Starbucks - IL - Chicago [WD]  03877",
+    "address": "47th & Cicero (UCO)_4701 South Cicero Avenue_Chicago, Illinois 60632",
+    "phone": "773-838-8596"
+  },
+  {
+    "position": {
+      "lat": 41.76587253,
+      "lng": -87.58587897
+    },
+    "name": "Starbucks - IL - Chicago [WD]  03878",
+    "address": "71st & Stony Island (UCO)_7101 South Stony Island Ave._Chicago, Illinois 60649",
+    "phone": "773-643-6520"
+  },
+  {
+    "position": {
+      "lat": 41.7363,
+      "lng": -87.627652
+    },
+    "name": "Starbucks - IL - Chicago [WD]  03879",
+    "address": "Chatham-87th & Lafayatte_160 W. 87th Street_Chicago, Illinois 60620",
+    "phone": "773-651-7623"
+  },
+  {
+    "position": {
+      "lat": 41.90885229,
+      "lng": -87.80240963
+    },
+    "name": "Starbucks - IL - Chicago [WD]  03880",
+    "address": "Galewood-North & Nordica_7112 W. North Ave._Chicago, Illinois 60707",
+    "phone": "773-622-8610"
+  },
+  {
+    "position": {
+      "lat": 41.8664,
+      "lng": -87.709297
+    },
+    "name": "Starbucks - IL - Chicago [WD]  03881",
+    "address": "Lawndale-Roosevelt & Homan (UCO)_3350 W. Roosevelt Rd._Chicago, Illinois 60624",
+    "phone": "773-826-0547"
+  },
+  {
+    "position": {
+      "lat": 41.99248455,
+      "lng": -87.71088509
+    },
+    "name": "Starbucks - IL - Chicago [WD]  03882",
+    "address": "Lincoln Village-Lincoln & McCormick_6075 N. Lincoln Ave._Chicago, Illinois 60659_773/279-0513"
+  },
+  {
+    "position": {
+      "lat": 41.88057873,
+      "lng": -87.63699611
+    },
+    "name": "Starbucks - IL - Chicago [W]  03883",
+    "address": "100 S. Wacker_100 S. Wacker Drive_Chicago, Illinois 60606",
+    "phone": "312-759-5559"
+  },
+  {
+    "position": {
+      "lat": 41.93233232,
+      "lng": -87.67091521
+    },
+    "name": "Starbucks - IL - Chicago [W]  03884",
+    "address": "1700 W. Diversey_1700 West Diversey Parkway_Chicago, Illinois 60614",
+    "phone": "773-665-8650"
+  },
+  {
+    "position": {
+      "lat": 41.88579158,
+      "lng": -87.62446843
+    },
+    "name": "Starbucks - IL - Chicago [W]  03885",
+    "address": "200 N. Michigan_202 N Michigan Ave_Chicago, Illinois 60601",
+    "phone": "312-541-1313"
+  },
+  {
+    "position": {
+      "lat": 41.88180133,
+      "lng": -87.63888807
+    },
+    "name": "Starbucks - IL - Chicago [W]  03886",
+    "address": "10 S. Riverside Plaza_10 S Riverside Plaza_Chicago, Illinois 60601",
+    "phone": "312-441-1919"
+  },
+  {
+    "position": {
+      "lat": 41.87812218,
+      "lng": -87.6338582
+    },
+    "name": "Starbucks - IL - Chicago [W]  03887",
+    "address": "209 W. Jackson_209 W. Jackson_Chicago, Illinois 60606_(312) 341-9850"
+  },
+  {
+    "position": {
+      "lat": 41.897863,
+      "lng": -87.631707
+    },
+    "name": "Starbucks - IL - Chicago [W]  03888",
+    "address": "111 E. Chestnut_111 East Chestnut_Chicago, Illinois 60610_312/642-3971"
+  },
+  {
+    "position": {
+      "lat": 41.96153971,
+      "lng": -87.6760702
+    },
+    "name": "Starbucks - IL - Chicago [W]  03889",
+    "address": "1900 W. Montrose_1900 W. Montrose Avenue_Chicago, Illinois 60613",
+    "phone": "773-878-0272"
+  },
+  {
+    "position": {
+      "lat": 41.87941564,
+      "lng": -87.63380013
+    },
+    "name": "Starbucks - IL - Chicago [W]  03890",
+    "address": "200 West Adams_200 W. Adams_Chicago, Illinois 606065208_(312) 578-9602"
+  },
+  {
+    "position": {
+      "lat": 41.88199346,
+      "lng": -87.63534725
+    },
+    "name": "Starbucks - IL - Chicago [W]  03891",
+    "address": "303 W. Madison_303 West Madison_Chicago, Illinois 60606_(312) 781-9845"
+  },
+  {
+    "position": {
+      "lat": 41.87786373,
+      "lng": -87.63657264
+    },
+    "name": "Starbucks - IL - Chicago [W]  03892",
+    "address": "311 S. Wacker_311 S. Wacker Dr._Chicago, Illinois 60606_312/427-7008"
+  },
+  {
+    "position": {
+      "lat": 41.88954405,
+      "lng": -87.63700461
+    },
+    "name": "Starbucks - IL - Chicago [W]  03893",
+    "address": "414 N. Orleans_414 N. Orleans_Chicago, Illinois 60610",
+    "phone": "312-467-1173"
+  },
+  {
+    "position": {
+      "lat": 41.89002574,
+      "lng": -87.63108163
+    },
+    "name": "Starbucks - IL - Chicago [W]  03894",
+    "address": "430 N. Clark_430 N. Clark_Chicago, Illinois 60610_(312) 670-3920"
+  },
+  {
+    "position": {
+      "lat": 41.87675077,
+      "lng": -87.64110304
+    },
+    "name": "Starbucks - IL - Chicago [W]  03895",
+    "address": "550 W. Van Buren_550 W Van Buren_Chicago, Illinois 60607",
+    "phone": "312-431-0226"
+  },
+  {
+    "position": {
+      "lat": 41.8820485,
+      "lng": -87.62529466
+    },
+    "name": "Starbucks - IL - Chicago [W]  03896",
+    "address": "68 E. Madison_68 E. Madison_Chicago, Illinois 60602_(312) 444-9535"
+  },
+  {
+    "position": {
+      "lat": 41.96392411,
+      "lng": -87.70835792
+    },
+    "name": "Starbucks - IL - Chicago [W]  03897",
+    "address": "Albany Park-Kedzie & Wilson_4558 North Kedzie Ave._Chicago, Illinois 60625",
+    "phone": "773-267-1579"
+  },
+  {
+    "position": {
+      "lat": 41.89008538,
+      "lng": -87.62412182
+    },
+    "name": "Starbucks - IL - Chicago [W]  03898",
+    "address": "444 North Michigan_444 N Michigan Avenue_Chicago, Illinois 60611_(312) 832-9851"
+  },
+  {
+    "position": {
+      "lat": 41.87818639,
+      "lng": -87.62594287
+    },
+    "name": "Starbucks - IL - Chicago [W]  03899",
+    "address": "55 E. Jackson_55 East Jackson Blvd._Chicago, Illinois 60604_(312) 786-9201"
+  },
+  {
+    "position": {
+      "lat": 41.92686057,
+      "lng": -87.65083251
+    },
+    "name": "Starbucks - IL - Chicago [W]  03900",
+    "address": "Altgeld & Lincoln_2475 N. Lincoln_Chicago, Illinois 60614_(773) 528-1275"
+  },
+  {
+    "position": {
+      "lat": 41.89436571,
+      "lng": -87.62428905
+    },
+    "name": "Starbucks - IL - Chicago [W]  03901",
+    "address": "670 N. Michigan_670 N. Michigan Avenue_Chicago, Illinois 60610",
+    "phone": "312-787-2165"
+  },
+  {
+    "position": {
+      "lat": 41.88070453,
+      "lng": -87.63419055
+    },
+    "name": "Starbucks - IL - Chicago [W]  03902",
+    "address": "AT&T Building_227 W. Monroe_Chicago, Illinois 60606",
+    "phone": "312-346-4360"
+  },
+  {
+    "position": {
+      "lat": 41.93945837,
+      "lng": -87.68225294
+    },
+    "name": "Starbucks - IL - Chicago [W]  03903",
+    "address": "Belmont & Leavitt_2159 West Belmont Ave._Chicago, Illinois 60618",
+    "phone": "773-935-5680"
+  },
+  {
+    "position": {
+      "lat": 41.7066,
+      "lng": -87.670453
+    },
+    "name": "Starbucks - IL - Chicago [W]  03904",
+    "address": "Beverly-103rd & Longwood_1933 W. 103rd St._Chicago, Illinois 60643",
+    "phone": "773-239-7139"
+  },
+  {
+    "position": {
+      "lat": 41.97808651,
+      "lng": -87.66836034
+    },
+    "name": "Starbucks - IL - Chicago [W]  03905",
+    "address": "Andersonville_5300 N Clark Street_Chicago, Illinois 60640_(773) 728-2777"
+  },
+  {
+    "position": {
+      "lat": 41.92636483,
+      "lng": -87.66819154
+    },
+    "name": "Starbucks - IL - Chicago [W]  03906",
+    "address": "Ashland & Altgeld_2454 Ashland Ave_Chicago, Illinois 60614",
+    "phone": "773-549-4482"
+  },
+  {
+    "position": {
+      "lat": 41.93102992,
+      "lng": -87.78689827
+    },
+    "name": "Starbucks - IL - Chicago [W]  03907",
+    "address": "Brickyard-Diversey & Narragansett_6451 W. Diversey_Chicago, Illinois 60707",
+    "phone": "773-622-6330"
+  },
+  {
+    "position": {
+      "lat": 41.95188661,
+      "lng": -87.64967275
+    },
+    "name": "Starbucks - IL - Chicago [W]  03908",
+    "address": "Broadway & Clarendon_3845 N Broadway_Chicago, Illinois 60613_(773) 755-4176"
+  },
+  {
+    "position": {
+      "lat": 41.96807544,
+      "lng": -87.65933686
+    },
+    "name": "Starbucks - IL - Chicago [W]  03909",
+    "address": "Broadway and Lawrence_4753 North Broadway_Chicago, Illinois 60640",
+    "phone": "773-334-4227"
+  },
+  {
+    "position": {
+      "lat": 41.91027378,
+      "lng": -87.67725126
+    },
+    "name": "Starbucks - IL - Chicago [W]  03910",
+    "address": "Bucktown_1588 N. Milwaukee Ave._Chicago, Illinois 60622",
+    "phone": "773-862-0249"
+  },
+  {
+    "position": {
+      "lat": 41.8958843,
+      "lng": -87.63571593
+    },
+    "name": "Starbucks - IL - Chicago [W]  03911",
+    "address": "Chicago & Franklin_750 North Franklin Street_Chicago, Illinois 60610",
+    "phone": "312-274-0092"
+  },
+  {
+    "position": {
+      "lat": 41.89668773,
+      "lng": -87.62686011
+    },
+    "name": "Starbucks - IL - Chicago [W]  03912",
+    "address": "Chicago & Wabash_42 East Chicago Ave_Chicago, Illinois 60611",
+    "phone": "312-951-6932"
+  },
+  {
+    "position": {
+      "lat": 41.88445212,
+      "lng": -87.62225287
+    },
+    "name": "Starbucks - IL - Chicago [W]  03913",
+    "address": "Chicago Amoco Building_200 East Randolph St_Chicago, Illinois 60601",
+    "phone": "312-240-1602"
+  },
+  {
+    "position": {
+      "lat": 41.93968226,
+      "lng": -87.65055455
+    },
+    "name": "Starbucks - IL - Chicago [W]  03914",
+    "address": "Clark & Belmont_3184 North Clark Street_Chicago, Illinois 60657_(773) 935-9270"
+  },
+  {
+    "position": {
+      "lat": 41.88199346,
+      "lng": -87.63000134
+    },
+    "name": "Starbucks - IL - Chicago [W]  03915",
+    "address": "Clark & Madison_70 W Madison St_Chicago, Illinois 60602",
+    "phone": "312-357-0927"
+  },
+  {
+    "position": {
+      "lat": 41.92166928,
+      "lng": -87.66451892
+    },
+    "name": "Starbucks - IL - Chicago [W]  03916",
+    "address": "Clybourn & Webster_2200 N. Clybourn_Chicago, Illinois 60614",
+    "phone": "773-248-0908"
+  },
+  {
+    "position": {
+      "lat": 41.92853,
+      "lng": -87.642097
+    },
+    "name": "Starbucks - IL - Chicago [W]  03917",
+    "address": "Clark Street_2525 1/2 N CLARK ST_Chicago, Illinois 60614",
+    "phone": "773-296-0898"
+  },
+  {
+    "position": {
+      "lat": 41.87496203,
+      "lng": -87.62918638
+    },
+    "name": "Starbucks - IL - Chicago [W]  03918",
+    "address": "Dearborn Park_555 S. Dearborn_Chicago, Illinois 60605",
+    "phone": "312-922-8910"
+  },
+  {
+    "position": {
+      "lat": 41.90389998,
+      "lng": -87.63010031
+    },
+    "name": "Starbucks - IL - Chicago [W]  03919",
+    "address": "Dearborn & Division_39 W Division St_Chicago, Illinois 60610",
+    "phone": "312-951-6992"
+  },
+  {
+    "position": {
+      "lat": 41.93276842,
+      "lng": -87.64435319
+    },
+    "name": "Starbucks - IL - Chicago [W]  03920",
+    "address": "Diversey_617 W Diversey Pkwy_Chicago, Illinois 60614",
+    "phone": "773-880-5172"
+  },
+  {
+    "position": {
+      "lat": 41.91950292,
+      "lng": -87.63680917
+    },
+    "name": "Starbucks - IL - Chicago [W]  03921",
+    "address": "Dickens_2063 N. Clark_Chicago, Illinois 60614",
+    "phone": "773-525-6231"
+  },
+  {
+    "position": {
+      "lat": 41.90329252,
+      "lng": -87.66996543
+    },
+    "name": "Starbucks - IL - Chicago [W]  03922",
+    "address": "Division & Paulina_1701 West Division Street_Chicago, Illinois 60622",
+    "phone": "773-252-5084"
+  },
+  {
+    "position": {
+      "lat": 41.99728085,
+      "lng": -87.76395421
+    },
+    "name": "Starbucks - IL - Chicago [W]  03923",
+    "address": "Edgebrook_5406 W Devon Ave_Chicago, Illinois 606464106",
+    "phone": "773-631-4791"
+  },
+  {
+    "position": {
+      "lat": 41.89252141,
+      "lng": -87.62816039
+    },
+    "name": "Starbucks - IL - Chicago [W]  03924",
+    "address": "Embassy Suites_600 N. State Street_Chicago, Illinois 60610",
+    "phone": "312-573-0033"
+  },
+  {
+    "position": {
+      "lat": 41.91042981,
+      "lng": -87.63239079
+    },
+    "name": "Starbucks - IL - Chicago [W]  03925",
+    "address": "Germania Place_106-108 WEST GERMANIA PLACE_Chicago, Illinois 60610_(312) 337-6481"
+  },
+  {
+    "position": {
+      "lat": 41.79509354,
+      "lng": -87.59711456
+    },
+    "name": "Starbucks - IL - Chicago [W]  03926",
+    "address": "Hyde Park-55th & Woodlawn (UCO)_1174 East 55th Streeet_Chicago, Illinois 60615",
+    "phone": "773-256-1930"
+  },
+  {
+    "position": {
+      "lat": 41.886915,
+      "lng": -87.626858
+    },
+    "name": "Starbucks - IL - Chicago [W]  03927",
+    "address": "East Wacker Drive_35 E. Wacker Dr_Chicago, Illinois 60601",
+    "phone": "312-541-8317"
+  },
+  {
+    "position": {
+      "lat": 41.95355812,
+      "lng": -87.73746229
+    },
+    "name": "Starbucks - IL - Chicago [W]  03928",
+    "address": "Irving Park & Kostner_4365 West Irving Park Road_Chicago, Illinois 60641",
+    "phone": "773-736-5226"
+  },
+  {
+    "position": {
+      "lat": 41.98366194,
+      "lng": -87.65743044
+    },
+    "name": "Starbucks - IL - Chicago [W]  03929",
+    "address": "Edgewater - Chicago_1070 W. Bryn Mawr Ave._Chicago, Illinois 60660",
+    "phone": "773-271-1998"
+  },
+  {
+    "position": {
+      "lat": 41.79959126,
+      "lng": -87.58908984
+    },
+    "name": "Starbucks - IL - Chicago [W]  03930",
+    "address": "Hyde Park_1500 E. 53rd St_Chicago, Illinois 60615",
+    "phone": "773-324-1241"
+  },
+  {
+    "position": {
+      "lat": 41.885368,
+      "lng": -87.632583
+    },
+    "name": "Starbucks - IL - Chicago [W]  03931",
+    "address": "Lake & LaSalle_180 N. LaSalle St_Chicago, Illinois 60601_(312) 236-1286"
+  },
+  {
+    "position": {
+      "lat": 41.881446,
+      "lng": -87.632299
+    },
+    "name": "Starbucks - IL - Chicago [W]  03932",
+    "address": "LaSalle & Monroe_39 S. LaSalle Street_Chicago, Illinois 60604",
+    "phone": "312-781-0854"
+  },
+  {
+    "position": {
+      "lat": 41.88577323,
+      "lng": -87.62919023
+    },
+    "name": "Starbucks - IL - Chicago [W]  03933",
+    "address": "Leo Burnett_40 W Lake Street_Chicago, Illinois 60601",
+    "phone": "312-553-0244"
+  },
+  {
+    "position": {
+      "lat": 41.93689552,
+      "lng": -87.66620845
+    },
+    "name": "Starbucks - IL - Chicago [W]  03934",
+    "address": "Lincoln & Greenview_3045 Greenview_Chicago, Illinois 60657",
+    "phone": "773-832-9080"
+  },
+  {
+    "position": {
+      "lat": 41.9231564,
+      "lng": -87.64575804
+    },
+    "name": "Starbucks - IL - Chicago [W]  03935",
+    "address": "Lincoln & Belden_2275 North Lincoln Avenue_Chicago, Illinois 60614",
+    "phone": "773-832-4313"
+  },
+  {
+    "position": {
+      "lat": 41.96407096,
+      "lng": -87.68553143
+    },
+    "name": "Starbucks - IL - Chicago [W]  03936",
+    "address": "Lincoln & Wilson_4553-4557 N Lincoln Ave_Chicago, Illinois 60625_(773) 878-5609"
+  },
+  {
+    "position": {
+      "lat": 41.94242322,
+      "lng": -87.67062082
+    },
+    "name": "Starbucks - IL - Chicago [W]  03937",
+    "address": "Lincoln & Paulina_3356 NORTH LINCOLN AVENUE_Chicago, Illinois 60657",
+    "phone": "773-871-6888"
+  },
+  {
+    "position": {
+      "lat": 41.92731771,
+      "lng": -87.69757306
+    },
+    "name": "Starbucks - IL - Chicago [W]  03938",
+    "address": "Logan Blvd._2543 N. California_Chicago, Illinois 606472636",
+    "phone": "773-772-9357"
+  },
+  {
+    "position": {
+      "lat": 41.925253,
+      "lng": -87.659418
+    },
+    "name": "Starbucks - IL - Chicago [W]  03939",
+    "address": "Lincoln Park-Fullerton & Racine_1245 W. Fullerton Ave._Chicago, Illinois 60614",
+    "phone": "773-327-9761"
+  },
+  {
+    "position": {
+      "lat": 41.88792118,
+      "lng": -87.6340523
+    },
+    "name": "Starbucks - IL - Chicago [W]  03940",
+    "address": "Merchandise Mart_470 MERCHANDISE MART_Chicago, Illinois 60654",
+    "phone": "312-661-0443"
+  },
+  {
+    "position": {
+      "lat": 41.95324852,
+      "lng": -87.67818215
+    },
+    "name": "Starbucks - IL - Chicago [W]  03941",
+    "address": "Lincoln/Damen/Irving_4015 N. Lincoln Avenue_Chicago, Illinois 60613",
+    "phone": "773-348-5776"
+  },
+  {
+    "position": {
+      "lat": 41.88172742,
+      "lng": -87.65209998
+    },
+    "name": "Starbucks - IL - Chicago [W]  03942",
+    "address": "Madison & Morgan (UCO)_1001A West Madison Avenue_Chicago, Illinois 60607",
+    "phone": "312-421-7073"
+  },
+  {
+    "position": {
+      "lat": 41.88006696,
+      "lng": -87.64109532
+    },
+    "name": "Starbucks - IL - Chicago [W]  03943",
+    "address": "Metropolitan Place_139 South Clinton_Chicago, Illinois 60661_(312) 756-9087"
+  },
+  {
+    "position": {
+      "lat": 41.91077158,
+      "lng": -87.65329977
+    },
+    "name": "Starbucks - IL - Chicago [W]  03944",
+    "address": "North & Sheffield_1001 W North Ave_Chicago, Illinois 60662_(312) 255-1352"
+  },
+  {
+    "position": {
+      "lat": 41.94314406,
+      "lng": -87.64475239
+    },
+    "name": "Starbucks - IL - Chicago [W]  03945",
+    "address": "North Broadway_3358 N. Broadway_Chicago, Illinois 60657",
+    "phone": "773-528-0343"
+  },
+  {
+    "position": {
+      "lat": 41.88444295,
+      "lng": -87.63708619
+    },
+    "name": "Starbucks - IL - Chicago [W]  03946",
+    "address": "North Wacker_150 N Wacker_Chicago, Illinois 60606",
+    "phone": "312-704-0655"
+  },
+  {
+    "position": {
+      "lat": 41.92181615,
+      "lng": -87.64869103
+    },
+    "name": "Starbucks - IL - Chicago [W]  03947",
+    "address": "North Halsted_2200 N. Halsted_Chicago, Illinois 60614",
+    "phone": "773-935-2622"
+  },
+  {
+    "position": {
+      "lat": 41.89999525,
+      "lng": -87.62722995
+    },
+    "name": "Starbucks - IL - Chicago [W]  03948",
+    "address": "Oak & Rush II_932 N Rush Street_Chicago, Illinois 60611_(312) 951-5436"
+  },
+  {
+    "position": {
+      "lat": 41.90430836,
+      "lng": -87.64038394
+    },
+    "name": "Starbucks - IL - Chicago [W]  03949",
+    "address": "Old Town Square_1229 N Clyborn Ave_Chicago, Illinois 60610",
+    "phone": "312-587-8537"
+  },
+  {
+    "position": {
+      "lat": 41.89339768,
+      "lng": -87.61769957
+    },
+    "name": "Starbucks - IL - Chicago [W]  03950",
+    "address": "Ontario_401 E. Ontario_Chicago, Illinois 60611",
+    "phone": "312-951-7242"
+  },
+  {
+    "position": {
+      "lat": 41.89155826,
+      "lng": -87.65859317
+    },
+    "name": "Starbucks - IL - Chicago [W]  03951",
+    "address": "River West-Grand & Ogden_520 N. Ogden Ave._Chicago, Illinois 60622",
+    "phone": "312-850-1617"
+  },
+  {
+    "position": {
+      "lat": 41.86746135,
+      "lng": -87.62642298
+    },
+    "name": "Starbucks - IL - Chicago [W]  03952",
+    "address": "Roosevelt & Wabash_31 East Roosevelt Road_Chicago, Illinois 60605",
+    "phone": "312-431-1988"
+  },
+  {
+    "position": {
+      "lat": 41.878872,
+      "lng": -87.636467
+    },
+    "name": "Starbucks - IL - Chicago [W]  03953",
+    "address": "Sears Towers_233 South Wacker Drive_Chicago, Illinois 60606_(312) 559-9930"
+  },
+  {
+    "position": {
+      "lat": 41.9111,
+      "lng": -87.634883
+    },
+    "name": "Starbucks - IL - Chicago [W]  03954",
+    "address": "Piper's Alley_200-230 W North Ave_Chicago, Illinois 60610_(312) 867-0186"
+  },
+  {
+    "position": {
+      "lat": 41.9325,
+      "lng": -87.653983
+    },
+    "name": "Starbucks - IL - Chicago [W]  03955",
+    "address": "Sheffield & Diversey_1000-1002 West Diversey Ave_Chicago, Illinois 60657",
+    "phone": "773-665-1888"
+  },
+  {
+    "position": {
+      "lat": 41.8933,
+      "lng": -87.627102
+    },
+    "name": "Starbucks - IL - Chicago [W]  03956",
+    "address": "River North-Ontario & Wabash_38 E. Ontario St._Chicago, Illinois 60611",
+    "phone": "312-951-0662"
+  },
+  {
+    "position": {
+      "lat": 41.8806,
+      "lng": -87.626
+    },
+    "name": "Starbucks - IL - Chicago [W]  03957",
+    "address": "State & Adams_131 South Dearborn/1 Bank One Plaza_Chicago, Illinois 60603",
+    "phone": "312-977-0018"
+  },
+  {
+    "position": {
+      "lat": 42.00471643,
+      "lng": -87.66080744
+    },
+    "name": "Starbucks - IL - Chicago [W]  03958",
+    "address": "Rogers Park_6738 North Sheridan Avenue_Chicago, Illinois 60626",
+    "phone": "773-743-0417"
+  },
+  {
+    "position": {
+      "lat": 41.94273543,
+      "lng": -87.72724066
+    },
+    "name": "Starbucks - IL - Chicago [W]  03959",
+    "address": "Roscoe Village_2023-25 West Roscoe Street_Chicago, Illinois 60618_(773) 281-6272"
+  },
+  {
+    "position": {
+      "lat": 41.99007129,
+      "lng": -87.73271341
+    },
+    "name": "Starbucks - IL - Chicago [W]  03960",
+    "address": "Sauganash_4159 W. Peterson_Chicago, Illinois 606465809_(773) 205-7440"
+  },
+  {
+    "position": {
+      "lat": 41.94301091,
+      "lng": -87.66398165
+    },
+    "name": "Starbucks - IL - Chicago [W]  03961",
+    "address": "Southport & Roscoe_3359 N. Southport_Chicago, Illinois 60657",
+    "phone": "773-975-2071"
+  },
+  {
+    "position": {
+      "lat": 41.89758646,
+      "lng": -87.62832735
+    },
+    "name": "Starbucks - IL - Chicago [W]  03962",
+    "address": "State & Pearson_828 North State Street_Chicago, Illinois 60610_(312) 751-1676"
+  },
+  {
+    "position": {
+      "lat": 41.86935762,
+      "lng": -87.66292528
+    },
+    "name": "Starbucks - IL - Chicago [W]  03963",
+    "address": "Taylor Street_1430 W. Taylor St._Chicago, Illinois 60607",
+    "phone": "312-492-7370"
+  },
+  {
+    "position": {
+      "lat": 41.884409,
+      "lng": -87.623807
+    },
+    "name": "Starbucks - IL - Chicago [W]  03964",
+    "address": "The Shops at Millenium Station_130 E. Randolph St._Chicago, Illinois 60601",
+    "phone": "312-297-0929"
+  },
+  {
+    "position": {
+      "lat": 41.87941564,
+      "lng": -87.6309384
+    },
+    "name": "Starbucks - IL - Chicago [W]  03965",
+    "address": "West Adams_105 W. Adams_Chicago, Illinois 60603",
+    "phone": "312-855-0099"
+  },
+  {
+    "position": {
+      "lat": 41.91807555,
+      "lng": -87.65347462
+    },
+    "name": "Starbucks - IL - Chicago [W]  03966",
+    "address": "West Armitage_1001 W. Armitage_Chicago, Illinois 60614",
+    "phone": "773-528-1340"
+  },
+  {
+    "position": {
+      "lat": 41.8819072,
+      "lng": -87.63894954
+    },
+    "name": "Starbucks - IL - Chicago [W]  03967",
+    "address": "Two North Riverside Plaza_400 W. Madison_Chicago, Illinois 60606",
+    "phone": "312-454-1010"
+  },
+  {
+    "position": {
+      "lat": 41.96537013,
+      "lng": -87.66106475
+    },
+    "name": "Starbucks - IL - Chicago [W]  03968",
+    "address": "Wilson & Magnolia (UCO)_4600 North Magnolia_Chicago, Illinois 60640",
+    "phone": "773-506-4280"
+  },
+  {
+    "position": {
+      "lat": 41.88242288,
+      "lng": -87.64115569
+    },
+    "name": "Starbucks - IL - Chicago [W]  03969",
+    "address": "Washington & Clinton_40 N. Clinton St._Chicago, Illinois 60661_312/463-0331"
+  },
+  {
+    "position": {
+      "lat": 41.94720039,
+      "lng": -87.65483656
+    },
+    "name": "Starbucks - IL - Chicago [W]  03970",
+    "address": "West Addison_1023-1025 West Addison Street_Chicago, Illinois 60613",
+    "phone": "773-929-0945"
+  },
+  {
+    "position": {
+      "lat": 41.92889865,
+      "lng": -87.65761477
+    },
+    "name": "Starbucks - IL - Chicago [W]  03971",
+    "address": "Wrightwood & Racine_1157 W Wrightwood_Chicago, Illinois 60614",
+    "phone": "773-528-3149"
+  },
+
+  {
+    "position": {
+      "lat": 40.75577,
+      "lng": -73.975365
+    },
+    "name": "Starbucks - NY - New York City  06095",
+    "address": "JP Morgan Chase - NYC/Park Ave_270 Park Ave._New York City, New York 10017"
+  },
+  {
+    "position": {
+      "lat": 40.74912032,
+      "lng": -73.99209498
+    },
+    "name": "Starbucks - NY - New York [W]  06096",
+    "address": "1 Penn Plaza_1 Penn Plaza_New York, New York 10119_(212) 760-3001"
+  },
+  {
+    "position": {
+      "lat": 40.70845219,
+      "lng": -74.00737411
+    },
+    "name": "Starbucks - NY - New York [W]  06097",
+    "address": "100 Williams Street_100 William Street_New York, New York 10038",
+    "phone": "212-509-9709"
+  },
+  {
+    "position": {
+      "lat": 40.7575091,
+      "lng": -73.98222319
+    },
+    "name": "Starbucks - NY - New York [W]  06098",
+    "address": "1185 6th_1185 Sixth Avenue_New York, New York 10036",
+    "phone": "212-382-0352"
+  },
+  {
+    "position": {
+      "lat": 40.8075,
+      "lng": -73.9445
+    },
+    "name": "Starbucks - NY - New York [W]  06099",
+    "address": "125th Street and Lennox (UCO)_77-83 West 125th Street_New York, New York 10027",
+    "phone": "917-492-2454"
+  },
+  {
+    "position": {
+      "lat": 40.7624005,
+      "lng": -73.97908
+    },
+    "name": "Starbucks - NY - New York [W]  06100",
+    "address": "1345 Ave. of the Americas Acquisiti_1345 6th Ave_New York, New York 10105_(212) 265-8610"
+  },
+  {
+    "position": {
+      "lat": 40.75223887,
+      "lng": -73.98748737
+    },
+    "name": "Starbucks - NY - New York [W]  06101",
+    "address": "1372 Broadway_1372 Broadway_New York, New York 10018_(212) 921-0827"
+  },
+  {
+    "position": {
+      "lat": 40.70487518,
+      "lng": -74.00695323
+    },
+    "name": "Starbucks - NY - New York [W]  06102",
+    "address": "100 Wall St (New World)_100 Wall Street_New York, New York 10005",
+    "phone": "212-809-1556"
+  },
+  {
+    "position": {
+      "lat": 40.80460803,
+      "lng": -73.96652413
+    },
+    "name": "Starbucks - NY - New York [W]  06103",
+    "address": "111th & Broadway_2853 Broadway_New York, New York 10025_(212) 280-7268"
+  },
+  {
+    "position": {
+      "lat": 40.76387089,
+      "lng": -73.97834578
+    },
+    "name": "Starbucks - NY - New York [W]  06104",
+    "address": "120 W. 56th_120 W. 56th Street_New York, New York 10019",
+    "phone": "212-262-9273"
+  },
+  {
+    "position": {
+      "lat": 40.76063538,
+      "lng": -73.97969055
+    },
+    "name": "Starbucks - NY - New York [W]  06105",
+    "address": "1290 Ave. of the Americas_1290 6th Ave_New York, New York 10104_(212) 977-4861"
+  },
+  {
+    "position": {
+      "lat": 40.75119299,
+      "lng": -73.97565924
+    },
+    "name": "Starbucks - NY - New York [W]  06106",
+    "address": "150 E. 42nd Street_150 E. 42nd Street_New York, New York 10017",
+    "phone": "212-949-4122"
+  },
+  {
+    "position": {
+      "lat": 40.75334337,
+      "lng": -73.99622977
+    },
+    "name": "Starbucks - NY - New York [W]  06107",
+    "address": "15th & Ninth_76 9th Ave_New York, New York 10001_(646) 230-7145"
+  },
+  {
+    "position": {
+      "lat": 40.70952572,
+      "lng": -74.01009936
+    },
+    "name": "Starbucks - NY - New York [W]  06108",
+    "address": "165 Broadway - 1 Liberty_165 Broadway_New York, New York 10006_(212) 608-6481"
+  },
+  {
+    "position": {
+      "lat": 40.71045252,
+      "lng": -74.00932594
+    },
+    "name": "Starbucks - NY - New York [W]  06109",
+    "address": "195 Broadway_195 Broadway_New York, New York 10007_(212) 385-1104"
+  },
+  {
+    "position": {
+      "lat": 40.73680479,
+      "lng": -73.9972288
+    },
+    "name": "Starbucks - NY - New York [W]  06110",
+    "address": "14th & Sixth_510 Sixth Avenue_New York, New York 10011_(212) 242-5981"
+  },
+  {
+    "position": {
+      "lat": 40.7428626,
+      "lng": -74.00026579
+    },
+    "name": "Starbucks - NY - New York [W]  06111",
+    "address": "19th & 8th_177 Eighth Avenue_New York, New York 100111602_212 414 8786"
+  },
+  {
+    "position": {
+      "lat": 40.75995275,
+      "lng": -73.98488682
+    },
+    "name": "Starbucks - NY - New York [W]  06112",
+    "address": "1585 Broadway (47th)_1585 Broadway_New York, New York 10036_(212) 541-7515"
+  },
+  {
+    "position": {
+      "lat": 40.76977334,
+      "lng": -73.95464229
+    },
+    "name": "Starbucks - NY - New York [W]  06113",
+    "address": "1st Avenue & 75th St._1445 First Avenue_New York, New York 10021",
+    "phone": "212-472-7784"
+  },
+  {
+    "position": {
+      "lat": 40.73402848,
+      "lng": -73.98666241
+    },
+    "name": "Starbucks - NY - New York [W]  06114",
+    "address": "15th & Third_145 Third Avenue_New York, New York 10003",
+    "phone": "212-677-7248"
+  },
+  {
+    "position": {
+      "lat": 40.76916459,
+      "lng": -73.98480283
+    },
+    "name": "Starbucks - NY - New York [W]  06115",
+    "address": "2 Columbus Ave._2 Columbus Avenue_New York, New York 10023_(212) 489-6757"
+  },
+  {
+    "position": {
+      "lat": 40.76222064,
+      "lng": -73.98354451
+    },
+    "name": "Starbucks - NY - New York [W]  06116",
+    "address": "1656 Broadway_1656 Broadway_New York, New York 10019",
+    "phone": "212-397-7124"
+  },
+  {
+    "position": {
+      "lat": 40.73291229,
+      "lng": -73.98145354
+    },
+    "name": "Starbucks - NY - New York [W]  06117",
+    "address": "17th & First (Stuyvesant Town)_286 First Avenue_New York, New York 10003",
+    "phone": "212-353-1214"
+  },
+  {
+    "position": {
+      "lat": 40.74187546,
+      "lng": -73.99351189
+    },
+    "name": "Starbucks - NY - New York [W]  06118",
+    "address": "22nd St. & Sixth Ave._684 Avenue of the Americas_New York, New York 10010_(212) 691-1948"
+  },
+  {
+    "position": {
+      "lat": 40.75639551,
+      "lng": -73.96441684
+    },
+    "name": "Starbucks - NY - New York [W]  06119",
+    "address": "1st Avenue @ 54th Street_400 East 54th Street_New York, New York 10022",
+    "phone": "212-688-8951"
+  },
+  {
+    "position": {
+      "lat": 40.74005899,
+      "lng": -73.9864688
+    },
+    "name": "Starbucks - NY - New York [W]  06120",
+    "address": "23rd & Park_304 Park Avenue South_New York, New York 10010_(212) 475-9025"
+  },
+  {
+    "position": {
+      "lat": 40.78098448,
+      "lng": -73.98119989
+    },
+    "name": "Starbucks - NY - New York [W]  06121",
+    "address": "2138 Broadway_2140 Broadway_New York, New York 10023",
+    "phone": "212-580-1141"
+  },
+  {
+    "position": {
+      "lat": 40.73815787,
+      "lng": -73.98365286
+    },
+    "name": "Starbucks - NY - New York [W]  06122",
+    "address": "23rd & 3rd_296-300 Third Avenue_New York, New York 10010_(212) 598-9858"
+  },
+  {
+    "position": {
+      "lat": 40.7440571,
+      "lng": -73.99191801
+    },
+    "name": "Starbucks - NY - New York [W]  06123",
+    "address": "24th & 6th_750 6th Avenue_New York, New York 100102710",
+    "phone": "646-230-7208"
+  },
+  {
+    "position": {
+      "lat": 40.74486396,
+      "lng": -73.99131525
+    },
+    "name": "Starbucks - NY - New York [W]  06124",
+    "address": "27th & Sixth_776 Avenue of the Americas_New York, New York 10001",
+    "phone": "212-481-1856"
+  },
+  {
+    "position": {
+      "lat": 40.74399399,
+      "lng": -73.98360192
+    },
+    "name": "Starbucks - NY - New York [W]  06125",
+    "address": "29th & Park-Park Ave. South_424 Park Avenue South_New York, New York 10016",
+    "phone": "212-725-0637"
+  },
+  {
+    "position": {
+      "lat": 40.7488308,
+      "lng": -73.99223797
+    },
+    "name": "Starbucks - NY - New York [W]  06126",
+    "address": "31st & 7th_370 7th Avenue_New York, New York 10001_(212) 967-2041"
+  },
+  {
+    "position": {
+      "lat": 40.74356577,
+      "lng": -73.9767252
+    },
+    "name": "Starbucks - NY - New York [W]  06127",
+    "address": "32nd @ 2nd Ave._585 2nd Avenue_New York, New York 10016",
+    "phone": "212-684-1299"
+  },
+  {
+    "position": {
+      "lat": 40.75363508,
+      "lng": -73.9787283
+    },
+    "name": "Starbucks - NY - New York [W]  06128",
+    "address": "335 Madison Ave._335 Madison Avenue_New York, New York 10017_(212) 370-3510"
+  },
+  {
+    "position": {
+      "lat": 40.74772697,
+      "lng": -73.98505305
+    },
+    "name": "Starbucks - NY - New York [W]  06129",
+    "address": "33rd Street and 5th Avenue (Old Ban_334 Fifth Ave._New York, New York 10001",
+    "phone": "212-279-2960"
+  },
+  {
+    "position": {
+      "lat": 40.74506681,
+      "lng": -73.9869293
+    },
+    "name": "Starbucks - NY - New York [W]  06130",
+    "address": "261 5th Avenue_261 Fifth Avenue_New York, New York 10016",
+    "phone": "212-779-1557"
+  },
+  {
+    "position": {
+      "lat": 40.75273026,
+      "lng": -73.99309058
+    },
+    "name": "Starbucks - NY - New York [W]  06131",
+    "address": "35th and 8th_494 Eighth Ave._New York, New York 10001_(212) 947-3860"
+  },
+  {
+    "position": {
+      "lat": 40.71153038,
+      "lng": -74.00746973
+    },
+    "name": "Starbucks - NY - New York [W]  06132",
+    "address": "38 Park Row_38 Park Row _New York, New York 10038",
+    "phone": "212-608-8073"
+  },
+  {
+    "position": {
+      "lat": 40.7479387,
+      "lng": -73.98909652
+    },
+    "name": "Starbucks - NY - New York [W]  06133",
+    "address": "31st and Sixth Avenue_875 Sixth Ave_New York, New York 10001",
+    "phone": "212-629-6512"
+  },
+  {
+    "position": {
+      "lat": 40.75532702,
+      "lng": -73.99116132
+    },
+    "name": "Starbucks - NY - New York [W]  06134",
+    "address": "39th and 8th_600 Eighth Ave._New York, New York 10018",
+    "phone": "212-997-7337"
+  },
+  {
+    "position": {
+      "lat": 40.753453,
+      "lng": -73.978832
+    },
+    "name": "Starbucks - NY - New York [W]  06135",
+    "address": "330 Madison_330 Madison Ave_New York, New York 10017",
+    "phone": "212-682-1880"
+  },
+  {
+    "position": {
+      "lat": 40.74914185,
+      "lng": -73.9819617
+    },
+    "name": "Starbucks - NY - New York [W]  06136",
+    "address": "400 Madison Avenue (New World)_400 Madison Avenue_New York, New York 10016",
+    "phone": "212-319-1873"
+  },
+  {
+    "position": {
+      "lat": 40.75366797,
+      "lng": -73.99880109
+    },
+    "name": "Starbucks - NY - New York [W]  06137",
+    "address": "33rd & Tenth_450 W. 33rd Street_New York, New York 10001",
+    "phone": "212-563-0692"
+  },
+  {
+    "position": {
+      "lat": 40.75172044,
+      "lng": -73.99012723
+    },
+    "name": "Starbucks - NY - New York [W]  06138",
+    "address": "35th & 7th_462 7th Avenue_New York, New York 10018_(212) 279-6432"
+  },
+  {
+    "position": {
+      "lat": 40.74845665,
+      "lng": -73.98239774
+    },
+    "name": "Starbucks - NY - New York [W]  06139",
+    "address": "36th and Madison_200 Madison Avenue_New York, New York 10016",
+    "phone": "212-684-6873"
+  },
+  {
+    "position": {
+      "lat": 40.7505171,
+      "lng": -73.97897418
+    },
+    "name": "Starbucks - NY - New York [W]  06140",
+    "address": "39th & Park_90 Park Ave_New York, New York 10016",
+    "phone": "212-661-5489"
+  },
+  {
+    "position": {
+      "lat": 40.74201519,
+      "lng": -73.98085069
+    },
+    "name": "Starbucks - NY - New York [W]  06141",
+    "address": "3rd & 28th_395 Third Avenue_New York, New York 100168103",
+    "phone": "212-686-2483"
+  },
+  {
+    "position": {
+      "lat": 40.75010205,
+      "lng": -73.97497862
+    },
+    "name": "Starbucks - NY - New York [W]  06142",
+    "address": "41st & 3rd_639 3rd Avenue_New York, New York 10017_(212) 973-1376"
+  },
+  {
+    "position": {
+      "lat": 40.75541,
+      "lng": -73.98631
+    },
+    "name": "Starbucks - NY - New York [W]  06143",
+    "address": "41st and Broadway_1460 Broadway_New York, New York 10036_(212) 869-0191"
+  },
+  {
+    "position": {
+      "lat": 40.75659255,
+      "lng": -73.98842034
+    },
+    "name": "Starbucks - NY - New York [W]  06144",
+    "address": "42nd & Eighth_251 West 42nd Street_New York, New York 10036",
+    "phone": "212-398-1982"
+  },
+  {
+    "position": {
+      "lat": 40.76029992,
+      "lng": -73.99703589
+    },
+    "name": "Starbucks - NY - New York [W]  06145",
+    "address": "42nd & Eleventh_555 W. 42ND STREET_New York, New York 10036",
+    "phone": "212-563-0671"
+  },
+  {
+    "position": {
+      "lat": 40.75809971,
+      "lng": -73.98920464
+    },
+    "name": "Starbucks - NY - New York [W]  06146",
+    "address": "43rd & 8th_684 Eighth Avenue_New York, New York 10036_(212) 398-9702"
+  },
+  {
+    "position": {
+      "lat": 40.75154913,
+      "lng": -73.97392109
+    },
+    "name": "Starbucks - NY - New York [W]  06147",
+    "address": "43rd St & Third Ave_685 Third Avenue_New York, New York 10017_646 865 1250"
+  },
+  {
+    "position": {
+      "lat": 40.75034097,
+      "lng": -73.97681155
+    },
+    "name": "Starbucks - NY - New York [W]  06148",
+    "address": "40th & Lexington (360 Lex)_360 Lexington Avenue_New York, New York 100176502",
+    "phone": "212-953-1662"
+  },
+  {
+    "position": {
+      "lat": 40.736947,
+      "lng": -74.000894
+    },
+    "name": "Starbucks - NY - New York [W]  06149",
+    "address": "450 7th Avenue_450 7th Avenue_New York, New York 10017",
+    "phone": "212-279-1122"
+  },
+  {
+    "position": {
+      "lat": 40.75204953,
+      "lng": -73.97989491
+    },
+    "name": "Starbucks - NY - New York [W]  06150",
+    "address": "41st & Madison_295 Madison Avenue_New York, New York 10017",
+    "phone": "212-922-9126"
+  },
+  {
+    "position": {
+      "lat": 40.7578254,
+      "lng": -73.98561313
+    },
+    "name": "Starbucks - NY - New York [W]  06151",
+    "address": "45th & Broadway_1530 Broadway_New York, New York 10036",
+    "phone": "212-391-2079"
+  },
+  {
+    "position": {
+      "lat": 40.762372,
+      "lng": -73.978342
+    },
+    "name": "Starbucks - NY - New York [W]  06152",
+    "address": "42nd & 6th_1100 Avenue of the Americas_New York, New York 10028_(212) 398-4508"
+  },
+  {
+    "position": {
+      "lat": 40.75694103,
+      "lng": -73.98259677
+    },
+    "name": "Starbucks - NY - New York [W]  06153",
+    "address": "45th St. & Sixth Ave._1166 Avenue of the Americas_New York, New York 100366712_(212) 354-3730"
+  },
+  {
+    "position": {
+      "lat": 40.752405,
+      "lng": -73.976355
+    },
+    "name": "Starbucks - NY - New York [W]  06154",
+    "address": "42nd & Park_125 Park Ave_New York, New York 10017",
+    "phone": "212-557-2718"
+  },
+  {
+    "position": {
+      "lat": 40.76159843,
+      "lng": -73.99030004
+    },
+    "name": "Starbucks - NY - New York [W]  06155",
+    "address": "47th & 9th_682 9th Avenue_New York, New York 10036",
+    "phone": "212-397-2288"
+  },
+  {
+    "position": {
+      "lat": 40.75874065,
+      "lng": -73.99240917
+    },
+    "name": "Starbucks - NY - New York [W]  06156",
+    "address": "43rd & Ninth_593 Ninth Ave_New York, New York 10036",
+    "phone": "212-594-7846"
+  },
+  {
+    "position": {
+      "lat": 40.70650148,
+      "lng": -74.00965938
+    },
+    "name": "Starbucks - NY - New York [W]  06157",
+    "address": "45 Wall Street_45 Wall Street_New York, New York 10005_(212) 269-8717"
+  },
+  {
+    "position": {
+      "lat": 40.75309549,
+      "lng": -73.97484875
+    },
+    "name": "Starbucks - NY - New York [W]  06158",
+    "address": "450 Lexington Ave._450 Lexington Avenue_New York, New York 10017_(212) 682-5139"
+  },
+  {
+    "position": {
+      "lat": 40.75396551,
+      "lng": -73.97208717
+    },
+    "name": "Starbucks - NY - New York [W]  06159",
+    "address": "48th & 3rd_757 Third Avenue_New York, New York 10017_(212) 715-9884"
+  },
+  {
+    "position": {
+      "lat": 40.76072373,
+      "lng": -73.98351468
+    },
+    "name": "Starbucks - NY - New York [W]  06160",
+    "address": "49th & 7th_750 Seventh Avenue_New York, New York 10019_(212) 974-0032"
+  },
+  {
+    "position": {
+      "lat": 40.75660289,
+      "lng": -73.97229692
+    },
+    "name": "Starbucks - NY - New York [W]  06161",
+    "address": "50th & Lexington_560 Lexington Avenue_New York, New York 10022",
+    "phone": "212-751-2937"
+  },
+  {
+    "position": {
+      "lat": 40.75368149,
+      "lng": -73.98865769
+    },
+    "name": "Starbucks - NY - New York [W]  06162",
+    "address": "525 Seventh Avenue (New World)_525 7th Avenue_New York, New York 10018",
+    "phone": "212-869-5273"
+  },
+  {
+    "position": {
+      "lat": 40.75602131,
+      "lng": -73.97500822
+    },
+    "name": "Starbucks - NY - New York [W]  06163",
+    "address": "48th & Park_280 Park Avenue_New York, New York 10017",
+    "phone": "212-573-9869"
+  },
+  {
+    "position": {
+      "lat": 40.76182387,
+      "lng": -73.98120929
+    },
+    "name": "Starbucks - NY - New York [W]  06164",
+    "address": "52nd & Seventh_156 W 52nd St_New York, New York 10019",
+    "phone": "212-581-6410"
+  },
+  {
+    "position": {
+      "lat": 40.76193376,
+      "lng": -73.98730701
+    },
+    "name": "Starbucks - NY - New York [W]  06165",
+    "address": "49th & 8th-World Wide Plaza_325 W 49th St_New York, New York 10019_(212) 765-2205"
+  },
+  {
+    "position": {
+      "lat": 40.76357781,
+      "lng": -73.98523078
+    },
+    "name": "Starbucks - NY - New York [W]  06166",
+    "address": "52nd Street and 8th Ave_871 8th Avenue_New York, New York 10019",
+    "phone": "212-246-7699"
+  },
+  {
+    "position": {
+      "lat": 40.76409893,
+      "lng": -73.98246441
+    },
+    "name": "Starbucks - NY - New York [W]  06167",
+    "address": "54th & Broadway_1710 Broadway_New York, New York 10019",
+    "phone": "212-245-0761"
+  },
+  {
+    "position": {
+      "lat": 40.75464626,
+      "lng": -73.97371886
+    },
+    "name": "Starbucks - NY - New York [W]  06168",
+    "address": "54th & Lexington_630 Lexington Ave_New York, New York 10017",
+    "phone": "212-521-8075"
+  },
+  {
+    "position": {
+      "lat": 40.70519503,
+      "lng": -74.01136074
+    },
+    "name": "Starbucks - NY - New York [W]  06169",
+    "address": "55 Broad Street_55 Broad Street_New York, New York 10004_(212) 742-2488"
+  },
+  {
+    "position": {
+      "lat": 40.75491676,
+      "lng": -73.96855214
+    },
+    "name": "Starbucks - NY - New York [W]  06170",
+    "address": "50th & Second_943 Second Avenue_New York, New York 10022",
+    "phone": "212-715-0752"
+  },
+  {
+    "position": {
+      "lat": 40.75646764,
+      "lng": -73.9787661
+    },
+    "name": "Starbucks - NY - New York [W]  06171",
+    "address": "575 Fifth Avenue_575 Fifth Avenue_New York, New York 10036",
+    "phone": "212-490-3189"
+  },
+  {
+    "position": {
+      "lat": 40.75782469,
+      "lng": -73.9714267
+    },
+    "name": "Starbucks - NY - New York [W]  06172",
+    "address": "52nd & Lexington_599 Lexington_New York, New York 10022",
+    "phone": "212-754-1864"
+  },
+  {
+    "position": {
+      "lat": 40.76441,
+      "lng": -73.97835
+    },
+    "name": "Starbucks - NY - New York [W]  06173",
+    "address": "57th & Seventh_142 W. 57th Street_New York, New York 10019_(646) 710-1906"
+  },
+  {
+    "position": {
+      "lat": 40.76763014,
+      "lng": -73.98232098
+    },
+    "name": "Starbucks - NY - New York [W]  06174",
+    "address": "58th & 8th_4 Columbus Circle_New York, New York 10019",
+    "phone": "212-265-0658"
+  },
+  {
+    "position": {
+      "lat": 40.75530899,
+      "lng": -73.97963997
+    },
+    "name": "Starbucks - NY - New York [W]  06175",
+    "address": "545 Fifth Ave._545 Fifth Ave._New York, New York 10017_(212) 687-1026"
+  },
+  {
+    "position": {
+      "lat": 40.759601,
+      "lng": -73.9701
+    },
+    "name": "Starbucks - NY - New York [W]  06176",
+    "address": "55th & Lexington_655 Lexington Avenue_New York, New York 10022",
+    "phone": "212-308-5717"
+  },
+  {
+    "position": {
+      "lat": 40.76128733,
+      "lng": -73.96996602
+    },
+    "name": "Starbucks - NY - New York [W]  06177",
+    "address": "57th & Lexington_116 E. 57th Street_New York, New York 10022_(212) 486-1632"
+  },
+  {
+    "position": {
+      "lat": 40.76698213,
+      "lng": -73.98356342
+    },
+    "name": "Starbucks - NY - New York [W]  06178",
+    "address": "57th btwn 8th & 9th_322 West 57th Street_New York, New York 10019_(212) 399-0714"
+  },
+  {
+    "position": {
+      "lat": 40.76023679,
+      "lng": -73.96160412
+    },
+    "name": "Starbucks - NY - New York [W]  06179",
+    "address": "60th & First_1102 1st Ave_New York, New York 10021",
+    "phone": "212-688-9118"
+  },
+  {
+    "position": {
+      "lat": 40.73289725,
+      "lng": -74.00001207
+    },
+    "name": "Starbucks - NY - New York [W]  06180",
+    "address": "6th & Waverly (Waverly Place)_378 6th Avenue_New York, New York 10011",
+    "phone": "212-477-2690"
+  },
+  {
+    "position": {
+      "lat": 40.72250308,
+      "lng": -73.99760694
+    },
+    "name": "Starbucks - NY - New York [W]  06181",
+    "address": "72 Spring_72 SPRING STREET_New York, New York 10012",
+    "phone": "212-219-2961"
+  },
+  {
+    "position": {
+      "lat": 40.77099087,
+      "lng": -73.95680191
+    },
+    "name": "Starbucks - NY - New York [W]  06182",
+    "address": "76th & Second_1449 Second Avenue_New York, New York 100212904",
+    "phone": "212-472-0653"
+  },
+  {
+    "position": {
+      "lat": 40.77222,
+      "lng": -73.949819
+    },
+    "name": "Starbucks - NY - New York [W]  06183",
+    "address": "80th & York_1515 York Avenue_New York, New York 10021",
+    "phone": "212-472-3581"
+  },
+  {
+    "position": {
+      "lat": 40.76921419,
+      "lng": -73.98228554
+    },
+    "name": "Starbucks - NY - New York [W]  06184",
+    "address": "60th & Broadway-II_1841 Broadway_New York, New York 10023",
+    "phone": "212-307-0162"
+  },
+  {
+    "position": {
+      "lat": 40.77743146,
+      "lng": -73.9550412
+    },
+    "name": "Starbucks - NY - New York [W]  06185",
+    "address": "84th & Third Ave_1488 Third Avenue #A_New York, New York 10028",
+    "phone": "212-744-7458"
+  },
+  {
+    "position": {
+      "lat": 40.78646447,
+      "lng": -73.97215027
+    },
+    "name": "Starbucks - NY - New York [W]  06186",
+    "address": "86th & Columbus_540 Columbus Avenue_New York, New York 10024_(212) 496-4139"
+  },
+  {
+    "position": {
+      "lat": 40.77728631,
+      "lng": -73.98216602
+    },
+    "name": "Starbucks - NY - New York [W]  06187",
+    "address": "70th & Broadway_2045 Broadway_New York, New York 10023_(212) 496-1551"
+  },
+  {
+    "position": {
+      "lat": 40.777624,
+      "lng": -73.978433
+    },
+    "name": "Starbucks - NY - New York [W]  06188",
+    "address": "73rd & Columbus_267-275 Columbus Ave_New York, New York 10023_(212) 579-7834"
+  },
+  {
+    "position": {
+      "lat": 40.74114075,
+      "lng": -74.00155268
+    },
+    "name": "Starbucks - NY - New York [W]  06189",
+    "address": "8th & 16th_124 Eighth Avenue_New York, New York 100115108_(212) 462-2020"
+  },
+  {
+    "position": {
+      "lat": 40.77991109,
+      "lng": -73.97695456
+    },
+    "name": "Starbucks - NY - New York [W]  06190",
+    "address": "76th & Columbus_338 Columbus Avenue_New York, New York 10023",
+    "phone": "646-505-1106"
+  },
+  {
+    "position": {
+      "lat": 40.7825901,
+      "lng": -73.95126859
+    },
+    "name": "Starbucks - NY - New York [W]  06191",
+    "address": "92nd & 3rd_1642 Third Avenue_New York, New York 101283618_(212) 360-0425"
+  },
+  {
+    "position": {
+      "lat": 40.78335323,
+      "lng": -73.97441845
+    },
+    "name": "Starbucks - NY - New York [W]  06192",
+    "address": "81st & Columbus_444 Columbus Avenue_New York, New York 10024",
+    "phone": "212-769-2296"
+  },
+  {
+    "position": {
+      "lat": 40.792514,
+      "lng": -73.973026
+    },
+    "name": "Starbucks - NY - New York [W]  06193",
+    "address": "93rd and Broadway_2498 Broadway_New York, New York 20120",
+    "phone": "917-441-1643"
+  },
+  {
+    "position": {
+      "lat": 40.77603259,
+      "lng": -73.95005534
+    },
+    "name": "Starbucks - NY - New York [W]  06194",
+    "address": "85th & First_1631 1st Ave_New York, New York 10028",
+    "phone": "212-737-6534"
+  },
+  {
+    "position": {
+      "lat": 40.78052553,
+      "lng": -73.95603158
+    },
+    "name": "Starbucks - NY - New York [W]  06195",
+    "address": "87th & Lexington_120 EAST 87TH ST_New York, New York 10128",
+    "phone": "212-426-2580"
+  },
+  {
+    "position": {
+      "lat": 40.73178407,
+      "lng": -73.9952709
+    },
+    "name": "Starbucks - NY - New York [W]  06196",
+    "address": "8th & University_21 East 8th Street_New York, New York 100035901_(212) 982-7505"
+  },
+  {
+    "position": {
+      "lat": 40.77942852,
+      "lng": -73.94748978
+    },
+    "name": "Starbucks - NY - New York [W]  06197",
+    "address": "90th & First_400 East 90th Street_New York, New York 10128",
+    "phone": "212-987-0891"
+  },
+  {
+    "position": {
+      "lat": 40.78722936,
+      "lng": -73.95426939
+    },
+    "name": "Starbucks - NY - New York [W]  06198",
+    "address": "96th & Madison_1378 Madison Avenue_New York, New York 101280712",
+    "phone": "212-534-7537"
+  },
+  {
+    "position": {
+      "lat": 40.793584,
+      "lng": -73.97288
+    },
+    "name": "Starbucks - NY - New York [W]  06199",
+    "address": "95th & Broadway_2521 Braodway_New York, New York 10025_(212) 316-0374"
+  },
+  {
+    "position": {
+      "lat": 40.71911872,
+      "lng": -73.98989566
+    },
+    "name": "Starbucks - NY - New York [W]  06200",
+    "address": "Allen & Delancey_80 Delancey Street_New York, New York 10002",
+    "phone": "917-534-1397"
+  },
+  {
+    "position": {
+      "lat": 40.79597884,
+      "lng": -73.97070965
+    },
+    "name": "Starbucks - NY - New York [W]  06201",
+    "address": "98th & Broadway_2600 Broadway_New York, New York 10025",
+    "phone": "212-316-9401"
+  },
+  {
+    "position": {
+      "lat": 40.7026887,
+      "lng": -74.01423845
+    },
+    "name": "Starbucks - NY - New York [W]  06202",
+    "address": "Battery Park Plaza_1 Battery Park Plaza_New York, New York 10004_(212) 482-1180"
+  },
+  {
+    "position": {
+      "lat": 40.73004702,
+      "lng": -73.99240917
+    },
+    "name": "Starbucks - NY - New York [W]  06203",
+    "address": "Astor Place_13-25  Astor Place_New York, New York 10003",
+    "phone": "212-982-3563"
+  },
+  {
+    "position": {
+      "lat": 40.72114448,
+      "lng": -74.00035006
+    },
+    "name": "Starbucks - NY - New York [W]  06204",
+    "address": "Broadway & Grand_471 Broadway_New York, New York 10013",
+    "phone": "212-219-8787"
+  },
+  {
+    "position": {
+      "lat": 40.761885,
+      "lng": -73.96841
+    },
+    "name": "Starbucks - NY - New York [W]  06205",
+    "address": "Bloomberg Building_731 Lexington Avenue_New York, New York 10022",
+    "phone": "212-644-0692"
+  },
+  {
+    "position": {
+      "lat": 40.70852878,
+      "lng": -74.01091967
+    },
+    "name": "Starbucks - NY - New York [W]  06206",
+    "address": "Broadway & Thames_115 Broadway_New York, New York 100061604",
+    "phone": "212-732-9268"
+  },
+  {
+    "position": {
+      "lat": 40.71480028,
+      "lng": -74.00568514
+    },
+    "name": "Starbucks - NY - New York [W]  06207",
+    "address": "Broadway & Reade_291 Broadway_New York, New York 100071814_212 406 5310"
+  },
+  {
+    "position": {
+      "lat": 40.72733155,
+      "lng": -73.99516747
+    },
+    "name": "Starbucks - NY - New York [W]  06208",
+    "address": "Broadway and Bond_665 Broadway_New York, New York 10012",
+    "phone": "917-534-0799"
+  },
+  {
+    "position": {
+      "lat": 40.78483621,
+      "lng": -73.979155
+    },
+    "name": "Starbucks - NY - New York [W]  06209",
+    "address": "Broadway @ 81st_2252 Broadway_New York, New York 10024",
+    "phone": "212-721-4157"
+  },
+  {
+    "position": {
+      "lat": 40.71802187,
+      "lng": -73.9999076
+    },
+    "name": "Starbucks - NY - New York [W]  06210",
+    "address": "Canal and Centre_241 Canal Street_New York, New York 10013",
+    "phone": "212-219-2725"
+  },
+  {
+    "position": {
+      "lat": 40.80694513,
+      "lng": -73.96453318
+    },
+    "name": "Starbucks - NY - New York [W]  06211",
+    "address": "B'way & 114 Street (New World)_2929 Broadway_New York, New York 10027",
+    "phone": "212-932-0300"
+  },
+  {
+    "position": {
+      "lat": 40.774048,
+      "lng": -73.981441
+    },
+    "name": "Starbucks - NY - New York [W]  06212",
+    "address": "Columbus @ 67th_152 - 154 Columbus Avenue_New York, New York 100235921",
+    "phone": "212-721-0470"
+  },
+  {
+    "position": {
+      "lat": 40.71528238,
+      "lng": -74.0087412
+    },
+    "name": "Starbucks - NY - New York [W]  06213",
+    "address": "Chambers and West Broadway_125 Chambers Street_New York, New York 10007",
+    "phone": "212-791-6368"
+  },
+  {
+    "position": {
+      "lat": 40.7520778,
+      "lng": -73.97789501
+    },
+    "name": "Starbucks - NY - New York [W]  06214",
+    "address": "East 34th and Park_3 Park Avenue_New York, New York 10017",
+    "phone": "212-725-9469"
+  },
+  {
+    "position": {
+      "lat": 40.7511,
+      "lng": -73.97171
+    },
+    "name": "Starbucks - NY - New York [W]  06215",
+    "address": "Grand Central Station 2_7800 Grand Central Station_New York, New York 10017",
+    "phone": "212-370-4161"
+  },
+  {
+    "position": {
+      "lat": 40.72976357,
+      "lng": -73.99069479
+    },
+    "name": "Starbucks - NY - New York [W]  06216",
+    "address": "Cooper Union_51 Astor Place_New York, New York 10083_(212) 677-6447"
+  },
+  {
+    "position": {
+      "lat": 40.71575548,
+      "lng": -74.00343736
+    },
+    "name": "Starbucks - NY - New York [W]  06217",
+    "address": "Lafayette & Worth_111 Worth Street_New York, New York 10013",
+    "phone": "212-964-8846"
+  },
+  {
+    "position": {
+      "lat": 40.73736818,
+      "lng": -74.00152055
+    },
+    "name": "Starbucks - NY - New York [W]  06218",
+    "address": "Greenwich Avenue_93 Greenwich Avenue_New York, New York 10014_(212) 462-4697"
+  },
+  {
+    "position": {
+      "lat": 40.778801,
+      "lng": -73.956099
+    },
+    "name": "Starbucks - NY - New York [W]  06219",
+    "address": "Lexington & 85th_1261 Lexington Avenue_New York, New York 10026",
+    "phone": "212-879-1764"
+  },
+  {
+    "position": {
+      "lat": 40.77416663,
+      "lng": -73.95955596
+    },
+    "name": "Starbucks - NY - New York [W]  06220",
+    "address": "Lexington & 78th_1117 Lexington Ave._New York, New York 100210401",
+    "phone": "212-517-8476"
+  },
+  {
+    "position": {
+      "lat": 40.70865492,
+      "lng": -74.00944536
+    },
+    "name": "Starbucks - NY - New York [W]  06221",
+    "address": "Liberty & Nassau_55 Liberty Street_New York, New York 10005",
+    "phone": "212-227-0372"
+  },
+  {
+    "position": {
+      "lat": 40.7026,
+      "lng": -74.0114
+    },
+    "name": "Starbucks - NY - New York [W]  06222",
+    "address": "NY Plaza_3 New York Plaza_New York, New York 10003",
+    "phone": "212-785-1082"
+  },
+  {
+    "position": {
+      "lat": 40.705976,
+      "lng": -74.007299
+    },
+    "name": "Starbucks - NY - New York [W]  06223",
+    "address": "Pearl & Maiden_80 Pine Street_New York, New York 10005",
+    "phone": "212-480-3970"
+  },
+  {
+    "position": {
+      "lat": 40.704653,
+      "lng": -74.009393
+    },
+    "name": "Starbucks - NY - New York [W]  06224",
+    "address": "Pearl & Hanover_110 Pearl Street_New York, New York 10005",
+    "phone": "212-482-6530"
+  },
+  {
+    "position": {
+      "lat": 40.75851183,
+      "lng": -73.97903566
+    },
+    "name": "Starbucks - NY - New York [W]  06225",
+    "address": "Rockefeller Center Concourse_30 Rockefeller Plaza_New York, New York 10111",
+    "phone": "212-586-0911"
+  },
+  {
+    "position": {
+      "lat": 40.7497,
+      "lng": -73.992
+    },
+    "name": "Starbucks - NY - New York [W]  06226",
+    "address": "Penn Station LIRR_1 Penn Plaza Concourse Level_New York, New York 10119",
+    "phone": "212-736-3206"
+  },
+  {
+    "position": {
+      "lat": 40.75850999,
+      "lng": -73.97904215
+    },
+    "name": "Starbucks - NY - New York [W]  06227",
+    "address": "Rockefeller Center Subway_30 Rockefeller Plaza_New York, New York 10020_(212) 397-7950"
+  },
+  {
+    "position": {
+      "lat": 40.75704,
+      "lng": -73.95546
+    },
+    "name": "Starbucks - NY - New York [W]  06228",
+    "address": "Roosevelt Island_455 Main Street_New York, New York 10044",
+    "phone": "212-371-1298"
+  },
+  {
+    "position": {
+      "lat": 40.77459399,
+      "lng": -73.95418346
+    },
+    "name": "Starbucks - NY - New York [W]  06229",
+    "address": "Second @ 81st_1559 2nd Avenue_New York, New York 100283902",
+    "phone": "212-472-7972"
+  },
+  {
+    "position": {
+      "lat": 40.73331527,
+      "lng": -74.00266811
+    },
+    "name": "Starbucks - NY - New York [W]  06230",
+    "address": "Sheridan Square (72 Grove Street)_72 Grove Street_New York, New York 10014",
+    "phone": "646-486-2216"
+  },
+  {
+    "position": {
+      "lat": 40.762548,
+      "lng": -73.965868
+    },
+    "name": "Starbucks - NY - New York [W]  06231",
+    "address": "Third & 60th_1021 Third Avenue_New York, New York 10021",
+    "phone": "212-486-6852"
+  },
+  {
+    "position": {
+      "lat": 40.76240846,
+      "lng": -73.97440479
+    },
+    "name": "Starbucks - NY - New York [W]  06232",
+    "address": "Trump Tower_725 5th Avenue_New York, New York 10022",
+    "phone": "212-421-7154"
+  },
+  {
+    "position": {
+      "lat": 40.72627254,
+      "lng": -74.00564065
+    },
+    "name": "Starbucks - NY - New York [W]  06233",
+    "address": "Spring and Varick_150 Varick Street_New York, New York 100131278",
+    "phone": "646-230-9816"
+  },
+  {
+    "position": {
+      "lat": 40.7636,
+      "lng": -73.977699
+    },
+    "name": "Starbucks - NY - New York [W]  06234",
+    "address": "W. 56th & 6th_1380 Sixth Avenue_New York, New York 10019",
+    "phone": "212-977-1382"
+  },
+  {
+    "position": {
+      "lat": 40.76583231,
+      "lng": -73.96354962
+    },
+    "name": "Starbucks - NY - New York [W]  06235",
+    "address": "Third @ 66th_1128 Third Avenue_New York, New York 10021",
+    "phone": "212-472-6535"
+  },
+  {
+    "position": {
+      "lat": 40.85095934,
+      "lng": -73.9384634
+    },
+    "name": "Starbucks - NY - New York [W]  06236",
+    "address": "Washington Hgts/181st St_803 W 181st St_New York, New York 10033",
+    "phone": "212-927-4272"
+  },
+  {
+    "position": {
+      "lat": 40.73489381,
+      "lng": -73.99001956
+    },
+    "name": "Starbucks - NY - New York [W]  06237",
+    "address": "Union Square_10 UNION SQUARE EAST_New York, New York 10003_(212) 982-8426"
+  },
+  {
+    "position": {
+      "lat": 40.76075214,
+      "lng": -73.98449981
+    },
+    "name": "Starbucks - NY - New York [W]  06238",
+    "address": "West 43rd and Broadway_1500 Broadway_New York, New York 10019",
+    "phone": "212-221-7515"
+  },
+  {
+    "position": {
+      "lat": 40.76207719,
+      "lng": -73.98632347
+    },
+    "name": "Starbucks - NY - New York [W]  06239",
+    "address": "Worldwide Plaza II_825 Eighth Avenue_New York, New York 100197416",
+    "phone": "212-307-7173"
+  },
+  {
+    "position": {
+      "lat": 40.745303,
+      "lng": -73.998498
+    },
+    "name": "Starbucks - NY - New York [W]  06240",
+    "address": "West 23rd and 8th_300 W 23rd St._New York, New York 10011",
+    "phone": "646-638-1571"
+  },
+  {
+    "position": {
+      "lat": 40.76443702,
+      "lng": -73.98082516
+    },
+    "name": "Starbucks - NY - New York [W]  06241",
+    "address": "West 55th & 7th_870 7th Avenue_New York, New York 10019",
+    "phone": "212-586-2142"
+  }
+]

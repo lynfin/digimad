@@ -17,6 +17,7 @@ const data = [
   {
     to: '/',
     text: 'Home',
+    id: 'filters',
   },
   {
     to: '/userlogin',

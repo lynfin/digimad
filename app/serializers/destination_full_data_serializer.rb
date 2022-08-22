@@ -1,6 +1,7 @@
 class DestinationFullDataSerializer < ActiveModel::Serializer
   attributes :id, :category, :name, :desc, :phone, :image, :website, :total_tests, :rate_summary,
-             :provider_fastest_cellular_download, :fastest_cell_provider, :fastest_cell_download
+             :provider_fastest_cellular_download, :fastest_cell_provider, :fastest_cell_download,
+             :average_tech_rating, :average_visit_rating
   belongs_to :address
 
   def fastest_cell_provider

@@ -12,10 +12,13 @@ import {
   FormTitleGrouped,
   FormSubTitle,
   FormSmallButton,
+  FormButtons,
+  FormInstruction,
   FormImgWrapper,
   FormAvatar,
 } from '../../formStyles';
 import { Container } from '../../globalStyles';
+import StarRating from '../StarRating/StarRating';
 import validateForm from './validateForm';
 
 function SpeedtestForm({ user, selectedDestination }) {
@@ -145,8 +148,8 @@ function SpeedtestForm({ user, selectedDestination }) {
     {
       label: 'Tech Rating',
       value: techRating,
-      onChange: (e) => setTechRating(e.target.value),
-      type: 'number',
+      onChange: setTechRating,
+      type: 'star',
     },
     {
       label: 'Tech Comments',
@@ -157,8 +160,8 @@ function SpeedtestForm({ user, selectedDestination }) {
     {
       label: 'Visit Rating',
       value: visitRating,
-      onChange: (e) => setVisitRating(e.target.value),
-      type: 'number',
+      onChange: setVisitRating,
+      type: 'star',
     },
     {
       label: 'Visit Comments',
@@ -222,7 +225,13 @@ function SpeedtestForm({ user, selectedDestination }) {
       <Container>
         <FormRow>
           <FormColumn>
-            <FormRow>
+            <FormTitleGrouped>Speedtest</FormTitleGrouped>
+            <FormSubTitle>
+              {selectedDestination
+                ? selectedDestination.name
+                : 'destination required'}
+            </FormSubTitle>
+            <FormButtons>
               <FormSmallButton
                 onClick={() => openInNewTab('https://www.speedtest.net/')}
               >
@@ -233,27 +242,37 @@ function SpeedtestForm({ user, selectedDestination }) {
               >
                 Speedcheck
               </FormSmallButton>
-            </FormRow>
-            <FormTitleGrouped>Speedtest</FormTitleGrouped>
-            <FormSubTitle>
-              {selectedDestination
-                ? selectedDestination.name
-                : 'destination required'}
-            </FormSubTitle>
+            </FormButtons>
+            <FormInstruction>
+              Select a button to run your speedtest.
+            </FormInstruction>
+            <FormInstruction>
+              Once complete, return here to log the results.
+            </FormInstruction>
             <FormWrapper onSubmit={handleSubmit}>
               {formData.map((el, index) => (
                 <FormInputRow key={index}>
                   <FormLabel>{el.label}</FormLabel>
-                  <FormInput
-                    type={el.type}
-                    placeholder={
-                      el.placeholder
-                        ? el.placeholder
-                        : `Enter your ${el.label.toLocaleLowerCase()}`
-                    }
-                    value={el.value}
-                    onChange={el.onChange}
-                  />
+                  {el.type === 'star' ? (
+                    <StarRating
+                      value={el.value}
+                      size='20px'
+                      spacing='5px'
+                      color='orange'
+                      changeRating={el.onChange}
+                    />
+                  ) : (
+                    <FormInput
+                      type={el.type}
+                      placeholder={
+                        el.placeholder
+                          ? el.placeholder
+                          : `Enter your ${el.label.toLocaleLowerCase()}`
+                      }
+                      value={el.value}
+                      onChange={el.onChange}
+                    />
+                  )}
                 </FormInputRow>
               ))}
               <FormRow>

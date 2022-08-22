@@ -59,20 +59,19 @@ function TestSummary({ destinationId, destinationName }) {
         {connectionTypes ? (
           <SubHeading>{connectionTypes.length} connection types</SubHeading>
         ) : null}
-
-        {connectionTypes
-          ? connectionTypes.map((connectionType, index) => (
-              <ConnectionTypeSummary
-                key={index}
-                connectionType={connectionType}
-                connectionData={speedtestDetails.filter(
-                  (testData) =>
-                    testData.speedtest.connectiontype === connectionType
-                )}
-              />
-            ))
-          : null}
       </TestSummaryWrapper>
+      {connectionTypes
+        ? connectionTypes.map((connectionType, index) => (
+            <ConnectionTypeSummary
+              key={index}
+              connectionType={connectionType}
+              connectionData={speedtestDetails.filter(
+                (testData) =>
+                  testData.speedtest.connectiontype === connectionType
+              )}
+            />
+          ))
+        : null}
     </TestSummarySection>
   );
 }

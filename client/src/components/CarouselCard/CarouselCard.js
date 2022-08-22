@@ -1,14 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { MdSpeed, MdCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md';
 import { parseISO, format } from 'date-fns';
-import { TextWrapper } from '../../globalStyles';
 import {
-  ImageWrapper,
+  TextWrapper,
+  TextContainer,
+  Row,
+  Column,
+  ButtonLink,
+} from '../../globalStyles';
+import {
+  CardWrapper,
   CarouselImage,
   CardButton,
   ButtonWrapper,
+  FavoriteButton,
+  IconButton,
+  SummaryValue,
+  SummaryUnits,
+  ButtonContainer,
 } from './CarouselCardStyles';
-
+import StarRating from '../StarRating/StarRating';
 function CarouselCard({
   el,
   index,
@@ -75,44 +86,89 @@ function CarouselCard({
     }
   }
   let summary1 = formatValue(el[cardStyle.summary1], cardStyle.summary1Type);
-  summary1 += cardStyle.summary1Units ? ' ' + cardStyle.summary1Units : '';
+  //summary1 += cardStyle.summary1Units ? ' ' + cardStyle.summary1Units : '';
 
   let summary2 = formatValue(el[cardStyle.summary2], cardStyle.summary2Type);
-  summary2 += cardStyle.summary2Units ? ' ' + cardStyle.summary2Units : '';
+  //summary2 += cardStyle.summary2Units ? ' ' + cardStyle.summary2Units : '';
 
   return (
-    <ImageWrapper key={index}>
-      {user ? (
-        <CardButton onClick={handleFavorite}>
-          {isFavorite ? ' - ' : ' + '}
-        </CardButton>
-      ) : null}
-      <CarouselImage src={el.image} />
-      <TextWrapper size='1.1rem' margin='0.4rem 0 0' weight='bold'>
-        {el.name}
-      </TextWrapper>
-      <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
-        {summary1}
-      </TextWrapper>
-      <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
-        {summary2}
-      </TextWrapper>
-      <TextWrapper size='0.9rem' margin='0.7rem' color='#4f4f4f'>
-        {`${el.address.city}, ${el.address.country}`}
-      </TextWrapper>
-      <ButtonWrapper>
-        <Link to={{ pathname: 'destination', state: { el } }}>
-          {/* <CardButton> */}
-          {/* <CardButton onClick={onDestinationSelected(el.id)}> */}
-          <CardButton onClick={handleClick}>Details</CardButton>
-        </Link>
+    <CardWrapper key={index}>
+      <Row height='25px' width='100%' justify='right' gap='20px' row-gap='20px'>
         {user ? (
-          <Link to={{ pathname: 'speedtest', state: { el } }}>
-            <CardButton onClick={handleClick}>Record Test</CardButton>
-          </Link>
+          <FavoriteButton onClick={handleFavorite}>
+            {isFavorite ? (
+              <MdCheckBox size='1.2em' fill='green' />
+            ) : (
+              <MdCheckBoxOutlineBlank size='1.2em' />
+            )}
+          </FavoriteButton>
         ) : null}
-      </ButtonWrapper>
-    </ImageWrapper>
+      </Row>
+      <Row justify='space-around'>
+        <CarouselImage src={el.image} />
+        <Column justify='flex-start' align='center'>
+          {cardStyle.summary1Units === 'Average Rating' ? (
+            <StarRating
+              value={+summary1}
+              size='18px'
+              spacing='1px'
+              color='orange'
+            />
+          ) : (
+            <SummaryValue>{summary1}</SummaryValue>
+          )}
+          <SummaryUnits>{cardStyle.summary1Units}</SummaryUnits>
+          <SummaryValue>{summary2}</SummaryValue>
+          <SummaryUnits>{cardStyle.summary2Units}</SummaryUnits>
+          {user ? (
+            <IconButton onClick={handleClick}>
+              <ButtonLink to={{ pathname: 'speedtest', state: { el } }}>
+                <MdSpeed size='2em' color='#1d609c' />
+              </ButtonLink>
+            </IconButton>
+          ) : null}
+        </Column>
+      </Row>
+      <Row justify='start' align='start' background='' width='100%'>
+        <Column justify='start' align='start' background=''>
+          <TextContainer
+            justify='start'
+            align='start'
+            background=''
+            padding='0.4rem 0.0rem 0.00rem 0.0rem'
+          >
+            <TextWrapper
+              size='1.1rem'
+              margin='0.8rem 0.2rem 0.0rem 0.4rem'
+              weight='bold'
+              padding='0.1rem'
+            >
+              {el.name.trim()}
+            </TextWrapper>
+          </TextContainer>
+          <TextContainer
+            justify='start'
+            align='start'
+            padding='0.0rem 0.0rem 0.00rem 0.0rem'
+          >
+            <TextWrapper
+              size='1.1rem'
+              margin='0.0rem 0.2rem 0.2rem 0.4rem'
+              padding='0.1rem'
+              color='#4f4f4f'
+            >
+              {`${el.address.city.trim()}, ${el.address.country.trim()}`}
+            </TextWrapper>
+          </TextContainer>
+        </Column>
+      </Row>
+
+      <CardButton onClick={handleClick}>
+        <ButtonLink to={{ pathname: 'destination', state: { el } }}>
+          Details
+        </ButtonLink>
+      </CardButton>
+    </CardWrapper>
   );
 }
 

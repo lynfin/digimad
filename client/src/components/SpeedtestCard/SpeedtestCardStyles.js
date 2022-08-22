@@ -24,6 +24,7 @@ export const SpeedtestWrapper = styled.div`
 
 export const SpeedtestContainer = styled.div`
   display: flex;
+
   justify-content: center;
   flex-flow: wrap;
   > div {
@@ -48,17 +49,17 @@ export const SpeedtestCardDiv = styled.div`
     transition: all 0.3s ease-out;
   }
 `;
-
+//width: 1200;
 export const SpeedtestCardInfo = styled.div`
   background: #242424;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
-  width: 280px;
+  width: 1200px;
   text-decoration: none;
   border-radius: 4px;
   height: 100%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 24px;
   color: #fff;
   margin: auto;

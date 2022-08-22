@@ -16,7 +16,6 @@ const DropdownList = ({
   label,
 }) => {
   const [search, setSearch] = useState('');
-
   useEffect(() => {
     if (!show) {
       setSearch('');

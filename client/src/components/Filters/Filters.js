@@ -25,6 +25,9 @@ function Filters({
   setSelectedCountry,
   selectedCity,
   setSelectedCity,
+  selectedCategory,
+  setSelectedCategory,
+  categories,
 }) {
   // const [country, setCountry] = useState('US');
   const [mergedFilteredCountries, setMergedFilteredCountries] = useState([]);
@@ -40,13 +43,17 @@ function Filters({
       data
         .filter((el) => filterForKnownDestinations(el))
         .map((item, i) => {
-          if (item.name === locations[i].country) {
+          if (
+            item.name.toLocaleLowerCase().trim() ===
+            locations[i].country.toLocaleLowerCase().trim()
+          ) {
             return Object.assign({}, item, locations[i]);
-          } else return null;
+          } else {
+            return null;
+          }
         })
     );
   }, [locations]);
-
   const cityChoices =
     selectedCountry !== 'All' && mergedFilteredCountries.length
       ? mergedFilteredCountries.find(
@@ -54,7 +61,7 @@ function Filters({
         ).cities
       : [];
   return (
-    <FiltersSection>
+    <FiltersSection id='filters'>
       <FiltersWrapper>
         <ContainerDEFAULT>
           <Header color='white'>Choose your destination:</Header>
@@ -78,6 +85,13 @@ function Filters({
               ) : null}
             </RowDEFAULT>
           ) : null}
+          <Dropdown
+            selectedName={selectedCategory}
+            setSelectedName={setSelectedCategory}
+            dropdownOptions={categories}
+            showFlag={false}
+            label={'Category'}
+          />
         </ContainerDEFAULT>
       </FiltersWrapper>
     </FiltersSection>
