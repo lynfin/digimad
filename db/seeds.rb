@@ -257,7 +257,7 @@ destinations = [
   #   website: 'http://www.blue1647.com/', phone: '',
   #   address: { street1: '1647 S Blue Island Ave', street2: '', zipcode: '60608', city: 'Chicago', state: 'IL', country: 'United States' } }
   { name: 'NeueHouse', desc: 'Dedicated Desks: $1,500 /month', category: 'coworking',
-    image: 'https://www.neuehouse.com/wp-content/uploads/2020/02/NeueHouse_MSQStudioFloor_Mobile.jpg', website: 'https://neuehouse.com/', phone: '', address: { street1: '110 E 25th St', street2: '', zipcode: '10010', city: 'New York', state: 'NY', country: 'United States' } },
+    image: 'https://www.neuehouse.com/wp-content/uploads/2020/02/NeueHouseMSQ_Gallery_Wide.jpg', website: 'https://neuehouse.com/', phone: '', address: { street1: '110 E 25th St', street2: '', zipcode: '10010', city: 'New York', state: 'NY', country: 'United States' } },
   { name: 'Green Desk', desc: 'Dedicated Desk: Starting $199/month', category: 'coworking',
     image: 'https://greendesk.com/wp-content/uploads/2022/01/68Jay-GD_16-7.jpg', website: 'https://www.greendesk.com/&sa=D&ust=1530701033696000', phone: '', address: { street1: '155 Water St', street2: 'Brooklyn', zipcode: '11201', city: 'New York', state: 'NY', country: 'United States' } },
   { name: 'The Wing', desc: 'Coworking: $ 215/month', category: 'coworking',

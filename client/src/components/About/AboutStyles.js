@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeroSection = styled.section`
+export const AboutSection = styled.section`
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -8,34 +8,26 @@ export const HeroSection = styled.section`
   box-shadow: inset 0 0 0 1000px rgba (0, 0, 0, 0.2);
 `;
 
-export const HeroDiv = styled.div`
+export const AboutDiv = styled.div`
   object-fit: fill;
   width: 100%;
   height: 100%;
   top: 0;
   position: absolute;
   z-index: -1;
+  background: ${({ background }) =>
+    background
+      ? background
+      : `{linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1))}`};
   background-image: ${({ img }) => (img ? `url(${img})` : '')};
   background-repeat: no-repeat;
   background-size: cover;
   background-clip: border-box;
   background-position: center;
-
   opacity: 0.4;
 `;
-//url('./assets/ooklaMap.png')
-// export const HeroDiv = styled.div`
-//   object-fit: cover;
-//   width: 100%;
-//   height: 100%;
-//   background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-//   top: 0;
-//   position: absolute;
-//   z-index: -1;
-//   background-image: ${({ img }) => (img ? img : '')};
-// `;
 
-export const HeroText = styled.p`
+export const AboutText = styled.p`
   margin-bottom: 35px;
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 600;
