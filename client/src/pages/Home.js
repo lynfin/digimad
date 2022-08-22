@@ -23,11 +23,18 @@ function Home({
     { code: 'DI', name: 'Dining' },
   ];
 
-  useEffect(() => {
-    if (selectedCountry === 'All') {
+  // useEffect(() => {
+  //   if (selectedCountry === 'All') {
+  //     setSelectedCity('All');
+  //   }
+  // }, [selectedCountry]);
+
+  function onChangeCountry(newCountry) {
+    if (newCountry !== selectedCountry || newCountry === 'All') {
       setSelectedCity('All');
     }
-  }, [selectedCountry]);
+    setSelectedCountry(newCountry);
+  }
 
   useEffect(() => {
     const filterForCountry =
@@ -115,7 +122,7 @@ function Home({
       <Filters
         locations={locations}
         selectedCountry={selectedCountry}
-        setSelectedCountry={setSelectedCountry}
+        setSelectedCountry={onChangeCountry}
         selectedCity={selectedCity}
         setSelectedCity={setSelectedCity}
         selectedCategory={selectedCategory}

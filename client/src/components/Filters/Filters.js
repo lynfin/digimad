@@ -65,7 +65,7 @@ function Filters({
     <FiltersSection id='filters'>
       <FiltersWrapper>
         <ContainerDEFAULT>
-          <Header color='white'>Choose your destination:</Header>
+          <Header color='white'>Refine your search:</Header>
           <Row justify='space-between' align='center' mt='4rem'>
             {mergedFilteredCountries.length ? (
               <Row justify='space-between' align='center' mt='4rem'>

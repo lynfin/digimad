@@ -53,9 +53,7 @@ function TestSummary({ destinationId, destinationName }) {
       <TestSummaryWrapper>
         <Heading>Speedtest Details</Heading>
         <SubHeading>{destinationName}</SubHeading>
-        {speedtestDetails ? (
-          <SubHeading>{speedtestDetails.length} tests reported</SubHeading>
-        ) : null}
+
         {connectionTypes ? (
           <SubHeading>{connectionTypes.length} connection types</SubHeading>
         ) : null}

@@ -5,9 +5,9 @@ export const SpeedSummarySection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #101522;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
 `;
-
+//background: #101522;
 export const SpeedSummaryWrapper = styled.div`
   display: flex;
   flex-direction: column;
