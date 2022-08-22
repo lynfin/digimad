@@ -65,7 +65,7 @@ function Filters({
         ).cities
       : [];
   return (
-    <FiltersSection>
+    <FiltersSection id='filters'>
       <FiltersWrapper>
         <ContainerDEFAULT>
           <Header color='white'>Choose your destination:</Header>
