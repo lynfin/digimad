@@ -9,7 +9,7 @@ destinations = [
   {
     name: 'Holiday Inn Express Cabo San Lucas',
     desc: 'holiday-inn-express',
-    category: 'hotel', image: 'https://ihg.scene7.com/is/image/ihg/holiday-inn-express-cabo-san-lucas-4061083978-16x9?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
+    category: 'lodging', image: 'https://ihg.scene7.com/is/image/ihg/holiday-inn-express-cabo-san-lucas-4061083978-16x9?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/cabo-san-lucas/sjdsl/hoteldetail',
     address: {
       street1: 'Corredor Csl - SJD KM. 4.5',
@@ -23,7 +23,7 @@ destinations = [
   {
     name: 'Holiday Inn Express Veracruz Boca del Rio',
     desc: 'holiday-inn-express',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-express-boca-del-rio-3998658643-16x9?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-express-boca-del-rio-3998658643-16x9?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinnexpress/hotels/us/en/boca-del-rio/verpp/hoteldetail',
     address: {
       street1: 'Blvd. Adolfo Ruiz Cortines :4298 A',
@@ -39,7 +39,7 @@ destinations = [
   {
     name: 'Holiday Inn Veracruz Boca del Rio',
     desc: 'holiday-inn',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-boca-del-rio-3998314571-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-boca-del-rio-3998314571-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinn/hotels/us/en/boca-del-rio/vcrmx/hoteldetail',
 
     address: {
@@ -55,7 +55,7 @@ destinations = [
   {
     name: 'Holiday Inn Veracruz Centro Historico',
     desc: 'holiday-inn',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-veracruz-3968729075-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-veracruz-3968729075-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinn/hotels/us/en/veracruz/vcrdt/hoteldetail',
 
     address: {
@@ -72,7 +72,7 @@ destinations = [
   {
     name: 'Candlewood Suites Celaya',
     desc: 'candlewood-suites',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/candlewood-suites-celaya-5114360258-2x1?wid=2880&hei=1440&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/candlewood-suites-celaya-5114360258-2x1?wid=2880&hei=1440&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
     website: 'https://www.ihg.com/candlewood/hotels/us/en/celaya/bjxca/hoteldetail',
 
     address: {
@@ -87,7 +87,7 @@ destinations = [
   {
     name: 'Holiday Inn Queretaro-Centro Historico',
     desc: 'holiday-inn',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6976573426-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6976573426-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqemx/hoteldetail',
 
     address: {
@@ -101,7 +101,7 @@ destinations = [
   {
     name: 'Holiday Inn Queretaro Zona Krystal',
     desc: 'holiday-inn',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6201528258-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6201528258-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqebc/hoteldetail',
 
     address: {
@@ -116,7 +116,7 @@ destinations = [
   {
     name: 'Holiday Inn Queretaro Zona Diamante',
     desc: 'holiday-inn',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6225228617-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/holiday-inn-queretaro-6225228617-3x2?fmt=jpg&jpegSize=500&qlt=85&resMode=sharp2&op_usm=1.75,0.3,2.0',
     website: 'https://www.ihg.com/holidayinn/hotels/us/en/queretaro/mqeap/hoteldetail',
 
     address: {
@@ -131,7 +131,7 @@ destinations = [
   {
     name: 'Crowne Plaza Queretaro',
     desc: 'crowne-plaza',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/crowne-plaza-queretaro-3252687880-3x2',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/crowne-plaza-queretaro-3252687880-3x2',
     website: 'https://www.ihg.com/crowneplaza/hotels/us/en/queretaro/mqecc/hoteldetail',
 
     address: {
@@ -146,7 +146,7 @@ destinations = [
   {
     name: 'Staybridge Suites Queretaro',
     desc: 'staybridge-suites',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/staybridge-suites-queretaro-6072304701-2x1?hei=512&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/staybridge-suites-queretaro-6072304701-2x1?hei=512&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
     website: 'https://www.ihg.com/staybridge/hotels/us/en/queretaro/mqesb/hoteldetail',
 
     address: {
@@ -162,7 +162,7 @@ destinations = [
   {
     name: 'Candlewood Suites Queretaro Juriquilla',
     desc: 'candlewood-suites',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/candlewood-suites-queretaro-4815784940-2x1?wid=2880&hei=1440&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/candlewood-suites-queretaro-4815784940-2x1?wid=2880&hei=1440&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0',
     website: 'https://www.ihg.com/candlewood/hotels/us/en/juriquilla/qroja/hoteldetail',
 
     address: {
@@ -178,7 +178,7 @@ destinations = [
   {
     name: 'Mr & Mrs Smith Casa No Name',
     desc: 'mr-and-mrs-smith',
-    category: 'hotel', image: 'https://digital.ihg.com/is/image/ihg/smith-san-miguel-de-allende-6638616690-2x1',
+    category: 'lodging', image: 'https://digital.ihg.com/is/image/ihg/smith-san-miguel-de-allende-6638616690-2x1',
     website: 'https://www.ihg.com/mrandmrssmith/hotels/us/en/san-miguel-de-allende/bjxsd/hoteldetail',
     address: {
       street1: 'No. 52 Hernandez Macia',

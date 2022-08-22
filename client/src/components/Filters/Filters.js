@@ -25,6 +25,9 @@ function Filters({
   setSelectedCountry,
   selectedCity,
   setSelectedCity,
+  selectedCategory,
+  setSelectedCategory,
+  categories,
 }) {
   // const [country, setCountry] = useState('US');
   const [mergedFilteredCountries, setMergedFilteredCountries] = useState([]);
@@ -46,13 +49,6 @@ function Filters({
           ) {
             return Object.assign({}, item, locations[i]);
           } else {
-            console.log(
-              `comparing ${item.name.toLocaleLowerCase().trim()} to ${locations[
-                i
-              ].country
-                .toLocaleLowerCase()
-                .trim()}`
-            );
             return null;
           }
         })
@@ -89,6 +85,13 @@ function Filters({
               ) : null}
             </RowDEFAULT>
           ) : null}
+          <Dropdown
+            selectedName={selectedCategory}
+            setSelectedName={setSelectedCategory}
+            dropdownOptions={categories}
+            showFlag={false}
+            label={'Category'}
+          />
         </ContainerDEFAULT>
       </FiltersWrapper>
     </FiltersSection>

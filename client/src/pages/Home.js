@@ -13,8 +13,15 @@ function Home({
 }) {
   const [selectedCountry, setSelectedCountry] = useState('All');
   const [selectedCity, setSelectedCity] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
+
+  const categoryOptions = [
+    { code: 'LD', name: 'Lodging' },
+    { code: 'CO', name: 'Coworking' },
+    { code: 'DI', name: 'Dining' },
+  ];
 
   useEffect(() => {
     if (selectedCountry === 'All') {
@@ -35,8 +42,17 @@ function Home({
             return d.address.city === selectedCity;
           })
         : filterForCountry;
-    setFilteredDestinations(filterForCity);
-  }, [destinations, selectedCountry, selectedCity]);
+    const filterForCategory =
+      selectedCategory && selectedCategory !== 'All'
+        ? filterForCity.filter((d) => {
+            return (
+              d.category.toLocaleLowerCase().trim() ===
+              selectedCategory.toLocaleLowerCase().trim()
+            );
+          })
+        : filterForCity;
+    setFilteredDestinations(filterForCategory);
+  }, [destinations, selectedCountry, selectedCity, selectedCategory]);
 
   const destinationCardStyles = [
     {
@@ -102,6 +118,9 @@ function Home({
         setSelectedCountry={setSelectedCountry}
         selectedCity={selectedCity}
         setSelectedCity={setSelectedCity}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+        categories={categoryOptions}
       />
       {favorites.length > 0 ? (
         <Carousel
