@@ -91,6 +91,19 @@ function CarouselCard({
   let summary2 = formatValue(el[cardStyle.summary2], cardStyle.summary2Type);
   //summary2 += cardStyle.summary2Units ? ' ' + cardStyle.summary2Units : '';
 
+  const cardColor = (category) => {
+    switch (category) {
+      case 'lodging':
+        return '#288e80';
+      case 'coworking':
+        return '#1d609c';
+      case 'dining':
+        return '#7637a4';
+      default:
+        return '#000';
+    }
+  };
+
   return (
     <CardWrapper key={index}>
       <Row height='25px' width='100%' justify='right' gap='20px' row-gap='20px'>
@@ -163,7 +176,7 @@ function CarouselCard({
         </Column>
       </Row>
 
-      <CardButton onClick={handleClick}>
+      <CardButton onClick={handleClick} background={cardColor(el.category)}>
         <ButtonLink to={{ pathname: 'destination', state: { el } }}>
           Details
         </ButtonLink>

@@ -81,7 +81,9 @@ export const IconButton = styled.button`
 `;
 
 export const CardButton = styled.button`
-  background-color: #1d609c;
+  background-color: ${({ background }) =>
+    background ? background : '#1d609c'};
+
   font-size: 1.3rem;
   padding: 5px 10px;
   color: #fff;
