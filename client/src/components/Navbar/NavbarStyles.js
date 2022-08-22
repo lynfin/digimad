@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Container } from '../../globalStyles';
+import { Container, ContainerBackground } from '../../globalStyles';
 import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
@@ -18,12 +18,12 @@ export const Nav = styled.nav`
   transition: background-color 0.3s ease-in;
 `;
 
-export const NavbarContainer = styled(Container)`
+export const NavbarContainer = styled(ContainerBackground)`
   display: flex;
   justify-content: start;
   height: 80px;
 
-  ${Container}
+  ${ContainerBackground}
 `;
 
 export const NavLogo = styled(Link)`

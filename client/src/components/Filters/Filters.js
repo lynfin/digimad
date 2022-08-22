@@ -4,6 +4,7 @@ import {
   TextWrapper,
   ContainerDEFAULT,
   Header,
+  Row,
   RowDEFAULT,
 } from '../../globalStyles';
 import { FiltersSection, FiltersWrapper } from './FiltersStyles';
@@ -65,33 +66,35 @@ function Filters({
       <FiltersWrapper>
         <ContainerDEFAULT>
           <Header color='white'>Choose your destination:</Header>
-          {mergedFilteredCountries.length ? (
-            <RowDEFAULT justify='center' align='center' mt='4rem'>
-              <Dropdown
-                selectedName={selectedCountry}
-                setSelectedName={setSelectedCountry}
-                dropdownOptions={mergedFilteredCountries}
-                showFlag={true}
-                label={'Country'}
-              />
-              {selectedCountry !== 'All' && cityChoices.length ? (
+          <Row justify='space-between' align='center' mt='4rem'>
+            {mergedFilteredCountries.length ? (
+              <Row justify='space-between' align='center' mt='4rem'>
                 <Dropdown
-                  selectedName={selectedCity}
-                  setSelectedName={setSelectedCity}
-                  dropdownOptions={cityChoices}
-                  showFlag={false}
-                  label={'City'}
+                  selectedName={selectedCountry}
+                  setSelectedName={setSelectedCountry}
+                  dropdownOptions={mergedFilteredCountries}
+                  showFlag={true}
+                  label={'Country'}
                 />
-              ) : null}
-            </RowDEFAULT>
-          ) : null}
-          <Dropdown
-            selectedName={selectedCategory}
-            setSelectedName={setSelectedCategory}
-            dropdownOptions={categories}
-            showFlag={false}
-            label={'Category'}
-          />
+                {selectedCountry !== 'All' && cityChoices.length ? (
+                  <Dropdown
+                    selectedName={selectedCity}
+                    setSelectedName={setSelectedCity}
+                    dropdownOptions={cityChoices}
+                    showFlag={false}
+                    label={'City'}
+                  />
+                ) : null}
+              </Row>
+            ) : null}
+            <Dropdown
+              selectedName={selectedCategory}
+              setSelectedName={setSelectedCategory}
+              dropdownOptions={categories}
+              showFlag={false}
+              label={'Category'}
+            />
+          </Row>
         </ContainerDEFAULT>
       </FiltersWrapper>
     </FiltersSection>

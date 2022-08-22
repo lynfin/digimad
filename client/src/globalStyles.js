@@ -10,6 +10,18 @@ const GlobalStyle = createGlobalStyle`
   }
  
 `;
+export const ContainerBackground = styled.div`
+  width: 100%;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 50px;
+  background-color: gray;
+  opacity: 0.8;
+  @media screen and (max-width: 960px) {
+    padding: 0 30px;
+  }
+`;
 
 export const Container = styled.div`
   width: 100%;

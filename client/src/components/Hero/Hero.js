@@ -1,15 +1,20 @@
 import React from 'react';
 
-import { Container, MainHeading } from '../../globalStyles';
+import {
+  Container,
+  ContainerBackground,
+  MainHeading,
+} from '../../globalStyles';
 import { HeroDiv, HeroSection, HeroText } from './HeroStyles';
 
 const Hero = () => {
   return (
     <HeroSection>
-      <HeroDiv />
+      <HeroDiv img='./assets/ooklaMap.png' />
+
       <Container>
-        <MainHeading>DigiMads</MainHeading>
-        <HeroText>Where digital nomads find their home</HeroText>
+        <MainHeading inverse>DigiMads</MainHeading>
+        <HeroText inverse>Where digital nomads find their home</HeroText>
       </Container>
     </HeroSection>
   );
