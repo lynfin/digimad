@@ -28,7 +28,11 @@ function DestinationHero({ destinationDetails }) {
       <HeroDiv />
       <Column>
         {/* <Row background=''>
-          <SubHeading align='start' padding='0rem 0.0rem 0.00rem 0.4rem'>
+          <SubHeading
+            inverse
+            align='start'
+            padding='0rem 0.0rem 0.00rem 0.4rem'
+          >
             {destinationDetails.category}:
           </SubHeading>
         </Row> */}

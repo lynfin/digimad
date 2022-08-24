@@ -33,7 +33,18 @@ function App() {
   useEffect(() => {
     fetch('/destinations').then((res) => {
       if (res.ok) {
-        res.json().then((d) => setDestinations(d));
+        res.json().then((d) => {
+          setDestinations(
+            d.map((dest) => {
+              return {
+                ...dest,
+                average_tech_rating: +dest.average_tech_rating,
+                fastest_cell_download: +dest.fastest_cell_download,
+                maximum_wifi: +dest.maximum_wifi,
+              };
+            })
+          );
+        });
       } else {
         res.json().then((data) => setErrors(data.error));
       }
@@ -76,7 +87,6 @@ function App() {
             setFavorites(d ? d.map((fav) => fav.destination_id) : []);
           });
         } else {
-          //res.json().then((data) => setErrors(data.error));
           setFavorites([]);
         }
       });
