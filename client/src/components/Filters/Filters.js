@@ -33,6 +33,11 @@ function Filters({
 }) {
   // const [country, setCountry] = useState('US');
   const [mergedFilteredCountries, setMergedFilteredCountries] = useState([]);
+  // console.log('mergedFilteredCountries: ');
+  // console.log(mergedFilteredCountries);
+  // console.log('locations: ');
+  // console.log(locations);
+
   useEffect(() => {
     const filterForKnownDestinations = (el) => {
       const searchText = el.name.toLocaleLowerCase().trim();
@@ -41,20 +46,46 @@ function Filters({
       );
       return located;
     };
-    setMergedFilteredCountries(
-      data
-        .filter((el) => filterForKnownDestinations(el))
-        .map((item, i) => {
-          if (
-            item.name.toLocaleLowerCase().trim() ===
-            locations[i].country.toLocaleLowerCase().trim()
-          ) {
-            return Object.assign({}, item, locations[i]);
-          } else {
-            return null;
-          }
-        })
+
+    const filteredAllCountries = data.filter((el) =>
+      filterForKnownDestinations(el)
     );
+
+    const mappedCountryData = filteredAllCountries.map((item, i) => {
+      return Object.assign(
+        {},
+        item,
+        locations.find((loc) =>
+          loc.country
+            .toLocaleLowerCase()
+            .trim()
+            .includes(item.name.toLocaleLowerCase().trim())
+        )
+      );
+    });
+    setMergedFilteredCountries(mappedCountryData);
+
+    // setMergedFilteredCountries(
+    //   data
+    //     .filter((el) => filterForKnownDestinations(el))
+    //     .map((item, i) => {
+    //       if (
+    //         item.name.toLocaleLowerCase().trim() ===
+    //         locations[i].country.toLocaleLowerCase().trim()
+    //       ) {
+    //         return Object.assign({}, item, locations[i]);
+    //       } else {
+    //         console.log(
+    //           `${item.name
+    //             .toLocaleLowerCase()
+    //             .trim()} DID NOT MATCH ${locations[i].country
+    //             .toLocaleLowerCase()
+    //             .trim()}`
+    //         );
+    //         return null;
+    //       }
+    //     })
+    //);
   }, [locations]);
   const cityChoices =
     selectedCountry !== 'All' && mergedFilteredCountries.length
