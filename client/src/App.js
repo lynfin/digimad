@@ -11,10 +11,8 @@ import Navbar from './components/Navbar/Navbar';
 function App() {
   const [destinations, setDestinations] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  //const [destination_sets, setDestinationSets] = useState([]);
   const [errors, setErrors] = useState(false);
   const [user, setUser] = useState(null);
-  //const [selectedDestinationId, setSelectedDestinationId] = useState(null);
   const [selectedDestination, setSelectedDestination] = useState(null);
   const [locations, setLocations] = useState([]);
 
@@ -27,7 +25,6 @@ function App() {
     });
   }, []);
 
-  // Believe I need to convert string values to numerics here, so sort of 90 < 120
   useEffect(() => {
     fetch('/destinations').then((res) => {
       if (res.ok) {
