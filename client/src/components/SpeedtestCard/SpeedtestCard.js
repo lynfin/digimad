@@ -14,6 +14,15 @@ import {
 } from './SpeedtestCardStyles';
 
 function SpeedtestCard({ testData }) {
+  function displayCellProvider(speedtest) {
+    return (
+      <>
+        <SpeedtestCardCost>Cell Provider:</SpeedtestCardCost>
+        <SpeedtestCardText>{speedtest.connectionprovider}</SpeedtestCardText>
+      </>
+    );
+  }
+
   return (
     <SpeedtestWrapper id='Speedtest'>
       <SpeedtestContainer>
@@ -22,7 +31,9 @@ function SpeedtestCard({ testData }) {
             <Row background='white' width='1000px' justify='space-between'>
               <Column width='30%' justify='space-between'>
                 <SpeedtestCardCost>{testData.user.username}</SpeedtestCardCost>
-
+                {testData.speedtest.connectiontype === 'cellular'
+                  ? displayCellProvider(testData.speedtest)
+                  : null}
                 <Row>
                   <Column>
                     <SpeedtestCardCost>Visit Dates:</SpeedtestCardCost>
