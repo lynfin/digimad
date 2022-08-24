@@ -1,17 +1,11 @@
 import React from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
 
-import { MdSpeed, MdCheckBoxOutlineBlank, MdCheckBox } from 'react-icons/md';
-import Ratings from 'react-ratings-declarative';
 import StarRating from '../StarRating/StarRating';
 import {
   Container,
   MainHeading,
-  Text,
   Column,
   Row,
-  SubHeading,
-  ButtonLink,
   Button,
   Divider,
 } from '../../globalStyles';
@@ -21,7 +15,6 @@ import {
   HeroText,
   ImageWrapper,
   HeroImage,
-  ButtonWrapper,
   AddressText,
 } from './DestinationHeroStyles';
 
@@ -29,7 +22,6 @@ function DestinationHero({ destinationDetails }) {
   const openInNewTab = (url) => {
     window.open(url, '_blank', 'noopener, noreferrer');
   };
-  let history = useHistory();
 
   return (
     <HeroSection>

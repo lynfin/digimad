@@ -1,27 +1,15 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+
 import { parseISO, format } from 'date-fns';
 import StarRating from '../StarRating/StarRating';
-import {
-  Button,
-  Heading,
-  SubHeading,
-  TextWrapper,
-  Container,
-  Column,
-  Row,
-} from '../../globalStyles';
+import { Column, Row } from '../../globalStyles';
 
 import {
-  SpeedtestCardSection,
   SpeedtestWrapper,
   SpeedtestContainer,
   SpeedtestCardInfo,
-  SpeedtestCardPlan,
   SpeedtestCardCost,
-  SpeedtestCardFeatures,
   SpeedtestCardText,
-  SpeedtestCardFeature,
   SpeedtestCardDiv,
 } from './SpeedtestCardStyles';
 

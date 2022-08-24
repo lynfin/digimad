@@ -5,7 +5,7 @@ import { AiOutlineCaretDown } from 'react-icons/ai';
 import DropdownList from '../DropdownList/DropdownList';
 
 import { DropdownBox, DropdownContainer } from './DropdownStyles';
-import { Text, SubHeading, TextWrapper } from '../../globalStyles';
+import { Text, SubHeading } from '../../globalStyles';
 
 const Dropdown = ({
   selectedName,

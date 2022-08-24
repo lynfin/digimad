@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  Heading,
-  TextWrapper,
-  ContainerDEFAULT,
-  Header,
-  Row,
-  RowDEFAULT,
-  Column,
-} from '../../globalStyles';
+import { Header, Row, Column } from '../../globalStyles';
 import { FiltersSection, FiltersWrapper } from './FiltersStyles';
 import data from './data.json';
 import Dropdown from '../Dropdown/Dropdown';
