@@ -10,10 +10,13 @@ function Home({
   favorites,
   onFavoriteSelected,
   locations,
+  selectedCountry,
+  selectedCity,
+  selectedCategory,
+  setSelectedCountry,
+  setSelectedCity,
+  setSelectedCategory,
 }) {
-  const [selectedCountry, setSelectedCountry] = useState('All');
-  const [selectedCity, setSelectedCity] = useState('All');
-  const [selectedCategory, setSelectedCategory] = useState('All');
   const [filteredDestinations, setFilteredDestinations] =
     useState(destinations);
 
@@ -23,12 +26,6 @@ function Home({
     { code: 'DI', name: 'Dining' },
     { code: 'PU', name: 'Public' },
   ];
-
-  // useEffect(() => {
-  //   if (selectedCountry === 'All') {
-  //     setSelectedCity('All');
-  //   }
-  // }, [selectedCountry]);
 
   function onChangeCountry(newCountry) {
     if (newCountry !== selectedCountry || newCountry === 'All') {
@@ -59,6 +56,7 @@ function Home({
             );
           })
         : filterForCity;
+
     setFilteredDestinations(filterForCategory);
   }, [destinations, selectedCountry, selectedCity, selectedCategory]);
 

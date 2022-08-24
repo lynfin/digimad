@@ -15,6 +15,9 @@ function App() {
   const [user, setUser] = useState(null);
   const [selectedDestination, setSelectedDestination] = useState(null);
   const [locations, setLocations] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState('All');
+  const [selectedCity, setSelectedCity] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
     // auto-login
@@ -125,6 +128,12 @@ function App() {
             favorites={favorites}
             onFavoriteSelected={handleFavoriteSelected}
             locations={locations}
+            selectedCountry={selectedCountry}
+            selectedCity={selectedCity}
+            selectedCategory={selectedCategory}
+            setSelectedCountry={setSelectedCountry}
+            setSelectedCity={setSelectedCity}
+            setSelectedCategory={setSelectedCategory}
           />
         </Route>
         <Route exact path='/destination'>
