@@ -26,7 +26,7 @@ function ConnectionTypeSummary({ connectionType, connectionData }) {
   return (
     <ConnectionTypeSummarySection id='ConnectionTypeSummary'>
       <ConnectionTypeSummaryWrapper>
-        <Heading>{connectionType}</Heading>
+        <Heading inverse>{connectionType}</Heading>
 
         <SubHeading>{connectionData.length} tests</SubHeading>
         {connectionData

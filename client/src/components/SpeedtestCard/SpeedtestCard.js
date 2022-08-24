@@ -31,7 +31,7 @@ function SpeedtestCard({ testData }) {
       <SpeedtestContainer>
         <SpeedtestCardInfo>
           <SpeedtestCardDiv>
-            <Row background='' width='800px' justify='space-between'>
+            <Row background='white' width='1000px' justify='space-between'>
               <Column width='30%' justify='space-between'>
                 <SpeedtestCardCost>{testData.user.username}</SpeedtestCardCost>
 
@@ -47,7 +47,7 @@ function SpeedtestCard({ testData }) {
                   </Column>
                 </Row>
               </Column>
-              <Column width='70%'>
+              <Column width='100%'>
                 <Row>
                   <SpeedtestCardText>{testData.desc}</SpeedtestCardText>
                 </Row>
