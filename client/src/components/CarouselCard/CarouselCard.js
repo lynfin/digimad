@@ -94,11 +94,13 @@ function CarouselCard({
   const cardColor = (category) => {
     switch (category) {
       case 'lodging':
-        return '#288e80';
+        return '#1D219C';
       case 'coworking':
         return '#1d609c';
       case 'dining':
-        return '#7637a4';
+        return '#1D9C99';
+      case 'public':
+        return '#581D9C';
       default:
         return '#000';
     }

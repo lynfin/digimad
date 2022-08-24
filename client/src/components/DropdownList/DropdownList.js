@@ -36,7 +36,7 @@ const DropdownList = ({
   };
 
   function sumCounts(total, option) {
-    return (total += option.count);
+    return option ? (total += option.count) : total;
   }
   const allOption = {
     code: '',

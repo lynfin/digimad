@@ -21,6 +21,7 @@ function Home({
     { code: 'LD', name: 'Lodging' },
     { code: 'CO', name: 'Coworking' },
     { code: 'DI', name: 'Dining' },
+    { code: 'PU', name: 'Public' },
   ];
 
   // useEffect(() => {
