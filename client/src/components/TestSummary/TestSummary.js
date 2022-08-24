@@ -51,11 +51,13 @@ function TestSummary({ destinationId, destinationName }) {
   return (
     <TestSummarySection id='TestSummary'>
       <TestSummaryWrapper>
-        <Heading>Speedtest Details</Heading>
-        <SubHeading>{destinationName}</SubHeading>
+        <Heading inverse>Speedtest Details</Heading>
+        <SubHeading inverse>{destinationName}</SubHeading>
 
         {connectionTypes ? (
-          <SubHeading>{connectionTypes.length} connection types</SubHeading>
+          <SubHeading inverse>
+            {connectionTypes.length} connection types
+          </SubHeading>
         ) : null}
       </TestSummaryWrapper>
       {connectionTypes

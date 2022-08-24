@@ -46,7 +46,7 @@ function DestinationHero({ destinationDetails }) {
           </ImageWrapper>
         </Row>
         <Container>
-          <MainHeading>{destinationDetails.name}</MainHeading>
+          <MainHeading inverse>{destinationDetails.name}</MainHeading>
 
           <Row background='' justify='space-between'>
             <Column>
@@ -57,7 +57,7 @@ function DestinationHero({ destinationDetails }) {
                 color='yellow'
               />
 
-              <HeroText>Average Visit Rating</HeroText>
+              <HeroText inverse>Average Visit Rating</HeroText>
             </Column>
             <Column>
               <StarRating
@@ -67,7 +67,7 @@ function DestinationHero({ destinationDetails }) {
                 color='yellow'
               />
 
-              <HeroText>Average Tech Rating</HeroText>
+              <HeroText inverse>Average Tech Rating</HeroText>
             </Column>
           </Row>
           {/*           
@@ -82,23 +82,32 @@ function DestinationHero({ destinationDetails }) {
             </Column>
           </Row> */}
           <Divider />
-          <AddressText>{destinationDetails.address.street1}</AddressText>
-          <AddressText>{destinationDetails.address.street2}</AddressText>
-          <AddressText>
+          <AddressText inverse>
+            {destinationDetails.address.street1}
+          </AddressText>
+          <AddressText inverse>
+            {destinationDetails.address.street2}
+          </AddressText>
+          <AddressText inverse>
             {destinationDetails.address.city},{' '}
             {destinationDetails.address.state}{' '}
             {destinationDetails.address.country}
           </AddressText>
-          <AddressText>{destinationDetails.address.zipcode}</AddressText>
-          <AddressText>
+          <AddressText inverse>
+            {destinationDetails.address.zipcode}
+          </AddressText>
+          <AddressText inverse>
             Phone:{' '}
             {destinationDetails.phone
               ? destinationDetails.phone
               : 'unavailable'}
           </AddressText>
           <Row justify='center'>
-            <Button onClick={() => openInNewTab(destinationDetails.website)}>
-              <HeroText>Visit their website</HeroText>
+            <Button
+              inverse
+              onClick={() => openInNewTab(destinationDetails.website)}
+            >
+              <HeroText inverse>Visit their website</HeroText>
             </Button>
           </Row>
           {/*           

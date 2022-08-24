@@ -12,11 +12,11 @@ export const HeroDiv = styled.div`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
   top: 0;
   position: absolute;
   z-index: -1;
 `;
+//background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
 
 export const HeroText = styled.p`
   margin-bottom: 35px;
@@ -24,7 +24,7 @@ export const HeroText = styled.p`
   line-height: 24px;
   text-align: center;
   letter-spacing: 2px;
-  color: #fff;
+  color: ${({ inverse }) => (inverse ? '#000' : '#fff')};
 `;
 
 export const AddressText = styled.p`
@@ -33,7 +33,7 @@ export const AddressText = styled.p`
   line-height: 18px;
   text-align: center;
   letter-spacing: 2px;
-  color: #fff;
+  color: ${({ inverse }) => (inverse ? '#000' : '#fff')};
 `;
 
 export const ButtonWrapper = styled.div`

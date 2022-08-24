@@ -5,7 +5,7 @@ export const TestSummarySection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: lightgray;
+  background: white;
 `;
 
 export const TestSummaryWrapper = styled.div`
