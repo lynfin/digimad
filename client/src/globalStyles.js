@@ -231,13 +231,14 @@ export const Button = styled.button`
   font-size: 16px;
   color: #fff;
   outline: none;
-  border: 2px solid #fff;
+
+  border: ${({ inverse }) => (inverse ? '2px solid #000' : '2px solid #fff')};
   cursor: pointer;
   overflow: hidden;
   position: ${({ position }) => (position ? position : 'relative')};
 
   &:before {
-    background: #fff;
+    background: ${({ inverse }) => (inverse ? '#000' : '#fff')};
     content: '';
     position: absolute;
     top: 50%;
@@ -255,9 +256,10 @@ export const Button = styled.button`
   }
 
   &:hover {
-    color: black;
+    color: ${({ inverse }) => (inverse ? '#fff' : '#000')};
   }
 `;
+//border: 2px solid #fff;
 
 export const Button2 = styled.button`
   border-radius: 4px;
