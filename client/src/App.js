@@ -7,8 +7,6 @@ import AboutSite from './pages/AboutSite';
 import Speedtest from './pages/Speedtest';
 import GlobalStyle from './globalStyles';
 import Navbar from './components/Navbar/Navbar';
-import { parseISO, format, endOfDay } from 'date-fns';
-import { CgOpenCollective } from 'react-icons/cg';
 
 function App() {
   const [destinations, setDestinations] = useState([]);
@@ -105,7 +103,7 @@ function App() {
   }
 
   function handleFavoriteSelected(selectedId, isFavorite) {
-    let updatedFavorites = isFavorite
+    isFavorite
       ? setFavorites((oldFavorites) => [...oldFavorites, selectedId])
       : setFavorites((oldFavorites) =>
           oldFavorites.filter((f) => {
