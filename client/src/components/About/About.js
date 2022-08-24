@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Column, MainHeading, SubHeading } from '../../globalStyles';
+import { Column, MainHeading, SubHeading, Divider } from '../../globalStyles';
 import {
   AboutDiv,
   AboutSection,
@@ -20,9 +20,8 @@ const About = () => {
           Origin
         </SubHeading>
         <AboutText align='start' inverse margin='20px'>
-          The site name 'DigiMads' is a reference to Digital Nomads. This site
-          was inspired by conversations such as the following posted on Digital
-          Nomad forums
+          'DigiMads' is a reference to Digital Nomads. This site was inspired by
+          questions such as the following posted on Digital Nomad forums:
         </AboutText>
 
         <AboutQuestion inverse margin='20px'>
@@ -38,6 +37,7 @@ const About = () => {
           touristy. However mobile data is very cheap and you'll get 4G in most
           places.
         </AboutAnswer>
+        <Divider />
         <AboutQuestion inverse margin='20px'>
           Q: I am renting an Airbnb outside of Barcelona and the site lists
           'Wifi available'. How can I be sure it will support my needs to upload
@@ -48,15 +48,19 @@ const About = () => {
           results
         </AboutAnswer>
         <AboutText align='start' inverse margin='20px'>
-          It is obvious that this community, very dependent on reliable internet
-          access, will benefit from the ability to store and look up internet
-          performance metrics at locations worldwide, whether it be a hotel,
-          Airbnb, public lounge, or a shared workspace.
+          For a community very dependent on internet access, it can be a
+          challenge to find reliable, up-to-date information about internet
+          connections. Typically information is shared on forums, in reponse to
+          direct questions, but there is no 'database' of information that can
+          be accessed and updated by the travelers. This community will benefit
+          from the ability to store and look up internet performance metrics at
+          locations worldwide, whether it be a hotel, Airbnb, public lounge, or
+          a shared workspace.
         </AboutText>
         <AboutText align='start' inverse margin='20px'>
-          DigiMads provides members the ability to store results of a speed
-          test, and to search for results logged by other users at locations
-          worldwide.
+          This DigiMad site provides members the ability to store results of a
+          speed test, and to search for results logged by other users at
+          locations worldwide.
         </AboutText>
         <AboutText align='start' inverse margin='20px'>
           In addition, users can rate and comment on the destination, providing

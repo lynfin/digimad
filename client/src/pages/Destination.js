@@ -1,6 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Container, MainHeading, TextWrapper } from '../globalStyles';
+import {
+  Container,
+  MainHeading,
+  SubHeading,
+  TextWrapper,
+} from '../globalStyles';
 import DestinationHero from '../components/DestinationHero/DestinationHero';
 import SpeedSummary from '../components/SpeedSummary/SpeedSummary';
 import TestSummary from '../components/TestSummary/TestSummary';
@@ -38,10 +43,14 @@ function Destination({ user, selectedDestination }) {
             selectedDestination={selectedDestination}
             destinationDetails={destinationDetails}
           />
-          <TestSummary
-            destinationId={destinationDetails.id}
-            destinationName={destinationDetails.name}
-          />
+          {user ? (
+            <TestSummary
+              destinationId={destinationDetails.id}
+              destinationName={destinationDetails.name}
+            />
+          ) : (
+            <SubHeading inverse>Please log in to see test details</SubHeading>
+          )}
         </>
       ) : (
         <Container>
