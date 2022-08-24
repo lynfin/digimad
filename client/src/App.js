@@ -93,6 +93,29 @@ function App() {
 
   if (errors) return <h1>{errors}</h1>;
 
+  function onDestinationUpdated(destinationId) {
+    fetch(`/destinations/${destinationId}`).then((res) => {
+      if (res.ok) {
+        res.json().then((dest) => {
+          const updatedDestination = {
+            ...dest,
+            average_tech_rating: +dest.average_tech_rating,
+            fastest_cell_download: +dest.fastest_cell_download,
+            maximum_wifi: +dest.maximum_wifi,
+          };
+
+          setDestinations((curDestinations) => {
+            return curDestinations.map((d) => {
+              return d.id === destinationId ? updatedDestination : d;
+            });
+          });
+        });
+      } else {
+        res.json().then((data) => console.log(data.error));
+      }
+    });
+  }
+
   function handleDestinationSelected(selectedId) {
     //setSelectedDestinationId(selectedId);
     setSelectedDestination(
@@ -140,7 +163,11 @@ function App() {
           <Destination user={user} selectedDestination={selectedDestination} />
         </Route>
         <Route exact path='/speedtest'>
-          <Speedtest user={user} selectedDestination={selectedDestination} />
+          <Speedtest
+            user={user}
+            selectedDestination={selectedDestination}
+            onDestinationUpdated={onDestinationUpdated}
+          />
         </Route>
         <Route exact path='/about'>
           <AboutSite />
