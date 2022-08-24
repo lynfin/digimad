@@ -64,28 +64,6 @@ function Filters({
       );
     });
     setMergedFilteredCountries(mappedCountryData);
-
-    // setMergedFilteredCountries(
-    //   data
-    //     .filter((el) => filterForKnownDestinations(el))
-    //     .map((item, i) => {
-    //       if (
-    //         item.name.toLocaleLowerCase().trim() ===
-    //         locations[i].country.toLocaleLowerCase().trim()
-    //       ) {
-    //         return Object.assign({}, item, locations[i]);
-    //       } else {
-    //         console.log(
-    //           `${item.name
-    //             .toLocaleLowerCase()
-    //             .trim()} DID NOT MATCH ${locations[i].country
-    //             .toLocaleLowerCase()
-    //             .trim()}`
-    //         );
-    //         return null;
-    //       }
-    //     })
-    //);
   }, [locations]);
   const cityChoices =
     selectedCountry !== 'All' && mergedFilteredCountries.length
