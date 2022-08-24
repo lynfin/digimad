@@ -51,7 +51,7 @@ export const SpeedtestCardDiv = styled.div`
 `;
 //width: 1200;
 export const SpeedtestCardInfo = styled.div`
-  background: #242424;
+  background: white;
   box-shadow: 0 6px 20px rgba(56, 125, 255, 0.2);
   width: 1200px;
   text-decoration: none;
@@ -89,12 +89,13 @@ export const SpeedtestCardPlan = styled.h3`
 
 export const SpeedtestCardCost = styled.h4`
   font-size: 1.2rem;
+  color: black;
 `;
 
 export const SpeedtestCardText = styled.p`
   font-size: 1.1rem;
   margin: 0.4rem 0 1.3rem;
-  color: #a9b3c1;
+  color: black;
 `;
 
 export const SpeedtestCardFeatures = styled.ul`
@@ -102,7 +103,7 @@ export const SpeedtestCardFeatures = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  color: #a9b3c1;
+  color: black;
 `;
 
 export const SpeedtestCardFeature = styled.li`

@@ -60,7 +60,7 @@ export const SubHeading = styled.h2`
   margin: ${({ margin }) => (margin ? margin : '')};
   margin-bottom: ${({ mb }) => (mb ? mb : '')};
   margin-top: ${({ mt }) => (mt ? mt : '')};
-  color: ${({ inverse }) => (inverse ? '$403ae3' : '#fff')};
+  color: ${({ inverse }) => (inverse ? 'black' : '#fff')};
   letter-spacing: 0.4rem;
   line-height: 2.06;
   text-align: ${({ align }) => (align ? align : 'center')};
@@ -231,13 +231,14 @@ export const Button = styled.button`
   font-size: 16px;
   color: #fff;
   outline: none;
-  border: 2px solid #fff;
+
+  border: ${({ inverse }) => (inverse ? '2px solid #000' : '2px solid #fff')};
   cursor: pointer;
   overflow: hidden;
   position: ${({ position }) => (position ? position : 'relative')};
 
   &:before {
-    background: #fff;
+    background: ${({ inverse }) => (inverse ? '#000' : '#fff')};
     content: '';
     position: absolute;
     top: 50%;
@@ -255,9 +256,10 @@ export const Button = styled.button`
   }
 
   &:hover {
-    color: black;
+    color: ${({ inverse }) => (inverse ? '#fff' : '#000')};
   }
 `;
+//border: 2px solid #fff;
 
 export const Button2 = styled.button`
   border-radius: 4px;

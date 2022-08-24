@@ -1,27 +1,15 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+
 import { parseISO, format } from 'date-fns';
 import StarRating from '../StarRating/StarRating';
-import {
-  Button,
-  Heading,
-  SubHeading,
-  TextWrapper,
-  Container,
-  Column,
-  Row,
-} from '../../globalStyles';
+import { Column, Row } from '../../globalStyles';
 
 import {
-  SpeedtestCardSection,
   SpeedtestWrapper,
   SpeedtestContainer,
   SpeedtestCardInfo,
-  SpeedtestCardPlan,
   SpeedtestCardCost,
-  SpeedtestCardFeatures,
   SpeedtestCardText,
-  SpeedtestCardFeature,
   SpeedtestCardDiv,
 } from './SpeedtestCardStyles';
 
@@ -31,7 +19,7 @@ function SpeedtestCard({ testData }) {
       <SpeedtestContainer>
         <SpeedtestCardInfo>
           <SpeedtestCardDiv>
-            <Row background='' width='800px' justify='space-between'>
+            <Row background='white' width='1000px' justify='space-between'>
               <Column width='30%' justify='space-between'>
                 <SpeedtestCardCost>{testData.user.username}</SpeedtestCardCost>
 
@@ -47,7 +35,7 @@ function SpeedtestCard({ testData }) {
                   </Column>
                 </Row>
               </Column>
-              <Column width='70%'>
+              <Column width='100%'>
                 <Row>
                   <SpeedtestCardText>{testData.desc}</SpeedtestCardText>
                 </Row>

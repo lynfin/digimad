@@ -1,26 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import ConnectionTypeSummary from '../ConnectionTypeSummary/ConnectionTypeSummary';
-import {
-  Button,
-  Heading,
-  SubHeading,
-  TextWrapper,
-  Container,
-} from '../../globalStyles';
+import { Heading, SubHeading } from '../../globalStyles';
 
-import {
-  TestSummarySection,
-  TestSummaryWrapper,
-  TestSummaryContainer,
-  TestSummaryCardInfo,
-  TestSummaryCardPlan,
-  TestSummaryCardCost,
-  TestSummaryCardFeatures,
-  TestSummaryCardText,
-  TestSummaryCardFeature,
-  TestSummaryCard,
-} from './TestSummaryStyles';
+import { TestSummarySection, TestSummaryWrapper } from './TestSummaryStyles';
 
 function TestSummary({ destinationId, destinationName }) {
   const [speedtestDetails, setSpeedtestDetails] = useState(null);
@@ -51,11 +34,13 @@ function TestSummary({ destinationId, destinationName }) {
   return (
     <TestSummarySection id='TestSummary'>
       <TestSummaryWrapper>
-        <Heading>Speedtest Details</Heading>
-        <SubHeading>{destinationName}</SubHeading>
+        <Heading inverse>Speedtest Details</Heading>
+        <SubHeading inverse>{destinationName}</SubHeading>
 
         {connectionTypes ? (
-          <SubHeading>{connectionTypes.length} connection types</SubHeading>
+          <SubHeading inverse>
+            {connectionTypes.length} connection types
+          </SubHeading>
         ) : null}
       </TestSummaryWrapper>
       {connectionTypes

@@ -5,7 +5,7 @@ import { AiOutlineCaretDown } from 'react-icons/ai';
 import DropdownList from '../DropdownList/DropdownList';
 
 import { DropdownBox, DropdownContainer } from './DropdownStyles';
-import { Text, SubHeading, TextWrapper } from '../../globalStyles';
+import { Text, SubHeading } from '../../globalStyles';
 
 const Dropdown = ({
   selectedName,
@@ -48,7 +48,7 @@ const Dropdown = ({
 
   return (
     <DropdownContainer>
-      <SubHeading>
+      <SubHeading inverse>
         <Text size='1.3rem'>{label}</Text>
       </SubHeading>
       <DropdownBox ref={ref} onClick={() => setShow(true)}>

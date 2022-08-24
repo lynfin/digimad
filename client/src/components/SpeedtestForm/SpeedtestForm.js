@@ -21,7 +21,7 @@ import { Container } from '../../globalStyles';
 import StarRating from '../StarRating/StarRating';
 import validateForm from './validateForm';
 
-function SpeedtestForm({ user, selectedDestination }) {
+function SpeedtestForm({ user, selectedDestination, onDestinationUpdated }) {
   const date = new Date();
   const formattedToday =
     date.getFullYear().toString() +
@@ -35,7 +35,7 @@ function SpeedtestForm({ user, selectedDestination }) {
   const [upload, setUpload] = useState(0.0);
   const [connectiontype, setConnectiontype] = useState('wifi');
   const [connectionprovider, setConnectionprovider] = useState('');
-  const [testprovider, setTestprovider] = useState('');
+  const [testprovider, setTestprovider] = useState('speedtest');
   const [resulturl, setResulturl] = useState('');
   const [resultimage, setResultimage] = useState('');
   const [start, setStart] = useState(formattedToday);
@@ -53,21 +53,17 @@ function SpeedtestForm({ user, selectedDestination }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const resultError = [];
-    // const resultError = validateForm({
-    //   latency,
-    //   download,
-    //   upload,
-    //   connectiontype,
-    //   connectionprovider,
-    //   testprovider,
-    //   resulturl,
-    //   resultimage,
-    //   start,
-    //   end,
-    //   techRating,
-    //   visitRating,
-    // });
+    //const resultError = [];
+    const resultError = validateForm({
+      latency,
+      download,
+      upload,
+      connectiontype,
+      connectionprovider,
+      testprovider,
+      start,
+      end,
+    });
 
     if (resultError.length) {
       setError(resultError);
@@ -105,10 +101,8 @@ function SpeedtestForm({ user, selectedDestination }) {
     }).then((r) => {
       if (r.ok) {
         r.json().then((speedtest) => {
-          // WILL NEED TO UPDATE LOCAL COPY
-          //onTest(speedtest);
-          console.log(speedtest);
-          history.push('/destination');
+          onDestinationUpdated(selectedDestination.id);
+          history.push('/');
         });
       } else {
         r.json().then((err) => console.log(err));
@@ -206,18 +200,18 @@ function SpeedtestForm({ user, selectedDestination }) {
       type: 'text',
     },
 
-    {
-      label: 'Result URL',
-      value: resulturl,
-      onChange: (e) => setResulturl(e.target.value),
-      type: 'text',
-    },
-    {
-      label: 'Result Image',
-      value: resultimage,
-      onChange: (e) => setResultimage(e.target.value),
-      type: 'text',
-    },
+    // {
+    //   label: 'Result URL',
+    //   value: resulturl,
+    //   onChange: (e) => setResulturl(e.target.value),
+    //   type: 'text',
+    // },
+    // {
+    //   label: 'Result Image',
+    //   value: resultimage,
+    //   onChange: (e) => setResultimage(e.target.value),
+    //   type: 'text',
+    // },
   ];
 
   return (

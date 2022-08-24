@@ -29,8 +29,12 @@ const DropdownList = ({
   const filterCountry = (el) => {
     const searchText = search.trim().toLocaleLowerCase();
 
-    const name = el.name.toLocaleLowerCase().trim().includes(searchText);
-    const code = el.code.toLocaleLowerCase().trim().includes(searchText);
+    const name = el
+      ? el.name.toLocaleLowerCase().trim().includes(searchText)
+      : true;
+    const code = el
+      ? el.code.toLocaleLowerCase().trim().includes(searchText)
+      : true;
 
     return code || name;
   };
@@ -72,7 +76,7 @@ const DropdownList = ({
               .filter((el) => filterCountry(el))
               .map((el, index) => (
                 <ListItem key={index} onClick={() => closeDropdown(el)}>
-                  {showFlag ? (
+                  {showFlag && el ? (
                     <>
                       <Flag size={28} country={el.code} />{' '}
                       <Text>{el.code}</Text>

@@ -7,18 +7,17 @@ import AboutSite from './pages/AboutSite';
 import Speedtest from './pages/Speedtest';
 import GlobalStyle from './globalStyles';
 import Navbar from './components/Navbar/Navbar';
-import { parseISO, format, endOfDay } from 'date-fns';
-import { CgOpenCollective } from 'react-icons/cg';
 
 function App() {
   const [destinations, setDestinations] = useState([]);
   const [favorites, setFavorites] = useState([]);
-  //const [destination_sets, setDestinationSets] = useState([]);
   const [errors, setErrors] = useState(false);
   const [user, setUser] = useState(null);
-  //const [selectedDestinationId, setSelectedDestinationId] = useState(null);
   const [selectedDestination, setSelectedDestination] = useState(null);
   const [locations, setLocations] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState('All');
+  const [selectedCity, setSelectedCity] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   useEffect(() => {
     // auto-login
@@ -29,11 +28,21 @@ function App() {
     });
   }, []);
 
-  // Believe I need to convert string values to numerics here, so sort of 90 < 120
   useEffect(() => {
     fetch('/destinations').then((res) => {
       if (res.ok) {
-        res.json().then((d) => setDestinations(d));
+        res.json().then((d) => {
+          setDestinations(
+            d.map((dest) => {
+              return {
+                ...dest,
+                average_tech_rating: +dest.average_tech_rating,
+                fastest_cell_download: +dest.fastest_cell_download,
+                maximum_wifi: +dest.maximum_wifi,
+              };
+            })
+          );
+        });
       } else {
         res.json().then((data) => setErrors(data.error));
       }
@@ -76,7 +85,6 @@ function App() {
             setFavorites(d ? d.map((fav) => fav.destination_id) : []);
           });
         } else {
-          //res.json().then((data) => setErrors(data.error));
           setFavorites([]);
         }
       });
@@ -84,6 +92,29 @@ function App() {
   }, [user]);
 
   if (errors) return <h1>{errors}</h1>;
+
+  function onDestinationUpdated(destinationId) {
+    fetch(`/destinations/${destinationId}`).then((res) => {
+      if (res.ok) {
+        res.json().then((dest) => {
+          const updatedDestination = {
+            ...dest,
+            average_tech_rating: +dest.average_tech_rating,
+            fastest_cell_download: +dest.fastest_cell_download,
+            maximum_wifi: +dest.maximum_wifi,
+          };
+
+          setDestinations((curDestinations) => {
+            return curDestinations.map((d) => {
+              return d.id === destinationId ? updatedDestination : d;
+            });
+          });
+        });
+      } else {
+        res.json().then((data) => console.log(data.error));
+      }
+    });
+  }
 
   function handleDestinationSelected(selectedId) {
     //setSelectedDestinationId(selectedId);
@@ -95,7 +126,7 @@ function App() {
   }
 
   function handleFavoriteSelected(selectedId, isFavorite) {
-    let updatedFavorites = isFavorite
+    isFavorite
       ? setFavorites((oldFavorites) => [...oldFavorites, selectedId])
       : setFavorites((oldFavorites) =>
           oldFavorites.filter((f) => {
@@ -120,13 +151,23 @@ function App() {
             favorites={favorites}
             onFavoriteSelected={handleFavoriteSelected}
             locations={locations}
+            selectedCountry={selectedCountry}
+            selectedCity={selectedCity}
+            selectedCategory={selectedCategory}
+            setSelectedCountry={setSelectedCountry}
+            setSelectedCity={setSelectedCity}
+            setSelectedCategory={setSelectedCategory}
           />
         </Route>
         <Route exact path='/destination'>
           <Destination user={user} selectedDestination={selectedDestination} />
         </Route>
         <Route exact path='/speedtest'>
-          <Speedtest user={user} selectedDestination={selectedDestination} />
+          <Speedtest
+            user={user}
+            selectedDestination={selectedDestination}
+            onDestinationUpdated={onDestinationUpdated}
+          />
         </Route>
         <Route exact path='/about'>
           <AboutSite />

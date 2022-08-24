@@ -1,13 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  Heading,
-  TextWrapper,
-  ContainerDEFAULT,
-  Header,
-  Row,
-  RowDEFAULT,
-  Column,
-} from '../../globalStyles';
+import { Header, Row, Column } from '../../globalStyles';
 import { FiltersSection, FiltersWrapper } from './FiltersStyles';
 import data from './data.json';
 import Dropdown from '../Dropdown/Dropdown';
@@ -33,6 +25,11 @@ function Filters({
 }) {
   // const [country, setCountry] = useState('US');
   const [mergedFilteredCountries, setMergedFilteredCountries] = useState([]);
+  // console.log('mergedFilteredCountries: ');
+  // console.log(mergedFilteredCountries);
+  // console.log('locations: ');
+  // console.log(locations);
+
   useEffect(() => {
     const filterForKnownDestinations = (el) => {
       const searchText = el.name.toLocaleLowerCase().trim();
@@ -41,20 +38,24 @@ function Filters({
       );
       return located;
     };
-    setMergedFilteredCountries(
-      data
-        .filter((el) => filterForKnownDestinations(el))
-        .map((item, i) => {
-          if (
-            item.name.toLocaleLowerCase().trim() ===
-            locations[i].country.toLocaleLowerCase().trim()
-          ) {
-            return Object.assign({}, item, locations[i]);
-          } else {
-            return null;
-          }
-        })
+
+    const filteredAllCountries = data.filter((el) =>
+      filterForKnownDestinations(el)
     );
+
+    const mappedCountryData = filteredAllCountries.map((item, i) => {
+      return Object.assign(
+        {},
+        item,
+        locations.find((loc) =>
+          loc.country
+            .toLocaleLowerCase()
+            .trim()
+            .includes(item.name.toLocaleLowerCase().trim())
+        )
+      );
+    });
+    setMergedFilteredCountries(mappedCountryData);
   }, [locations]);
   const cityChoices =
     selectedCountry !== 'All' && mergedFilteredCountries.length
@@ -66,7 +67,7 @@ function Filters({
     <FiltersSection id='filters'>
       <FiltersWrapper>
         <Column justify='space-between'>
-          <Header color='white'>Refine your search:</Header>
+          <Header color='black'>Refine your search:</Header>
           <Row justify='space-between' align='center' mt='4rem' padding='20px'>
             {mergedFilteredCountries.length ? (
               <Row
