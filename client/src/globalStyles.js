@@ -60,7 +60,7 @@ export const SubHeading = styled.h2`
   margin: ${({ margin }) => (margin ? margin : '')};
   margin-bottom: ${({ mb }) => (mb ? mb : '')};
   margin-top: ${({ mt }) => (mt ? mt : '')};
-  color: ${({ inverse }) => (inverse ? '$403ae3' : '#fff')};
+  color: ${({ inverse }) => (inverse ? 'black' : '#fff')};
   letter-spacing: 0.4rem;
   line-height: 2.06;
   text-align: ${({ align }) => (align ? align : 'center')};

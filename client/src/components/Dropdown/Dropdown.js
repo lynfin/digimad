@@ -48,7 +48,7 @@ const Dropdown = ({
 
   return (
     <DropdownContainer>
-      <SubHeading>
+      <SubHeading inverse>
         <Text size='1.3rem'>{label}</Text>
       </SubHeading>
       <DropdownBox ref={ref} onClick={() => setShow(true)}>
