@@ -6,6 +6,7 @@ import {
   Header,
   Row,
   RowDEFAULT,
+  Column,
 } from '../../globalStyles';
 import { FiltersSection, FiltersWrapper } from './FiltersStyles';
 import data from './data.json';
@@ -64,11 +65,16 @@ function Filters({
   return (
     <FiltersSection id='filters'>
       <FiltersWrapper>
-        <ContainerDEFAULT>
-          <Header color='white'>Choose your destination:</Header>
-          <Row justify='space-between' align='center' mt='4rem'>
+        <Column justify='space-between'>
+          <Header color='white'>Refine your search:</Header>
+          <Row justify='space-between' align='center' mt='4rem' padding='20px'>
             {mergedFilteredCountries.length ? (
-              <Row justify='space-between' align='center' mt='4rem'>
+              <Row
+                justify='space-between'
+                align='center'
+                mt='4rem'
+                padding='20px'
+              >
                 <Dropdown
                   selectedName={selectedCountry}
                   setSelectedName={setSelectedCountry}
@@ -95,7 +101,7 @@ function Filters({
               label={'Category'}
             />
           </Row>
-        </ContainerDEFAULT>
+        </Column>
       </FiltersWrapper>
     </FiltersSection>
   );

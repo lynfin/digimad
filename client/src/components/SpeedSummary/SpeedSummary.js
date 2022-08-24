@@ -28,7 +28,7 @@ function SpeedSummary({ selectedDestination, destinationDetails }) {
   return (
     <SpeedSummarySection id='SpeedSummary'>
       <SpeedSummaryWrapper>
-        <Heading>Download speeds</Heading>
+        <Heading>Download Speeds</Heading>
         <SubHeading>{selectedDestination.name}</SubHeading>
 
         <TextWrapper

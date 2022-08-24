@@ -37,7 +37,8 @@ export const HeroDiv = styled.div`
 
 export const HeroText = styled.p`
   margin-bottom: 35px;
-  font-size: clamp(0.9rem, 1.5vw, 1.3rem);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 600;
   line-height: 24px;
   text-align: center;
   letter-spacing: 2px;

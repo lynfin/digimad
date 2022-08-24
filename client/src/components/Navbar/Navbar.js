@@ -20,6 +20,10 @@ const data = [
     id: 'filters',
   },
   {
+    to: '/about',
+    text: 'About',
+  },
+  {
     to: '/userlogin',
     text: 'Login',
   },
@@ -31,7 +35,7 @@ const Navbar = ({ user }) => {
 
   let history = useHistory();
   let location = useLocation();
-  data[1]['text'] = user ? 'Profile' : 'Login';
+  data[2]['text'] = user ? 'Profile' : 'Login';
 
   const handleClick = () => {
     setShow(!show);

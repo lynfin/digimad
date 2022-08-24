@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Destination from './pages/Destination';
+import AboutSite from './pages/AboutSite';
 import Speedtest from './pages/Speedtest';
 import GlobalStyle from './globalStyles';
 import Navbar from './components/Navbar/Navbar';
@@ -126,6 +127,9 @@ function App() {
         </Route>
         <Route exact path='/speedtest'>
           <Speedtest user={user} selectedDestination={selectedDestination} />
+        </Route>
+        <Route exact path='/about'>
+          <AboutSite />
         </Route>
       </Switch>
     </BrowserRouter>
