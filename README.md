@@ -247,12 +247,6 @@ It should be possible to shutdown the server using [CTRL-C]. If that fails, foll
 
 ## Usage
 
-<div style="width:400px ; height:400px">
-
-![Workout Tracker](./assets/WorkoutTracker-Exercises.png?raw=true 'Workout Tracker')
-
-</div>
-
 1. [`Login`] with your username & password. If this is your first time, create a user profile [`Sign Up`]
 
 2. [`Logout`] when finished.

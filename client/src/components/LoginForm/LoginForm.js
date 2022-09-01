@@ -49,14 +49,13 @@ function LoginForm({ onLogin, onShowLogin }) {
           history.push('/');
         });
       } else {
-        r.json().then((err) => {
-          setError([`Error ${err.status}: ${err.error}`]);
-        });
+        setError([`Error ${r.status}: ${r.statusText}`]);
+        setUsername('');
+        setPassword('');
+        return;
       }
     });
 
-    setUsername('');
-    setPassword('');
     //setError(null);
     //setSuccess('Logged in!');
   };
