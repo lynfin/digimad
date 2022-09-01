@@ -71,8 +71,8 @@ function SpeedtestForm({ user, selectedDestination, onDestinationUpdated }) {
     }
 
     const visit_attributes = {
-      start,
-      end,
+      start: new Date(`${start} 00:00:01`).toISOString(),
+      end: new Date(`${end} 00:00:01`).toISOString(),
       user_id: user ? user.id : null,
       destination_id: selectedDestination ? selectedDestination.id : null,
       desc,
