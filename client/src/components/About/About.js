@@ -67,6 +67,14 @@ const About = () => {
           guidance to future visitors on whether or not to depend on this
           location to meet their tech needs.
         </AboutText>
+        <AboutText align='start' inverse margin='20px'>
+          Background image is from the{' '}
+          <a href='https://www.ookla.com/ookla-for-good/open-data'>
+            Ookla Open Data Initiative
+          </a>
+          . Visit them to learn more about their mission and view their Global
+          Fixed Broadband & Mobile Network Maps
+        </AboutText>
       </Column>
     </AboutSection>
   );
